@@ -1,0 +1,59 @@
+{
+  "modelo_A_naive": {
+    "modelo": "A — OLS ponderado (sin efectos fijos)",
+    "n": 19812,
+    "intercept": 19.291792449395277,
+    "slope_pp_per_hour": 0.8841818155916829,
+    "slope_se": 0.05016924887118379,
+    "slope_ci95_low": 0.7858518946727359,
+    "slope_ci95_high": 0.9825117365106298,
+    "r2": 0.019581980212294292
+  },
+  "modelo_B_fixed_effects": {
+    "modelo": "B — M1: Efectos fijos de local de votación",
+    "n": 19803,
+    "n_locales": 1684,
+    "slope_pp_per_hour": 0.09244849623611574,
+    "slope_se_clustered": 0.037030242750213965,
+    "slope_ci95_low": 0.01987055410692093,
+    "slope_ci95_high": 0.16502643836531056,
+    "r2_within": 0.0003240514228736169,
+    "nota": "SE clusterizados por local de votación. Singletons dropeados."
+  },
+  "modelo_C_nonlinear_fe": {
+    "modelo": "C — M3: Efecto no lineal (bins) + efectos fijos de local",
+    "n": 19803,
+    "bin_ref": "retraso ≤ 0.5h (mesas 'a tiempo')",
+    "coeficientes_por_bin": {
+      "bin_05_1": {
+        "coef_pp": 0.033198312664784006,
+        "se": 0.05240802605128391,
+        "ci95_low": -0.06951953089656937,
+        "ci95_high": 0.13591615622613737,
+        "n_mesas_en_bin": 4742
+      },
+      "bin_1_2": {
+        "coef_pp": 0.053426483093568414,
+        "se": 0.06817052798394806,
+        "ci95_low": -0.08018529656204969,
+        "ci95_high": 0.1870382627491865,
+        "n_mesas_en_bin": 3547
+      },
+      "bin_2_3": {
+        "coef_pp": 0.3148542382773537,
+        "se": 0.11110819225793482,
+        "ci95_low": 0.09708618306444938,
+        "ci95_high": 0.532622293490258,
+        "n_mesas_en_bin": 1396
+      },
+      "bin_3plus": {
+        "coef_pp": 0.45931177820011576,
+        "se": 0.19554706039094208,
+        "ci95_low": 0.07604658255119034,
+        "ci95_high": 0.8425769738490412,
+        "n_mesas_en_bin": 1118
+      }
+    },
+    "nota": "Cada coeficiente es el efecto en pp de ausentismo vs. el bin de referencia, manteniendo local constante."
+  }
+}

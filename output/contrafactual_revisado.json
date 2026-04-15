@@ -1,0 +1,28 @@
+{
+  "total_ausentes_extra_point": 3869.9072020244457,
+  "total_ausentes_extra_conservador": 2838.680672486527,
+  "candidatos_point": {
+    "RP": 910.4297528984433,
+    "PBG": 580.9919997650084,
+    "JPP": 73.84298073433352
+  },
+  "candidatos_conservador": {
+    "RP": 715.2339460294472,
+    "PBG": 437.27697233594847,
+    "JPP": 49.28802707250677
+  },
+  "mesas_por_bin": {
+    "bin_ref_0_05": 9004,
+    "bin_05_1": 4744,
+    "bin_1_2": 3549,
+    "bin_2_3": 1397,
+    "bin_3plus": 1118
+  },
+  "electores_por_bin": {
+    "bin_05_1": 1408084,
+    "bin_1_2": 1055219,
+    "bin_2_3": 416058,
+    "bin_3plus": 332825,
+    "bin_ref_0_05": 2667551
+  }
+}

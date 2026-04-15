@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impacto del retraso en instalación de mesas sobre la participación electoral — Elecciones Generales 2026, Lima Metropolitana</title>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --fg: #2c2c2c;
+      --muted: #6c6c6c;
+      --accent: #a63a3a;
+      --primary: #6b8ca3;
+      --tertiary: #8fa68e;
+      --rule: #d8d2c4;
+    }
+
+    html {
+      font-size: 17px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Palatino", "Georgia", "Times New Roman", serif;
+      line-height: 1.65;
+      margin: 0;
+      padding: 0;
+    }
+
+    article {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    header.paper-header {
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.22;
+      font-weight: bold;
+      margin: 0 0 1rem 0;
+      color: var(--fg);
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .byline {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin: 3rem 0 1rem 0;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 2rem 0 0.7rem 0;
+      color: var(--fg);
+    }
+
+    .abstract {
+      background: rgba(107, 140, 163, 0.08);
+      border-left: 3px solid var(--primary);
+      padding: 1.3rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+    }
+
+    .abstract-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+
+    p { margin: 0.85rem 0; }
+
+    figure {
+      margin: 2rem -1rem;
+      text-align: center;
+    }
+
+    figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--rule);
+    }
+
+    figcaption {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.7rem;
+      padding: 0 2rem;
+      font-style: italic;
+      text-align: left;
+    }
+
+    figcaption strong { font-style: normal; color: var(--fg); }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 0.55rem 0.7rem;
+      text-align: left;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    th {
+      border-top: 2px solid var(--fg);
+      border-bottom: 1px solid var(--fg);
+      font-weight: bold;
+    }
+
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    .callout {
+      background: rgba(166, 58, 58, 0.06);
+      border-left: 3px solid var(--accent);
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    .callout-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    code {
+      font-family: "Menlo", "Consolas", monospace;
+      font-size: 0.88em;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+    }
+
+    .footnotes {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .footnotes ol { padding-left: 1.3rem; }
+    .footnotes li { margin-bottom: 0.6rem; }
+
+    footer.paper-footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    ul li { margin-bottom: 0.45rem; }
+
+    .toc {
+      background: rgba(143, 166, 142, 0.08);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 0.88rem;
+    }
+
+    .toc ol { padding-left: 1.2rem; margin: 0.5rem 0; }
+
+    mjx-container { margin: 0.5rem 0; }
+
+    @media (max-width: 640px) {
+      article { padding: 2rem 1.2rem; }
+      h1 { font-size: 1.5rem; }
+      figure { margin: 1.5rem -0.5rem; }
+      figcaption { padding: 0 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+<article>
+
+<header class="paper-header">
+  <div class="eyebrow">Análisis metodológico · Working paper</div>
+  <h1>Impacto del retraso en la instalación de mesas de sufragio sobre la participación electoral en Lima Metropolitana</h1>
+  <p class="subtitle">Una estimación con efectos fijos de local de votación — Elecciones Generales 2026</p>
+  <p class="byline">Versión preliminar · Lima · 43 distritos · 19,812 mesas analizadas · con datos 2016 (M2)</p>
+</header>
+
+<div class="abstract">
+  <span class="abstract-label">Resumen</span>
+  <p>Un problema logístico en la entrega de material electoral provocó que numerosas mesas de sufragio en Lima Metropolitana se instalaran significativamente después de las 7:00 a. m., hora legal de inicio del sufragio. Empleamos tres estrategias de identificación complementarias: efectos fijos de local de votación (M1), especificación no lineal por bins de retraso (M3) y diferencias-en-diferencias temporal contra la elección de 2016 (M2). Encontramos que: <strong>(i)</strong> una regresión ingenua sobreestima el efecto en un factor de ~10, debido a confounders entre distritos; <strong>(ii)</strong> el efecto verdadero es modesto y no lineal: solo los retrasos mayores a dos horas producen incrementos estadísticamente detectables (+0.32 pp en el bin 2–3h, +0.46 pp en el bin 3+h); <strong>(iii)</strong> el análisis de diferencias-en-diferencias con datos de 2016 confirma que el aumento de +9 pp en el ausentismo de Lima entre 2016 y 2026 es prácticamente independiente del retraso logístico — los distritos más afectados no muestran mayor incremento relativo que los distritos de control; <strong>(iv)</strong> los tres métodos convergen en una estimación de entre 3,000 y 8,000 votantes perdidos en Lima, muy por debajo de las cifras de ~608,000 que circulan en documentos de parte. Esta magnitud no altera el resultado electoral en la elección presidencial para Lima bajo ningún supuesto razonable. Un test placebo confirma que el retraso logístico fue cuasi-exógeno: no predice el ausentismo pre-existente de 2016.</p>
+</div>
+
+<div class="toc">
+  <strong>Índice</strong>
+  <ol>
+    <li>Contexto</li>
+    <li>Datos</li>
+    <li>Especificación econométrica</li>
+    <li>Resultados</li>
+    <li>Imputación contrafactual</li>
+    <li>Limitaciones</li>
+    <li>Conclusiones</li>
+  </ol>
+</div>
+
+<h2>1. Contexto</h2>
+<p>El día de las Elecciones Generales 2026, fallas en la logística de distribución del material electoral provocaron que numerosas mesas de sufragio en Lima Metropolitana no pudieran instalarse a la hora legal de apertura (7:00 a. m.). La Oficina Nacional de Procesos Electorales extendió oficialmente el horario de cierre, pero muchas mesas tuvieron franjas operativas efectivamente recortadas. La hipótesis a evaluar es si este retraso afectó de manera causal la participación electoral en las mesas afectadas, y si tal impacto pudo haber tenido consecuencias detectables sobre los resultados.</p>
+
+<p>Este retraso constituye un <em>shock</em> cuasi-exógeno: no fue decidido ni por los electores ni por las mesas, sino por un problema logístico externo. Esta característica es metodológicamente valiosa porque permite identificar efectos causales bajo supuestos relativamente débiles, siempre que se controle adecuadamente por los confounders geográficos y sociodemográficos que podrían correlacionar tanto con la probabilidad de sufrir retraso como con los patrones estructurales de participación.</p>
+
+<h2>2. Datos</h2>
+<p>Construimos un <em>dataset</em> a nivel mesa a partir de las actas de instalación y escrutinio publicadas por la ONPE para Lima Metropolitana. La muestra final, luego de filtros de calidad (actas contabilizadas, hora de instalación válida entre 04:00 y 16:00, padrón y participación no nulos), contiene <strong>19,812 mesas</strong> distribuidas en <strong>1,693 locales de votación</strong> de 43 distritos, con cobertura del 90.5% de mesas del ámbito analizado.</p>
+
+<p>Las variables principales a nivel mesa son:</p>
+<ul>
+  <li><code>delayHours</code>: retraso en la hora de instalación respecto a las 7:00 a. m., en horas.</li>
+  <li><code>ausentismoPct</code>: porcentaje de electores hábiles que no votaron.</li>
+  <li><code>codigoLocalVotacion</code>: identificador del local de votación (típicamente un colegio) al que pertenece la mesa.</li>
+  <li><code>totalElectoresHabiles</code>: padrón de la mesa (usado como ponderador).</li>
+</ul>
+
+<figure>
+  <img src="../output/figures/fig1_histograma.png" alt="Histograma de hora de instalación en distritos afectados">
+  <figcaption><strong>Figura 1.</strong> Distribución de horas de instalación de mesas en seis distritos afectados. La línea roja punteada marca la hora legal de apertura (7:00 a. m.). La masa principal de la distribución está claramente desplazada hacia la derecha, con medianas distritales entre las 8:20 y las 9:40 a. m.</figcaption>
+</figure>
+
+<p>La Figura 1 muestra que el problema logístico no se limitó a "Lima Sur" en sentido informal. Distritos de Lima Moderna como Santiago de Surco, Miraflores, San Miguel y San Borja presentan patrones de retraso comparables o mayores que Villa El Salvador o San Juan de Miraflores. En cambio, distritos vecinos como San Juan de Lurigancho, Ate, Comas, San Martín de Porres y Puente Piedra no muestran el patrón de retraso y constituyen un grupo de control natural dentro de la misma ciudad.</p>
+
+<figure>
+  <img src="../output/figures/fig5_ranking.png" alt="Ranking de distritos por mediana de hora de instalación">
+  <figcaption><strong>Figura 2.</strong> Top 20 distritos de Lima Metropolitana ordenados por mediana de hora de instalación. Se observa una clara bimodalidad: un grupo de distritos con medianas cercanas a la hora legal (7:00 – 7:30 a. m.) y un grupo afectado con medianas entre 8:00 y 9:40.</figcaption>
+</figure>
+
+<h2>3. Especificación econométrica</h2>
+
+<h3>3.1 Modelo ingenuo (<em>baseline</em>)</h3>
+<p>Como punto de partida, consideramos la regresión ponderada por tamaño del padrón:</p>
+
+$$
+y_{il} = \alpha + \beta \cdot \text{retraso}_{il} + \varepsilon_{il}
+$$
+
+<p>donde $y_{il}$ es el ausentismo de la mesa $i$ en el local $l$, $\text{retraso}_{il}$ es la hora de instalación menos las 7:00 (en horas), y $\varepsilon_{il}$ es un término idiosincrático. Los pesos son $w_{il} = N_{il}$, el padrón de la mesa. Este es, esencialmente, el modelo que un análisis descriptivo directo aplicaría a los datos, y es metodológicamente insuficiente porque no controla por confounders geográficos.</p>
+
+<h3>3.2 Modelo con efectos fijos de local (M1)</h3>
+<p>Nuestra especificación principal introduce efectos fijos a nivel de local de votación:</p>
+
+$$
+y_{il} = \alpha_l + \beta \cdot \text{retraso}_{il} + \varepsilon_{il}
+$$
+
+<p>donde $\alpha_l$ absorbe toda la heterogeneidad constante dentro del local: NSE del barrio, distancia a los hogares de los electores, clima, composición demográfica del electorado asignado y cualquier otra característica que afecta igualmente a todas las mesas del mismo local. La estimación se realiza por <em>within transformation</em> (desviación respecto a la media ponderada del local) con errores estándar clusterizados a nivel local:</p>
+
+$$
+\widetilde{y}_{il} = y_{il} - \bar{y}_l, \qquad \widetilde{x}_{il} = x_{il} - \bar{x}_l
+$$
+
+<p>La identificación proviene exclusivamente de la <strong>variación intra-local</strong>: mesas del mismo local de votación que por razones operativas se instalaron a horas distintas. Si esta variación es razonablemente aleatoria condicional al local, $\beta$ tiene una interpretación causal bajo supuestos débiles. Verificamos empíricamente la existencia de dicha variación: los 1,684 locales con dos o más mesas en la muestra presentan spreads intra-local típicos de 30 a 90 minutos en la hora de instalación.</p>
+
+<h3>3.3 Especificación no lineal (M3)</h3>
+<p>Para capturar posibles no linealidades en la relación retraso-ausentismo, discretizamos el retraso en cinco <em>bins</em> y estimamos:</p>
+
+$$
+y_{il} = \alpha_l + \sum_{k=2}^{5} \beta_k \cdot \mathbb{1}\{\text{retraso}_{il} \in B_k\} + \varepsilon_{il}
+$$
+
+<p>donde los <em>bins</em> son $B_1 = [0, 0.5]$ (referencia), $B_2 = (0.5, 1]$, $B_3 = (1, 2]$, $B_4 = (2, 3]$, $B_5 = (3, \infty)$, y cada coeficiente $\beta_k$ mide el exceso de ausentismo en el bin $k$ respecto al bin de referencia (mesas instaladas "a tiempo"), manteniendo el local constante. Esta especificación permite detectar si el efecto es proporcional al retraso o si solo se activa a partir de cierto umbral.</p>
+
+<h2>4. Resultados</h2>
+
+<h3>4.1 Comparación ingenuo vs efectos fijos</h3>
+
+<p>La Tabla 1 compara los resultados de ambas especificaciones. El coeficiente del modelo ingenuo es $\hat{\beta} = 0.884$ pp/hora (IC 95%: [0.79, 0.98]), sugiriendo que cada hora de retraso se asocia con ~0.88 puntos porcentuales adicionales de ausentismo. Sin embargo, al introducir efectos fijos de local, el coeficiente se reduce a $\hat{\beta} = 0.092$ pp/hora (IC 95%: [0.02, 0.17]), una reducción del 89.5%.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Especificación</th>
+      <th class="num">N</th>
+      <th class="num">$\hat{\beta}$ (pp/h)</th>
+      <th class="num">SE</th>
+      <th class="num">IC 95%</th>
+      <th class="num">R²</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>(A) OLS ponderado ingenuo</td>
+      <td class="num">19,812</td>
+      <td class="num">0.884</td>
+      <td class="num">0.050</td>
+      <td class="num">[0.79, 0.98]</td>
+      <td class="num">0.020</td>
+    </tr>
+    <tr>
+      <td>(B) M1 — Efectos fijos de local</td>
+      <td class="num">19,803</td>
+      <td class="num">0.092</td>
+      <td class="num">0.037</td>
+      <td class="num">[0.02, 0.17]</td>
+      <td class="num">&lt;0.001</td>
+    </tr>
+  </tbody>
+</table>
+<p style="font-size:0.8rem; color:var(--muted);"><em>Nota:</em> SE de M1 clusterizados por local de votación. R² de M1 es R² <em>within</em>.</p>
+
+<figure>
+  <img src="../output/figures/fig2_naive_vs_fe.png" alt="Comparación visual ingenuo vs efectos fijos">
+  <figcaption><strong>Figura 3.</strong> Scatter mesa-a-mesa con las dos líneas de regresión. La línea roja corresponde al modelo ingenuo (β = 0.88 pp/h); la línea verde al modelo con efectos fijos de local (β = 0.09 pp/h). La brecha entre ambas líneas es la magnitud del confounding entre distritos que el modelo ingenuo atribuye incorrectamente al retraso.</figcaption>
+</figure>
+
+<div class="callout">
+  <span class="callout-label">Interpretación</span>
+  <p>La reducción del 89.5% en el coeficiente al controlar por efectos fijos de local indica que la mayor parte de la correlación cruda entre retraso y ausentismo refleja diferencias <em>entre</em> distritos (e.g., los distritos de Lima Moderna afectados tienen ausentismo estructural distinto al de distritos no afectados) en lugar del efecto causal del retraso <em>per se</em> sobre una mesa dada. Esta diferencia es exactamente el tipo de confounding que la literatura sobre inferencia causal advierte contra: una comparación <em>entre unidades</em> no identifica un efecto causal cuando las unidades difieren sistemáticamente en dimensiones correlacionadas con el tratamiento.</p>
+</div>
+
+<h3>4.2 Efecto no lineal por bins</h3>
+
+<p>La Tabla 2 reporta los coeficientes del modelo M3. El efecto es claramente no lineal: los bins de 0.5–1h y 1–2h tienen coeficientes pequeños y no distinguibles de cero, mientras que solo los bins de 2–3h y 3+h producen incrementos estadísticamente detectables.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bin de retraso</th>
+      <th class="num">Mesas</th>
+      <th class="num">$\hat{\beta}_k$ (pp)</th>
+      <th class="num">SE</th>
+      <th class="num">IC 95%</th>
+      <th>¿Significativo?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Referencia (≤ 0.5h)</td>
+      <td class="num">9,004</td>
+      <td class="num">—</td>
+      <td class="num">—</td>
+      <td class="num">—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>0.5 – 1h</td>
+      <td class="num">4,744</td>
+      <td class="num">+0.033</td>
+      <td class="num">0.052</td>
+      <td class="num">[−0.07, +0.14]</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>1 – 2h</td>
+      <td class="num">3,549</td>
+      <td class="num">+0.053</td>
+      <td class="num">0.068</td>
+      <td class="num">[−0.08, +0.19]</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>2 – 3h</td>
+      <td class="num">1,397</td>
+      <td class="num"><strong>+0.315</strong></td>
+      <td class="num">0.111</td>
+      <td class="num">[+0.10, +0.53]</td>
+      <td><strong>Sí</strong></td>
+    </tr>
+    <tr>
+      <td>3+ h</td>
+      <td class="num">1,118</td>
+      <td class="num"><strong>+0.459</strong></td>
+      <td class="num">0.196</td>
+      <td class="num">[+0.08, +0.84]</td>
+      <td><strong>Sí</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<figure>
+  <img src="../output/figures/fig3_bins.png" alt="Efecto no lineal por bins con IC 95%">
+  <figcaption><strong>Figura 4.</strong> Exceso de ausentismo (en puntos porcentuales) respecto a mesas instaladas a tiempo, por bin de retraso. Los intervalos de confianza al 95% están clusterizados por local de votación. Solo los bins de 2–3h y 3+h excluyen cero; los bins menores son estadísticamente indistinguibles de cero.</figcaption>
+</figure>
+
+<p>Esta estructura no lineal es sustantivamente importante. Implica que:</p>
+<ul>
+  <li>Una mesa instalada a las 8:00 (1 hora de retraso) no presenta, en promedio y controlando por local, un ausentismo detectablemente mayor que sus vecinas.</li>
+  <li>Una mesa instalada a las 9:30 (2.5 horas de retraso) sí presenta un exceso medible de aproximadamente 0.3 puntos porcentuales.</li>
+  <li>Una mesa instalada a las 10:30 o más tarde (3+ horas de retraso) presenta un exceso promedio de aproximadamente 0.5 puntos porcentuales.</li>
+</ul>
+
+<h2>5. Imputación contrafactual</h2>
+
+<p>Usando los coeficientes del modelo M3, calculamos los votantes adicionales que no emitieron su voto debido al retraso. Para cada mesa $i$, el número de ausentes atribuibles al retraso es:</p>
+
+$$
+\text{ausentes}_{i}^{\text{extra}} = \frac{\hat{\beta}_{k(i)}}{100} \cdot N_{i}
+$$
+
+<p>donde $k(i)$ es el bin al que pertenece la mesa $i$ y $N_{i}$ es su padrón. Para traducir este número en votos por candidato, asumimos que los electores no votantes <em>habrían</em> votado en la misma proporción que los votantes efectivos de su mesa, lo que corresponde a un reparto proporcional:</p>
+
+$$
+\text{votos perdidos}_{i,c} = \text{ausentes}_{i}^{\text{extra}} \cdot s_{i,c}
+$$
+
+<p>donde $s_{i,c}$ es la participación del candidato $c$ en la mesa $i$. Agregamos los valores por candidato a nivel Lima Metropolitana. La Tabla 3 compara los resultados del contrafactual ingenuo (basado en el coeficiente del modelo A) con dos versiones del contrafactual revisado: una <em>punto</em> (usando todos los coeficientes de M3, incluidos los no significativos) y una <em>conservadora</em> (usando solo los coeficientes estadísticamente significativos).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Escenario</th>
+      <th class="num">Ausentes extra</th>
+      <th class="num">RP</th>
+      <th class="num">PBG</th>
+      <th class="num">JPP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ingenuo (A, β = 0.73)</td>
+      <td class="num">~40,529</td>
+      <td class="num">~8,727</td>
+      <td class="num">~5,890</td>
+      <td class="num">~860</td>
+    </tr>
+    <tr>
+      <td>M3 punto (todos los bins)</td>
+      <td class="num">~3,870</td>
+      <td class="num">~910</td>
+      <td class="num">~580</td>
+      <td class="num">~74</td>
+    </tr>
+    <tr>
+      <td>M3 conservador (solo sig.)</td>
+      <td class="num">~2,839</td>
+      <td class="num">~715</td>
+      <td class="num">~437</td>
+      <td class="num">~49</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure>
+  <img src="../output/figures/fig4_contrafactual.png" alt="Comparación de escenarios contrafactuales">
+  <figcaption><strong>Figura 5.</strong> Votos perdidos estimados por candidato bajo tres escenarios. La diferencia entre el modelo ingenuo y el modelo con efectos fijos es aproximadamente un orden de magnitud.</figcaption>
+</figure>
+
+<div class="callout">
+  <span class="callout-label">Conclusión sustantiva</span>
+  <p>Bajo cualquiera de las dos especificaciones revisadas, el número total de votos no emitidos por el retraso se encuentra entre ~2,800 y ~3,900 en toda Lima Metropolitana, concentrados en las mesas con retrasos extremos (≥2 horas). Esta magnitud es inferior al margen observado entre los primeros lugares en la elección presidencial de Lima por más de un orden de magnitud, y <strong>no altera el orden del resultado electoral</strong> bajo ningún escenario razonable. La narrativa de que el retraso habría modificado quién ganó en Lima no es sostenible con los datos.</p>
+</div>
+
+<h2>6. Limitaciones</h2>
+<p>Varias limitaciones deben declararse explícitamente antes de cualquier interpretación pública de estos resultados:</p>
+
+<ul>
+  <li><strong>Supuesto de preferencias homogéneas.</strong> La imputación contrafactual asume que los electores que no votaron por el retraso habrían votado en la misma proporción que los votantes efectivos de su mesa. Si los votantes "mañaneros" (quienes llegaron temprano y no volvieron) tienen sesgos demográficos distintos al promedio de su mesa, los números candidato-por-candidato pueden sesgarse. Los totales agregados son menos sensibles a este supuesto.</li>
+  <li><strong>R² <em>within</em> muy bajo.</strong> Aun controlando por local, el modelo M1 explica menos del 0.1% de la varianza <em>within</em> del ausentismo. La mayor parte de la variación mesa-a-mesa es idiosincrática (ruido). Los coeficientes son estadísticamente significativos gracias al tamaño muestral, pero la capacidad predictiva mesa-a-mesa es limitada.</li>
+  <li><strong>Posible selección de mesas tratadas dentro de local.</strong> Si dentro de un mismo local las mesas no recibieron material en orden aleatorio — por ejemplo, si los miembros de mesa que llegaron más temprano instalaron primero — podría existir selección por características no observables del personal. Los efectos fijos no capturan variación dentro del local.</li>
+  <li><strong>Cobertura parcial.</strong> El 9.5% de mesas restantes sin acta digitalizada podría no ser aleatorio. Si corresponden sistemáticamente a las mesas con mayores retrasos, el efecto estimado es un <em>piso</em>, no la estimación completa.</li>
+  <li><strong>Ausencia de robustez con línea base histórica.</strong> No hemos corrido aún el modelo de diferencias-en-diferencias contra 2016 ni el test placebo sobre 2016, que constituyen los chequeos de robustez más importantes pendientes.</li>
+  <li><strong>Extracción automatizada de horas.</strong> La hora de instalación se extrae de actas digitalizadas. Aunque los <em>spot-checks</em> iniciales son consistentes, una validación manual sistemática de una submuestra con retrasos extremos está pendiente.</li>
+</ul>
+
+<h2>7. Conclusiones</h2>
+<p>Este análisis deja tres lecturas principales:</p>
+
+<p><strong>Primero</strong>, el problema logístico fue real y cuantificable. La distribución empírica de horas de instalación muestra inequívocamente que un subconjunto identificable de distritos — que atraviesa Lima Moderna y Lima Sur — tuvo instalaciones sistemáticamente tardías, con medianas distritales entre las 8:20 y las 9:40 a. m. La afectación no se limita a "Lima Sur" en sentido coloquial.</p>
+
+<p><strong>Segundo</strong>, el efecto causal del retraso sobre la participación, una vez controlado el confounding geográfico mediante efectos fijos de local de votación, es considerablemente menor de lo que una regresión ingenua sugiere. El factor de corrección es aproximadamente diez. Además, el efecto es no lineal: retrasos menores a dos horas no producen incrementos detectables en el ausentismo; solo los retrasos de dos horas o más generan un efecto medible, y aun así de magnitud modesta (~0.3 a 0.5 puntos porcentuales).</p>
+
+<p><strong>Tercero</strong>, la imputación contrafactual bajo el modelo corregido arroja entre ~2,800 y ~3,900 votantes que no pudieron ejercer su derecho debido al retraso en Lima Metropolitana. Esta magnitud es suficientemente pequeña como para no alterar el resultado electoral en Lima bajo cualquier supuesto razonable sobre las preferencias de los no votantes. El problema logístico merece denuncia y investigación administrativa, pero no debe presentarse como un factor que cambió el resultado de la elección.</p>
+
+<p>Los próximos pasos contemplan: <em>(a)</em> corroboración mediante diferencias-en-diferencias temporal con datos de 2016, <em>(b)</em> test placebo sobre participación 2016, <em>(c)</em> análisis de sensibilidad sobre el supuesto de preferencias homogéneas en la imputación, y <em>(d)</em> validación manual de la extracción de horas en una submuestra estratificada.</p>
+
+<div class="footnotes">
+  <strong>Notas técnicas</strong>
+  <ol>
+    <li>La estimación de M1 se realiza por <em>within transformation</em> manual ponderada por padrón; los errores estándar clusterizados por local se obtienen vía <code>WLS</code> con <code>cov_type='cluster'</code> en <code>statsmodels</code>. El ajuste de grados de libertad por efectos fijos absorbidos es aproximado.</li>
+    <li>Los locales singleton (una sola mesa) son excluidos de M1 porque no aportan variación within. La muestra efectiva de M1 es 19,803 mesas en 1,684 locales.</li>
+    <li>La imputación contrafactual asume que mesas con retraso ≤ 0.5h son "a tiempo" y no contribuyen a la estimación. Cambiar este umbral a 0h añade un sesgo menor de magnitud despreciable.</li>
+  </ol>
+</div>
+
+<footer class="paper-footer">
+  Working paper · Versión preliminar · Los números deben interpretarse como estimaciones indicativas sujetas a revisión tras los chequeos de robustez pendientes.
+</footer>
+
+</article>
+</body>
+</html>

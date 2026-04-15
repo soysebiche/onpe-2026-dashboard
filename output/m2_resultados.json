@@ -1,0 +1,119 @@
+{
+  "modelos": {
+    "M2a": {
+      "descripcion": "M2a — DiD: Δausentismo ~ delay_promedio (dist)",
+      "n": 40,
+      "r2": 0.0015967472223641366,
+      "coeficientes": {
+        "const": {
+          "coef": 8.982577786691675,
+          "se": 0.2797766798245734,
+          "pvalue": 3.6075683020597496e-226,
+          "ci95_low": 8.434225570521317,
+          "ci95_high": -0.4853670862664763
+        },
+        "delay_promedio": {
+          "coef": 0.05960777299177966,
+          "se": 0.2780535068791815,
+          "pvalue": 0.83025448850001,
+          "ci95_low": 9.530930002862032,
+          "ci95_high": 0.6045826322500356
+        }
+      }
+    },
+    "M2b": {
+      "descripcion": "M2b — DiD: Δausentismo ~ %mesas_despues_8 (dist)",
+      "n": 40,
+      "r2": 0.0034027408823554817,
+      "coeficientes": {
+        "const": {
+          "coef": 8.964251132342053,
+          "se": 0.2583491073119554,
+          "pvalue": 8.38402106256268e-264,
+          "ci95_low": 8.457896186572547,
+          "ci95_high": -0.012004523499967982
+        },
+        "pct_mesas_despues_8": {
+          "coef": 0.0022736878164684865,
+          "se": 0.007284935554459765,
+          "pvalue": 0.7549583268803437,
+          "ci95_low": 9.470606078111558,
+          "ci95_high": 0.016551899132904953
+        }
+      }
+    },
+    "M2c": {
+      "descripcion": "M2c — DiD: Δausentismo ~ %mesas_despues_10 (dist)",
+      "n": 40,
+      "r2": 6.856423366885522e-05,
+      "coeficientes": {
+        "const": {
+          "coef": 9.033133343517006,
+          "se": 0.18437298808301353,
+          "pvalue": 0.0,
+          "ci95_low": 8.671768927152268,
+          "ci95_high": -0.02957102085414846
+        },
+        "pct_mesas_despues_10": {
+          "coef": 0.0006973854852443395,
+          "se": 0.01544334823402171,
+          "pvalue": 0.963981641376588,
+          "ci95_low": 9.394497759881745,
+          "ci95_high": 0.03096579182463714
+        }
+      }
+    },
+    "placebo_A": {
+      "descripcion": "Placebo A — ausentismo_2016 ~ delay_2026 (dist, continuo)",
+      "n": 40,
+      "r2": 0.06098759832907352,
+      "coeficientes": {
+        "const": {
+          "coef": 12.39936449994179,
+          "se": 0.49316838673382457,
+          "pvalue": 1.7176557898427725e-139,
+          "ci95_low": 11.432772223629772,
+          "ci95_high": -0.5752908298433304
+        },
+        "delay_promedio": {
+          "coef": 0.668228390299801,
+          "se": 0.6344602400614768,
+          "pvalue": 0.29223860248129996,
+          "ci95_low": 13.365956776253807,
+          "ci95_high": 1.9117476104429323
+        }
+      }
+    },
+    "placebo_B": {
+      "descripcion": "Placebo B — ausentismo_2016 ~ %mesas_despues_8_2026 (dist)",
+      "n": 40,
+      "r2": 0.1005695855108758,
+      "coeficientes": {
+        "const": {
+          "coef": 12.292494847960075,
+          "se": 0.3975624867803425,
+          "pvalue": 6.502044929921754e-210,
+          "ci95_low": 11.513286692266423,
+          "ci95_high": -0.007724724093208402
+        },
+        "pct_mesas_despues_8": {
+          "coef": 0.022421727541848527,
+          "se": 0.015381125302734283,
+          "pvalue": 0.1449113983867247,
+          "ci95_low": 13.071703003653727,
+          "ci95_high": 0.052568179176905455
+        }
+      }
+    }
+  },
+  "imputacion_did": {
+    "beta_delay": 0.05960777299177966,
+    "total_ausentes_extra_did": 3312.226252690542,
+    "total_padron_lima": 6049957.0,
+    "delta_ausentismo_promedio_lima": 9.037325717175985,
+    "fraccion_delta_atribuible": 0.006057979118784721
+  },
+  "n_distritos": 40,
+  "ausentismo_lima_2016_ponderado": 13.189191789748994,
+  "ausentismo_lima_2026_ponderado": 22.050437713854826
+}
