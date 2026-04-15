@@ -1829,6 +1829,8 @@ def render_territory_drilldown(payload: dict) -> str:
             </tbody>
           </table>
         </div>
+      </div>
+      <div class="focus-foreign-stack">
         <div class="table-shell">
           <div class="focus-subtitle">
             <div>
@@ -2514,6 +2516,24 @@ def render_html(payload: dict) -> str:
 
     <section class="stack">
       <div class="section-title">
+        <p class="eyebrow">Diferencia real</p>
+        <h2>Brechas al corte actual</h2>
+        <p>Diferencias observadas hasta este momento, sin proyectar al 100%.</p>
+      </div>
+      {render_actual_comparison(payload)}
+    </section>
+
+    <section class="stack">
+      <div class="section-title">
+        <p class="eyebrow">Brecha simulada</p>
+        <h2>Brechas al 100% proyectado</h2>
+        <p>Diferencias estimadas al cierre entre cada par, tanto en votos proyectados como en puntos porcentuales.</p>
+      </div>
+      {render_projected_comparison(payload)}
+    </section>
+
+    <section class="stack">
+      <div class="section-title">
         <p class="eyebrow">Lo que falta</p>
         <h2>Bolsones pendientes por bloque</h2>
       </div>
@@ -2533,24 +2553,6 @@ def render_html(payload: dict) -> str:
     </section>
 
     {render_territory_drilldown(payload)}
-
-    <section class="stack">
-      <div class="section-title">
-        <p class="eyebrow">Diferencia real</p>
-        <h2>Brechas al corte actual</h2>
-        <p>Diferencias observadas hasta este momento, sin proyectar al 100%.</p>
-      </div>
-      {render_actual_comparison(payload)}
-    </section>
-
-    <section class="stack">
-      <div class="section-title">
-        <p class="eyebrow">Brecha simulada</p>
-        <h2>Brechas al 100% proyectado</h2>
-        <p>Diferencias estimadas al cierre entre cada par, tanto en votos proyectados como en puntos porcentuales.</p>
-      </div>
-      {render_projected_comparison(payload)}
-    </section>
 
     {render_delta_section(payload['delta_info']['latest'], 'Última tanda contra el snapshot previo')}
     {render_delta_section(payload['delta_info']['trend'], 'Tendencia acumulada de los últimos cortes')}
