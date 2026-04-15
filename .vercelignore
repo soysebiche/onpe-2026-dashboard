@@ -1,18 +1,21 @@
+.git
+.gitignore
+.vercel
 .DS_Store
-.claude/
-.playwright-cli/
-__pycache__/
+.claude
+.playwright-cli
+__pycache__
 *.pyc
 *.pyo
 *.log
 
-# Local execution artifacts
-onpe_dashboard_stdout.log
-onpe_dashboard_stderr.log
-
 # Heavy local state snapshots regenerated from ONPE
 onpe_state_district.json
 onpe_state_province.json
+
+# Local execution artifacts
+onpe_dashboard_stdout.log
+onpe_dashboard_stderr.log
 
 # Local caches and scratch outputs
 output/.DS_Store
@@ -20,10 +23,9 @@ output/lima_instalacion_cache.json
 output/lima_instalacion_mesa_codes.json
 output/onpe_participacion_main.js
 output/sample_acta_*.pdf
-output/slides/
+output/slides
 
-# Private notes / stray build artifacts
+# Private notes / unused build remnants
 plan.md
 main-KINQGOLR.js
 polyfills-R7OGVS7E.js
-.vercel
