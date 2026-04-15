@@ -1763,25 +1763,20 @@ def render_territory_drilldown(payload: dict) -> str:
             """
         )
 
-    foreign_cards = []
+    foreign_rows = []
     for row in drilldown.get("foreign", []):
-        foreign_cards.append(
+        gap_sign = "+" if row["gap_pp"] >= 0 else ""
+        foreign_rows.append(
             f"""
-            <article class="focus-card focus-card--foreign">
-              <div class="focus-card__header">
-                <div>
-                  <p class="eyebrow">Extranjero · {escape(str(row.get('continent', '')))}</p>
-                  <h3>{escape(str(row['name']))}</h3>
-                </div>
-                <span>{fmt_int(row['remaining_votes'])} faltantes</span>
-              </div>
-              <div class="focus-card__chips">
-                <span class="focus-chip">{left_label} {fmt_pct(row['left_pct'])}</span>
-                <span class="focus-chip">{right_label} {fmt_pct(row['right_pct'])}</span>
-                <span class="focus-chip focus-chip--gap">Brecha {row['gap_pp']:+.2f} pp</span>
-              </div>
-              <p class="focus-card__note">{int(row.get('counted_actas', 0))}/{int(row.get('total_actas', 0))} actas observadas. El faltante se estima con actas pendientes y votos por acta del propio país, suavizado con el promedio del exterior.</p>
-            </article>
+            <tr>
+              <td>{escape(str(row.get('continent', '')))}</td>
+              <td>{escape(str(row['name']))}</td>
+              <td>{fmt_pct(row['pct_actas'], 3)}</td>
+              <td>{fmt_int(row['remaining_votes'])}</td>
+              <td>{fmt_pct(row['left_pct'])}</td>
+              <td>{fmt_pct(row['right_pct'])}</td>
+              <td>{gap_sign}{row['gap_pp']:.2f} pp</td>
+            </tr>
             """
         )
 
@@ -1834,8 +1829,30 @@ def render_territory_drilldown(payload: dict) -> str:
             </tbody>
           </table>
         </div>
-        <div class="focus-foreign-stack">
-          {''.join(foreign_cards)}
+        <div class="table-shell">
+          <div class="focus-subtitle">
+            <div>
+              <p class="eyebrow">Extranjero</p>
+              <h3>Países con más votos faltantes</h3>
+            </div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Continente</th>
+                <th>País</th>
+                <th>% actas</th>
+                <th>Faltan</th>
+                <th>{left_label}</th>
+                <th>{right_label}</th>
+                <th>{right_label}-{left_label}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {''.join(foreign_rows)}
+            </tbody>
+          </table>
+          <p class="table-shell__note">El faltante por país se estima con actas pendientes y votos por acta del propio país, suavizado con el promedio del exterior.</p>
         </div>
       </div>
     </section>
@@ -2287,6 +2304,12 @@ def render_html(payload: dict) -> str:
     .micro-table th,
     .micro-table td {{
       padding: 10px 10px;
+      font-size: 0.9rem;
+    }}
+    .table-shell__note {{
+      margin: 10px 14px 14px;
+      color: var(--muted);
+      line-height: 1.5;
       font-size: 0.9rem;
     }}
     .focus-card__note {{
