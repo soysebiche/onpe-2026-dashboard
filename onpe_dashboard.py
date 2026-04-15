@@ -1,8 +1,12 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import math
+import re
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import datetime
 from html import escape
@@ -71,6 +75,18 @@ INK = "#0f172a"
 ACCENT = "#1e40af"
 SOFT = "#dbe7ff"
 CARD = "#ffffff"
+FOREIGN_GEO_NAME_CACHE = Path(__file__).with_name("output") / "foreign_geo_names.json"
+FOREIGN_HISTORY_URL = (
+    "https://www.web.onpe.gob.pe/modElecciones/elecciones/elecciones2016/"
+    "PRPCP2016/participacion-ciudadana-Extranjero-{code}-Pie.html"
+)
+FOREIGN_CONTINENT_NAMES = {
+    910000: "África",
+    920000: "América",
+    930000: "Asia",
+    940000: "Europa",
+    950000: "Oceanía",
+}
 
 
 @dataclass
@@ -596,6 +612,228 @@ def fetch_name_map(
     return names
 
 
+def _load_foreign_name_cache() -> dict[str, dict[str, str]]:
+    if not FOREIGN_GEO_NAME_CACHE.exists():
+        return {"countries": {}, "continents": {}}
+    try:
+        payload = json.loads(FOREIGN_GEO_NAME_CACHE.read_text())
+    except Exception:
+        return {"countries": {}, "continents": {}}
+    return {
+        "countries": {str(k): str(v) for k, v in (payload.get("countries") or {}).items()},
+        "continents": {str(k): str(v) for k, v in (payload.get("continents") or {}).items()},
+    }
+
+
+def _save_foreign_name_cache(cache: dict[str, dict[str, str]]) -> None:
+    FOREIGN_GEO_NAME_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    FOREIGN_GEO_NAME_CACHE.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=2, sort_keys=True)
+    )
+
+
+def _fetch_historical_foreign_name(code: int, kind: str) -> str | None:
+    pattern = r"Pa[ií]s:\s*([^<\r\n]+)" if kind == "country" else r"Continente:\s*([^<\r\n]+)"
+    url = FOREIGN_HISTORY_URL.format(code=code)
+    for attempt in range(3):
+        try:
+            response = op.requests.get(
+                url,
+                headers={"User-Agent": op.UA, "Accept": "text/html,application/xhtml+xml"},
+                timeout=20,
+            )
+            response.raise_for_status()
+            match = re.search(pattern, response.text, re.IGNORECASE)
+            if match:
+                return html.unescape(match.group(1)).strip()
+        except Exception:
+            if attempt == 2:
+                break
+            time.sleep(0.4 * (attempt + 1))
+    return None
+
+
+def resolve_foreign_names(country_codes: list[int], continent_codes: list[int]) -> tuple[dict[int, str], dict[int, str]]:
+    cache = _load_foreign_name_cache()
+    countries = {int(k): v for k, v in cache["countries"].items()}
+    continents = {int(k): v for k, v in cache["continents"].items()}
+    changed = False
+
+    for continent_code in continent_codes:
+        if continent_code in continents:
+            continue
+        continents[continent_code] = (
+            _fetch_historical_foreign_name(continent_code, "continent")
+            or FOREIGN_CONTINENT_NAMES.get(continent_code, f"CONT_{continent_code}")
+        )
+        changed = True
+
+    for country_code in country_codes:
+        if country_code in countries:
+            continue
+        countries[country_code] = (
+            _fetch_historical_foreign_name(country_code, "country")
+            or f"PAÍS {country_code}"
+        )
+        changed = True
+
+    if changed:
+        _save_foreign_name_cache(
+            {
+                "countries": {str(k): v for k, v in countries.items()},
+                "continents": {str(k): v for k, v in continents.items()},
+            }
+        )
+
+    return countries, continents
+
+
+def _estimate_foreign_remaining_votes(
+    counted_actas: int,
+    total_actas: int,
+    total_valid: float,
+    foreign_region: op.Region | None,
+) -> float:
+    remaining_actas = max(total_actas - counted_actas, 0)
+    if remaining_actas <= 0:
+        return 0.0
+
+    foreign_valid_ratio = 0.0
+    foreign_emitidos_por_acta = 0.0
+    if foreign_region is not None:
+        if foreign_region.votos_emitidos > 0 and foreign_region.votos_validos > 0:
+            foreign_valid_ratio = foreign_region.votos_validos / foreign_region.votos_emitidos
+        else:
+            foreign_valid_ratio = float(foreign_region.ref_valid_ratio or 0.0)
+        if foreign_region.actas_contabilizadas > 0 and foreign_region.votos_emitidos > 0:
+            foreign_emitidos_por_acta = foreign_region.votos_emitidos / foreign_region.actas_contabilizadas
+        else:
+            foreign_emitidos_por_acta = float(foreign_region.ref_emitidos_por_acta or 0.0)
+
+    local_emitidos_por_acta = 0.0
+    if counted_actas > 0 and total_valid > 0:
+        local_validos_por_acta = total_valid / counted_actas
+        local_emitidos_por_acta = (
+            local_validos_por_acta / foreign_valid_ratio
+            if foreign_valid_ratio > 0
+            else local_validos_por_acta
+        )
+
+    if local_emitidos_por_acta > 0 and foreign_emitidos_por_acta > 0:
+        weight = min(counted_actas / 5.0, 1.0)
+        emitidos_por_acta = (
+            weight * local_emitidos_por_acta
+            + (1.0 - weight) * foreign_emitidos_por_acta
+        )
+    else:
+        emitidos_por_acta = local_emitidos_por_acta or foreign_emitidos_por_acta
+
+    return max(0.0, remaining_actas * emitidos_por_acta)
+
+
+def fetch_foreign_country_rows(
+    foreign_region: op.Region | None,
+    left_candidate: str,
+    right_candidate: str,
+) -> list[dict[str, float | int | str]]:
+    continent_rows = op.fetch(
+        "resumen-general/mapa-calor",
+        tipoFiltro="ambito_geografico",
+        idAmbitoGeografico=2,
+    )
+    continent_codes = sorted(
+        {int(row.get("ubigeoNivel01") or 0) for row in continent_rows if int(row.get("ambitoGeografico", 0)) == 2}
+    )
+
+    raw_rows: dict[int, dict[str, int | float]] = {}
+    for continent_code in continent_codes:
+        rows = op.fetch(
+            "resumen-general/mapa-calor",
+            tipoFiltro="ubigeo_nivel_01",
+            ubigeoNivel1=continent_code,
+            idAmbitoGeografico=2,
+        )
+        for row in rows:
+            if int(row.get("ubigeoNivel01") or 0) != continent_code:
+                continue
+            country_code = int(row.get("ubigeoNivel02") or 0)
+            counted_actas = int(row.get("actasContabilizadas", 0))
+            pct_actas = float(row.get("porcentajeActasContabilizadas", 0.0))
+            total_actas = int(round(counted_actas / (pct_actas / 100.0))) if pct_actas > 0 else counted_actas
+            raw_rows[country_code] = {
+                "continent_code": continent_code,
+                "country_code": country_code,
+                "counted_actas": counted_actas,
+                "pct_actas": pct_actas,
+                "total_actas": total_actas,
+            }
+
+    def _worker(row: dict[str, int | float]) -> dict[str, float | int | str]:
+        continent_code = int(row["continent_code"])
+        country_code = int(row["country_code"])
+        counted_actas = int(row["counted_actas"])
+        total_actas = int(row["total_actas"])
+        pct_actas = float(row["pct_actas"])
+        left_votes = 0.0
+        right_votes = 0.0
+        total_valid = 0.0
+        if counted_actas > 0:
+            data = op.fetch(
+                "eleccion-presidencial/participantes-ubicacion-geografica-nombre",
+                tipoFiltro="ubigeo_nivel_02",
+                ubigeoNivel1=continent_code,
+                ubigeoNivel2=country_code,
+                idAmbitoGeografico=2,
+            )
+            candidatos, votos = op._extraer_candidatos(data)
+            vote_map = {cand: float(value) for cand, value in zip(candidatos, votos)}
+            left_votes = float(vote_map.get(left_candidate, 0.0))
+            right_votes = float(vote_map.get(right_candidate, 0.0))
+            total_valid = float(sum(vote_map.values()))
+
+        payload = territory_compare_row(
+            name=f"PAÍS {country_code}",
+            code=country_code,
+            pct_actas=pct_actas,
+            remaining_votes=_estimate_foreign_remaining_votes(
+                counted_actas=counted_actas,
+                total_actas=total_actas,
+                total_valid=total_valid,
+                foreign_region=foreign_region,
+            ),
+            left_votes=left_votes,
+            right_votes=right_votes,
+            total_valid=total_valid,
+        )
+        payload["continent_code"] = continent_code
+        payload["counted_actas"] = counted_actas
+        payload["total_actas"] = total_actas
+        return payload
+
+    rows: list[dict[str, float | int | str]] = []
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = [executor.submit(_worker, row) for row in raw_rows.values()]
+        for future in as_completed(futures):
+            rows.append(future.result())
+
+    rows.sort(
+        key=lambda row: (float(row["remaining_votes"]), float(row["left_pct"] + row["right_pct"])),
+        reverse=True,
+    )
+    top_rows = rows[:12]
+    country_names, continent_names = resolve_foreign_names(
+        [int(row["code"]) for row in top_rows],
+        sorted({int(row["continent_code"]) for row in top_rows}),
+    )
+    for row in top_rows:
+        row["name"] = country_names.get(int(row["code"]), str(row["name"]))
+        row["continent"] = continent_names.get(
+            int(row["continent_code"]),
+            FOREIGN_CONTINENT_NAMES.get(int(row["continent_code"]), "Extranjero"),
+        )
+    return top_rows
+
+
 def territory_compare_row(
     *,
     name: str,
@@ -715,22 +953,12 @@ def build_territory_drilldown(
         )
     lima_district_rows.sort(key=lambda row: row["remaining_votes"], reverse=True)
 
-    foreign_rows = []
-    for region in province_units:
-        if region.ambito != 2:
-            continue
-        candidate_votes = region.votos_por_candidato()
-        foreign_rows.append(
-            territory_compare_row(
-                name="EXTRANJERO",
-                code=region.ubigeo,
-                pct_actas=region.pct_actas,
-                remaining_votes=region.votos_faltantes_estimados(),
-                left_votes=float(candidate_votes.get(left_candidate, 0)),
-                right_votes=float(candidate_votes.get(right_candidate, 0)),
-                total_valid=float(region.votos_validos),
-            )
-        )
+    foreign_region = next((region for region in province_units if region.ambito == 2), None)
+    foreign_rows = fetch_foreign_country_rows(
+        foreign_region=foreign_region,
+        left_candidate=left_candidate,
+        right_candidate=right_candidate,
+    )
 
     top_regions = region_rows[:10]
     top_region_details = []
@@ -754,7 +982,7 @@ def build_territory_drilldown(
         "regions_top_remaining": top_regions,
         "region_details": top_region_details,
         "lima_districts_top_remaining": lima_district_rows[:15],
-        "foreign": foreign_rows[:1],
+        "foreign": foreign_rows,
     }
 
 
@@ -1542,7 +1770,7 @@ def render_territory_drilldown(payload: dict) -> str:
             <article class="focus-card focus-card--foreign">
               <div class="focus-card__header">
                 <div>
-                  <p class="eyebrow">Extranjero</p>
+                  <p class="eyebrow">Extranjero · {escape(str(row.get('continent', '')))}</p>
                   <h3>{escape(str(row['name']))}</h3>
                 </div>
                 <span>{fmt_int(row['remaining_votes'])} faltantes</span>
@@ -1552,7 +1780,7 @@ def render_territory_drilldown(payload: dict) -> str:
                 <span class="focus-chip">{right_label} {fmt_pct(row['right_pct'])}</span>
                 <span class="focus-chip focus-chip--gap">Brecha {row['gap_pp']:+.2f} pp</span>
               </div>
-              <p class="focus-card__note">ONPE sigue llegando agregado en este flujo, así que aquí se muestra el bloque consolidado y no todavía por país.</p>
+              <p class="focus-card__note">{int(row.get('counted_actas', 0))}/{int(row.get('total_actas', 0))} actas observadas. El faltante se estima con actas pendientes y votos por acta del propio país, suavizado con el promedio del exterior.</p>
             </article>
             """
         )

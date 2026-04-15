@@ -1,0 +1,21 @@
+{
+  "continents": {
+    "920000": "AMERICA",
+    "930000": "ASIA",
+    "940000": "EUROPA"
+  },
+  "countries": {
+    "920200": "ARGENTINA",
+    "920400": "BOLIVIA",
+    "920500": "BRASIL",
+    "920600": "CANADA",
+    "921000": "CHILE",
+    "921300": "ESTADOS UNIDOS DE AMERICA",
+    "930700": "JAPON",
+    "940200": "ALEMANIA",
+    "940900": "ESPAÑA",
+    "941100": "FRANCIA",
+    "941700": "ITALIA",
+    "942800": "SUIZA"
+  }
+}
