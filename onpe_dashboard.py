@@ -2242,7 +2242,7 @@ def render_html(payload: dict) -> str:
     }}
     .focus-lower-grid {{
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+      grid-template-columns: 1fr;
       gap: 18px;
       align-items: start;
     }}
