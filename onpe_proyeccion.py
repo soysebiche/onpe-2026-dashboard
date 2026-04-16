@@ -227,7 +227,8 @@ def fetch_totales(**params) -> dict | None:
                 continue
             if r.status_code == 204:
                 return None
-            r.raise_for_status()
+            if r.status_code >= 400:
+                break  # this base_url failed (e.g. proxy 502), try next
             if "application/json" not in r.headers.get("content-type", ""):
                 break
             j = r.json()
