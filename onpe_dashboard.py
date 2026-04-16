@@ -1156,10 +1156,16 @@ def payload_to_jsonable(
             for candidate, votes in region.get("votos_por_candidato", {}).items():
                 current_votes_by_candidate[candidate] = current_votes_by_candidate.get(candidate, 0) + int(votes)
 
+    # Fresh total valid votes from regiones (more accurate than stale snapshot)
+    total_validos_fresh = (
+        sum(r.votos_validos for r in regiones)
+        if regiones else int(current_snapshot.get("votos_validos", 0))
+    )
+
     def current_comparison_row(left: str, right: str) -> dict | None:
         if left not in current_votes_by_candidate or right not in current_votes_by_candidate:
             return None
-        total_validos = int(current_snapshot.get("votos_validos", 0))
+        total_validos = total_validos_fresh
         left_votes = current_votes_by_candidate[left]
         right_votes = current_votes_by_candidate[right]
         return {
