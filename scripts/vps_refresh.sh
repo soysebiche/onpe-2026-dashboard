@@ -23,12 +23,14 @@ python -m pip install -r requirements.txt >/dev/null
 
 python onpe_dashboard.py
 
-if ! git diff --quiet -- dashboard.html dashboard_data.json; then
+TRACKED_FILES="dashboard.html dashboard_data.json output/foreign_geo_names.json"
+
+if ! git diff --quiet -- $TRACKED_FILES; then
   git config user.name "npe-vps-bot"
   git config user.email "npe-vps-bot@local"
-  git add dashboard.html dashboard_data.json
+  git add $TRACKED_FILES
   git commit -m "Auto-update dashboard $(date -u +%Y-%m-%dT%H:%M:%SZ)"
   git push origin "$BRANCH"
 else
-  echo "No hubo cambios en dashboard.html ni dashboard_data.json"
+  echo "No hubo cambios en los archivos rastreados"
 fi

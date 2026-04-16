@@ -35,6 +35,7 @@ import numpy as np
 import requests
 
 API = "https://resultadoelectoral.onpe.gob.pe/presentacion-backend"
+PROXY_API = "https://onpe-proxy.sebbs21.workers.dev"
 DEFAULT_REFERER = "https://resultadoelectoral.onpe.gob.pe/main/resumen"
 UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -170,9 +171,9 @@ def configure_api(api_base: str | None = None, election_id: int | None = None, r
     _session.headers["Referer"] = effective_referer
 
 
-def fetch(path: str, **params) -> dict:
-    params.setdefault("idEleccion", ID_ELECCION)
-    url = f"{API}/{path.lstrip('/')}"
+def _fetch_from(base_url: str, path: str, params: dict) -> requests.Response:
+    """Intenta fetching desde base_url. Lanza excepcion si falla o devuelve HTML."""
+    url = f"{base_url}/{path.lstrip('/')}"
     last_err = None
     for attempt in range(1, FETCH_RETRIES + 1):
         try:
@@ -192,12 +193,23 @@ def fetch(path: str, **params) -> dict:
         raise last_err if last_err else RuntimeError(f"No se pudo consultar {url}")
     r.raise_for_status()
     if "application/json" not in r.headers.get("content-type", ""):
-        raise RuntimeError(
-            f"ONPE devolvio HTML para {url} - revisa headers (User-Agent completo, Referer)."
-        )
+        raise RuntimeError(f"ONPE devolvio HTML para {url} (posible bloqueo de IP).")
+    return r
+
+
+def fetch(path: str, **params) -> dict:
+    params.setdefault("idEleccion", ID_ELECCION)
+    # Intenta directo; si devuelve HTML (IP bloqueada), usa el proxy de Cloudflare
+    try:
+        r = _fetch_from(API, path, params)
+    except RuntimeError as direct_err:
+        if "HTML" in str(direct_err):
+            r = _fetch_from(PROXY_API, path, params)
+        else:
+            raise
     j = r.json()
     if not j.get("success", False):
-        raise RuntimeError(f"ONPE error {url}: {j}")
+        raise RuntimeError(f"ONPE error {r.url}: {j}")
     return j["data"]
 
 
