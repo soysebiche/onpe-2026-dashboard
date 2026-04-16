@@ -1426,17 +1426,22 @@ def render_battle_gauge(payload: dict) -> str:
     src = actual or proj
     left_pct = float(src["left_pct"])
     right_pct = float(src["right_pct"])
-    diff_votes = int(src["vote_diff"])
-    diff_pp = float(src["pp_diff"])
+    left_votes = int(src["left_votes"])
+    right_votes = int(src["right_votes"])
     is_proj = actual is None
+
+    # Always positive — leader determined by which side has more votes
+    diff_votes = abs(left_votes - right_votes)
+    diff_pp = abs(left_pct - right_pct)
+    label = "proyectado al 100%" if is_proj else "corte actual"
+    if left_votes >= right_votes:
+        leader, leader_color = left_short, left_color
+    else:
+        leader, leader_color = right_short, right_color
 
     total = left_pct + right_pct or 1.0
     left_bar = 100.0 * left_pct / total
     right_bar = 100.0 * right_pct / total
-    sign = "+" if diff_votes >= 0 else ""
-    label = "proyectado al 100%" if is_proj else "corte actual"
-    leader = left_short if diff_votes >= 0 else right_short
-    leader_color = left_color if diff_votes >= 0 else right_color
 
     return f"""
     <section>
@@ -1469,8 +1474,8 @@ def render_battle_gauge(payload: dict) -> str:
         </div>
         <div class="battle-gauge__diff">
           <span style="color:{leader_color}; font-weight:700;">{escape(leader)}</span>
-          lidera por <strong>{sign}{fmt_int(diff_votes)}</strong> votos
-          (<strong>{sign}{diff_pp:.2f} pp</strong>)
+          lidera por <strong>{fmt_int(diff_votes)}</strong> votos
+          (<strong>{diff_pp:.2f} pp</strong>)
         </div>
       </div>
     </section>
