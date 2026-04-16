@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-16T14:31:33.522843-05:00",
+  "generated_at": "2026-04-16T14:37:48.143003-05:00",
   "snapshot_at": "2026-04-16T19:15:33.251165+00:00",
-  "onpe_updated_at": 1776366910019,
+  "onpe_updated_at": 1776367507992,
   "actas_contadas": 86123,
   "actas_totales": 92766,
   "actas_pct": 92.83897117478386,
@@ -1544,7 +1544,7 @@
         "name": "LORETO",
         "code": 150000,
         "pct_actas": 82.98109010011123,
-        "remaining_votes": 71837,
+        "remaining_votes": 71843,
         "left_pct": 5.12544092584519,
         "right_pct": 7.400420118108676,
         "gap_pp": 2.274979192263486
@@ -1850,7 +1850,7 @@
       },
       {
         "name": "LORETO",
-        "remaining_votes": 71837,
+        "remaining_votes": 71843,
         "left_pct": 5.12544092584519,
         "right_pct": 7.400420118108676,
         "gap_pp": 2.274979192263486,
@@ -1859,7 +1859,7 @@
             "name": "MAYNAS",
             "code": 150100,
             "pct_actas": 83.02308265078183,
-            "remaining_votes": 39340,
+            "remaining_votes": 39343,
             "left_pct": 6.031494644203459,
             "right_pct": 2.8450446434921974,
             "gap_pp": -3.1864500007112615
@@ -1868,7 +1868,7 @@
             "name": "ALTO AMAZONAS",
             "code": 150200,
             "pct_actas": 82.96703296703296,
-            "remaining_votes": 10495,
+            "remaining_votes": 10496,
             "left_pct": 3.7427319080418644,
             "right_pct": 15.010287145540746,
             "gap_pp": 11.26755523749888
@@ -1886,7 +1886,7 @@
             "name": "MARISCAL RAMÓN CASTILLA",
             "code": 150600,
             "pct_actas": 82.47422680412372,
-            "remaining_votes": 4624,
+            "remaining_votes": 4625,
             "left_pct": 3.736608309380716,
             "right_pct": 3.3969166448915598,
             "gap_pp": -0.33969166448915633
