@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T11:16:33.884335-05:00",
+  "generated_at": "2026-04-16T11:23:13.429845-05:00",
   "snapshot_at": "2026-04-16T15:10:14.263201+00:00",
   "onpe_updated_at": 1776351300360,
   "actas_contadas": 85810,
@@ -1919,19 +1919,6 @@
     ],
     "foreign": [
       {
-        "name": "ARGENTINA",
-        "code": 920200,
-        "pct_actas": 22.408,
-        "remaining_votes": 47380,
-        "left_pct": 8.609223123584009,
-        "right_pct": 2.616385295622305,
-        "gap_pp": -5.992837827961704,
-        "continent_code": 920000,
-        "counted_actas": 67,
-        "total_actas": 299,
-        "continent": "AMERICA"
-      },
-      {
         "name": "ESPAÑA",
         "code": 940900,
         "pct_actas": 47.534,
@@ -1982,6 +1969,19 @@
         "counted_actas": 183,
         "total_actas": 251,
         "continent": "EUROPA"
+      },
+      {
+        "name": "ARGENTINA",
+        "code": 920200,
+        "pct_actas": 57.525,
+        "remaining_votes": 10103,
+        "left_pct": 8.609223123584009,
+        "right_pct": 2.616385295622305,
+        "gap_pp": -5.992837827961704,
+        "continent_code": 920000,
+        "counted_actas": 172,
+        "total_actas": 299,
+        "continent": "AMERICA"
       },
       {
         "name": "JAPON",
