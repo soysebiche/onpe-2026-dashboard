@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-16T13:46:41.876694-05:00",
+  "generated_at": "2026-04-16T13:52:37.474309-05:00",
   "snapshot_at": "2026-04-16T18:45:20.973995+00:00",
-  "onpe_updated_at": 1776364511681,
+  "onpe_updated_at": 1776365107875,
   "actas_contadas": 86116,
   "actas_totales": 92766,
   "actas_pct": 92.83142530668565,
   "votos_validos": 18796050,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1447,8 +1447,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 94.42677881492119,
-        "remaining_votes": 378531,
+        "pct_actas": 94.43019796902246,
+        "remaining_votes": 378287,
         "left_pct": 17.588278994192194,
         "right_pct": 2.8858176610442827,
         "gap_pp": -14.702461333147912
@@ -1474,8 +1474,8 @@
       {
         "name": "LORETO",
         "code": 150000,
-        "pct_actas": 82.75862068965517,
-        "remaining_votes": 72600,
+        "pct_actas": 82.8327771598072,
+        "remaining_votes": 72336,
         "left_pct": 5.131292450253143,
         "right_pct": 7.341556626416556,
         "gap_pp": 2.2102641761634123
@@ -1538,7 +1538,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 378531,
+        "remaining_votes": 378287,
         "left_pct": 17.588278994192194,
         "right_pct": 2.8858176610442827,
         "gap_pp": -14.702461333147912,
@@ -1546,8 +1546,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 94.42654028436019,
-            "remaining_votes": 343050,
+            "pct_actas": 94.4303317535545,
+            "remaining_votes": 342806,
             "left_pct": 18.66444203128444,
             "right_pct": 2.480791251964335,
             "gap_pp": -16.183650779320107
@@ -1727,7 +1727,7 @@
       },
       {
         "name": "LORETO",
-        "remaining_votes": 72600,
+        "remaining_votes": 72336,
         "left_pct": 5.131292450253143,
         "right_pct": 7.341556626416556,
         "gap_pp": 2.2102641761634123,
@@ -1735,8 +1735,8 @@
           {
             "name": "MAYNAS",
             "code": 150100,
-            "pct_actas": 82.83803863298662,
-            "remaining_votes": 39786,
+            "pct_actas": 82.8996282527881,
+            "remaining_votes": 39669,
             "left_pct": 6.031494644203459,
             "right_pct": 2.8450446434921974,
             "gap_pp": -3.1864500007112615
@@ -1744,8 +1744,8 @@
           {
             "name": "ALTO AMAZONAS",
             "code": 150200,
-            "pct_actas": 82.45125348189416,
-            "remaining_votes": 10585,
+            "pct_actas": 82.54847645429363,
+            "remaining_votes": 10540,
             "left_pct": 3.747545376130962,
             "right_pct": 14.799317293398667,
             "gap_pp": 11.051771917267706
@@ -1754,7 +1754,7 @@
             "name": "LORETO",
             "code": 150300,
             "pct_actas": 82.74111675126903,
-            "remaining_votes": 4765,
+            "remaining_votes": 4772,
             "left_pct": 3.8360115368768026,
             "right_pct": 7.981046559538525,
             "gap_pp": 4.145035022661722
@@ -1763,7 +1763,7 @@
             "name": "MARISCAL RAMÓN CASTILLA",
             "code": 150600,
             "pct_actas": 82.47422680412372,
-            "remaining_votes": 4617,
+            "remaining_votes": 4624,
             "left_pct": 3.736608309380716,
             "right_pct": 3.3969166448915598,
             "gap_pp": -0.33969166448915633
@@ -1771,8 +1771,8 @@
           {
             "name": "REQUENA",
             "code": 150400,
-            "pct_actas": 82.70270270270271,
-            "remaining_votes": 4454,
+            "pct_actas": 83.15217391304348,
+            "remaining_votes": 4324,
             "left_pct": 6.29231381919554,
             "right_pct": 10.314615690959776,
             "gap_pp": 4.0223018717642365
@@ -1781,7 +1781,7 @@
             "name": "UCAYALI",
             "code": 150500,
             "pct_actas": 83.15789473684211,
-            "remaining_votes": 4122,
+            "remaining_votes": 4128,
             "left_pct": 4.439428141459744,
             "right_pct": 12.951467268623025,
             "gap_pp": 8.51203912716328
