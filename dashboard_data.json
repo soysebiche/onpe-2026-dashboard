@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-16T17:01:42.048276-05:00",
+  "generated_at": "2026-04-16T17:07:25.148031-05:00",
   "snapshot_at": "2026-04-16T22:00:22.059508+00:00",
-  "onpe_updated_at": 1776375730000,
+  "onpe_updated_at": 1776376569664,
   "actas_contadas": 86135,
   "actas_totales": 92766,
   "actas_pct": 92.85190694866654,
   "votos_validos": 18800082,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1544,7 +1544,7 @@
         "name": "LORETO",
         "code": 150000,
         "pct_actas": 82.98109010011123,
-        "remaining_votes": 71843,
+        "remaining_votes": 71845,
         "left_pct": 5.12544092584519,
         "right_pct": 7.400420118108676,
         "gap_pp": 2.274979192263486
@@ -1562,7 +1562,7 @@
         "name": "ICA",
         "code": 100000,
         "pct_actas": 90.50347932869423,
-        "remaining_votes": 53203,
+        "remaining_votes": 53204,
         "left_pct": 7.80768436625668,
         "right_pct": 6.3888631055326455,
         "gap_pp": -1.4188212607240347
@@ -1850,7 +1850,7 @@
       },
       {
         "name": "LORETO",
-        "remaining_votes": 71843,
+        "remaining_votes": 71845,
         "left_pct": 5.12544092584519,
         "right_pct": 7.400420118108676,
         "gap_pp": 2.274979192263486,
@@ -1859,7 +1859,7 @@
             "name": "MAYNAS",
             "code": 150100,
             "pct_actas": 83.02308265078183,
-            "remaining_votes": 39343,
+            "remaining_votes": 39344,
             "left_pct": 6.031494644203459,
             "right_pct": 2.8450446434921974,
             "gap_pp": -3.1864500007112615
@@ -1877,7 +1877,7 @@
             "name": "LORETO",
             "code": 150300,
             "pct_actas": 82.74111675126903,
-            "remaining_votes": 4772,
+            "remaining_votes": 4773,
             "left_pct": 3.8360115368768026,
             "right_pct": 7.981046559538525,
             "gap_pp": 4.145035022661722
