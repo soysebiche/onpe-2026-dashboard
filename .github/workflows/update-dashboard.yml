@@ -41,13 +41,28 @@ jobs:
             --history-size 4
 
       - name: Commit updated artifacts
+        id: commit_changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add dashboard.html dashboard_data.json output/foreign_geo_names.json output/onpe_state_district_ci.json
           if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes to commit"
             exit 0
           fi
           git commit -m "Auto-update dashboard $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger Vercel production deploy
+        if: steps.commit_changes.outputs.changed == 'true' && secrets.VERCEL_DEPLOY_HOOK_URL != ''
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          curl --fail --silent --show-error -X POST "${VERCEL_DEPLOY_HOOK_URL}?buildCache=false"
+
+      - name: Note missing Vercel deploy hook
+        if: steps.commit_changes.outputs.changed == 'true' && secrets.VERCEL_DEPLOY_HOOK_URL == ''
+        run: |
+          echo "VERCEL_DEPLOY_HOOK_URL is not configured. GitHub data update succeeded, but Vercel still needs a manual deploy trigger."
