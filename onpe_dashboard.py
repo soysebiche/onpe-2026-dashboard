@@ -190,6 +190,21 @@ def fetch_onpe_updated_at_millis() -> int | None:
     return max(candidates) if candidates else None
 
 
+def fetch_national_vote_totals() -> dict[str, int]:
+    """Fetch vote totals per candidate from the national presidential endpoint.
+    This is more up-to-date than aggregating district-level data."""
+    try:
+        data = op.fetch(
+            "eleccion-presidencial/participantes-ubicacion-geografica-nombre",
+            tipoFiltro="ambito_geografico",
+            idAmbitoGeografico=1,
+        )
+        candidatos, votos = op._extraer_candidatos(data)
+        return {cand: int(v) for cand, v in zip(candidatos, votos)}
+    except Exception:
+        return {}
+
+
 def fetch_department_names() -> dict[int, str]:
     names = {0: "EXTRANJERO"}
     try:
@@ -1144,14 +1159,18 @@ def payload_to_jsonable(
     late_bias_model: dict | None,
     changed: bool,
     regiones: list | None = None,
+    national_vote_totals: dict[str, int] | None = None,
 ) -> dict:
-    # Use fresh regiones data for current vote counts (avoids stale snapshot)
-    current_votes_by_candidate: dict[str, int] = {}
-    if regiones:
+    # Priority: national endpoint totals > fresh regiones > stale snapshot
+    if national_vote_totals:
+        current_votes_by_candidate: dict[str, int] = dict(national_vote_totals)
+    elif regiones:
+        current_votes_by_candidate = {}
         for region in regiones:
             for cand, votes in zip(region.candidatos, region.votos):
                 current_votes_by_candidate[cand] = current_votes_by_candidate.get(cand, 0) + int(votes)
     else:
+        current_votes_by_candidate = {}
         for region in current_snapshot.get("regions", {}).values():
             for candidate, votes in region.get("votos_por_candidato", {}).items():
                 current_votes_by_candidate[candidate] = current_votes_by_candidate.get(candidate, 0) + int(votes)
@@ -3225,6 +3244,7 @@ def main() -> None:
     html_out = Path(args.html_out).resolve()
     json_out = Path(args.json_out).resolve()
     onpe_updated_at_millis = fetch_onpe_updated_at_millis()
+    national_vote_totals = fetch_national_vote_totals()
     department_name_map = fetch_department_names()
 
     regiones = op.cargar_unidades(args.geo_level, max_workers=max(args.workers, 1))
@@ -3302,6 +3322,7 @@ def main() -> None:
         late_bias_model=late_bias_model,
         changed=changed,
         regiones=regiones,
+        national_vote_totals=national_vote_totals,
     )
 
     json_out.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
