@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T09:05:26.966761-05:00",
+  "generated_at": "2026-04-16T09:08:03.360618-05:00",
   "snapshot_at": "2026-04-16T13:47:15.734068+00:00",
   "onpe_updated_at": 1776347760320,
   "actas_contadas": 85810,
@@ -219,22 +219,22 @@
     {
       "left": "RENOVACIÓN POPULAR",
       "right": "PARTIDO DEL BUEN GOBIERNO",
-      "left_votes": 1814574,
-      "right_votes": 1715090,
-      "vote_diff": 99484,
-      "left_pct": 9.661838269606315,
-      "right_pct": 9.132128090570623,
-      "pp_diff": 0.5297101790356926
+      "left_votes": 1864600,
+      "right_votes": 1731810,
+      "vote_diff": 132790,
+      "left_pct": 9.928205538880166,
+      "right_pct": 9.221155011416958,
+      "pp_diff": 0.707050527463208
     },
     {
       "left": "RENOVACIÓN POPULAR",
       "right": "JUNTOS POR EL PERÚ",
-      "left_votes": 1814574,
-      "right_votes": 1873891,
-      "vote_diff": -59317,
-      "left_pct": 9.661838269606315,
-      "right_pct": 9.977676180123185,
-      "pp_diff": -0.31583791051686916
+      "left_votes": 1864600,
+      "right_votes": 1877927,
+      "vote_diff": -13327,
+      "left_pct": 9.928205538880166,
+      "right_pct": 9.999166171303557,
+      "pp_diff": -0.07096063242339135
     }
   ],
   "projection_rows": [
