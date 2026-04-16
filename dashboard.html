@@ -4,1323 +4,1380 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="180">
-  <title>Dashboard local ONPE</title>
+  <title>Elecciones 2026 — Primera Vuelta</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&family=Fira+Sans:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
     :root {
-      --paper: #f8fafc;
-      --ink: #0f172a;
-      --accent: #1e40af;
-      --soft: #dbe7ff;
-      --card: #ffffff;
-      --muted: #475569;
-      --line: rgba(15, 23, 42, 0.08);
-      --blue-strong: #1d4ed8;
-      --blue-soft: #dbeafe;
-      --amber: #f59e0b;
-      --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
-      --radius: 24px;
+      --bg: #F5F2EB;
+      --surface: #FFFFFF;
+      --ink: #1C1A20;
+      --ink-2: #4D4A58;
+      --ink-3: #908D9C;
+      --border: #E2DDD5;
+      --border-2: #C5C0B8;
+      --red: #BF3030;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+      --shadow-md: 0 2px 8px rgba(0,0,0,0.07), 0 12px 28px rgba(0,0,0,0.06);
+      --r-sm: 8px; --r-md: 14px; --r-lg: 22px; --r-xl: 32px;
     }
-    * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
+      background: var(--bg);
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(30, 64, 175, 0.12), transparent 20%),
-        radial-gradient(circle at top right, rgba(245, 158, 11, 0.12), transparent 18%),
-        linear-gradient(180deg, #f8fafc 0%, #eff6ff 48%, #f8fafc 100%);
-      font-family: "Fira Sans", "Segoe UI", sans-serif;
+      font-family: "Nunito Sans", "Segoe UI", sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
     }
     .page {
-      width: min(1220px, calc(100vw - 32px));
-      margin: 32px auto 64px;
-    }
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 36px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.96), rgba(239,246,255,0.96)),
-        linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.86));
-      border: 1px solid rgba(30, 64, 175, 0.10);
-      border-radius: 34px;
-      box-shadow: var(--shadow);
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto -40px -40px auto;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(30, 64, 175, 0.14), transparent 68%);
-      pointer-events: none;
-    }
-    .eyebrow {
-      margin: 0 0 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 11px;
-      color: rgba(15, 23, 42, 0.56);
-      font-family: "Fira Code", monospace;
-    }
-    h1, h2, h3 {
-      margin: 0;
-      font-family: "Fira Sans", "Segoe UI", sans-serif;
-      font-weight: 800;
-      line-height: 0.98;
-    }
-    h1 {
-      font-size: clamp(2.6rem, 4vw, 4.8rem);
-      max-width: none;
-      letter-spacing: -0.04em;
-    }
-    .hero p {
-      max-width: none;
-      line-height: 1.52;
-      color: var(--muted);
-      font-size: 1.02rem;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 22px;
-      align-items: start;
-    }
-    .meta-strip {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 14px;
-      margin-top: 6px;
-    }
-    .meta-card {
-      min-width: 0;
-      padding: 16px 16px 15px;
-      border-radius: 20px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,250,252,0.94));
-      border: 1px solid rgba(30, 64, 175, 0.10);
-    }
-    .meta-card strong {
-      display: block;
-      margin-top: 6px;
-      font-size: clamp(0.98rem, 1.5vw, 1.18rem);
-      font-family: "Fira Code", monospace;
-      line-height: 1.14;
-      letter-spacing: -0.02em;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-      hyphens: auto;
-    }
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 11px 16px;
-      border-radius: 999px;
-      background: rgba(30, 64, 175, 0.08);
-      color: var(--blue-strong);
-      font-weight: 600;
-      border: 1px solid rgba(30, 64, 175, 0.10);
-    }
-    .section-title {
+      width: min(1280px, calc(100vw - 40px));
+      margin: 28px auto 80px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      margin-bottom: 18px;
+      gap: 24px;
     }
-    .section-title p:last-child {
-      color: var(--muted);
-      max-width: 72ch;
-      margin: 0;
-    }
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 26px;
-    }
-    .candidate-card, .battle-card, .remaining-card, .delta-card, .table-shell, .projection-shell, .trajectory-card {
-      background: rgba(255, 255, 255, 0.96);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-    }
-    .trajectory-card {
-      padding: 18px 18px 8px;
+    /* ── HERO ──────────────────────────────────── */
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      box-shadow: var(--shadow-md);
+      padding: 36px 40px;
+      position: relative;
       overflow: hidden;
     }
-    .trajectory-card__header {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: flex-start;
-      margin-bottom: 14px;
-    }
-    .trajectory-card__badge {
-      min-width: 180px;
-      padding: 18px 20px;
-      border-radius: 22px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(239,246,255,0.94));
-      border: 1px solid rgba(30, 64, 175, 0.10);
-      text-align: right;
-    }
-    .trajectory-card__badge strong {
-      display: block;
-      font-size: 2rem;
-      line-height: 1;
-      margin: 6px 0 4px;
-      font-family: "Fira Code", monospace;
-    }
-    .trajectory-card__badge small {
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-    .trajectory-legend {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 18px;
-      align-items: center;
-    }
-    .trajectory-legend__item {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      font-weight: 600;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(248, 250, 252, 0.88);
-      border: 1px solid rgba(148, 163, 184, 0.18);
-    }
-    .trajectory-legend__code {
-      font-family: "Fira Code", monospace;
-      font-size: 0.84rem;
-      letter-spacing: 0.06em;
-      color: rgba(15, 23, 42, 0.92);
-    }
-    .trajectory-legend__name {
-      color: rgba(15, 23, 42, 0.62);
-      font-size: 0.88rem;
-      font-weight: 500;
-    }
-    .trajectory-legend__swatch {
-      width: 24px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--swatch);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4);
-    }
-    .trajectory-legend__hint {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-    .trajectory-chart-shell {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 220px;
-      gap: 18px;
-      align-items: stretch;
-    }
-    .trajectory-canvas-shell {
-      position: relative;
-      min-width: 0;
-      min-height: 420px;
-      padding: 10px 14px 6px 2px;
-      border-radius: 24px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.88), rgba(248,250,252,0.72));
-      border: 1px solid rgba(148, 163, 184, 0.14);
+        radial-gradient(ellipse 55% 45% at 95% 5%, rgba(191,48,48,0.06), transparent),
+        radial-gradient(ellipse 45% 35% at 5% 95%, rgba(30,63,164,0.06), transparent);
+      pointer-events: none;
     }
-    .trajectory-canvas {
-      width: 100%;
-      height: 420px;
-      display: block;
-    }
-    .trajectory-endpoints {
-      display: grid;
-      align-content: start;
-      gap: 12px;
-      padding-top: 8px;
-    }
-    .trajectory-endpoint {
-      padding: 14px 16px;
-      border-radius: 20px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,252,0.94));
-      border: 1px solid rgba(148, 163, 184, 0.16);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
-    }
-    .trajectory-endpoint__head {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+    .hero__eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 700;
+      font-family: "JetBrains Mono", monospace;
       margin-bottom: 10px;
     }
-    .trajectory-endpoint__dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--swatch);
-      box-shadow: 0 0 0 4px color-mix(in srgb, var(--swatch) 18%, white);
+    .hero__title {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+      font-weight: 400;
+      line-height: 1.06;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin-bottom: 10px;
     }
-    .trajectory-endpoint__code {
-      font-family: "Fira Code", monospace;
-      font-size: 0.84rem;
-      letter-spacing: 0.06em;
-      font-weight: 700;
+    .hero__sub {
+      color: var(--ink-2);
+      font-size: 1rem;
+      max-width: 64ch;
+      margin-bottom: 24px;
+      line-height: 1.6;
     }
-    .trajectory-endpoint strong {
-      display: block;
-      font-size: 1.35rem;
-      line-height: 1;
-      font-family: "Fira Code", monospace;
-    }
-    .trajectory-endpoint small {
-      display: block;
-      margin-top: 6px;
-      color: var(--muted);
-      line-height: 1.35;
-      font-size: 0.82rem;
-    }
-    .candidate-card {
-      position: relative;
-      padding: 22px;
-      overflow: hidden;
-    }
-    .candidate-card__rank {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      font-size: 12px;
-      letter-spacing: 0.12em;
-      color: rgba(15, 23, 42, 0.52);
-      font-family: "Fira Code", monospace;
-    }
-    .candidate-card__numbers {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .hero__metrics {
+      display: flex;
+      flex-wrap: wrap;
       gap: 10px;
-      margin: 20px 0 18px;
+      margin-bottom: 22px;
     }
-    .value {
-      display: block;
-      font-size: 1.45rem;
+    .hero__metric {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 11px 16px;
+      min-width: 130px;
+    }
+    .hero__metric-label {
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .hero__metric-value {
+      font-family: "JetBrains Mono", monospace;
       font-weight: 700;
-      font-family: "Fira Code", monospace;
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.2;
+      word-break: break-all;
     }
-    .label {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 0.86rem;
+    .hero__progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--ink-2);
+      margin-bottom: 5px;
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 600;
     }
-    .candidate-card__bar,
-    .battle-line__bar,
-    .remaining-card__bar,
-    .delta-line__bar {
-      height: 12px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.08);
+    .hero__progress-bar {
+      height: 10px;
+      background: var(--border);
+      border-radius: 99px;
       overflow: hidden;
     }
-    .candidate-card__bar span,
-    .battle-line__bar span,
-    .remaining-card__bar span,
-    .delta-line__bar span {
+    .hero__progress-bar span {
       display: block;
       height: 100%;
-      border-radius: inherit;
+      background: linear-gradient(90deg, #1e3fa4 0%, #4f72e0 100%);
+      border-radius: 99px;
     }
-    .candidate-card__meta,
-    .delta-line__meta,
-    .battle-line__head,
-    .remaining-card__header,
-    .battle-card__header,
+    /* ── SECTION TITLE ─────────────────────────── */
+    .section-title {
+      margin-bottom: 16px;
+    }
+    .eyebrow {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 5px;
+    }
+    h2 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.18;
+      margin-bottom: 4px;
+    }
+    h3 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .section-note {
+      font-size: 0.8rem;
+      color: var(--ink-3);
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+    /* ── CANDIDATE CARDS ───────────────────────── */
+    .candidates-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .candidate-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .candidate-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--c-color);
+    }
+    .candidate-card__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .candidate-card__rank {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      color: var(--ink-3);
+      font-weight: 700;
+    }
+    .candidate-card__name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+    .candidate-card__pcts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .candidate-card__big {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1;
+      display: block;
+    }
+    .candidate-card__big--proj {
+      color: var(--c-color);
+    }
+    .candidate-card__small {
+      font-size: 0.65rem;
+      color: var(--ink-3);
+      display: block;
+      margin-top: 3px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: "JetBrains Mono", monospace;
+    }
+    .candidate-card__bar {
+      height: 5px;
+      border-radius: 99px;
+      background: var(--border);
+      overflow: hidden;
+    }
+    .candidate-card__bar span {
+      display: block;
+      height: 100%;
+      background: var(--c-color);
+      opacity: 0.65;
+      border-radius: 99px;
+    }
+    .candidate-card__ic {
+      font-size: 0.68rem;
+      color: var(--ink-3);
+      font-family: "JetBrains Mono", monospace;
+    }
+    .candidate-card__top2 { margin-top: auto; }
+    .candidate-card__top2-label {
+      font-size: 0.65rem;
+      color: var(--ink-3);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-family: "JetBrains Mono", monospace;
+      margin-bottom: 4px;
+    }
+    .candidate-card__top2-bar {
+      height: 5px;
+      border-radius: 99px;
+      background: var(--border);
+      overflow: hidden;
+    }
+    .candidate-card__top2-bar span {
+      display: block;
+      height: 100%;
+      background: var(--c-color);
+      border-radius: 99px;
+    }
+    .candidate-card__top2-pct {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--c-color);
+      margin-top: 4px;
+    }
+    /* ── BATTLE GAUGE ──────────────────────────── */
+    .battle-gauge {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 28px 32px;
+    }
+    .battle-gauge__header {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 20px;
+    }
+    .battle-gauge__cand-name {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+      font-family: "JetBrains Mono", monospace;
+    }
+    .battle-gauge__cand-pct {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+    .battle-gauge__cand-full {
+      font-size: 0.72rem;
+      color: var(--ink-3);
+      margin-top: 3px;
+    }
+    .battle-gauge__vs {
+      font-family: "DM Serif Display", serif;
+      font-size: 1.4rem;
+      color: var(--ink-3);
+      text-align: center;
+      padding-bottom: 4px;
+    }
+    .battle-gauge__bar {
+      height: 14px;
+      border-radius: 99px;
+      overflow: hidden;
+      display: flex;
+      background: var(--border);
+    }
+    .battle-gauge__bar-left, .battle-gauge__bar-right {
+      height: 100%;
+    }
+    .battle-gauge__labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 6px;
+      font-size: 0.72rem;
+      color: var(--ink-3);
+      font-family: "JetBrains Mono", monospace;
+    }
+    .battle-gauge__diff {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 0.875rem;
+      color: var(--ink-2);
+    }
+    .battle-gauge__diff strong {
+      font-family: "JetBrains Mono", monospace;
+    }
+    /* ── CARTOGRAM ────────────────────────────── */
+    .carto-body {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .carto-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 72px);
+      grid-template-rows: repeat(8, 72px);
+      gap: 5px;
+      flex-shrink: 0;
+    }
+    .carto-cell { /* empty slot */ }
+    .carto-tile {
+      border-radius: var(--r-sm);
+      border: 2px solid var(--tile-color, var(--border));
+      background: color-mix(in srgb, var(--tile-color, #888) 12%, white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 3px 6px;
+      cursor: default;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      gap: 1px;
+      overflow: hidden;
+      position: relative;
+    }
+    .carto-tile:hover {
+      transform: scale(1.12);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.20);
+      z-index: 10;
+    }
+    .carto-tile--nd {
+      background: #EEEAE3;
+      border-color: #D5D0C8;
+    }
+    .carto-tile__abbr {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: color-mix(in srgb, var(--tile-color, #888) 80%, #111);
+      line-height: 1;
+    }
+    .carto-tile__pct {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: color-mix(in srgb, var(--tile-color, #888) 80%, #000);
+      line-height: 1;
+    }
+    .carto-tile__party {
+      font-size: 0.52rem;
+      font-weight: 700;
+      color: color-mix(in srgb, var(--tile-color, #888) 65%, #555);
+      text-align: center;
+    }
+    .carto-tile__actas {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: rgba(0,0,0,0.10);
+    }
+    .carto-tile__actas span {
+      display: block;
+      height: 100%;
+      background: var(--tile-color, #888);
+      opacity: 0.55;
+    }
+    .carto-sidebar {
+      padding-top: 4px;
+    }
+    .carto-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .carto-legend__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--ink-2);
+    }
+    .carto-legend__dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .carto-legend__full {
+      font-size: 0.72rem;
+      color: var(--ink-3);
+      font-weight: 400;
+    }
+    .carto-legend__note {
+      font-size: 0.75rem;
+      color: var(--ink-3);
+      line-height: 1.45;
+      max-width: 22ch;
+    }
+    /* ── BLOCKS ───────────────────────────────── */
+    .blocks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .block-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 20px;
+    }
+    .block-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .block-card__title { font-size: 0.875rem; font-weight: 700; }
+    .block-card__total {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
+      color: var(--ink-3);
+    }
+    .block-bar { margin-bottom: 10px; }
+    .block-bar__head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      font-size: 0.78rem;
+    }
+    .block-bar__name { font-weight: 600; color: var(--ink-2); }
+    .block-bar__pct {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+    }
+    .block-bar__track {
+      height: 7px;
+      border-radius: 99px;
+      background: var(--border);
+      overflow: hidden;
+    }
+    .block-bar__track span {
+      display: block;
+      height: 100%;
+      border-radius: 99px;
+    }
+    /* ── TABLES ───────────────────────────────── */
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .table-inner { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+      font-size: 0.845rem;
+    }
+    table.sortable thead th { cursor: pointer; user-select: none; }
+    table.sortable thead th:hover { background: var(--bg); color: var(--ink); }
+    thead th {
+      padding: 11px 14px;
+      text-align: left;
+      font-size: 0.68rem;
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+      background: var(--surface);
+      transition: color 0.1s;
+    }
+    thead th.th-asc::after { content: " ↑"; color: var(--ink); }
+    thead th.th-desc::after { content: " ↓"; color: var(--ink); }
+    tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink);
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: color-mix(in srgb, var(--bg) 70%, white); }
+    td.num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      text-align: right;
+      color: var(--ink-2);
+    }
+    .table-note {
+      padding: 10px 14px;
+      font-size: 0.75rem;
+      color: var(--ink-3);
+      border-top: 1px solid var(--border);
+    }
+    /* ── TRAJECTORY ───────────────────────────── */
+    .traj-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 22px;
+    }
+    .traj-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .traj-legend { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+    .traj-legend__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .traj-legend__swatch { width: 18px; height: 3px; border-radius: 99px; }
+    .traj-legend__hint { font-size: 0.75rem; color: var(--ink-3); }
+    .traj-badge {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 12px 16px;
+      text-align: right;
+      min-width: 150px;
+    }
+    .traj-badge__pct {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--ink);
+      line-height: 1;
+      display: block;
+    }
+    .traj-badge__label {
+      font-size: 0.68rem;
+      color: var(--ink-3);
+      margin-top: 4px;
+      font-family: "JetBrains Mono", monospace;
+    }
+    .traj-shell {
+      display: grid;
+      grid-template-columns: 1fr 190px;
+      gap: 14px;
+      align-items: stretch;
+    }
+    .traj-canvas-wrap { min-height: 360px; }
+    canvas#trajectoryChart { width: 100% !important; height: 360px; display: block; }
+    .traj-endpoints { display: flex; flex-direction: column; gap: 8px; }
+    .traj-endpoint {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 11px 13px;
+    }
+    .traj-endpoint__head {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 6px;
+    }
+    .traj-endpoint__dot {
+      width: 9px; height: 9px; border-radius: 50%;
+    }
+    .traj-endpoint__code {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .traj-endpoint__pct {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: block;
+      line-height: 1;
+    }
+    .traj-endpoint__name {
+      font-size: 0.68rem;
+      color: var(--ink-3);
+      margin-top: 3px;
+      line-height: 1.3;
+    }
+    /* ── DELTA / INCREMENTALS ─────────────────── */
+    .delta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .delta-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
     .delta-card__header {
       display: flex;
       justify-content: space-between;
-      gap: 14px;
       align-items: baseline;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
     }
-    .candidate-card__meta {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 0.85rem;
+    .delta-card__title { font-size: 0.875rem; font-weight: 700; }
+    .delta-card__count {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
+      color: var(--ink-3);
     }
-    .stack,
-    .delta-section,
-    .table-section {
-      margin-top: 32px;
-      display: grid;
-      gap: 18px;
-    }
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .focus-lower-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-    .focus-foreign-stack {
-      display: grid;
-      gap: 18px;
-    }
-    .focus-card {
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.96);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-    }
-    .focus-card--foreign {
-      min-height: 100%;
-    }
-    .focus-card__header,
-    .focus-subtitle {
+    .delta-line { margin-bottom: 9px; }
+    .delta-line__head {
       display: flex;
       justify-content: space-between;
-      gap: 16px;
-      align-items: flex-start;
+      margin-bottom: 4px;
+      font-size: 0.78rem;
     }
-    .focus-subtitle {
-      margin: 8px 8px 14px;
-    }
-    .focus-card__header span {
-      color: var(--muted);
-      font-size: 0.92rem;
-      font-family: "Fira Code", monospace;
-    }
-    .focus-card__chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 16px 0 18px;
-    }
-    .focus-chip {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(219, 234, 254, 0.38);
-      color: rgba(15, 23, 42, 0.88);
-      border: 1px solid rgba(30, 64, 175, 0.08);
-      font-weight: 600;
-      font-size: 0.86rem;
-    }
-    .focus-chip--gap {
-      background: rgba(241, 245, 249, 0.96);
-    }
-    .focus-table-shell {
-      overflow: auto;
-    }
-    .micro-table {
-      min-width: 100%;
-    }
-    .micro-table th,
-    .micro-table td {
-      padding: 10px 10px;
-      font-size: 0.9rem;
-    }
-    .table-shell__note {
-      margin: 10px 14px 14px;
-      color: var(--muted);
-      line-height: 1.5;
-      font-size: 0.9rem;
-    }
-    .focus-card__note {
-      margin: 6px 0 0;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-    .battle-grid, .remaining-grid, .delta-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .battle-card, .remaining-card, .delta-card {
-      padding: 20px;
-    }
+    .delta-line__name { font-weight: 600; color: var(--ink-2); }
+    .delta-line__pct { font-family: "JetBrains Mono", monospace; font-weight: 700; }
+    .delta-bar { height: 6px; border-radius: 99px; background: var(--border); overflow: hidden; }
+    .delta-bar span { display: block; height: 100%; border-radius: 99px; }
+    /* ── SHIFT ────────────────────────────────── */
     .shift-grid {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
     }
     .shift-card {
-      padding: 22px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,252,0.94));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .shift-card--up {
-      box-shadow: 0 24px 60px rgba(31, 122, 69, 0.10);
-    }
-    .shift-card--down {
-      box-shadow: 0 24px 60px rgba(217, 119, 6, 0.12);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
     }
     .shift-card__header {
       display: flex;
       justify-content: space-between;
-      gap: 12px;
       align-items: flex-start;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
-    .shift-card__pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: color-mix(in srgb, var(--shift-color) 12%, white);
-      color: var(--shift-color);
+    .shift-card__name { font-size: 0.78rem; font-weight: 700; max-width: 16ch; line-height: 1.3; }
+    .shift-pill {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: color-mix(in srgb, var(--c-color, #888) 14%, white);
+      color: var(--c-color, #888);
+      white-space: nowrap;
+    }
+    .shift-pct {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 700;
+      font-size: 1.35rem;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .shift-delta {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
+      color: var(--ink-3);
+    }
+    /* ── REMAINING ────────────────────────────── */
+    .remaining-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .remaining-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+    .remaining-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .remaining-card__title { font-size: 0.875rem; font-weight: 700; }
+    .remaining-card__count {
+      font-family: "JetBrains Mono", monospace;
       font-size: 0.82rem;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-family: "Fira Code", monospace;
     }
-    .shift-card__numbers {
+    .remaining-bar {
+      height: 8px;
+      border-radius: 99px;
+      background: var(--border);
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .remaining-bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, #1e3fa4, #4f72e0);
+      border-radius: 99px;
+    }
+    .remaining-card__note { font-size: 0.75rem; color: var(--ink-3); }
+    /* ── FOCUS CARDS ─────────────────────────── */
+    .focus-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
-      margin-bottom: 14px;
     }
-    .shift-card__meta {
+    .focus-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      padding: 18px;
+    }
+    .focus-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .focus-card__header span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--ink-3);
+    }
+    .focus-subtitle {
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 0.88rem;
+      align-items: flex-start;
+      margin: 6px 6px 12px;
     }
-    .battle-line, .delta-line {
-      margin-top: 14px;
-    }
-    .battle-line__head, .delta-line__head {
+    .focus-card__chips {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
     }
-    .remaining-card p {
-      margin: 12px 0 0;
-      color: var(--muted);
-      line-height: 1.5;
+    .focus-chip {
+      padding: 5px 10px;
+      border-radius: 99px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: "JetBrains Mono", monospace;
     }
-    .projection-shell, .table-shell {
-      padding: 10px;
-      overflow: auto;
+    .focus-chip--gap {
+      background: rgba(191,48,48,0.07);
+      border-color: rgba(191,48,48,0.2);
+      color: var(--red);
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 860px;
+    .focus-table-shell, .focus-lower-grid, .focus-foreign-stack { overflow: auto; }
+    .micro-table th, .micro-table td { font-size: 0.76rem; padding: 7px 10px; }
+    .table-shell__note {
+      padding: 8px 12px;
+      font-size: 0.75rem;
+      color: var(--ink-3);
     }
-    th, td {
-      padding: 13px 14px;
-      border-bottom: 1px solid rgba(31, 27, 23, 0.08);
-      text-align: left;
-      white-space: nowrap;
+    /* ── PROJECTION SHELL ─────────────────────── */
+    .projection-shell {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
     }
-    th {
-      color: var(--muted);
-      font-size: 0.86rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-family: "Fira Code", monospace;
-    }
-    tbody tr:hover {
-      background: rgba(219, 234, 254, 0.32);
-    }
+    /* ── MISC ─────────────────────────────────── */
     .empty-state {
-      padding: 20px 22px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.74);
-      color: var(--muted);
+      padding: 20px;
+      color: var(--ink-3);
+      font-size: 0.875rem;
     }
-    .footer-note {
-      margin-top: 26px;
-      color: var(--muted);
+    .footer {
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      color: var(--ink-3);
+      font-size: 0.8rem;
       line-height: 1.55;
-      font-size: 0.92rem;
     }
-    @media (max-width: 980px) {
-      .cards-grid,
-      .focus-grid,
-      .battle-grid,
-      .remaining-grid,
-      .delta-grid,
-      .meta-strip {
-        grid-template-columns: 1fr;
+    /* ── RESPONSIVE ───────────────────────────── */
+    @media (max-width: 900px) {
+      .candidates-grid { grid-template-columns: repeat(2, 1fr); }
+      .blocks-grid, .delta-grid, .remaining-grid { grid-template-columns: 1fr; }
+      .traj-shell { grid-template-columns: 1fr; }
+      .traj-endpoints { flex-direction: row; flex-wrap: wrap; }
+      .focus-grid { grid-template-columns: 1fr; }
+      .carto-grid {
+        grid-template-columns: repeat(6, 52px);
+        grid-template-rows: repeat(8, 52px);
       }
-      .focus-lower-grid {
-        grid-template-columns: 1fr;
+      .hero { padding: 24px 20px; }
+      .battle-gauge { padding: 20px; }
+    }
+    @media (max-width: 600px) {
+      .candidates-grid { grid-template-columns: 1fr; }
+      .carto-body { flex-direction: column; }
+      .carto-grid {
+        grid-template-columns: repeat(6, 44px);
+        grid-template-rows: repeat(8, 44px);
       }
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-      .trajectory-card__header {
-        flex-direction: column;
-      }
-      .trajectory-chart-shell {
-        grid-template-columns: 1fr;
-      }
-      .trajectory-endpoints {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      }
-      .page {
-        width: min(100vw - 20px, 1220px);
-        margin-top: 12px;
-      }
-      .hero {
-        padding: 24px;
-      }
+      .battle-gauge__cand-pct { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
   <main class="page">
+
+    <!-- ── HERO ────────────────────────────────── -->
     <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow">Elecciones Generales 2026</p>
-          <h1>Estimación de resultados, primera vuelta.</h1>
-          <p>
-            Lectura nacional y territorial del último corte disponible, con seguimiento de trayectoria y porcentaje proyectado al cierre.
-          </p>
-          <div class="status-pill">18,551,589 votos válidos observados</div>
+      <div class="hero__eyebrow">Elecciones Generales 2026 · Primera Vuelta</div>
+      <h1 class="hero__title">Estimación de resultados</h1>
+      <p class="hero__sub">Conteo en vivo con proyecciones bayesianas al cierre. Actualización automática cada 15 minutos.</p>
+      <div class="hero__metrics">
+        <div class="hero__metric">
+          <div class="hero__metric-label">Último corte</div>
+          <div class="hero__metric-value">2026-04-15 23:08:52 CDT</div>
         </div>
-        <div class="meta-strip">
-          <div class="meta-card">
-            <span class="eyebrow">Último corte</span>
-            <strong>2026-04-15 15:10:26 CDT</strong>
-          </div>
-          <div class="meta-card">
-            <span class="eyebrow">Actualizado ONPE</span>
-            <strong>2026-04-15 15:07:58 CDT</strong>
-          </div>
-          <div class="meta-card">
-            <span class="eyebrow">Actas procesadas</span>
-            <strong>84,923 / 92,766</strong>
-          </div>
-          <div class="meta-card">
-            <span class="eyebrow">Avance nacional</span>
-            <strong>91.545%</strong>
-          </div>
-          <div class="meta-card">
-            <span class="eyebrow">Válidos observados</span>
-            <strong>18,551,589</strong>
-          </div>
+        <div class="hero__metric">
+          <div class="hero__metric-label">Actualizado ONPE</div>
+          <div class="hero__metric-value">2026-04-15 23:08:03 CDT</div>
+        </div>
+        <div class="hero__metric">
+          <div class="hero__metric-label">Actas procesadas</div>
+          <div class="hero__metric-value">85,436 / 92,766</div>
+        </div>
+        <div class="hero__metric">
+          <div class="hero__metric-label">Votos válidos</div>
+          <div class="hero__metric-value">18,657,781</div>
+        </div>
+      </div>
+      <div>
+        <div class="hero__progress-label">
+          <span>Avance nacional</span>
+          <span>92.10%</span>
+        </div>
+        <div class="hero__progress-bar">
+          <span style="width:92.10%"></span>
         </div>
       </div>
     </section>
 
+    <!-- ── CANDIDATES ──────────────────────────── -->
+    <section>
+      <div class="section-title">
+        <span class="eyebrow">Proyección nacional</span>
+        <h2>Candidatos en la zona crítica</h2>
+        <p class="section-note">Proyección bayesiana Dirichlet-Multinomial al 100% de actas. IC = intervalo de confianza 95%.</p>
+      </div>
+      <div class="candidates-grid">
+        
+    <article class="candidate-card" style="--c-color:#6b7280;">
+      <div class="candidate-card__top">
+        <span class="candidate-card__rank">#1 · FP</span>
+      </div>
+      <h3 class="candidate-card__name">FUERZA POPULAR</h3>
+      <div class="candidate-card__pcts">
+        <div class="candidate-card__pct-block">
+          <span class="candidate-card__big">14.22%</span>
+          <span class="candidate-card__small">actual</span>
+        </div>
+        <div class="candidate-card__pct-block">
+          <span class="candidate-card__big candidate-card__big--proj">14.22%</span>
+          <span class="candidate-card__small">proyectado</span>
+        </div>
+      </div>
+      <div class="candidate-card__bar">
+        <span style="width:64.0%"></span>
+      </div>
+      <div class="candidate-card__ic">
+        IC 95%: 14.20% — 14.25%
+      </div>
+      <div class="candidate-card__top2">
+        <div class="candidate-card__top2-label">Prob. 2da vuelta</div>
+        <div class="candidate-card__top2-bar">
+          <span style="width:100.0%"></span>
+        </div>
+        <div class="candidate-card__top2-pct">100.0%</div>
+      </div>
+    </article>
     
-    <section class="stack">
+    <article class="candidate-card" style="--c-color:#1e40af;">
+      <div class="candidate-card__top">
+        <span class="candidate-card__rank">#2 · RP</span>
+      </div>
+      <h3 class="candidate-card__name">RENOVACIÓN POPULAR</h3>
+      <div class="candidate-card__pcts">
+        <div class="candidate-card__pct-block">
+          <span class="candidate-card__big">9.89%</span>
+          <span class="candidate-card__small">actual</span>
+        </div>
+        <div class="candidate-card__pct-block">
+          <span class="candidate-card__big candidate-card__big--proj">9.96%</span>
+          <span class="candidate-card__small">proyectado</span>
+        </div>
+      </div>
+      <div class="candidate-card__bar">
+        <span style="width:44.8%"></span>
+      </div>
+      <div class="candidate-card__ic">
+        IC 95%: 9.94% — 9.99%
+      </div>
+      <div class="candidate-card__top2">
+        <div class="candidate-card__top2-label">Prob. 2da vuelta</div>
+        <div class="candidate-card__top2-bar">
+          <span style="width:92.6%"></span>
+        </div>
+        <div class="candidate-card__top2-pct">92.6%</div>
+      </div>
+    </article>
+    
+    <article class="candidate-card" style="--c-color:#1f7a45;">
+      <div class="candidate-card__top">
+        <span class="candidate-card__rank">#3 · JPP</span>
+      </div>
+      <h3 class="candidate-card__name">JUNTOS POR EL PERÚ</h3>
+      <div class="candidate-card__pcts">
+        <div class="candidate-card__pct-block">
+          <span class="candidate-card__big">10.05%</span>
+          <span class="candidate-card__small">actual</span>
+        </div>
+        <div class="candidate-card__pct-block">
+          <span class="candidate-card__big candidate-card__big--proj">9.94%</span>
+          <span class="candidate-card__small">proyectado</span>
+        </div>
+      </div>
+      <div class="candidate-card__bar">
+        <span style="width:44.7%"></span>
+      </div>
+      <div class="candidate-card__ic">
+        IC 95%: 9.93% — 9.95%
+      </div>
+      <div class="candidate-card__top2">
+        <div class="candidate-card__top2-label">Prob. 2da vuelta</div>
+        <div class="candidate-card__top2-bar">
+          <span style="width:7.4%"></span>
+        </div>
+        <div class="candidate-card__top2-pct">7.4%</div>
+      </div>
+    </article>
+    
+    <article class="candidate-card" style="--c-color:#d97706;">
+      <div class="candidate-card__top">
+        <span class="candidate-card__rank">#4 · PBG</span>
+      </div>
+      <h3 class="candidate-card__name">PARTIDO DEL BUEN GOBIERNO</h3>
+      <div class="candidate-card__pcts">
+        <div class="candidate-card__pct-block">
+          <span class="candidate-card__big">9.22%</span>
+          <span class="candidate-card__small">actual</span>
+        </div>
+        <div class="candidate-card__pct-block">
+          <span class="candidate-card__big candidate-card__big--proj">9.16%</span>
+          <span class="candidate-card__small">proyectado</span>
+        </div>
+      </div>
+      <div class="candidate-card__bar">
+        <span style="width:41.2%"></span>
+      </div>
+      <div class="candidate-card__ic">
+        IC 95%: 9.14% — 9.18%
+      </div>
+      <div class="candidate-card__top2">
+        <div class="candidate-card__top2-label">Prob. 2da vuelta</div>
+        <div class="candidate-card__top2-bar">
+          <span style="width:0.0%"></span>
+        </div>
+        <div class="candidate-card__top2-pct">0.0%</div>
+      </div>
+    </article>
+    
+      </div>
+    </section>
+
+    <!-- ── TRAJECTORY ──────────────────────────── -->
+    
+    <section>
       <div class="section-title">
         <p class="eyebrow">Trayectoria</p>
         <h2>Evolución observada y estimación al 100%</h2>
-        <p>Línea continua = cortes observados. Línea punteada = tendencia. Punto final = estimación al cierre.</p>
+        <p class="section-note">Línea continua = cortes observados. Tramo punteado = proyección. Punto final = estimación al cierre.</p>
       </div>
-      <div class="trajectory-card">
-        <div class="trajectory-card__header">
-          <div class="trajectory-legend">
+      <div class="traj-card">
+        <div class="traj-header">
+          <div class="traj-legend">
             
-            <div class="trajectory-legend__item">
-              <span class="trajectory-legend__swatch" style="--swatch:#1f7a45;"></span>
-              <span class="trajectory-legend__code">JPP</span>
-              <span class="trajectory-legend__name">JUNTOS POR EL PERÚ</span>
+            <div class="traj-legend__item">
+              <span class="traj-legend__swatch" style="background:#1f7a45;"></span>
+              <span>JPP</span>
+              <span style="font-size:0.72rem;color:var(--ink-3);font-weight:400;">JUNTOS POR EL PERÚ</span>
             </div>
             
-            <div class="trajectory-legend__item">
-              <span class="trajectory-legend__swatch" style="--swatch:#1e40af;"></span>
-              <span class="trajectory-legend__code">RP</span>
-              <span class="trajectory-legend__name">RENOVACIÓN POPULAR</span>
+            <div class="traj-legend__item">
+              <span class="traj-legend__swatch" style="background:#1e40af;"></span>
+              <span>RP</span>
+              <span style="font-size:0.72rem;color:var(--ink-3);font-weight:400;">RENOVACIÓN POPULAR</span>
             </div>
             
-            <div class="trajectory-legend__item">
-              <span class="trajectory-legend__swatch" style="--swatch:#d97706;"></span>
-              <span class="trajectory-legend__code">PBG</span>
-              <span class="trajectory-legend__name">PARTIDO DEL BUEN GOBIERNO</span>
+            <div class="traj-legend__item">
+              <span class="traj-legend__swatch" style="background:#d97706;"></span>
+              <span>PBG</span>
+              <span style="font-size:0.72rem;color:var(--ink-3);font-weight:400;">PARTIDO DEL BUEN GOBIERNO</span>
             </div>
             
-            <div class="trajectory-legend__hint">Sólido = observado · Tramo punteado = proyección al 100%</div>
+            <div class="traj-legend__hint">Sólido = observado · Punteado = proyección al 100%</div>
           </div>
-          
-    <div class="trajectory-card__badge">
-      <span class="eyebrow">ONPE</span>
-      <strong>91.545%</strong>
-      <small>actas procesadas</small>
-    </div>
-    
+          <div class="traj-badge">
+            <span class="eyebrow" style="text-align:right;">ONPE</span>
+            <span class="traj-badge__pct">92.098%</span>
+            <div class="traj-badge__label">actas procesadas</div>
+          </div>
         </div>
-        <div class="trajectory-chart-shell">
-          <div class="trajectory-canvas-shell">
-            <canvas id="trajectoryChart" class="trajectory-canvas" aria-label="Trayectoria real y proyectada de candidatos"></canvas>
+        <div class="traj-shell">
+          <div class="traj-canvas-wrap">
+            <canvas id="trajectoryChart" aria-label="Trayectoria real y proyectada de candidatos"></canvas>
           </div>
-          <aside class="trajectory-endpoints">
+          <aside class="traj-endpoints">
             
-            <article class="trajectory-endpoint">
-              <div class="trajectory-endpoint__head">
-                <span class="trajectory-endpoint__dot" style="--swatch:#1f7a45;"></span>
-                <span class="trajectory-endpoint__code">JPP</span>
+            <article class="traj-endpoint">
+              <div class="traj-endpoint__head">
+                <span class="traj-endpoint__dot" style="background:#1f7a45;"></span>
+                <span class="traj-endpoint__code">JPP</span>
               </div>
-              <strong>9.94%</strong>
-              <small>JUNTOS POR EL PERÚ</small>
+              <span class="traj-endpoint__pct">9.94%</span>
+              <span class="traj-endpoint__name">JUNTOS POR EL PERÚ</span>
             </article>
             
-            <article class="trajectory-endpoint">
-              <div class="trajectory-endpoint__head">
-                <span class="trajectory-endpoint__dot" style="--swatch:#1e40af;"></span>
-                <span class="trajectory-endpoint__code">RP</span>
+            <article class="traj-endpoint">
+              <div class="traj-endpoint__head">
+                <span class="traj-endpoint__dot" style="background:#1e40af;"></span>
+                <span class="traj-endpoint__code">RP</span>
               </div>
-              <strong>9.98%</strong>
-              <small>RENOVACIÓN POPULAR</small>
+              <span class="traj-endpoint__pct">9.96%</span>
+              <span class="traj-endpoint__name">RENOVACIÓN POPULAR</span>
             </article>
             
-            <article class="trajectory-endpoint">
-              <div class="trajectory-endpoint__head">
-                <span class="trajectory-endpoint__dot" style="--swatch:#d97706;"></span>
-                <span class="trajectory-endpoint__code">PBG</span>
+            <article class="traj-endpoint">
+              <div class="traj-endpoint__head">
+                <span class="traj-endpoint__dot" style="background:#d97706;"></span>
+                <span class="traj-endpoint__code">PBG</span>
               </div>
-              <strong>9.16%</strong>
-              <small>PARTIDO DEL BUEN GOBIERNO</small>
+              <span class="traj-endpoint__pct">9.16%</span>
+              <span class="traj-endpoint__name">PARTIDO DEL BUEN GOBIERNO</span>
             </article>
             
           </aside>
         </div>
-        <script id="trajectory-data" type="application/json">{"series": [{"candidate": "JUNTOS POR EL PERÚ", "color": "#1f7a45", "actual": [{"x": 78.24169900819318, "y": 8.879045780332403, "label": "2026-04-14 15:42:48 CDT"}, {"x": 78.71065114273394, "y": 8.942721455581777, "label": "2026-04-14 16:38:09 CDT"}, {"x": 79.82666062997218, "y": 9.040867827114514, "label": "2026-04-14 17:55:00 CDT"}, {"x": 80.5456740616174, "y": 9.127369365321252, "label": "2026-04-14 18:50:16 CDT"}, {"x": 81.36493974085333, "y": 9.186244729013884, "label": "2026-04-14 19:57:10 CDT"}, {"x": 82.11521462604834, "y": 9.266665418001079, "label": "2026-04-14 20:59:15 CDT"}, {"x": 83.073539874523, "y": 9.338530136846613, "label": "2026-04-14 22:05:46 CDT"}, {"x": 84.40592458443827, "y": 9.543945222874354, "label": "2026-04-14 23:13:38 CDT"}, {"x": 85.75879093633444, "y": 9.701291629347597, "label": "2026-04-15 00:08:45 CDT"}, {"x": 86.63303365457172, "y": 9.773396881348772, "label": "2026-04-15 00:58:44 CDT"}, {"x": 87.37360670935472, "y": 9.832984399004483, "label": "2026-04-15 01:37:34 CDT"}, {"x": 90.5116098570597, "y": 10.03966930337104, "label": "2026-04-15 08:38:31 CDT"}, {"x": 90.89537114891232, "y": 10.053431063011018, "label": "2026-04-15 09:45:31 CDT"}, {"x": 91.07108207748529, "y": 10.060042481672157, "label": "2026-04-15 10:41:13 CDT"}, {"x": 91.29206821464761, "y": 10.056872923163832, "label": "2026-04-15 11:47:52 CDT"}, {"x": 91.43220576504322, "y": 10.063331445102836, "label": "2026-04-15 12:55:40 CDT"}, {"x": 91.51844425759438, "y": 10.072350408845079, "label": "2026-04-15 14:03:09 CDT"}, {"x": 91.54539378651661, "y": 10.074506286227018, "label": "2026-04-15 15:10:26 CDT"}], "projected": {"x": 100.0, "y": 9.937381936153042}}, {"candidate": "RENOVACIÓN POPULAR", "color": "#1e40af", "actual": [{"x": 78.24169900819318, "y": 10.641352504897153, "label": "2026-04-14 15:42:48 CDT"}, {"x": 78.71065114273394, "y": 10.609535799113289, "label": "2026-04-14 16:38:09 CDT"}, {"x": 79.82666062997218, "y": 10.550302683146214, "label": "2026-04-14 17:55:00 CDT"}, {"x": 80.5456740616174, "y": 10.49506975117729, "label": "2026-04-14 18:50:16 CDT"}, {"x": 81.36493974085333, "y": 10.455659245037676, "label": "2026-04-14 19:57:10 CDT"}, {"x": 82.11521462604834, "y": 10.40368212514664, "label": "2026-04-14 20:59:15 CDT"}, {"x": 83.073539874523, "y": 10.357654926251763, "label": "2026-04-14 22:05:46 CDT"}, {"x": 84.40592458443827, "y": 10.247847906745655, "label": "2026-04-14 23:13:38 CDT"}, {"x": 85.75879093633444, "y": 10.162629814859173, "label": "2026-04-15 00:08:45 CDT"}, {"x": 86.63303365457172, "y": 10.123871491472043, "label": "2026-04-15 00:58:44 CDT"}, {"x": 87.37360670935472, "y": 10.092458683792314, "label": "2026-04-15 01:37:34 CDT"}, {"x": 90.5116098570597, "y": 9.938627831650344, "label": "2026-04-15 08:38:31 CDT"}, {"x": 90.89537114891232, "y": 9.918164472301576, "label": "2026-04-15 09:45:31 CDT"}, {"x": 91.07108207748529, "y": 9.905964383017771, "label": "2026-04-15 10:41:13 CDT"}, {"x": 91.29206821464761, "y": 9.895130886956661, "label": "2026-04-15 11:47:52 CDT"}, {"x": 91.43220576504322, "y": 9.886580983666285, "label": "2026-04-15 12:55:40 CDT"}, {"x": 91.51844425759438, "y": 9.881789149266535, "label": "2026-04-15 14:03:09 CDT"}, {"x": 91.54539378651661, "y": 9.880458218430777, "label": "2026-04-15 15:10:26 CDT"}], "projected": {"x": 100.0, "y": 9.978750622383885}}, {"candidate": "PARTIDO DEL BUEN GOBIERNO", "color": "#d97706", "actual": [{"x": 78.24169900819318, "y": 9.873366914749461, "label": "2026-04-14 15:42:48 CDT"}, {"x": 78.71065114273394, "y": 9.849899515257599, "label": "2026-04-14 16:38:09 CDT"}, {"x": 79.82666062997218, "y": 9.809204038155913, "label": "2026-04-14 17:55:00 CDT"}, {"x": 80.5456740616174, "y": 9.764863573082463, "label": "2026-04-14 18:50:16 CDT"}, {"x": 81.36493974085333, "y": 9.732776022883947, "label": "2026-04-14 19:57:10 CDT"}, {"x": 82.11521462604834, "y": 9.688866518280939, "label": "2026-04-14 20:59:15 CDT"}, {"x": 83.073539874523, "y": 9.64699410290341, "label": "2026-04-14 22:05:46 CDT"}, {"x": 84.40592458443827, "y": 9.552700461695627, "label": "2026-04-14 23:13:38 CDT"}, {"x": 85.75879093633444, "y": 9.471393031631447, "label": "2026-04-15 00:08:45 CDT"}, {"x": 86.63303365457172, "y": 9.42956247302418, "label": "2026-04-15 00:58:44 CDT"}, {"x": 87.37360670935472, "y": 9.395438202032132, "label": "2026-04-15 01:37:34 CDT"}, {"x": 90.5116098570597, "y": 9.259987097890237, "label": "2026-04-15 08:38:31 CDT"}, {"x": 90.89537114891232, "y": 9.247236104936444, "label": "2026-04-15 09:45:31 CDT"}, {"x": 91.07108207748529, "y": 9.239146385456898, "label": "2026-04-15 10:41:13 CDT"}, {"x": 91.29206821464761, "y": 9.23118647614767, "label": "2026-04-15 11:47:52 CDT"}, {"x": 91.43220576504322, "y": 9.22346457884276, "label": "2026-04-15 12:55:40 CDT"}, {"x": 91.51844425759438, "y": 9.221499938505145, "label": "2026-04-15 14:03:09 CDT"}, {"x": 91.54539378651661, "y": 9.220854342989163, "label": "2026-04-15 15:10:26 CDT"}], "projected": {"x": 100.0, "y": 9.16439931334002}}], "x_ticks": [75.0, 80.0, 85.0, 90.0, 95.0, 100.0], "y_ticks": [8.5, 9.0, 9.5, 10.0, 10.5, 11.0], "bounds": {"x_min": 75.0, "x_max": 100.0, "y_min": 8.5, "y_max": 11.0}}</script>
+        <script id="trajectory-data" type="application/json">{"series": [{"candidate": "JUNTOS POR EL PERÚ", "color": "#1f7a45", "actual": [{"x": 84.40592458443827, "y": 9.543945222874354, "label": "2026-04-14 23:13:38 CDT"}, {"x": 85.75879093633444, "y": 9.701291629347597, "label": "2026-04-15 00:08:45 CDT"}, {"x": 86.63303365457172, "y": 9.773396881348772, "label": "2026-04-15 00:58:44 CDT"}, {"x": 87.37360670935472, "y": 9.832984399004483, "label": "2026-04-15 01:37:34 CDT"}, {"x": 90.5116098570597, "y": 10.03966930337104, "label": "2026-04-15 08:38:31 CDT"}, {"x": 90.84362805338162, "y": 10.05226648715189, "label": "2026-04-15 09:34:09 CDT"}, {"x": 91.07108207748529, "y": 10.060042481672157, "label": "2026-04-15 10:41:13 CDT"}, {"x": 91.29206821464761, "y": 10.056872923163832, "label": "2026-04-15 11:47:52 CDT"}, {"x": 91.43220576504322, "y": 10.063331445102836, "label": "2026-04-15 12:55:40 CDT"}, {"x": 91.51844425759438, "y": 10.072350408845079, "label": "2026-04-15 14:03:09 CDT"}, {"x": 91.54431580535972, "y": 10.074375546892893, "label": "2026-04-15 14:59:52 CDT"}, {"x": 91.60791669361619, "y": 10.070225883463506, "label": "2026-04-15 16:39:11 CDT"}, {"x": 91.68337537459846, "y": 10.0664608512139, "label": "2026-04-15 17:57:59 CDT"}, {"x": 91.73188452665848, "y": 10.065693374102173, "label": "2026-04-15 18:53:21 CDT"}, {"x": 91.83860466119052, "y": 10.065613251096654, "label": "2026-04-15 19:59:49 CDT"}, {"x": 91.90975141754522, "y": 10.062493785618043, "label": "2026-04-15 20:55:17 CDT"}, {"x": 92.03695319405817, "y": 10.051412664407556, "label": "2026-04-15 22:01:56 CDT"}, {"x": 92.09839812000087, "y": 10.05087368106636, "label": "2026-04-15 23:08:52 CDT"}], "projected": {"x": 100.0, "y": 9.940257618941253}}, {"candidate": "RENOVACIÓN POPULAR", "color": "#1e40af", "actual": [{"x": 84.40592458443827, "y": 10.247847906745655, "label": "2026-04-14 23:13:38 CDT"}, {"x": 85.75879093633444, "y": 10.162629814859173, "label": "2026-04-15 00:08:45 CDT"}, {"x": 86.63303365457172, "y": 10.123871491472043, "label": "2026-04-15 00:58:44 CDT"}, {"x": 87.37360670935472, "y": 10.092458683792314, "label": "2026-04-15 01:37:34 CDT"}, {"x": 90.5116098570597, "y": 9.938627831650344, "label": "2026-04-15 08:38:31 CDT"}, {"x": 90.84362805338162, "y": 9.920008251888909, "label": "2026-04-15 09:34:09 CDT"}, {"x": 91.07108207748529, "y": 9.905964383017771, "label": "2026-04-15 10:41:13 CDT"}, {"x": 91.29206821464761, "y": 9.895130886956661, "label": "2026-04-15 11:47:52 CDT"}, {"x": 91.43220576504322, "y": 9.886580983666285, "label": "2026-04-15 12:55:40 CDT"}, {"x": 91.51844425759438, "y": 9.881789149266535, "label": "2026-04-15 14:03:09 CDT"}, {"x": 91.54431580535972, "y": 9.88053565573216, "label": "2026-04-15 14:59:52 CDT"}, {"x": 91.60791669361619, "y": 9.881252123402811, "label": "2026-04-15 16:39:11 CDT"}, {"x": 91.68337537459846, "y": 9.88307639773725, "label": "2026-04-15 17:57:59 CDT"}, {"x": 91.73188452665848, "y": 9.883244062716635, "label": "2026-04-15 18:53:21 CDT"}, {"x": 91.83860466119052, "y": 9.886327915534107, "label": "2026-04-15 19:59:49 CDT"}, {"x": 91.90975141754522, "y": 9.887354976939037, "label": "2026-04-15 20:55:17 CDT"}, {"x": 92.03695319405817, "y": 9.890546643611135, "label": "2026-04-15 22:01:56 CDT"}, {"x": 92.09839812000087, "y": 9.891165514269892, "label": "2026-04-15 23:08:52 CDT"}], "projected": {"x": 100.0, "y": 9.96049380776103}}, {"candidate": "PARTIDO DEL BUEN GOBIERNO", "color": "#d97706", "actual": [{"x": 84.40592458443827, "y": 9.552700461695627, "label": "2026-04-14 23:13:38 CDT"}, {"x": 85.75879093633444, "y": 9.471393031631447, "label": "2026-04-15 00:08:45 CDT"}, {"x": 86.63303365457172, "y": 9.42956247302418, "label": "2026-04-15 00:58:44 CDT"}, {"x": 87.37360670935472, "y": 9.395438202032132, "label": "2026-04-15 01:37:34 CDT"}, {"x": 90.5116098570597, "y": 9.259987097890237, "label": "2026-04-15 08:38:31 CDT"}, {"x": 90.84362805338162, "y": 9.247691031906852, "label": "2026-04-15 09:34:09 CDT"}, {"x": 91.07108207748529, "y": 9.239146385456898, "label": "2026-04-15 10:41:13 CDT"}, {"x": 91.29206821464761, "y": 9.23118647614767, "label": "2026-04-15 11:47:52 CDT"}, {"x": 91.43220576504322, "y": 9.22346457884276, "label": "2026-04-15 12:55:40 CDT"}, {"x": 91.51844425759438, "y": 9.221499938505145, "label": "2026-04-15 14:03:09 CDT"}, {"x": 91.54431580535972, "y": 9.220897859260488, "label": "2026-04-15 14:59:52 CDT"}, {"x": 91.60791669361619, "y": 9.221478852052686, "label": "2026-04-15 16:39:11 CDT"}, {"x": 91.68337537459846, "y": 9.223016164529495, "label": "2026-04-15 17:57:59 CDT"}, {"x": 91.73188452665848, "y": 9.222387895554347, "label": "2026-04-15 18:53:21 CDT"}, {"x": 91.83860466119052, "y": 9.221890678194594, "label": "2026-04-15 19:59:49 CDT"}, {"x": 91.90975141754522, "y": 9.221468674599839, "label": "2026-04-15 20:55:17 CDT"}, {"x": 92.03695319405817, "y": 9.22221472009897, "label": "2026-04-15 22:01:56 CDT"}, {"x": 92.09839812000087, "y": 9.222029136262238, "label": "2026-04-15 23:08:52 CDT"}], "projected": {"x": 100.0, "y": 9.159139238703586}}], "x_ticks": [80.0, 85.0, 90.0, 95.0, 100.0], "y_ticks": [8.5, 9.0, 9.5, 10.0, 10.5], "bounds": {"x_min": 80.0, "x_max": 100.0, "y_min": 8.5, "y_max": 10.5}}</script>
       </div>
     </section>
     
 
-    <section class="stack">
+    <!-- ── BATTLE GAUGE ────────────────────────── -->
+    
+    <section>
       <div class="section-title">
-        <p class="eyebrow">Foto nacional</p>
-        <h2>Quiénes están peleando la zona crítica</h2>
+        <span class="eyebrow">Duelo clave</span>
+        <h2>2° lugar: RP vs JPP</h2>
+        <p class="section-note">Diferencia al corte actual. Solo entre estos dos candidatos.</p>
       </div>
-      <div class="cards-grid">
+      <div class="battle-gauge">
+        <div class="battle-gauge__header">
+          <div class="battle-gauge__cand" style="text-align:left;">
+            <div class="battle-gauge__cand-name" style="color:#1e40af;">RP</div>
+            <div class="battle-gauge__cand-pct" style="color:#1e40af;">9.89%</div>
+            <div class="battle-gauge__cand-full">RENOVACIÓN POPULAR</div>
+          </div>
+          <div class="battle-gauge__vs">vs</div>
+          <div class="battle-gauge__cand" style="text-align:right;">
+            <div class="battle-gauge__cand-name" style="color:#1f7a45;">JPP</div>
+            <div class="battle-gauge__cand-pct" style="color:#1f7a45;">10.05%</div>
+            <div class="battle-gauge__cand-full">JUNTOS POR EL PERÚ</div>
+          </div>
+        </div>
+        <div class="battle-gauge__bar">
+          <div class="battle-gauge__bar-left" style="width:49.60%; background:#1e40af;"></div>
+          <div class="battle-gauge__bar-right" style="width:50.40%; background:#1f7a45;"></div>
+        </div>
+        <div class="battle-gauge__labels">
+          <span>9.89%</span>
+          <span>10.05%</span>
+        </div>
+        <div class="battle-gauge__diff">
+          <span style="color:#1f7a45; font-weight:700;">JPP</span>
+          lidera por <strong>-29,798</strong> votos
+          (<strong>-0.16 pp</strong>)
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- ── MAP ─────────────────────────────────── -->
+    
+    <section>
+      <div class="section-title">
+        <span class="eyebrow">Mapa político</span>
+        <h2>Candidato líder por departamento</h2>
+        <p class="section-note">Proyección al 100%. Barra inferior = porcentaje de actas contadas. Hover para detalle.</p>
+      </div>
+      <div class="carto-body">
+        <div class="carto-grid" style="--carto-cols:6; --carto-rows:8;">
+          <div class="carto-tile" style="--tile-color:#6b7280;" title="TUMBES: FP 17.8% (95% actas)"><span class="carto-tile__abbr">TUM</span><span class="carto-tile__pct">17.8%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:95%"></span></div></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="PIURA: JPP 21.0% (97% actas)"><span class="carto-tile__abbr">PIU</span><span class="carto-tile__pct">21.0%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:97%"></span></div></div><div class="carto-tile" style="--tile-color:#6b7280;" title="LAMBAYEQUE: FP 21.3% (83% actas)"><span class="carto-tile__abbr">LAM</span><span class="carto-tile__pct">21.3%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:83%"></span></div></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="LORETO: JPP 18.1% (89% actas)"><span class="carto-tile__abbr">LOR</span><span class="carto-tile__pct">18.1%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:89%"></span></div></div><div class="carto-cell"></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="CAJAMARCA: JPP 32.7% (94% actas)"><span class="carto-tile__abbr">CAJ</span><span class="carto-tile__pct">32.7%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:94%"></span></div></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="AMAZONAS: JPP 27.5% (94% actas)"><span class="carto-tile__abbr">AMA</span><span class="carto-tile__pct">27.5%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:94%"></span></div></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-tile" style="--tile-color:#6b7280;" title="LA LIBERTAD: FP 21.6% (95% actas)"><span class="carto-tile__abbr">LAL</span><span class="carto-tile__pct">21.6%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:95%"></span></div></div><div class="carto-cell"></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="SAN MARTIN: JPP 10.5% (95% actas)"><span class="carto-tile__abbr">SMA</span><span class="carto-tile__pct">10.5%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:95%"></span></div></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-tile" style="--tile-color:#6b7280;" title="ANCASH: FP 13.9% (91% actas)"><span class="carto-tile__abbr">ANC</span><span class="carto-tile__pct">13.9%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:91%"></span></div></div><div class="carto-tile" style="--tile-color:#6b7280;" title="HUANUCO: FP 16.8% (91% actas)"><span class="carto-tile__abbr">HUA</span><span class="carto-tile__pct">16.8%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:91%"></span></div></div><div class="carto-tile" style="--tile-color:#6b7280;" title="UCAYALI: FP 22.1% (88% actas)"><span class="carto-tile__abbr">UCA</span><span class="carto-tile__pct">22.1%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:88%"></span></div></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="CALLAO: JPP 18.1% (91% actas)"><span class="carto-tile__abbr">CAL</span><span class="carto-tile__pct">18.1%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:91%"></span></div></div><div class="carto-tile" style="--tile-color:#1e40af;" title="LIMA: RP 17.6% (94% actas)"><span class="carto-tile__abbr">LIM</span><span class="carto-tile__pct">17.6%</span><span class="carto-tile__party">RP</span><div class="carto-tile__actas"><span style="width:94%"></span></div></div><div class="carto-tile" style="--tile-color:#6b7280;" title="PASCO: FP 21.5% (92% actas)"><span class="carto-tile__abbr">PAS</span><span class="carto-tile__pct">21.5%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:92%"></span></div></div><div class="carto-tile" style="--tile-color:#6b7280;" title="JUNIN: FP 16.2% (93% actas)"><span class="carto-tile__abbr">JUN</span><span class="carto-tile__pct">16.2%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:93%"></span></div></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-tile" style="--tile-color:#6b7280;" title="ICA: FP 13.8% (95% actas)"><span class="carto-tile__abbr">ICA</span><span class="carto-tile__pct">13.8%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:95%"></span></div></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="HUANCAVELICA: JPP 23.0% (91% actas)"><span class="carto-tile__abbr">HVC</span><span class="carto-tile__pct">23.0%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:91%"></span></div></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="AYACUCHO: JPP 25.0% (95% actas)"><span class="carto-tile__abbr">AYA</span><span class="carto-tile__pct">25.0%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:95%"></span></div></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="CUSCO: JPP 34.5% (95% actas)"><span class="carto-tile__abbr">CUS</span><span class="carto-tile__pct">34.5%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:95%"></span></div></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="MADRE DE DIOS: JPP 11.2% (95% actas)"><span class="carto-tile__abbr">MAD</span><span class="carto-tile__pct">11.2%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:95%"></span></div></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-tile" style="--tile-color:#d97706;" title="AREQUIPA: PBG 16.5% (98% actas)"><span class="carto-tile__abbr">ARE</span><span class="carto-tile__pct">16.5%</span><span class="carto-tile__party">PBG</span><div class="carto-tile__actas"><span style="width:98%"></span></div></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="APURIMAC: JPP 32.2% (96% actas)"><span class="carto-tile__abbr">APU</span><span class="carto-tile__pct">32.2%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:96%"></span></div></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="PUNO: JPP 17.4% (94% actas)"><span class="carto-tile__abbr">PUN</span><span class="carto-tile__pct">17.4%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:94%"></span></div></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-cell"></div><div class="carto-tile" style="--tile-color:#1f7a45;" title="MOQUEGUA: JPP 14.9% (93% actas)"><span class="carto-tile__abbr">MOQ</span><span class="carto-tile__pct">14.9%</span><span class="carto-tile__party">JPP</span><div class="carto-tile__actas"><span style="width:93%"></span></div></div><div class="carto-tile" style="--tile-color:#6b7280;" title="TACNA: FP 26.6% (91% actas)"><span class="carto-tile__abbr">TAC</span><span class="carto-tile__pct">26.6%</span><span class="carto-tile__party">FP</span><div class="carto-tile__actas"><span style="width:91%"></span></div></div><div class="carto-cell"></div><div class="carto-cell"></div>
+        </div>
+        <div class="carto-sidebar">
+          <div class="carto-legend">
+            <div class="carto-legend__item"><span class="carto-legend__dot" style="background:#1f7a45;"></span><span>JPP</span><span class="carto-legend__full">JUNTOS POR EL PERÚ</span></div><div class="carto-legend__item"><span class="carto-legend__dot" style="background:#1e40af;"></span><span>RP</span><span class="carto-legend__full">RENOVACIÓN POPULAR</span></div><div class="carto-legend__item"><span class="carto-legend__dot" style="background:#d97706;"></span><span>PBG</span><span class="carto-legend__full">PARTIDO DEL BUEN GOBIERNO</span></div><div class="carto-legend__item"><span class="carto-legend__dot" style="background:#6b7280;"></span><span>FP</span><span class="carto-legend__full">FUERZA POPULAR</span></div>
+          </div>
+          <p class="carto-legend__note">Barra inferior = % actas procesadas</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- ── BLOCKS ──────────────────────────────── -->
+    <section>
+      <div class="section-title">
+        <span class="eyebrow">Bloques territoriales</span>
+        <h2>Proyección por bloque geográfico</h2>
+      </div>
+      <div class="blocks-grid">
         
-    <article class="candidate-card">
-      <div class="candidate-card__rank">#1</div>
-      <div>
-        <p class="eyebrow">Proyección nacional</p>
-        <h3>FUERZA POPULAR</h3>
-      </div>
-      <div class="candidate-card__numbers">
-        <div>
-          <span class="value">14.22%</span>
-          <span class="label">mediana</span>
-        </div>
-        <div>
-          <span class="value">2,864,457</span>
-          <span class="label">votos proj.</span>
-        </div>
-      </div>
-      <div class="candidate-card__range">
-        <div class="candidate-card__bar">
-          <span style="width:14.22%; background:#6b7280;"></span>
-        </div>
-        <div class="candidate-card__meta">
-          <span>Actual 14.21%</span>
-          <span>IC 95% 14.20% - 14.25%</span>
-        </div>
-      </div>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__rank">#2</div>
-      <div>
-        <p class="eyebrow">Proyección nacional</p>
-        <h3>RENOVACIÓN POPULAR</h3>
-      </div>
-      <div class="candidate-card__numbers">
-        <div>
-          <span class="value">9.98%</span>
-          <span class="label">mediana</span>
-        </div>
-        <div>
-          <span class="value">2,009,815</span>
-          <span class="label">votos proj.</span>
-        </div>
-      </div>
-      <div class="candidate-card__range">
-        <div class="candidate-card__bar">
-          <span style="width:9.98%; background:#1e40af;"></span>
-        </div>
-        <div class="candidate-card__meta">
-          <span>Actual 9.88%</span>
-          <span>IC 95% 9.95% - 10.01%</span>
-        </div>
-      </div>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__rank">#3</div>
-      <div>
-        <p class="eyebrow">Proyección nacional</p>
-        <h3>JUNTOS POR EL PERÚ</h3>
-      </div>
-      <div class="candidate-card__numbers">
-        <div>
-          <span class="value">9.94%</span>
-          <span class="label">mediana</span>
-        </div>
-        <div>
-          <span class="value">2,000,054</span>
-          <span class="label">votos proj.</span>
-        </div>
-      </div>
-      <div class="candidate-card__range">
-        <div class="candidate-card__bar">
-          <span style="width:9.94%; background:#1f7a45;"></span>
-        </div>
-        <div class="candidate-card__meta">
-          <span>Actual 10.07%</span>
-          <span>IC 95% 9.93% - 9.95%</span>
-        </div>
-      </div>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__rank">#4</div>
-      <div>
-        <p class="eyebrow">Proyección nacional</p>
-        <h3>PARTIDO DEL BUEN GOBIERNO</h3>
-      </div>
-      <div class="candidate-card__numbers">
-        <div>
-          <span class="value">9.16%</span>
-          <span class="label">mediana</span>
-        </div>
-        <div>
-          <span class="value">1,844,815</span>
-          <span class="label">votos proj.</span>
-        </div>
-      </div>
-      <div class="candidate-card__range">
-        <div class="candidate-card__bar">
-          <span style="width:9.16%; background:#d97706;"></span>
-        </div>
-        <div class="candidate-card__meta">
-          <span>Actual 9.22%</span>
-          <span>IC 95% 9.15% - 9.18%</span>
-        </div>
-      </div>
-    </article>
-    
+            <article class="block-card">
+              <div class="block-card__header">
+                <h3 class="block-card__title">Regiones sin Lima</h3>
+                <span class="block-card__total">12,822,973 proj.</span>
+              </div>
+              
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">JUNTOS POR EL PERÚ</span>
+                    <span class="block-bar__pct">14.00%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:14.00%; background:#1f7a45;"></span></div>
+                </div>
+                
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">RENOVACIÓN POPULAR</span>
+                    <span class="block-bar__pct">5.52%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:5.52%; background:#1e40af;"></span></div>
+                </div>
+                
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">PARTIDO DEL BUEN GOBIERNO</span>
+                    <span class="block-bar__pct">6.96%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:6.96%; background:#d97706;"></span></div>
+                </div>
+                
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">FUERZA POPULAR</span>
+                    <span class="block-bar__pct">13.49%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:13.49%; background:#6b7280;"></span></div>
+                </div>
+                
+            </article>
+            
+            <article class="block-card">
+              <div class="block-card__header">
+                <h3 class="block-card__title">Lima</h3>
+                <span class="block-card__total">6,897,962 proj.</span>
+              </div>
+              
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">JUNTOS POR EL PERÚ</span>
+                    <span class="block-bar__pct">2.89%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:2.89%; background:#1f7a45;"></span></div>
+                </div>
+                
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">RENOVACIÓN POPULAR</span>
+                    <span class="block-bar__pct">17.60%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:17.60%; background:#1e40af;"></span></div>
+                </div>
+                
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">PARTIDO DEL BUEN GOBIERNO</span>
+                    <span class="block-bar__pct">13.33%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:13.33%; background:#d97706;"></span></div>
+                </div>
+                
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">FUERZA POPULAR</span>
+                    <span class="block-bar__pct">15.76%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:15.76%; background:#6b7280;"></span></div>
+                </div>
+                
+            </article>
+            
+            <article class="block-card">
+              <div class="block-card__header">
+                <h3 class="block-card__title">Extranjero</h3>
+                <span class="block-card__total">389,077 proj.</span>
+              </div>
+              
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">JUNTOS POR EL PERÚ</span>
+                    <span class="block-bar__pct">1.91%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:1.91%; background:#1f7a45;"></span></div>
+                </div>
+                
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">RENOVACIÓN POPULAR</span>
+                    <span class="block-bar__pct">21.94%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:21.94%; background:#1e40af;"></span></div>
+                </div>
+                
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">PARTIDO DEL BUEN GOBIERNO</span>
+                    <span class="block-bar__pct">8.38%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:8.38%; background:#d97706;"></span></div>
+                </div>
+                
+                <div class="block-bar">
+                  <div class="block-bar__head">
+                    <span class="block-bar__name">FUERZA POPULAR</span>
+                    <span class="block-bar__pct">12.57%</span>
+                  </div>
+                  <div class="block-bar__track"><span style="width:12.57%; background:#6b7280;"></span></div>
+                </div>
+                
+            </article>
+            
       </div>
     </section>
 
-    
-    <section class="stack">
+    <!-- ── REMAINING ───────────────────────────── -->
+    <section>
       <div class="section-title">
-        <p class="eyebrow">Movimiento de proyección</p>
-        <h2>Contra el snapshot previo</h2>
-        <p>
-          2026-04-15 14:59:52 CDT · 91.544% de actas.
-          Esto muestra cuánto se movió la estimación final al entrar nueva data.
-        </p>
-      </div>
-      <div class="cards-grid shift-grid">
-        
-            <article class="shift-card shift-card--stable">
-              <div class="shift-card__header">
-                <div>
-                  <p class="eyebrow">Proyección final</p>
-                  <h3>FUERZA POPULAR</h3>
-                </div>
-                <span class="shift-card__pill" style="--shift-color:#6b7280;">sin cambio</span>
-              </div>
-              <div class="shift-card__numbers">
-                <div>
-                  <span class="value">14.25%</span>
-                  <span class="label">estimación actual</span>
-                </div>
-                <div>
-                  <span class="value">-0.00 pp</span>
-                  <span class="label">vs base</span>
-                </div>
-              </div>
-              <div class="candidate-card__bar">
-                <span style="width:14.25%; background:#6b7280;"></span>
-              </div>
-              <div class="shift-card__meta">
-                <span>Base 14.26%</span>
-                <span>-5,055 votos proj.</span>
-              </div>
-            </article>
-            
-            <article class="shift-card shift-card--up">
-              <div class="shift-card__header">
-                <div>
-                  <p class="eyebrow">Proyección final</p>
-                  <h3>RENOVACIÓN POPULAR</h3>
-                </div>
-                <span class="shift-card__pill" style="--shift-color:#1e40af;">sube</span>
-              </div>
-              <div class="shift-card__numbers">
-                <div>
-                  <span class="value">10.00%</span>
-                  <span class="label">estimación actual</span>
-                </div>
-                <div>
-                  <span class="value">+0.01 pp</span>
-                  <span class="label">vs base</span>
-                </div>
-              </div>
-              <div class="candidate-card__bar">
-                <span style="width:10.00%; background:#1e40af;"></span>
-              </div>
-              <div class="shift-card__meta">
-                <span>Base 10.00%</span>
-                <span>-2,075 votos proj.</span>
-              </div>
-            </article>
-            
-            <article class="shift-card shift-card--stable">
-              <div class="shift-card__header">
-                <div>
-                  <p class="eyebrow">Proyección final</p>
-                  <h3>JUNTOS POR EL PERÚ</h3>
-                </div>
-                <span class="shift-card__pill" style="--shift-color:#1f7a45;">sin cambio</span>
-              </div>
-              <div class="shift-card__numbers">
-                <div>
-                  <span class="value">9.95%</span>
-                  <span class="label">estimación actual</span>
-                </div>
-                <div>
-                  <span class="value">-0.00 pp</span>
-                  <span class="label">vs base</span>
-                </div>
-              </div>
-              <div class="candidate-card__bar">
-                <span style="width:9.95%; background:#1f7a45;"></span>
-              </div>
-              <div class="shift-card__meta">
-                <span>Base 9.96%</span>
-                <span>-3,768 votos proj.</span>
-              </div>
-            </article>
-            
-            <article class="shift-card shift-card--up">
-              <div class="shift-card__header">
-                <div>
-                  <p class="eyebrow">Proyección final</p>
-                  <h3>PARTIDO DEL BUEN GOBIERNO</h3>
-                </div>
-                <span class="shift-card__pill" style="--shift-color:#d97706;">sube</span>
-              </div>
-              <div class="shift-card__numbers">
-                <div>
-                  <span class="value">9.18%</span>
-                  <span class="label">estimación actual</span>
-                </div>
-                <div>
-                  <span class="value">+0.01 pp</span>
-                  <span class="label">vs base</span>
-                </div>
-              </div>
-              <div class="candidate-card__bar">
-                <span style="width:9.18%; background:#d97706;"></span>
-              </div>
-              <div class="shift-card__meta">
-                <span>Base 9.17%</span>
-                <span>-1,952 votos proj.</span>
-              </div>
-            </article>
-            
-      </div>
-    </section>
-    
-    
-    <section class="stack">
-      <div class="section-title">
-        <p class="eyebrow">Movimiento de proyección</p>
-        <h2>Contra la base de tendencia</h2>
-        <p>
-          2026-04-15 14:26:01 CDT · 91.536% de actas.
-          Esto muestra cuánto se movió la estimación final al entrar nueva data.
-        </p>
-      </div>
-      <div class="cards-grid shift-grid">
-        
-            <article class="shift-card shift-card--stable">
-              <div class="shift-card__header">
-                <div>
-                  <p class="eyebrow">Proyección final</p>
-                  <h3>FUERZA POPULAR</h3>
-                </div>
-                <span class="shift-card__pill" style="--shift-color:#6b7280;">sin cambio</span>
-              </div>
-              <div class="shift-card__numbers">
-                <div>
-                  <span class="value">14.25%</span>
-                  <span class="label">estimación actual</span>
-                </div>
-                <div>
-                  <span class="value">-0.00 pp</span>
-                  <span class="label">vs base</span>
-                </div>
-              </div>
-              <div class="candidate-card__bar">
-                <span style="width:14.25%; background:#6b7280;"></span>
-              </div>
-              <div class="shift-card__meta">
-                <span>Base 14.25%</span>
-                <span>-4,798 votos proj.</span>
-              </div>
-            </article>
-            
-            <article class="shift-card shift-card--up">
-              <div class="shift-card__header">
-                <div>
-                  <p class="eyebrow">Proyección final</p>
-                  <h3>RENOVACIÓN POPULAR</h3>
-                </div>
-                <span class="shift-card__pill" style="--shift-color:#1e40af;">sube</span>
-              </div>
-              <div class="shift-card__numbers">
-                <div>
-                  <span class="value">10.00%</span>
-                  <span class="label">estimación actual</span>
-                </div>
-                <div>
-                  <span class="value">+0.01 pp</span>
-                  <span class="label">vs base</span>
-                </div>
-              </div>
-              <div class="candidate-card__bar">
-                <span style="width:10.00%; background:#1e40af;"></span>
-              </div>
-              <div class="shift-card__meta">
-                <span>Base 9.99%</span>
-                <span>-1,864 votos proj.</span>
-              </div>
-            </article>
-            
-            <article class="shift-card shift-card--down">
-              <div class="shift-card__header">
-                <div>
-                  <p class="eyebrow">Proyección final</p>
-                  <h3>JUNTOS POR EL PERÚ</h3>
-                </div>
-                <span class="shift-card__pill" style="--shift-color:#1f7a45;">baja</span>
-              </div>
-              <div class="shift-card__numbers">
-                <div>
-                  <span class="value">9.95%</span>
-                  <span class="label">estimación actual</span>
-                </div>
-                <div>
-                  <span class="value">-0.01 pp</span>
-                  <span class="label">vs base</span>
-                </div>
-              </div>
-              <div class="candidate-card__bar">
-                <span style="width:9.95%; background:#1f7a45;"></span>
-              </div>
-              <div class="shift-card__meta">
-                <span>Base 9.96%</span>
-                <span>-5,045 votos proj.</span>
-              </div>
-            </article>
-            
-            <article class="shift-card shift-card--stable">
-              <div class="shift-card__header">
-                <div>
-                  <p class="eyebrow">Proyección final</p>
-                  <h3>PARTIDO DEL BUEN GOBIERNO</h3>
-                </div>
-                <span class="shift-card__pill" style="--shift-color:#d97706;">sin cambio</span>
-              </div>
-              <div class="shift-card__numbers">
-                <div>
-                  <span class="value">9.18%</span>
-                  <span class="label">estimación actual</span>
-                </div>
-                <div>
-                  <span class="value">+0.00 pp</span>
-                  <span class="label">vs base</span>
-                </div>
-              </div>
-              <div class="candidate-card__bar">
-                <span style="width:9.18%; background:#d97706;"></span>
-              </div>
-              <div class="shift-card__meta">
-                <span>Base 9.18%</span>
-                <span>-2,781 votos proj.</span>
-              </div>
-            </article>
-            
-      </div>
-    </section>
-    
-
-    <section class="stack">
-      <div class="section-title">
-        <p class="eyebrow">Diferencia real</p>
-        <h2>Brechas al corte actual</h2>
-        <p>Diferencias observadas hasta este momento, sin proyectar al 100%.</p>
-      </div>
-      
-      <div class="projection-shell">
-        <table>
-          <thead>
-            <tr>
-              <th>Candidato A</th>
-              <th>Candidato B</th>
-              <th>Votos A</th>
-              <th>Votos B</th>
-              <th>Diferencia real</th>
-              <th>Diferencia real en puntos</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <tr>
-              <td>RENOVACIÓN POPULAR</td>
-              <td>JUNTOS POR EL PERÚ</td>
-              <td>1,832,982</td>
-              <td>1,868,981</td>
-              <td>-35,999</td>
-              <td>-0.19 pp</td>
-            </tr>
-            
-          </tbody>
-        </table>
-      </div>
-    
-    </section>
-
-    <section class="stack">
-      <div class="section-title">
-        <p class="eyebrow">Brecha simulada</p>
-        <h2>Brechas al 100% proyectado</h2>
-        <p>Diferencias estimadas al cierre entre cada par, tanto en votos proyectados como en puntos porcentuales.</p>
-      </div>
-      
-      <div class="projection-shell">
-        <table>
-          <thead>
-            <tr>
-              <th>Candidato A</th>
-              <th>Candidato B</th>
-              <th>Votos A proj.</th>
-              <th>Votos B proj.</th>
-              <th>Diferencia simulada</th>
-              <th>Diferencia simulada en puntos</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <tr>
-              <td>RENOVACIÓN POPULAR</td>
-              <td>JUNTOS POR EL PERÚ</td>
-              <td>2,009,815</td>
-              <td>2,000,054</td>
-              <td>+9,761</td>
-              <td>+0.04 pp</td>
-            </tr>
-            
-          </tbody>
-        </table>
-      </div>
-    
-    </section>
-
-    <section class="stack">
-      <div class="section-title">
-        <p class="eyebrow">Lo que falta</p>
-        <h2>Bolsones pendientes por bloque</h2>
+        <span class="eyebrow">Votos pendientes</span>
+        <h2>Bolsones por contar</h2>
       </div>
       <div class="remaining-grid">
         
             <article class="remaining-card">
               <div class="remaining-card__header">
-                <h3>Regiones sin Lima</h3>
-                <span>864,408 votos</span>
+                <h3 class="remaining-card__title">Regiones sin Lima</h3>
+                <span class="remaining-card__count">828,084 votos</span>
               </div>
-              <div class="remaining-card__bar"><span style="width:100.00%"></span></div>
-              <p>Falta por contar aproximadamente 6.74% del bloque.</p>
+              <div class="remaining-bar"><span style="width:100.00%"></span></div>
+              <p class="remaining-card__note">Falta ~6.46% del bloque.</p>
             </article>
             
             <article class="remaining-card">
               <div class="remaining-card__header">
-                <h3>Lima</h3>
-                <span>471,271 votos</span>
+                <h3 class="remaining-card__title">Lima</h3>
+                <span class="remaining-card__count">427,084 votos</span>
               </div>
-              <div class="remaining-card__bar"><span style="width:54.52%"></span></div>
-              <p>Falta por contar aproximadamente 6.83% del bloque.</p>
+              <div class="remaining-bar"><span style="width:51.57%"></span></div>
+              <p class="remaining-card__note">Falta ~6.19% del bloque.</p>
             </article>
             
             <article class="remaining-card">
               <div class="remaining-card__header">
-                <h3>Extranjero</h3>
-                <span>208,850 votos</span>
+                <h3 class="remaining-card__title">Extranjero</h3>
+                <span class="remaining-card__count">197,063 votos</span>
               </div>
-              <div class="remaining-card__bar"><span style="width:24.16%"></span></div>
-              <p>Falta por contar aproximadamente 55.49% del bloque.</p>
+              <div class="remaining-bar"><span style="width:23.80%"></span></div>
+              <p class="remaining-card__note">Falta ~50.65% del bloque.</p>
             </article>
             
       </div>
     </section>
 
-    <section class="stack">
-      <div class="section-title">
-        <p class="eyebrow">Mapa político</p>
-        <h2>Proyección por bloque territorial</h2>
-      </div>
-      <div class="battle-grid">
-        
-            <article class="battle-card">
-              <div class="battle-card__header">
-                <h3>Regiones sin Lima</h3>
-                <span>12,823,220 emitidos proj.</span>
-              </div>
-              
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>JUNTOS POR EL PERÚ</span>
-                    <span>13.99%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:13.99%; background:#1f7a45;"></span></div>
-                </div>
-                
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>RENOVACIÓN POPULAR</span>
-                    <span>5.52%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:5.52%; background:#1e40af;"></span></div>
-                </div>
-                
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>PARTIDO DEL BUEN GOBIERNO</span>
-                    <span>6.97%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:6.97%; background:#d97706;"></span></div>
-                </div>
-                
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>FUERZA POPULAR</span>
-                    <span>13.50%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:13.50%; background:#6b7280;"></span></div>
-                </div>
-                
-            </article>
-            
-            <article class="battle-card">
-              <div class="battle-card__header">
-                <h3>Lima</h3>
-                <span>6,896,494 emitidos proj.</span>
-              </div>
-              
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>JUNTOS POR EL PERÚ</span>
-                    <span>2.89%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:2.89%; background:#1f7a45;"></span></div>
-                </div>
-                
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>RENOVACIÓN POPULAR</span>
-                    <span>17.61%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:17.61%; background:#1e40af;"></span></div>
-                </div>
-                
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>PARTIDO DEL BUEN GOBIERNO</span>
-                    <span>13.33%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:13.33%; background:#d97706;"></span></div>
-                </div>
-                
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>FUERZA POPULAR</span>
-                    <span>15.76%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:15.76%; background:#6b7280;"></span></div>
-                </div>
-                
-            </article>
-            
-            <article class="battle-card">
-              <div class="battle-card__header">
-                <h3>Extranjero</h3>
-                <span>376,404 emitidos proj.</span>
-              </div>
-              
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>JUNTOS POR EL PERÚ</span>
-                    <span>1.84%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:1.84%; background:#1f7a45;"></span></div>
-                </div>
-                
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>RENOVACIÓN POPULAR</span>
-                    <span>23.09%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:23.09%; background:#1e40af;"></span></div>
-                </div>
-                
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>PARTIDO DEL BUEN GOBIERNO</span>
-                    <span>8.61%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:8.61%; background:#d97706;"></span></div>
-                </div>
-                
-                <div class="battle-line">
-                  <div class="battle-line__head">
-                    <span>FUERZA POPULAR</span>
-                    <span>12.48%</span>
-                  </div>
-                  <div class="battle-line__bar"><span style="width:12.48%; background:#6b7280;"></span></div>
-                </div>
-                
-            </article>
-            
-      </div>
-    </section>
-
+    <!-- ── TERRITORY DRILLDOWN ─────────────────── -->
     
-    <section class="stack">
+    <section>
       <div class="section-title">
         <p class="eyebrow">Territorio fino</p>
         <h2>Dónde está el remanente que define RLA vs Sánchez</h2>
-        <p>Regiones y provincias con más votos pendientes, más un zoom de Lima por distrito. La brecha se muestra como Sánchez menos RLA.</p>
+        <p class="section-note">Regiones y provincias con más votos pendientes, más un zoom de Lima por distrito. La brecha se muestra como Sánchez menos RLA. Click en columna para ordenar.</p>
       </div>
-      <div class="table-shell">
-        <table>
-          <thead>
-            <tr>
-              <th>Región</th>
-              <th>% actas</th>
-              <th>Faltan</th>
-              <th>RLA</th>
-              <th>Sánchez</th>
-              <th>Sánchez-RLA</th>
-            </tr>
-          </thead>
-          <tbody>
-            
+      <div class="table-wrap">
+        <div class="table-inner">
+          <table class="sortable">
+            <thead>
+              <tr>
+                <th>Región</th>
+                <th>% actas</th>
+                <th>Faltan</th>
+                <th>RLA</th>
+                <th>Sánchez</th>
+                <th>Sánchez-RLA</th>
+              </tr>
+            </thead>
+            <tbody>
+              
             <tr>
               <td>LIMA</td>
-              <td>93.008%</td>
-              <td>470,833</td>
+              <td>93.678%</td>
+              <td>426,306</td>
               <td>17.61%</td>
               <td>2.89%</td>
               <td>-14.72 pp</td>
@@ -1328,29 +1385,29 @@
             
             <tr>
               <td>PIURA</td>
-              <td>91.062%</td>
-              <td>97,863</td>
-              <td>5.16%</td>
-              <td>8.61%</td>
-              <td>+3.45 pp</td>
+              <td>91.895%</td>
+              <td>88,871</td>
+              <td>5.14%</td>
+              <td>8.72%</td>
+              <td>+3.58 pp</td>
             </tr>
             
             <tr>
               <td>LA LIBERTAD</td>
-              <td>91.343%</td>
-              <td>96,861</td>
-              <td>6.62%</td>
-              <td>7.61%</td>
-              <td>+0.98 pp</td>
+              <td>92.663%</td>
+              <td>82,415</td>
+              <td>6.59%</td>
+              <td>7.53%</td>
+              <td>+0.94 pp</td>
             </tr>
             
             <tr>
               <td>LORETO</td>
-              <td>80.608%</td>
-              <td>81,266</td>
-              <td>5.19%</td>
-              <td>6.95%</td>
-              <td>+1.76 pp</td>
+              <td>82.759%</td>
+              <td>72,600</td>
+              <td>5.13%</td>
+              <td>7.34%</td>
+              <td>+2.21 pp</td>
             </tr>
             
             <tr>
@@ -1373,8 +1430,8 @@
             
             <tr>
               <td>ICA</td>
-              <td>90.463%</td>
-              <td>53,427</td>
+              <td>90.503%</td>
+              <td>53,203</td>
               <td>7.81%</td>
               <td>6.39%</td>
               <td>-1.42 pp</td>
@@ -1391,8 +1448,8 @@
             
             <tr>
               <td>HUÁNUCO</td>
-              <td>90.859%</td>
-              <td>38,386</td>
+              <td>90.901%</td>
+              <td>38,239</td>
               <td>4.66%</td>
               <td>22.96%</td>
               <td>+18.30 pp</td>
@@ -1407,8 +1464,9 @@
               <td>+1.68 pp</td>
             </tr>
             
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
       <div class="focus-grid">
         
@@ -1418,7 +1476,7 @@
                   <p class="eyebrow">Región crítica</p>
                   <h3>LIMA</h3>
                 </div>
-                <span>470,833 faltantes</span>
+                <span>426,306 faltantes</span>
               </div>
               <div class="focus-card__chips">
                 <span class="focus-chip">RLA 17.61%</span>
@@ -1426,29 +1484,30 @@
                 <span class="focus-chip focus-chip--gap">Brecha -14.72 pp</span>
               </div>
               <div class="focus-table-shell">
-                <table class="micro-table">
-                  <thead>
-                    <tr>
-                      <th>Provincia</th>
-                      <th>Faltan</th>
-                      <th>RLA</th>
-                      <th>Sánchez</th>
-                      <th>Sánchez-RLA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    
+                <div class="table-inner">
+                  <table class="micro-table sortable">
+                    <thead>
+                      <tr>
+                        <th>Provincia</th>
+                        <th>Faltan</th>
+                        <th>RLA</th>
+                        <th>Sánchez</th>
+                        <th>Sánchez-RLA</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
                 <tr>
                   <td>LIMA</td>
-                  <td>426,459</td>
-                  <td>18.72%</td>
+                  <td>386,097</td>
+                  <td>18.70%</td>
                   <td>2.48%</td>
-                  <td>-16.24 pp</td>
+                  <td>-16.22 pp</td>
                 </tr>
                 
                 <tr>
                   <td>CAÑETE</td>
-                  <td>11,094</td>
+                  <td>9,930</td>
                   <td>7.28%</td>
                   <td>5.43%</td>
                   <td>-1.85 pp</td>
@@ -1456,7 +1515,7 @@
                 
                 <tr>
                   <td>HUAURA</td>
-                  <td>10,340</td>
+                  <td>9,230</td>
                   <td>7.32%</td>
                   <td>6.03%</td>
                   <td>-1.29 pp</td>
@@ -1464,7 +1523,7 @@
                 
                 <tr>
                   <td>HUARAL</td>
-                  <td>8,857</td>
+                  <td>7,960</td>
                   <td>7.03%</td>
                   <td>7.84%</td>
                   <td>+0.81 pp</td>
@@ -1472,7 +1531,7 @@
                 
                 <tr>
                   <td>BARRANCA</td>
-                  <td>6,441</td>
+                  <td>6,004</td>
                   <td>6.57%</td>
                   <td>6.04%</td>
                   <td>-0.53 pp</td>
@@ -1480,14 +1539,15 @@
                 
                 <tr>
                   <td>HUAROCHIRÍ</td>
-                  <td>4,983</td>
+                  <td>4,573</td>
                   <td>8.54%</td>
                   <td>7.53%</td>
                   <td>-1.01 pp</td>
                 </tr>
                 
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </article>
             
@@ -1497,29 +1557,30 @@
                   <p class="eyebrow">Región crítica</p>
                   <h3>PIURA</h3>
                 </div>
-                <span>97,863 faltantes</span>
+                <span>88,871 faltantes</span>
               </div>
               <div class="focus-card__chips">
-                <span class="focus-chip">RLA 5.16%</span>
-                <span class="focus-chip">Sánchez 8.61%</span>
-                <span class="focus-chip focus-chip--gap">Brecha +3.45 pp</span>
+                <span class="focus-chip">RLA 5.14%</span>
+                <span class="focus-chip">Sánchez 8.72%</span>
+                <span class="focus-chip focus-chip--gap">Brecha +3.58 pp</span>
               </div>
               <div class="focus-table-shell">
-                <table class="micro-table">
-                  <thead>
-                    <tr>
-                      <th>Provincia</th>
-                      <th>Faltan</th>
-                      <th>RLA</th>
-                      <th>Sánchez</th>
-                      <th>Sánchez-RLA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    
+                <div class="table-inner">
+                  <table class="micro-table sortable">
+                    <thead>
+                      <tr>
+                        <th>Provincia</th>
+                        <th>Faltan</th>
+                        <th>RLA</th>
+                        <th>Sánchez</th>
+                        <th>Sánchez-RLA</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
                 <tr>
                   <td>PIURA</td>
-                  <td>42,929</td>
+                  <td>39,062</td>
                   <td>7.23%</td>
                   <td>6.22%</td>
                   <td>-1.01 pp</td>
@@ -1527,7 +1588,7 @@
                 
                 <tr>
                   <td>SULLANA</td>
-                  <td>17,475</td>
+                  <td>15,983</td>
                   <td>4.35%</td>
                   <td>3.98%</td>
                   <td>-0.37 pp</td>
@@ -1535,15 +1596,15 @@
                 
                 <tr>
                   <td>MORROPÓN</td>
-                  <td>9,046</td>
-                  <td>4.34%</td>
-                  <td>9.12%</td>
-                  <td>+4.77 pp</td>
+                  <td>8,196</td>
+                  <td>4.24%</td>
+                  <td>10.32%</td>
+                  <td>+6.08 pp</td>
                 </tr>
                 
                 <tr>
                   <td>TALARA</td>
-                  <td>7,191</td>
+                  <td>6,385</td>
                   <td>5.10%</td>
                   <td>2.94%</td>
                   <td>-2.16 pp</td>
@@ -1551,7 +1612,7 @@
                 
                 <tr>
                   <td>PAITA</td>
-                  <td>6,856</td>
+                  <td>6,207</td>
                   <td>2.83%</td>
                   <td>5.40%</td>
                   <td>+2.57 pp</td>
@@ -1559,14 +1620,15 @@
                 
                 <tr>
                   <td>HUANCABAMBA</td>
-                  <td>5,303</td>
+                  <td>4,813</td>
                   <td>1.47%</td>
                   <td>36.06%</td>
                   <td>+34.59 pp</td>
                 </tr>
                 
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </article>
             
@@ -1576,37 +1638,38 @@
                   <p class="eyebrow">Región crítica</p>
                   <h3>LA LIBERTAD</h3>
                 </div>
-                <span>96,861 faltantes</span>
+                <span>82,415 faltantes</span>
               </div>
               <div class="focus-card__chips">
-                <span class="focus-chip">RLA 6.62%</span>
-                <span class="focus-chip">Sánchez 7.61%</span>
-                <span class="focus-chip focus-chip--gap">Brecha +0.98 pp</span>
+                <span class="focus-chip">RLA 6.59%</span>
+                <span class="focus-chip">Sánchez 7.53%</span>
+                <span class="focus-chip focus-chip--gap">Brecha +0.94 pp</span>
               </div>
               <div class="focus-table-shell">
-                <table class="micro-table">
-                  <thead>
-                    <tr>
-                      <th>Provincia</th>
-                      <th>Faltan</th>
-                      <th>RLA</th>
-                      <th>Sánchez</th>
-                      <th>Sánchez-RLA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    
+                <div class="table-inner">
+                  <table class="micro-table sortable">
+                    <thead>
+                      <tr>
+                        <th>Provincia</th>
+                        <th>Faltan</th>
+                        <th>RLA</th>
+                        <th>Sánchez</th>
+                        <th>Sánchez-RLA</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
                 <tr>
                   <td>TRUJILLO</td>
-                  <td>54,888</td>
-                  <td>9.46%</td>
+                  <td>46,678</td>
+                  <td>9.33%</td>
                   <td>2.57%</td>
-                  <td>-6.89 pp</td>
+                  <td>-6.76 pp</td>
                 </tr>
                 
                 <tr>
                   <td>SÁNCHEZ CARRIÓN</td>
-                  <td>6,925</td>
+                  <td>5,821</td>
                   <td>1.38%</td>
                   <td>24.05%</td>
                   <td>+22.67 pp</td>
@@ -1614,38 +1677,39 @@
                 
                 <tr>
                   <td>ASCOPE</td>
-                  <td>6,535</td>
+                  <td>5,469</td>
                   <td>4.58%</td>
                   <td>3.43%</td>
                   <td>-1.15 pp</td>
                 </tr>
                 
                 <tr>
+                  <td>PACASMAYO</td>
+                  <td>4,786</td>
+                  <td>5.60%</td>
+                  <td>7.26%</td>
+                  <td>+1.66 pp</td>
+                </tr>
+                
+                <tr>
                   <td>VIRÚ</td>
-                  <td>5,617</td>
+                  <td>4,740</td>
                   <td>2.50%</td>
                   <td>13.00%</td>
                   <td>+10.50 pp</td>
                 </tr>
                 
                 <tr>
-                  <td>PACASMAYO</td>
-                  <td>5,419</td>
-                  <td>5.61%</td>
-                  <td>7.26%</td>
-                  <td>+1.66 pp</td>
-                </tr>
-                
-                <tr>
                   <td>CHEPÉN</td>
-                  <td>4,558</td>
+                  <td>3,922</td>
                   <td>4.33%</td>
                   <td>9.80%</td>
                   <td>+5.48 pp</td>
                 </tr>
                 
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </article>
             
@@ -1655,29 +1719,30 @@
                   <p class="eyebrow">Región crítica</p>
                   <h3>LORETO</h3>
                 </div>
-                <span>81,266 faltantes</span>
+                <span>72,600 faltantes</span>
               </div>
               <div class="focus-card__chips">
-                <span class="focus-chip">RLA 5.19%</span>
-                <span class="focus-chip">Sánchez 6.95%</span>
-                <span class="focus-chip focus-chip--gap">Brecha +1.76 pp</span>
+                <span class="focus-chip">RLA 5.13%</span>
+                <span class="focus-chip">Sánchez 7.34%</span>
+                <span class="focus-chip focus-chip--gap">Brecha +2.21 pp</span>
               </div>
               <div class="focus-table-shell">
-                <table class="micro-table">
-                  <thead>
-                    <tr>
-                      <th>Provincia</th>
-                      <th>Faltan</th>
-                      <th>RLA</th>
-                      <th>Sánchez</th>
-                      <th>Sánchez-RLA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    
+                <div class="table-inner">
+                  <table class="micro-table sortable">
+                    <thead>
+                      <tr>
+                        <th>Provincia</th>
+                        <th>Faltan</th>
+                        <th>RLA</th>
+                        <th>Sánchez</th>
+                        <th>Sánchez-RLA</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
                 <tr>
                   <td>MAYNAS</td>
-                  <td>44,472</td>
+                  <td>39,786</td>
                   <td>6.03%</td>
                   <td>2.85%</td>
                   <td>-3.19 pp</td>
@@ -1685,7 +1750,7 @@
                 
                 <tr>
                   <td>ALTO AMAZONAS</td>
-                  <td>11,667</td>
+                  <td>10,585</td>
                   <td>3.75%</td>
                   <td>14.80%</td>
                   <td>+11.05 pp</td>
@@ -1693,7 +1758,7 @@
                 
                 <tr>
                   <td>LORETO</td>
-                  <td>5,432</td>
+                  <td>4,765</td>
                   <td>3.84%</td>
                   <td>7.98%</td>
                   <td>+4.15 pp</td>
@@ -1701,7 +1766,7 @@
                 
                 <tr>
                   <td>MARISCAL RAMÓN CASTILLA</td>
-                  <td>5,133</td>
+                  <td>4,617</td>
                   <td>3.74%</td>
                   <td>3.40%</td>
                   <td>-0.34 pp</td>
@@ -1709,7 +1774,7 @@
                 
                 <tr>
                   <td>REQUENA</td>
-                  <td>4,849</td>
+                  <td>4,454</td>
                   <td>6.29%</td>
                   <td>10.31%</td>
                   <td>+4.02 pp</td>
@@ -1717,14 +1782,15 @@
                 
                 <tr>
                   <td>UCAYALI</td>
-                  <td>4,615</td>
+                  <td>4,122</td>
                   <td>4.44%</td>
                   <td>12.95%</td>
                   <td>+8.51 pp</td>
                 </tr>
                 
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </article>
             
@@ -1742,18 +1808,19 @@
                 <span class="focus-chip focus-chip--gap">Brecha +14.16 pp</span>
               </div>
               <div class="focus-table-shell">
-                <table class="micro-table">
-                  <thead>
-                    <tr>
-                      <th>Provincia</th>
-                      <th>Faltan</th>
-                      <th>RLA</th>
-                      <th>Sánchez</th>
-                      <th>Sánchez-RLA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    
+                <div class="table-inner">
+                  <table class="micro-table sortable">
+                    <thead>
+                      <tr>
+                        <th>Provincia</th>
+                        <th>Faltan</th>
+                        <th>RLA</th>
+                        <th>Sánchez</th>
+                        <th>Sánchez-RLA</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
                 <tr>
                   <td>CUSCO</td>
                   <td>26,472</td>
@@ -1802,8 +1869,9 @@
                   <td>+24.06 pp</td>
                 </tr>
                 
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </article>
             
@@ -1821,18 +1889,19 @@
                 <span class="focus-chip focus-chip--gap">Brecha +6.98 pp</span>
               </div>
               <div class="focus-table-shell">
-                <table class="micro-table">
-                  <thead>
-                    <tr>
-                      <th>Provincia</th>
-                      <th>Faltan</th>
-                      <th>RLA</th>
-                      <th>Sánchez</th>
-                      <th>Sánchez-RLA</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    
+                <div class="table-inner">
+                  <table class="micro-table sortable">
+                    <thead>
+                      <tr>
+                        <th>Provincia</th>
+                        <th>Faltan</th>
+                        <th>RLA</th>
+                        <th>Sánchez</th>
+                        <th>Sánchez-RLA</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
                 <tr>
                   <td>SANTA</td>
                   <td>24,925</td>
@@ -1881,35 +1950,37 @@
                   <td>+19.44 pp</td>
                 </tr>
                 
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </article>
             
       </div>
       <div class="focus-lower-grid">
-        <div class="table-shell">
+        <div class="table-wrap">
           <div class="focus-subtitle">
             <p class="eyebrow">Lima</p>
             <h3>Distritos con más votos faltantes</h3>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Distrito</th>
-                <th>% actas</th>
-                <th>Faltan</th>
-                <th>RLA</th>
-                <th>Sánchez</th>
-                <th>Sánchez-RLA</th>
-              </tr>
-            </thead>
-            <tbody>
-              
+          <div class="table-inner">
+            <table class="sortable">
+              <thead>
+                <tr>
+                  <th>Distrito</th>
+                  <th>% actas</th>
+                  <th>Faltan</th>
+                  <th>RLA</th>
+                  <th>Sánchez</th>
+                  <th>Sánchez-RLA</th>
+                </tr>
+              </thead>
+              <tbody>
+                
             <tr>
               <td>SAN JUAN DE LURIGANCHO</td>
-              <td>93.208%</td>
-              <td>44,920</td>
+              <td>93.775%</td>
+              <td>40,983</td>
               <td>10.48%</td>
               <td>3.32%</td>
               <td>-7.16 pp</td>
@@ -1917,17 +1988,17 @@
             
             <tr>
               <td>SAN MARTÍN DE PORRES</td>
-              <td>93.151%</td>
-              <td>28,825</td>
-              <td>16.61%</td>
-              <td>1.84%</td>
-              <td>-14.78 pp</td>
+              <td>93.760%</td>
+              <td>26,325</td>
+              <td>16.63%</td>
+              <td>1.83%</td>
+              <td>-14.80 pp</td>
             </tr>
             
             <tr>
               <td>ATE</td>
-              <td>93.322%</td>
-              <td>26,698</td>
+              <td>93.922%</td>
+              <td>24,181</td>
               <td>13.67%</td>
               <td>4.33%</td>
               <td>-9.35 pp</td>
@@ -1935,17 +2006,17 @@
             
             <tr>
               <td>COMAS</td>
-              <td>93.117%</td>
-              <td>24,372</td>
+              <td>93.729%</td>
+              <td>22,290</td>
               <td>12.64%</td>
               <td>2.09%</td>
-              <td>-10.56 pp</td>
+              <td>-10.55 pp</td>
             </tr>
             
             <tr>
               <td>VILLA MARÍA DEL TRIUNFO</td>
-              <td>93.333%</td>
-              <td>20,115</td>
+              <td>93.852%</td>
+              <td>18,504</td>
               <td>12.29%</td>
               <td>3.07%</td>
               <td>-9.21 pp</td>
@@ -1953,17 +2024,17 @@
             
             <tr>
               <td>VILLA EL SALVADOR</td>
-              <td>92.249%</td>
-              <td>19,367</td>
-              <td>10.71%</td>
+              <td>92.885%</td>
+              <td>17,721</td>
+              <td>10.70%</td>
               <td>2.32%</td>
               <td>-8.39 pp</td>
             </tr>
             
             <tr>
               <td>SANTIAGO DE SURCO</td>
-              <td>93.115%</td>
-              <td>18,436</td>
+              <td>93.666%</td>
+              <td>16,885</td>
               <td>41.93%</td>
               <td>0.70%</td>
               <td>-41.23 pp</td>
@@ -1971,17 +2042,17 @@
             
             <tr>
               <td>SAN JUAN DE MIRAFLORES</td>
-              <td>91.256%</td>
-              <td>18,048</td>
-              <td>17.04%</td>
-              <td>2.29%</td>
-              <td>-14.75 pp</td>
+              <td>92.642%</td>
+              <td>16,449</td>
+              <td>16.96%</td>
+              <td>2.30%</td>
+              <td>-14.65 pp</td>
             </tr>
             
             <tr>
               <td>LOS OLIVOS</td>
-              <td>93.372%</td>
-              <td>16,150</td>
+              <td>93.922%</td>
+              <td>14,747</td>
               <td>17.23%</td>
               <td>1.92%</td>
               <td>-15.31 pp</td>
@@ -1989,8 +2060,8 @@
             
             <tr>
               <td>LIMA</td>
-              <td>93.175%</td>
-              <td>16,079</td>
+              <td>93.804%</td>
+              <td>14,537</td>
               <td>18.19%</td>
               <td>1.59%</td>
               <td>-16.60 pp</td>
@@ -1998,17 +2069,17 @@
             
             <tr>
               <td>CHORRILLOS</td>
-              <td>93.134%</td>
-              <td>14,664</td>
-              <td>19.39%</td>
+              <td>93.764%</td>
+              <td>13,499</td>
+              <td>19.40%</td>
               <td>1.55%</td>
-              <td>-17.84 pp</td>
+              <td>-17.85 pp</td>
             </tr>
             
             <tr>
               <td>PUENTE PIEDRA</td>
-              <td>93.239%</td>
-              <td>14,513</td>
+              <td>93.853%</td>
+              <td>13,129</td>
               <td>8.86%</td>
               <td>4.86%</td>
               <td>-4.00 pp</td>
@@ -2016,17 +2087,17 @@
             
             <tr>
               <td>CARABAYLLO</td>
-              <td>93.151%</td>
-              <td>13,933</td>
-              <td>9.68%</td>
-              <td>4.39%</td>
-              <td>-5.29 pp</td>
+              <td>93.891%</td>
+              <td>12,561</td>
+              <td>9.64%</td>
+              <td>4.37%</td>
+              <td>-5.27 pp</td>
             </tr>
             
             <tr>
               <td>SANTA ANITA</td>
-              <td>93.252%</td>
-              <td>10,556</td>
+              <td>93.827%</td>
+              <td>9,611</td>
               <td>14.45%</td>
               <td>2.88%</td>
               <td>-11.57 pp</td>
@@ -2034,67 +2105,49 @@
             
             <tr>
               <td>LA VICTORIA</td>
-              <td>92.512%</td>
-              <td>10,271</td>
-              <td>18.60%</td>
-              <td>2.17%</td>
-              <td>-16.42 pp</td>
+              <td>93.301%</td>
+              <td>9,368</td>
+              <td>18.57%</td>
+              <td>2.18%</td>
+              <td>-16.39 pp</td>
             </tr>
             
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div class="focus-foreign-stack">
-        <div class="table-shell">
+        <div class="table-wrap">
           <div class="focus-subtitle">
             <div>
               <p class="eyebrow">Extranjero</p>
               <h3>Países con más votos faltantes</h3>
             </div>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Continente</th>
-                <th>País</th>
-                <th>% actas</th>
-                <th>Faltan</th>
-                <th>RLA</th>
-                <th>Sánchez</th>
-                <th>Sánchez-RLA</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-            <tr>
-              <td>AMERICA</td>
-              <td>CHILE</td>
-              <td>24.199%</td>
-              <td>50,882</td>
-              <td>7.18%</td>
-              <td>3.57%</td>
-              <td>-3.61 pp</td>
-            </tr>
-            
-            <tr>
-              <td>EUROPA</td>
-              <td>ITALIA</td>
-              <td>16.733%</td>
-              <td>49,682</td>
-              <td>11.93%</td>
-              <td>2.66%</td>
-              <td>-9.26 pp</td>
-            </tr>
-            
+          <div class="table-inner">
+            <table class="sortable">
+              <thead>
+                <tr>
+                  <th>Continente</th>
+                  <th>País</th>
+                  <th>% actas</th>
+                  <th>Faltan</th>
+                  <th>RLA</th>
+                  <th>Sánchez</th>
+                  <th>Sánchez-RLA</th>
+                </tr>
+              </thead>
+              <tbody>
+                
             <tr>
               <td>AMERICA</td>
               <td>ARGENTINA</td>
-              <td>21.405%</td>
-              <td>47,980</td>
-              <td>8.69%</td>
-              <td>2.60%</td>
-              <td>-6.09 pp</td>
+              <td>22.408%</td>
+              <td>47,380</td>
+              <td>8.61%</td>
+              <td>2.62%</td>
+              <td>-5.99 pp</td>
             </tr>
             
             <tr>
@@ -2105,6 +2158,26 @@
               <td>16.70%</td>
               <td>1.71%</td>
               <td>-14.99 pp</td>
+            </tr>
+            
+            <tr>
+              <td>EUROPA</td>
+              <td>ITALIA</td>
+              <td>31.076%</td>
+              <td>41,733</td>
+              <td>12.49%</td>
+              <td>2.44%</td>
+              <td>-10.05 pp</td>
+            </tr>
+            
+            <tr>
+              <td>AMERICA</td>
+              <td>CHILE</td>
+              <td>43.060%</td>
+              <td>36,361</td>
+              <td>7.90%</td>
+              <td>3.23%</td>
+              <td>-4.67 pp</td>
             </tr>
             
             <tr>
@@ -2140,31 +2213,31 @@
             <tr>
               <td>AMERICA</td>
               <td>BRASIL</td>
-              <td>63.636%</td>
-              <td>2,482</td>
-              <td>18.46%</td>
-              <td>3.41%</td>
-              <td>-15.06 pp</td>
+              <td>72.727%</td>
+              <td>1,753</td>
+              <td>19.14%</td>
+              <td>3.25%</td>
+              <td>-15.89 pp</td>
             </tr>
             
             <tr>
               <td>AMERICA</td>
               <td>CANADA</td>
-              <td>76.923%</td>
-              <td>1,991</td>
-              <td>39.68%</td>
-              <td>0.66%</td>
-              <td>-39.01 pp</td>
+              <td>80.769%</td>
+              <td>1,658</td>
+              <td>39.70%</td>
+              <td>0.67%</td>
+              <td>-39.02 pp</td>
             </tr>
             
             <tr>
               <td>AMERICA</td>
               <td>BOLIVIA</td>
-              <td>68.182%</td>
-              <td>1,787</td>
-              <td>16.50%</td>
-              <td>3.73%</td>
-              <td>-12.77 pp</td>
+              <td>72.727%</td>
+              <td>1,559</td>
+              <td>16.16%</td>
+              <td>3.90%</td>
+              <td>-12.27 pp</td>
             </tr>
             
             <tr>
@@ -2178,83 +2251,213 @@
             </tr>
             
             <tr>
-              <td>EUROPA</td>
-              <td>SUIZA</td>
-              <td>78.947%</td>
-              <td>607</td>
-              <td>28.97%</td>
-              <td>1.45%</td>
-              <td>-27.52 pp</td>
+              <td>OCEANIA</td>
+              <td>AUSTRALIA</td>
+              <td>66.667%</td>
+              <td>722</td>
+              <td>36.73%</td>
+              <td>0.83%</td>
+              <td>-35.90 pp</td>
             </tr>
             
-            </tbody>
-          </table>
-          <p class="table-shell__note">El faltante por país se estima con actas pendientes y votos por acta del propio país, suavizado con el promedio del exterior.</p>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">El faltante por país se estima con actas pendientes y votos por acta del propio país, suavizado con el promedio del exterior.</p>
         </div>
       </div>
     </section>
     
 
+    <!-- ── SHIFT ───────────────────────────────── -->
+    
+    <section class="stack">
+      <div class="section-title">
+        <p class="eyebrow">Movimiento de proyección</p>
+        <h2>Contra el snapshot previo</h2>
+        <p>
+          2026-04-15 22:57:43 CDT · 92.093% de actas.
+          Esto muestra cuánto se movió la estimación final al entrar nueva data.
+        </p>
+      </div>
+      <div class="cards-grid shift-grid">
+        
+            <article class="shift-card" style="--c-color:#6b7280;">
+              <div class="shift-card__header">
+                <h3 class="shift-card__name">FUERZA POPULAR</h3>
+                <span class="shift-pill">sin cambio</span>
+              </div>
+              <span class="shift-pct">14.25%</span>
+              <span class="shift-delta">+0.00 pp vs base · -3,658 votos proj.</span>
+              <div class="candidate-card__bar" style="margin-top:8px;">
+                <span style="width:14.25%;"></span>
+              </div>
+            </article>
+            
+            <article class="shift-card" style="--c-color:#1e40af;">
+              <div class="shift-card__header">
+                <h3 class="shift-card__name">RENOVACIÓN POPULAR</h3>
+                <span class="shift-pill">sube</span>
+              </div>
+              <span class="shift-pct">9.98%</span>
+              <span class="shift-delta">+0.01 pp vs base · -1,720 votos proj.</span>
+              <div class="candidate-card__bar" style="margin-top:8px;">
+                <span style="width:9.98%;"></span>
+              </div>
+            </article>
+            
+            <article class="shift-card" style="--c-color:#1f7a45;">
+              <div class="shift-card__header">
+                <h3 class="shift-card__name">JUNTOS POR EL PERÚ</h3>
+                <span class="shift-pill">sin cambio</span>
+              </div>
+              <span class="shift-pct">9.96%</span>
+              <span class="shift-delta">-0.00 pp vs base · -3,618 votos proj.</span>
+              <div class="candidate-card__bar" style="margin-top:8px;">
+                <span style="width:9.96%;"></span>
+              </div>
+            </article>
+            
+            <article class="shift-card" style="--c-color:#d97706;">
+              <div class="shift-card__header">
+                <h3 class="shift-card__name">PARTIDO DEL BUEN GOBIERNO</h3>
+                <span class="shift-pill">sin cambio</span>
+              </div>
+              <span class="shift-pct">9.17%</span>
+              <span class="shift-delta">+0.00 pp vs base · -1,702 votos proj.</span>
+              <div class="candidate-card__bar" style="margin-top:8px;">
+                <span style="width:9.17%;"></span>
+              </div>
+            </article>
+            
+      </div>
+    </section>
+    
+    
+    <section class="stack">
+      <div class="section-title">
+        <p class="eyebrow">Movimiento de proyección</p>
+        <h2>Contra la base de tendencia</h2>
+        <p>
+          2026-04-15 22:24:15 CDT · 92.056% de actas.
+          Esto muestra cuánto se movió la estimación final al entrar nueva data.
+        </p>
+      </div>
+      <div class="cards-grid shift-grid">
+        
+            <article class="shift-card" style="--c-color:#6b7280;">
+              <div class="shift-card__header">
+                <h3 class="shift-card__name">FUERZA POPULAR</h3>
+                <span class="shift-pill">sin cambio</span>
+              </div>
+              <span class="shift-pct">14.25%</span>
+              <span class="shift-delta">-0.00 pp vs base · -4,402 votos proj.</span>
+              <div class="candidate-card__bar" style="margin-top:8px;">
+                <span style="width:14.25%;"></span>
+              </div>
+            </article>
+            
+            <article class="shift-card" style="--c-color:#1e40af;">
+              <div class="shift-card__header">
+                <h3 class="shift-card__name">RENOVACIÓN POPULAR</h3>
+                <span class="shift-pill">sube</span>
+              </div>
+              <span class="shift-pct">9.98%</span>
+              <span class="shift-delta">+0.01 pp vs base · -1,178 votos proj.</span>
+              <div class="candidate-card__bar" style="margin-top:8px;">
+                <span style="width:9.98%;"></span>
+              </div>
+            </article>
+            
+            <article class="shift-card" style="--c-color:#1f7a45;">
+              <div class="shift-card__header">
+                <h3 class="shift-card__name">JUNTOS POR EL PERÚ</h3>
+                <span class="shift-pill">sin cambio</span>
+              </div>
+              <span class="shift-pct">9.96%</span>
+              <span class="shift-delta">-0.00 pp vs base · -3,385 votos proj.</span>
+              <div class="candidate-card__bar" style="margin-top:8px;">
+                <span style="width:9.96%;"></span>
+              </div>
+            </article>
+            
+            <article class="shift-card" style="--c-color:#d97706;">
+              <div class="shift-card__header">
+                <h3 class="shift-card__name">PARTIDO DEL BUEN GOBIERNO</h3>
+                <span class="shift-pill">sin cambio</span>
+              </div>
+              <span class="shift-pct">9.17%</span>
+              <span class="shift-delta">+0.00 pp vs base · -1,999 votos proj.</span>
+              <div class="candidate-card__bar" style="margin-top:8px;">
+                <span style="width:9.17%;"></span>
+              </div>
+            </article>
+            
+      </div>
+    </section>
+    
+
+    <!-- ── DELTA ───────────────────────────────── -->
     
     <section class="delta-section">
       <div class="section-title">
         <p class="eyebrow">Incrementales</p>
-        <h2>Última tanda contra el snapshot previo</h2>
-        <p>2026-04-15 14:59:52 CDT → 2026-04-15 15:10:26 CDT</p>
+        <h2>Última tanda de actas vs. snapshot previo</h2>
+        <p>2026-04-15 22:57:43 CDT → 2026-04-15 23:08:52 CDT</p>
       </div>
       <div class="delta-grid">
         
             <article class="delta-card">
               <div class="delta-card__header">
-                <h3>Regiones sin Lima</h3>
-                <span>196 nuevos válidos</span>
+                <h3 class="delta-card__title">Regiones sin Lima</h3>
+                <span class="delta-card__count">822 nuevos válidos</span>
               </div>
               
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>JUNTOS POR EL PERÚ</span>
-                    <strong>22.45%</strong>
+                    <span class="delta-line__name">JUNTOS POR EL PERÚ</span>
+                    <span class="delta-line__pct">19.83%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:22.45%; background:#1f7a45;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:19.83%; background:#1f7a45;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 14.05%</span>
-                    <span>44 votos nuevos</span>
+                    <span>163 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>RENOVACIÓN POPULAR</span>
-                    <strong>2.55%</strong>
+                    <span class="delta-line__name">RENOVACIÓN POPULAR</span>
+                    <span class="delta-line__pct">2.19%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:2.55%; background:#1e40af;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:2.19%; background:#1e40af;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 5.54%</span>
-                    <span>5 votos nuevos</span>
+                    <span>18 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>PARTIDO DEL BUEN GOBIERNO</span>
-                    <strong>5.10%</strong>
+                    <span class="delta-line__name">PARTIDO DEL BUEN GOBIERNO</span>
+                    <span class="delta-line__pct">1.46%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:5.10%; background:#d97706;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:1.46%; background:#d97706;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 7.02%</span>
-                    <span>10 votos nuevos</span>
+                    <span>12 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>FUERZA POPULAR</span>
-                    <strong>17.86%</strong>
+                    <span class="delta-line__name">FUERZA POPULAR</span>
+                    <span class="delta-line__pct">18.86%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:17.86%; background:#6b7280;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 13.40%</span>
-                    <span>35 votos nuevos</span>
+                  <div class="delta-bar"><span style="width:18.86%; background:#6b7280;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 13.41%</span>
+                    <span>155 nuevos</span>
                   </div>
                 </div>
                 
@@ -2262,55 +2465,55 @@
             
             <article class="delta-card">
               <div class="delta-card__header">
-                <h3>Lima</h3>
-                <span>0 nuevos válidos</span>
+                <h3 class="delta-card__title">Lima</h3>
+                <span class="delta-card__count">1,467 nuevos válidos</span>
               </div>
               
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>JUNTOS POR EL PERÚ</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">JUNTOS POR EL PERÚ</span>
+                    <span class="delta-line__pct">3.07%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#1f7a45;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:3.07%; background:#1f7a45;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 2.89%</span>
-                    <span>0 votos nuevos</span>
+                    <span>45 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>RENOVACIÓN POPULAR</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">RENOVACIÓN POPULAR</span>
+                    <span class="delta-line__pct">14.59%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#1e40af;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:14.59%; background:#1e40af;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 17.61%</span>
-                    <span>0 votos nuevos</span>
+                    <span>214 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>PARTIDO DEL BUEN GOBIERNO</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">PARTIDO DEL BUEN GOBIERNO</span>
+                    <span class="delta-line__pct">12.00%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#d97706;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:12.00%; background:#d97706;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 13.33%</span>
-                    <span>0 votos nuevos</span>
+                    <span>176 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>FUERZA POPULAR</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">FUERZA POPULAR</span>
+                    <span class="delta-line__pct">15.75%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#6b7280;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:15.75%; background:#6b7280;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 15.76%</span>
-                    <span>0 votos nuevos</span>
+                    <span>231 nuevos</span>
                   </div>
                 </div>
                 
@@ -2318,55 +2521,55 @@
             
             <article class="delta-card">
               <div class="delta-card__header">
-                <h3>Extranjero</h3>
-                <span>0 nuevos válidos</span>
+                <h3 class="delta-card__title">Extranjero</h3>
+                <span class="delta-card__count">0 nuevos válidos</span>
               </div>
               
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>JUNTOS POR EL PERÚ</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">JUNTOS POR EL PERÚ</span>
+                    <span class="delta-line__pct">0.00%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#1f7a45;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 1.84%</span>
-                    <span>0 votos nuevos</span>
-                  </div>
-                </div>
-                
-                <div class="delta-line">
-                  <div class="delta-line__head">
-                    <span>RENOVACIÓN POPULAR</span>
-                    <strong>0.00%</strong>
-                  </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#1e40af;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 23.10%</span>
-                    <span>0 votos nuevos</span>
+                  <div class="delta-bar"><span style="width:0.00%; background:#1f7a45;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 1.91%</span>
+                    <span>0 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>PARTIDO DEL BUEN GOBIERNO</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">RENOVACIÓN POPULAR</span>
+                    <span class="delta-line__pct">0.00%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#d97706;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 8.61%</span>
-                    <span>0 votos nuevos</span>
+                  <div class="delta-bar"><span style="width:0.00%; background:#1e40af;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 21.95%</span>
+                    <span>0 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>FUERZA POPULAR</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">PARTIDO DEL BUEN GOBIERNO</span>
+                    <span class="delta-line__pct">0.00%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#6b7280;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 12.48%</span>
-                    <span>0 votos nuevos</span>
+                  <div class="delta-bar"><span style="width:0.00%; background:#d97706;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 8.38%</span>
+                    <span>0 nuevos</span>
+                  </div>
+                </div>
+                
+                <div class="delta-line">
+                  <div class="delta-line__head">
+                    <span class="delta-line__name">FUERZA POPULAR</span>
+                    <span class="delta-line__pct">0.00%</span>
+                  </div>
+                  <div class="delta-bar"><span style="width:0.00%; background:#6b7280;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 12.57%</span>
+                    <span>0 nuevos</span>
                   </div>
                 </div>
                 
@@ -2380,61 +2583,61 @@
       <div class="section-title">
         <p class="eyebrow">Incrementales</p>
         <h2>Tendencia acumulada de los últimos cortes</h2>
-        <p>2026-04-15 14:26:01 CDT → 2026-04-15 15:10:26 CDT</p>
+        <p>2026-04-15 22:24:15 CDT → 2026-04-15 23:08:52 CDT</p>
       </div>
       <div class="delta-grid">
         
             <article class="delta-card">
               <div class="delta-card__header">
-                <h3>Regiones sin Lima</h3>
-                <span>1,528 nuevos válidos</span>
+                <h3 class="delta-card__title">Regiones sin Lima</h3>
+                <span class="delta-card__count">2,894 nuevos válidos</span>
               </div>
               
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>JUNTOS POR EL PERÚ</span>
-                    <strong>20.35%</strong>
+                    <span class="delta-line__name">JUNTOS POR EL PERÚ</span>
+                    <span class="delta-line__pct">20.80%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:20.35%; background:#1f7a45;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:20.80%; background:#1f7a45;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 14.05%</span>
-                    <span>311 votos nuevos</span>
+                    <span>602 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>RENOVACIÓN POPULAR</span>
-                    <strong>4.19%</strong>
+                    <span class="delta-line__name">RENOVACIÓN POPULAR</span>
+                    <span class="delta-line__pct">2.07%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:4.19%; background:#1e40af;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:2.07%; background:#1e40af;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 5.54%</span>
-                    <span>64 votos nuevos</span>
+                    <span>60 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>PARTIDO DEL BUEN GOBIERNO</span>
-                    <strong>3.40%</strong>
+                    <span class="delta-line__name">PARTIDO DEL BUEN GOBIERNO</span>
+                    <span class="delta-line__pct">2.28%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:3.40%; background:#d97706;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:2.28%; background:#d97706;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 7.02%</span>
-                    <span>52 votos nuevos</span>
+                    <span>66 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>FUERZA POPULAR</span>
-                    <strong>14.99%</strong>
+                    <span class="delta-line__name">FUERZA POPULAR</span>
+                    <span class="delta-line__pct">12.54%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:14.99%; background:#6b7280;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 13.40%</span>
-                    <span>229 votos nuevos</span>
+                  <div class="delta-bar"><span style="width:12.54%; background:#6b7280;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 13.41%</span>
+                    <span>363 nuevos</span>
                   </div>
                 </div>
                 
@@ -2442,55 +2645,55 @@
             
             <article class="delta-card">
               <div class="delta-card__header">
-                <h3>Lima</h3>
-                <span>230 nuevos válidos</span>
+                <h3 class="delta-card__title">Lima</h3>
+                <span class="delta-card__count">5,150 nuevos válidos</span>
               </div>
               
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>JUNTOS POR EL PERÚ</span>
-                    <strong>3.91%</strong>
+                    <span class="delta-line__name">JUNTOS POR EL PERÚ</span>
+                    <span class="delta-line__pct">2.89%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:3.91%; background:#1f7a45;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:2.89%; background:#1f7a45;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 2.89%</span>
-                    <span>9 votos nuevos</span>
+                    <span>149 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>RENOVACIÓN POPULAR</span>
-                    <strong>7.39%</strong>
+                    <span class="delta-line__name">RENOVACIÓN POPULAR</span>
+                    <span class="delta-line__pct">15.92%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:7.39%; background:#1e40af;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:15.92%; background:#1e40af;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 17.61%</span>
-                    <span>17 votos nuevos</span>
+                    <span>820 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>PARTIDO DEL BUEN GOBIERNO</span>
-                    <strong>9.57%</strong>
+                    <span class="delta-line__name">PARTIDO DEL BUEN GOBIERNO</span>
+                    <span class="delta-line__pct">11.98%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:9.57%; background:#d97706;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:11.98%; background:#d97706;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 13.33%</span>
-                    <span>22 votos nuevos</span>
+                    <span>617 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>FUERZA POPULAR</span>
-                    <strong>17.39%</strong>
+                    <span class="delta-line__name">FUERZA POPULAR</span>
+                    <span class="delta-line__pct">15.34%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:17.39%; background:#6b7280;"></span></div>
-                  <div class="delta-line__meta">
+                  <div class="delta-bar"><span style="width:15.34%; background:#6b7280;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
                     <span>Acum. 15.76%</span>
-                    <span>40 votos nuevos</span>
+                    <span>790 nuevos</span>
                   </div>
                 </div>
                 
@@ -2498,55 +2701,55 @@
             
             <article class="delta-card">
               <div class="delta-card__header">
-                <h3>Extranjero</h3>
-                <span>0 nuevos válidos</span>
+                <h3 class="delta-card__title">Extranjero</h3>
+                <span class="delta-card__count">0 nuevos válidos</span>
               </div>
               
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>JUNTOS POR EL PERÚ</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">JUNTOS POR EL PERÚ</span>
+                    <span class="delta-line__pct">0.00%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#1f7a45;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 1.84%</span>
-                    <span>0 votos nuevos</span>
-                  </div>
-                </div>
-                
-                <div class="delta-line">
-                  <div class="delta-line__head">
-                    <span>RENOVACIÓN POPULAR</span>
-                    <strong>0.00%</strong>
-                  </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#1e40af;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 23.10%</span>
-                    <span>0 votos nuevos</span>
+                  <div class="delta-bar"><span style="width:0.00%; background:#1f7a45;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 1.91%</span>
+                    <span>0 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>PARTIDO DEL BUEN GOBIERNO</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">RENOVACIÓN POPULAR</span>
+                    <span class="delta-line__pct">0.00%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#d97706;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 8.61%</span>
-                    <span>0 votos nuevos</span>
+                  <div class="delta-bar"><span style="width:0.00%; background:#1e40af;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 21.95%</span>
+                    <span>0 nuevos</span>
                   </div>
                 </div>
                 
                 <div class="delta-line">
                   <div class="delta-line__head">
-                    <span>FUERZA POPULAR</span>
-                    <strong>0.00%</strong>
+                    <span class="delta-line__name">PARTIDO DEL BUEN GOBIERNO</span>
+                    <span class="delta-line__pct">0.00%</span>
                   </div>
-                  <div class="delta-line__bar"><span style="width:0.00%; background:#6b7280;"></span></div>
-                  <div class="delta-line__meta">
-                    <span>Acum. 12.48%</span>
-                    <span>0 votos nuevos</span>
+                  <div class="delta-bar"><span style="width:0.00%; background:#d97706;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 8.38%</span>
+                    <span>0 nuevos</span>
+                  </div>
+                </div>
+                
+                <div class="delta-line">
+                  <div class="delta-line__head">
+                    <span class="delta-line__name">FUERZA POPULAR</span>
+                    <span class="delta-line__pct">0.00%</span>
+                  </div>
+                  <div class="delta-bar"><span style="width:0.00%; background:#6b7280;"></span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--ink-3);margin-top:3px;">
+                    <span>Acum. 12.57%</span>
+                    <span>0 nuevos</span>
                   </div>
                 </div>
                 
@@ -2556,306 +2759,357 @@
     </section>
     
 
-    <section class="stack">
+    <!-- ── RANKING TABLE ───────────────────────── -->
+    <section>
       <div class="section-title">
-        <p class="eyebrow">Ranking general</p>
-        <h2>Top de proyección nacional</h2>
+        <span class="eyebrow">Ranking general</span>
+        <h2>Proyección nacional — todos los candidatos</h2>
+        <p class="section-note">Click en columna para ordenar.</p>
       </div>
-      <div class="projection-shell">
-        <table>
-          <thead>
-            <tr>
-              <th>Candidato</th>
-              <th>Actual</th>
-              <th>Proyección</th>
-              <th>IC 95%</th>
-              <th>Prob. top-2</th>
-            </tr>
-          </thead>
-          <tbody>
-            
+      <div class="table-wrap">
+        <div class="table-inner">
+          <table class="sortable">
+            <thead>
+              <tr>
+                <th>Candidato</th>
+                <th>Actual</th>
+                <th>Proyección</th>
+                <th>IC 95%</th>
+                <th>Prob. 2da vuelta</th>
+              </tr>
+            </thead>
+            <tbody>
+              
             <tr>
               <td>FUERZA POPULAR</td>
-              <td>14.21%</td>
-              <td>14.22%</td>
-              <td>14.20% - 14.25%</td>
-              <td>100.0%</td>
+              <td class="num">14.22%</td>
+              <td class="num">14.22%</td>
+              <td class="num">14.20% — 14.25%</td>
+              <td class="num">100.0%</td>
             </tr>
             
             <tr>
               <td>VOTOS EN BLANCO</td>
-              <td>11.60%</td>
-              <td>11.66%</td>
-              <td>11.63% - 11.68%</td>
-              <td>0.0%</td>
+              <td class="num">11.61%</td>
+              <td class="num">11.67%</td>
+              <td class="num">11.65% — 11.70%</td>
+              <td class="num">0.0%</td>
             </tr>
             
             <tr>
               <td>RENOVACIÓN POPULAR</td>
-              <td>9.88%</td>
-              <td>9.98%</td>
-              <td>9.95% - 10.01%</td>
-              <td>99.8%</td>
+              <td class="num">9.89%</td>
+              <td class="num">9.96%</td>
+              <td class="num">9.94% — 9.99%</td>
+              <td class="num">92.6%</td>
             </tr>
             
             <tr>
               <td>JUNTOS POR EL PERÚ</td>
-              <td>10.07%</td>
-              <td>9.94%</td>
-              <td>9.93% - 9.95%</td>
-              <td>0.2%</td>
+              <td class="num">10.05%</td>
+              <td class="num">9.94%</td>
+              <td class="num">9.93% — 9.95%</td>
+              <td class="num">7.4%</td>
             </tr>
             
             <tr>
               <td>PARTIDO DEL BUEN GOBIERNO</td>
-              <td>9.22%</td>
-              <td>9.16%</td>
-              <td>9.15% - 9.18%</td>
-              <td>0.0%</td>
+              <td class="num">9.22%</td>
+              <td class="num">9.16%</td>
+              <td class="num">9.14% — 9.18%</td>
+              <td class="num">0.0%</td>
             </tr>
             
             <tr>
               <td>PARTIDO CÍVICO OBRAS</td>
-              <td>8.47%</td>
-              <td>8.41%</td>
-              <td>8.39% - 8.42%</td>
-              <td>0.0%</td>
+              <td class="num">8.46%</td>
+              <td class="num">8.41%</td>
+              <td class="num">8.40% — 8.43%</td>
+              <td class="num">0.0%</td>
             </tr>
             
             <tr>
               <td>PARTIDO PAÍS PARA TODOS</td>
-              <td>6.55%</td>
-              <td>6.57%</td>
-              <td>6.55% - 6.59%</td>
-              <td>0.0%</td>
+              <td class="num">6.56%</td>
+              <td class="num">6.58%</td>
+              <td class="num">6.56% — 6.60%</td>
+              <td class="num">0.0%</td>
             </tr>
             
             <tr>
               <td>AHORA NACIÓN - AN</td>
-              <td>6.14%</td>
-              <td>6.09%</td>
-              <td>6.08% - 6.11%</td>
-              <td>0.0%</td>
+              <td class="num">6.13%</td>
+              <td class="num">6.09%</td>
+              <td class="num">6.08% — 6.11%</td>
+              <td class="num">0.0%</td>
             </tr>
             
-          </tbody>
-        </table>
+            <tr>
+              <td>VOTOS NULOS</td>
+              <td class="num">5.00%</td>
+              <td class="num">5.00%</td>
+              <td class="num">4.99% — 5.02%</td>
+              <td class="num">0.0%</td>
+            </tr>
+            
+            <tr>
+              <td>PRIMERO LA GENTE – COMUNIDAD, ECOLOGÍA, LIBERTAD Y PROGRESO</td>
+              <td class="num">2.86%</td>
+              <td class="num">2.86%</td>
+              <td class="num">2.85% — 2.87%</td>
+              <td class="num">0.0%</td>
+            </tr>
+            
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
+    <!-- ── DEPARTMENT TABLE ────────────────────── -->
     
-    <section class="table-section">
+    <section>
       <div class="section-title">
         <p class="eyebrow">Territorio</p>
         <h2>Proyección por departamento</h2>
-        <p>Valores en porcentaje de emitidos y votos absolutos proyectados al 100%.</p>
+        <p class="section-note">Click en columna para ordenar. Votos proyectados al 100% de actas.</p>
       </div>
-      <div class="table-shell">
-        <table>
-          <thead>
-            <tr>
-              <th>Departamento</th>
-              <th>% actas</th>
-              <th>Emitidos proj.</th>
-              <th>JUNTOS POR EL PERÚ</th><th>Votos</th><th>RENOVACIÓN POPULAR</th><th>Votos</th><th>PARTIDO DEL BUEN GOBIERNO</th><th>Votos</th><th>FUERZA POPULAR</th><th>Votos</th>
-            </tr>
-          </thead>
-          <tbody>
-            
+      <div class="table-wrap">
+        <div class="table-inner">
+          <table class="sortable">
+            <thead>
+              <tr>
+                <th>Departamento</th>
+                <th>% actas</th>
+                <th>Emitidos proj.</th>
+                <th>JUNTOS POR EL PERÚ</th><th>Votos</th><th>RENOVACIÓN POPULAR</th><th>Votos</th><th>PARTIDO DEL BUEN GOBIERNO</th><th>Votos</th><th>FUERZA POPULAR</th><th>Votos</th>
+              </tr>
+            </thead>
+            <tbody>
+              
             <tr>
               <td>AMAZONAS</td>
               <td>93.66%</td>
               <td>214,526</td>
-              <td>27.54%</td><td>59,086</td><td>2.83%</td><td>6,071</td><td>2.79%</td><td>5,987</td><td>13.24%</td><td>28,411</td>
+              <td>27.54%</td><td>59,079</td><td>2.83%</td><td>6,069</td><td>2.79%</td><td>5,986</td><td>13.25%</td><td>28,414</td>
             </tr>
             
             <tr>
               <td>APURÍMAC</td>
               <td>96.36%</td>
               <td>255,276</td>
-              <td>32.20%</td><td>82,200</td><td>2.48%</td><td>6,343</td><td>2.89%</td><td>7,366</td><td>5.43%</td><td>13,859</td>
+              <td>32.20%</td><td>82,195</td><td>2.48%</td><td>6,342</td><td>2.89%</td><td>7,365</td><td>5.43%</td><td>13,862</td>
             </tr>
             
             <tr>
               <td>AREQUIPA</td>
-              <td>97.65%</td>
-              <td>994,374</td>
-              <td>8.91%</td><td>88,556</td><td>9.43%</td><td>93,720</td><td>16.53%</td><td>164,358</td><td>6.48%</td><td>64,420</td>
+              <td>97.86%</td>
+              <td>994,354</td>
+              <td>8.90%</td><td>88,532</td><td>9.42%</td><td>93,632</td><td>16.53%</td><td>164,376</td><td>6.48%</td><td>64,464</td>
             </tr>
             
             <tr>
               <td>AYACUCHO</td>
               <td>95.16%</td>
               <td>355,460</td>
-              <td>24.99%</td><td>88,839</td><td>2.19%</td><td>7,777</td><td>4.43%</td><td>15,762</td><td>6.47%</td><td>22,992</td>
+              <td>24.99%</td><td>88,833</td><td>2.19%</td><td>7,776</td><td>4.43%</td><td>15,760</td><td>6.47%</td><td>22,998</td>
             </tr>
             
             <tr>
               <td>CAJAMARCA</td>
               <td>94.34%</td>
               <td>822,202</td>
-              <td>32.70%</td><td>268,884</td><td>2.54%</td><td>20,882</td><td>3.61%</td><td>29,697</td><td>10.83%</td><td>89,031</td>
+              <td>32.70%</td><td>268,858</td><td>2.54%</td><td>20,879</td><td>3.61%</td><td>29,692</td><td>10.83%</td><td>89,043</td>
             </tr>
             
             <tr>
               <td>CALLAO</td>
-              <td>95.07%</td>
-              <td>670,205</td>
-              <td>2.59%</td><td>17,365</td><td>12.96%</td><td>86,860</td><td>12.98%</td><td>87,002</td><td>17.84%</td><td>119,557</td>
+              <td>95.31%</td>
+              <td>670,234</td>
+              <td>2.60%</td><td>17,402</td><td>12.94%</td><td>86,740</td><td>12.97%</td><td>86,941</td><td>17.84%</td><td>119,601</td>
             </tr>
             
             <tr>
               <td>CUSCO</td>
               <td>91.16%</td>
               <td>846,718</td>
-              <td>18.14%</td><td>153,611</td><td>4.04%</td><td>34,201</td><td>7.60%</td><td>64,376</td><td>5.00%</td><td>42,309</td>
+              <td>18.14%</td><td>153,604</td><td>4.04%</td><td>34,187</td><td>7.60%</td><td>64,353</td><td>5.00%</td><td>42,359</td>
             </tr>
             
             <tr>
               <td>HUANCAVELICA</td>
               <td>94.89%</td>
               <td>217,709</td>
-              <td>34.54%</td><td>75,196</td><td>1.87%</td><td>4,071</td><td>2.58%</td><td>5,611</td><td>5.57%</td><td>12,124</td>
+              <td>34.54%</td><td>75,189</td><td>1.87%</td><td>4,070</td><td>2.58%</td><td>5,610</td><td>5.57%</td><td>12,129</td>
             </tr>
             
             <tr>
               <td>HUÁNUCO</td>
-              <td>90.86%</td>
-              <td>439,320</td>
-              <td>22.99%</td><td>100,989</td><td>4.66%</td><td>20,454</td><td>3.67%</td><td>16,104</td><td>12.04%</td><td>52,874</td>
+              <td>90.90%</td>
+              <td>439,331</td>
+              <td>22.98%</td><td>100,938</td><td>4.65%</td><td>20,445</td><td>3.66%</td><td>16,099</td><td>12.04%</td><td>52,910</td>
             </tr>
             
             <tr>
               <td>ICA</td>
-              <td>90.46%</td>
-              <td>580,831</td>
-              <td>6.39%</td><td>37,123</td><td>7.80%</td><td>45,298</td><td>8.17%</td><td>47,431</td><td>16.82%</td><td>97,715</td>
+              <td>90.50%</td>
+              <td>580,803</td>
+              <td>6.39%</td><td>37,128</td><td>7.80%</td><td>45,281</td><td>8.16%</td><td>47,416</td><td>16.83%</td><td>97,734</td>
             </tr>
             
             <tr>
               <td>JUNÍN</td>
               <td>95.37%</td>
               <td>785,041</td>
-              <td>9.93%</td><td>77,927</td><td>6.17%</td><td>48,408</td><td>6.50%</td><td>51,066</td><td>13.78%</td><td>108,157</td>
+              <td>9.93%</td><td>77,928</td><td>6.17%</td><td>48,402</td><td>6.50%</td><td>51,060</td><td>13.78%</td><td>108,162</td>
             </tr>
             
             <tr>
               <td>LA LIBERTAD</td>
-              <td>91.34%</td>
-              <td>1,160,799</td>
-              <td>7.61%</td><td>88,364</td><td>6.62%</td><td>76,792</td><td>7.89%</td><td>91,633</td><td>16.19%</td><td>187,921</td>
+              <td>92.66%</td>
+              <td>1,163,059</td>
+              <td>7.54%</td><td>87,745</td><td>6.59%</td><td>76,646</td><td>7.89%</td><td>91,746</td><td>16.23%</td><td>188,760</td>
             </tr>
             
             <tr>
               <td>LAMBAYEQUE</td>
               <td>95.26%</td>
               <td>817,379</td>
-              <td>8.71%</td><td>71,169</td><td>7.02%</td><td>57,400</td><td>8.47%</td><td>69,210</td><td>21.59%</td><td>176,487</td>
+              <td>8.71%</td><td>71,172</td><td>7.02%</td><td>57,393</td><td>8.47%</td><td>69,202</td><td>21.59%</td><td>176,486</td>
             </tr>
             
             <tr>
               <td>LIMA</td>
-              <td>93.01%</td>
-              <td>6,896,494</td>
-              <td>2.89%</td><td>199,244</td><td>17.61%</td><td>1,214,425</td><td>13.33%</td><td>919,216</td><td>15.76%</td><td>1,086,906</td>
+              <td>93.68%</td>
+              <td>6,897,962</td>
+              <td>2.89%</td><td>199,114</td><td>17.60%</td><td>1,214,357</td><td>13.33%</td><td>919,566</td><td>15.76%</td><td>1,087,295</td>
             </tr>
             
             <tr>
               <td>LORETO</td>
-              <td>80.61%</td>
-              <td>451,133</td>
-              <td>7.07%</td><td>31,902</td><td>5.16%</td><td>23,266</td><td>2.80%</td><td>12,626</td><td>21.44%</td><td>96,703</td>
+              <td>82.76%</td>
+              <td>449,019</td>
+              <td>7.39%</td><td>33,196</td><td>5.11%</td><td>22,923</td><td>2.77%</td><td>12,422</td><td>21.26%</td><td>95,458</td>
             </tr>
             
             <tr>
               <td>MADRE DE DIOS</td>
               <td>89.35%</td>
               <td>103,710</td>
-              <td>18.07%</td><td>18,741</td><td>2.64%</td><td>2,740</td><td>4.05%</td><td>4,201</td><td>10.55%</td><td>10,945</td>
+              <td>18.07%</td><td>18,738</td><td>2.64%</td><td>2,738</td><td>4.05%</td><td>4,198</td><td>10.56%</td><td>10,950</td>
             </tr>
             
             <tr>
               <td>MOQUEGUA</td>
               <td>94.98%</td>
               <td>131,221</td>
-              <td>11.18%</td><td>14,670</td><td>5.06%</td><td>6,640</td><td>9.05%</td><td>11,878</td><td>5.72%</td><td>7,511</td>
+              <td>11.18%</td><td>14,670</td><td>5.06%</td><td>6,639</td><td>9.05%</td><td>11,876</td><td>5.73%</td><td>7,514</td>
             </tr>
             
             <tr>
               <td>PASCO</td>
-              <td>92.64%</td>
-              <td>145,726</td>
-              <td>14.93%</td><td>21,758</td><td>5.16%</td><td>7,523</td><td>3.55%</td><td>5,167</td><td>14.87%</td><td>21,672</td>
+              <td>93.02%</td>
+              <td>145,777</td>
+              <td>14.91%</td><td>21,732</td><td>5.16%</td><td>7,522</td><td>3.55%</td><td>5,171</td><td>14.85%</td><td>21,647</td>
             </tr>
             
             <tr>
               <td>PIURA</td>
-              <td>91.06%</td>
-              <td>1,143,994</td>
-              <td>8.65%</td><td>98,943</td><td>5.15%</td><td>58,906</td><td>6.77%</td><td>77,457</td><td>21.51%</td><td>246,064</td>
+              <td>91.90%</td>
+              <td>1,143,490</td>
+              <td>8.74%</td><td>99,964</td><td>5.13%</td><td>58,702</td><td>6.74%</td><td>77,100</td><td>21.49%</td><td>245,679</td>
             </tr>
             
             <tr>
               <td>PUNO</td>
               <td>96.91%</td>
               <td>769,842</td>
-              <td>21.00%</td><td>161,704</td><td>1.63%</td><td>12,523</td><td>3.52%</td><td>27,131</td><td>3.30%</td><td>25,439</td>
+              <td>21.00%</td><td>161,700</td><td>1.63%</td><td>12,522</td><td>3.52%</td><td>27,130</td><td>3.31%</td><td>25,446</td>
             </tr>
             
             <tr>
               <td>SAN MARTÍN</td>
               <td>93.61%</td>
               <td>532,092</td>
-              <td>17.41%</td><td>92,645</td><td>4.31%</td><td>22,918</td><td>3.28%</td><td>17,457</td><td>17.01%</td><td>90,490</td>
+              <td>17.41%</td><td>92,639</td><td>4.31%</td><td>22,913</td><td>3.28%</td><td>17,454</td><td>17.01%</td><td>90,494</td>
             </tr>
             
             <tr>
               <td>TACNA</td>
               <td>95.00%</td>
               <td>248,826</td>
-              <td>10.55%</td><td>26,244</td><td>5.52%</td><td>13,727</td><td>10.19%</td><td>25,351</td><td>6.09%</td><td>15,166</td>
+              <td>10.55%</td><td>26,245</td><td>5.52%</td><td>13,725</td><td>10.19%</td><td>25,348</td><td>6.10%</td><td>15,170</td>
             </tr>
             
             <tr>
               <td>TUMBES</td>
               <td>90.66%</td>
               <td>141,013</td>
-              <td>5.40%</td><td>7,611</td><td>4.64%</td><td>6,538</td><td>4.35%</td><td>6,138</td><td>26.63%</td><td>37,554</td>
+              <td>5.40%</td><td>7,614</td><td>4.63%</td><td>6,535</td><td>4.35%</td><td>6,135</td><td>26.63%</td><td>37,550</td>
             </tr>
             
             <tr>
               <td>UCAYALI</td>
-              <td>87.79%</td>
-              <td>299,970</td>
-              <td>9.69%</td><td>29,079</td><td>4.26%</td><td>12,771</td><td>3.30%</td><td>9,914</td><td>22.12%</td><td>66,362</td>
+              <td>87.85%</td>
+              <td>300,038</td>
+              <td>9.69%</td><td>29,061</td><td>4.25%</td><td>12,762</td><td>3.31%</td><td>9,919</td><td>22.12%</td><td>66,377</td>
             </tr>
             
             <tr>
               <td>ÁNCASH</td>
               <td>90.96%</td>
               <td>695,853</td>
-              <td>11.68%</td><td>81,265</td><td>4.69%</td><td>32,633</td><td>5.79%</td><td>40,283</td><td>13.91%</td><td>96,800</td>
+              <td>11.68%</td><td>81,267</td><td>4.69%</td><td>32,619</td><td>5.79%</td><td>40,267</td><td>13.91%</td><td>96,821</td>
             </tr>
             
             <tr>
               <td>EXTRANJERO</td>
-              <td>44.51%</td>
-              <td>376,404</td>
-              <td>1.84%</td><td>6,937</td><td>23.09%</td><td>86,928</td><td>8.61%</td><td>32,396</td><td>12.48%</td><td>46,989</td>
+              <td>49.35%</td>
+              <td>389,077</td>
+              <td>1.91%</td><td>7,412</td><td>21.94%</td><td>85,376</td><td>8.38%</td><td>32,613</td><td>12.57%</td><td>48,889</td>
             </tr>
             
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
     
 
-    <p class="footer-note">
-      Estimación referencial de resultados de Elecciones Generales 2026, primera vuelta. Actualizado localmente el 2026-04-15 15:12:33 CDT.
-    </p>
-</main>
+    <!-- ── FOOTER ──────────────────────────────── -->
+    <footer class="footer">
+      Estimación referencial — Elecciones Generales 2026, primera vuelta.<br>
+      Generado el 2026-04-15 23:09:40 CDT · Modelo bayesiano Dirichlet-Multinomial por distrito.
+    </footer>
+
+  </main>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
   <script>
+    /* ── Sortable tables ── */
+    document.querySelectorAll("table.sortable").forEach(table => {
+      const ths = table.querySelectorAll("thead th");
+      ths.forEach((th, idx) => {
+        th.addEventListener("click", () => {
+          const asc = th.dataset.dir !== "asc";
+          ths.forEach(h => { h.classList.remove("th-asc", "th-desc"); delete h.dataset.dir; });
+          th.dataset.dir = asc ? "asc" : "desc";
+          th.classList.add(asc ? "th-asc" : "th-desc");
+          const tbody = table.querySelector("tbody");
+          const rows = [...tbody.querySelectorAll("tr")];
+          rows.sort((a, b) => {
+            const aT = (a.cells[idx]?.textContent || "").trim();
+            const bT = (b.cells[idx]?.textContent || "").trim();
+            const aN = parseFloat(aT.replace(/[^\d.,-]/g, "").replace(",", ""));
+            const bN = parseFloat(bT.replace(/[^\d.,-]/g, "").replace(",", ""));
+            if (!isNaN(aN) && !isNaN(bN)) return asc ? aN - bN : bN - aN;
+            return asc ? aT.localeCompare(bT, "es") : bT.localeCompare(aT, "es");
+          });
+          rows.forEach(r => tbody.appendChild(r));
+        });
+      });
+    });
+
+    /* ── Trajectory chart ── */
     (() => {
       const el = document.getElementById("trajectory-data");
       const canvas = document.getElementById("trajectoryChart");
@@ -2866,30 +3120,23 @@
       const datasets = [];
 
       for (const line of trajectory.series || []) {
-        const actual = (line.actual || []).map((point) => ({
-          x: point.x,
-          y: point.y,
-          label: point.label || ""
-        }));
+        const actual = (line.actual || []).map(p => ({ x: p.x, y: p.y, label: p.label || "" }));
         if (!actual.length) continue;
-
         const latest = actual[actual.length - 1];
         const short = labels[line.candidate] || line.candidate;
-
         datasets.push({
           label: short,
           data: actual,
           borderColor: line.color,
           backgroundColor: line.color,
           pointBackgroundColor: line.color,
-          pointBorderColor: "rgba(255,255,255,0.92)",
-          pointBorderWidth: 1.8,
-          pointRadius: 4,
+          pointBorderColor: "rgba(245,242,235,0.9)",
+          pointBorderWidth: 1.5,
+          pointRadius: 3.5,
           pointHoverRadius: 5,
-          borderWidth: 3,
-          tension: 0.28
+          borderWidth: 2.5,
+          tension: 0.3
         });
-
         datasets.push({
           label: `${short} cierre`,
           data: [
@@ -2899,18 +3146,17 @@
           borderColor: line.color,
           backgroundColor: line.color,
           pointBackgroundColor: [line.color, line.color],
-          pointBorderColor: ["transparent", "rgba(15,23,42,0.28)"],
+          pointBorderColor: ["transparent", "rgba(28,26,32,0.3)"],
           pointBorderWidth: [0, 2],
           pointRadius: [0, 6],
           pointHoverRadius: [0, 6],
-          borderWidth: 2,
+          borderWidth: 1.8,
           tension: 0,
-          borderDash: [6, 8]
+          borderDash: [5, 7]
         });
       }
 
-      const xMax = Math.max(100.8, Number(trajectory.bounds.x_max || 100) + 0.8);
-
+      const xMax = Math.max(100.8, Number(trajectory.bounds?.x_max || 100) + 0.8);
       new Chart(canvas.getContext("2d"), {
         type: "line",
         data: { datasets },
@@ -2918,79 +3164,37 @@
           responsive: true,
           maintainAspectRatio: false,
           animation: false,
-          layout: {
-            padding: {
-              right: 12
-            }
-          },
-          interaction: {
-            mode: "nearest",
-            intersect: false
-          },
+          interaction: { mode: "nearest", intersect: false },
           plugins: {
-            legend: {
-              display: false
-            },
+            legend: { display: false },
             tooltip: {
-              backgroundColor: "rgba(15,23,42,0.92)",
-              titleFont: { family: "Fira Code, monospace", size: 11 },
-              bodyFont: { family: "Fira Sans, sans-serif", size: 12 },
+              backgroundColor: "rgba(28,26,32,0.94)",
+              titleFont: { family: "JetBrains Mono, monospace", size: 10 },
+              bodyFont: { family: "Nunito Sans, sans-serif", size: 12 },
               callbacks: {
-                title: (items) => {
-                  const raw = items?.[0]?.raw;
-                  return raw?.label || "Punto";
-                },
-                label: (item) => `${item.dataset.label}: ${item.parsed.y.toFixed(2)}%`
+                title: items => items?.[0]?.raw?.label || "Punto",
+                label: item => `${item.dataset.label}: ${item.parsed.y.toFixed(2)}%`
               }
             }
           },
           scales: {
             x: {
               type: "linear",
-              min: trajectory.bounds.x_min,
+              min: trajectory.bounds?.x_min,
               max: xMax,
-              grid: {
-                color: "rgba(15, 23, 42, 0.08)",
-                drawBorder: false
-              },
-              border: {
-                display: false
-              },
-              ticks: {
-                color: "rgba(15, 23, 42, 0.52)",
-                stepSize: 5,
-                font: {
-                  family: "Fira Code, monospace",
-                  size: 11
-                },
-                callback: (value) => `${value}%`
-              }
+              grid: { color: "rgba(28,26,32,0.07)", drawBorder: false },
+              border: { display: false },
+              ticks: { color: "rgba(28,26,32,0.45)", stepSize: 5, font: { family: "JetBrains Mono, monospace", size: 10 }, callback: v => `${v}%` }
             },
             y: {
-              min: trajectory.bounds.y_min,
-              max: trajectory.bounds.y_max,
-              grid: {
-                color: "rgba(15, 23, 42, 0.08)",
-                drawBorder: false
-              },
-              border: {
-                display: false
-              },
-              ticks: {
-                color: "rgba(15, 23, 42, 0.52)",
-                font: {
-                  family: "Fira Code, monospace",
-                  size: 11
-                },
-                callback: (value) => `${Number(value).toFixed(2)}%`
-              }
+              min: trajectory.bounds?.y_min,
+              max: trajectory.bounds?.y_max,
+              grid: { color: "rgba(28,26,32,0.07)", drawBorder: false },
+              border: { display: false },
+              ticks: { color: "rgba(28,26,32,0.45)", font: { family: "JetBrains Mono, monospace", size: 10 }, callback: v => `${Number(v).toFixed(2)}%` }
             }
           },
-          elements: {
-            line: {
-              capBezierPoints: true
-            }
-          }
+          elements: { line: { capBezierPoints: true } }
         }
       });
     })();
