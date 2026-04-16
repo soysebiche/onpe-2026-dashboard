@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-16T14:11:41.777577-05:00",
-  "snapshot_at": "2026-04-16T19:10:21.748530+00:00",
+  "generated_at": "2026-04-16T14:18:31.885767-05:00",
+  "snapshot_at": "2026-04-16T19:15:33.251165+00:00",
   "onpe_updated_at": 1776366307744,
   "actas_contadas": 86123,
   "actas_totales": 92766,
@@ -22,38 +22,38 @@
     {
       "candidate": "FUERZA POPULAR",
       "actual_pct": 14.220502390145247,
-      "projected_pct": 14.229559662529354,
-      "ic_lo": 14.213741160526418,
-      "ic_hi": 14.246242581189358,
+      "projected_pct": 14.229851271678207,
+      "ic_lo": 14.214082436088301,
+      "ic_hi": 14.24651904090436,
       "top2_prob": 1.0,
-      "projected_votes": 2870469
+      "projected_votes": 2870555
     },
     {
       "candidate": "RENOVACIÓN POPULAR",
       "actual_pct": 9.931929165560117,
-      "projected_pct": 9.934876473096601,
-      "ic_lo": 9.917503709715724,
-      "ic_hi": 9.952641588766527,
-      "top2_prob": 0.592,
-      "projected_votes": 2003759
+      "projected_pct": 9.934748840921923,
+      "ic_lo": 9.917357827437321,
+      "ic_hi": 9.952685671017704,
+      "top2_prob": 0.60525,
+      "projected_votes": 2003727
     },
     {
       "candidate": "JUNTOS POR EL PERÚ",
       "actual_pct": 9.99406613245899,
-      "projected_pct": 9.932507459908301,
-      "ic_lo": 9.924913456521356,
-      "ic_hi": 9.940796646987136,
-      "top2_prob": 0.408,
-      "projected_votes": 2002879
+      "projected_pct": 9.932014791381839,
+      "ic_lo": 9.92471865363779,
+      "ic_hi": 9.94006558639676,
+      "top2_prob": 0.39475,
+      "projected_votes": 2002764
     },
     {
       "candidate": "PARTIDO DEL BUEN GOBIERNO",
       "actual_pct": 9.223381544810117,
-      "projected_pct": 9.153861993111883,
-      "ic_lo": 9.140651019723599,
-      "ic_hi": 9.1676042561979,
+      "projected_pct": 9.153960413545231,
+      "ic_lo": 9.141052272841954,
+      "ic_hi": 9.16770813839883,
       "top2_prob": 0.0,
-      "projected_votes": 1845690
+      "projected_votes": 1845714
     }
   ],
   "trajectory": {
@@ -150,12 +150,12 @@
           {
             "x": 92.83897117478386,
             "y": 9.99406613245899,
-            "label": "2026-04-16 14:10:21 CDT"
+            "label": "2026-04-16 14:15:33 CDT"
           }
         ],
         "projected": {
           "x": 100.0,
-          "y": 9.932507459908301
+          "y": 9.932014791381839
         }
       },
       {
@@ -250,12 +250,12 @@
           {
             "x": 92.83897117478386,
             "y": 9.931929165560119,
-            "label": "2026-04-16 14:10:21 CDT"
+            "label": "2026-04-16 14:15:33 CDT"
           }
         ],
         "projected": {
           "x": 100.0,
-          "y": 9.934876473096601
+          "y": 9.934748840921923
         }
       },
       {
@@ -350,12 +350,12 @@
           {
             "x": 92.83897117478386,
             "y": 9.223381544810117,
-            "label": "2026-04-16 14:10:21 CDT"
+            "label": "2026-04-16 14:15:33 CDT"
           }
         ],
         "projected": {
           "x": 100.0,
-          "y": 9.153861993111883
+          "y": 9.153960413545231
         }
       }
     ],
@@ -382,62 +382,62 @@
     {
       "left": "FUERZA POPULAR",
       "right": "RENOVACIÓN POPULAR",
-      "left_votes": 2870469,
-      "right_votes": 2003759,
-      "vote_diff": 866710,
-      "left_pct": 14.229559662529354,
-      "right_pct": 9.934876473096601,
-      "pp_diff": 4.294683189432753
+      "left_votes": 2870555,
+      "right_votes": 2003727,
+      "vote_diff": 866828,
+      "left_pct": 14.229851271678207,
+      "right_pct": 9.934748840921923,
+      "pp_diff": 4.295102430756284
     },
     {
       "left": "FUERZA POPULAR",
       "right": "JUNTOS POR EL PERÚ",
-      "left_votes": 2870469,
-      "right_votes": 2002879,
-      "vote_diff": 867590,
-      "left_pct": 14.229559662529354,
-      "right_pct": 9.932507459908301,
-      "pp_diff": 4.297052202621053
+      "left_votes": 2870555,
+      "right_votes": 2002764,
+      "vote_diff": 867791,
+      "left_pct": 14.229851271678207,
+      "right_pct": 9.932014791381839,
+      "pp_diff": 4.297836480296368
     },
     {
       "left": "FUERZA POPULAR",
       "right": "PARTIDO DEL BUEN GOBIERNO",
-      "left_votes": 2870469,
-      "right_votes": 1845690,
-      "vote_diff": 1024779,
-      "left_pct": 14.229559662529354,
-      "right_pct": 9.153861993111883,
-      "pp_diff": 5.075697669417471
+      "left_votes": 2870555,
+      "right_votes": 1845714,
+      "vote_diff": 1024841,
+      "left_pct": 14.229851271678207,
+      "right_pct": 9.153960413545231,
+      "pp_diff": 5.075890858132976
     },
     {
       "left": "RENOVACIÓN POPULAR",
       "right": "JUNTOS POR EL PERÚ",
-      "left_votes": 2003759,
-      "right_votes": 2002879,
-      "vote_diff": 880,
-      "left_pct": 9.934876473096601,
-      "right_pct": 9.932507459908301,
-      "pp_diff": 0.002369013188300073
+      "left_votes": 2003727,
+      "right_votes": 2002764,
+      "vote_diff": 963,
+      "left_pct": 9.934748840921923,
+      "right_pct": 9.932014791381839,
+      "pp_diff": 0.0027340495400842713
     },
     {
       "left": "RENOVACIÓN POPULAR",
       "right": "PARTIDO DEL BUEN GOBIERNO",
-      "left_votes": 2003759,
-      "right_votes": 1845690,
-      "vote_diff": 158069,
-      "left_pct": 9.934876473096601,
-      "right_pct": 9.153861993111883,
-      "pp_diff": 0.7810144799847176
+      "left_votes": 2003727,
+      "right_votes": 1845714,
+      "vote_diff": 158013,
+      "left_pct": 9.934748840921923,
+      "right_pct": 9.153960413545231,
+      "pp_diff": 0.7807884273766916
     },
     {
       "left": "JUNTOS POR EL PERÚ",
       "right": "PARTIDO DEL BUEN GOBIERNO",
-      "left_votes": 2002879,
-      "right_votes": 1845690,
-      "vote_diff": 157189,
-      "left_pct": 9.932507459908301,
-      "right_pct": 9.153861993111883,
-      "pp_diff": 0.7786454667964176
+      "left_votes": 2002764,
+      "right_votes": 1845714,
+      "vote_diff": 157050,
+      "left_pct": 9.932014791381839,
+      "right_pct": 9.153960413545231,
+      "pp_diff": 0.7780543778366074
     }
   ],
   "actual_comparison": [
@@ -466,305 +466,305 @@
     {
       "candidate": "FUERZA POPULAR",
       "actual_pct": 14.220502390145247,
-      "projected_pct": 14.229559662529354,
-      "ic_lo": 14.213741160526418,
-      "ic_hi": 14.246242581189358,
+      "projected_pct": 14.229851271678207,
+      "ic_lo": 14.214082436088301,
+      "ic_hi": 14.24651904090436,
       "top2_prob": 1.0
     },
     {
       "candidate": "VOTOS EN BLANCO",
       "actual_pct": 11.633513828454305,
-      "projected_pct": 11.696570533071672,
-      "ic_lo": 11.680188583382758,
-      "ic_hi": 11.713831550547441,
+      "projected_pct": 11.69589641264888,
+      "ic_lo": 11.679586230283554,
+      "ic_hi": 11.712867013247799,
       "top2_prob": 0.0
     },
     {
       "candidate": "RENOVACIÓN POPULAR",
       "actual_pct": 9.931929165560117,
-      "projected_pct": 9.934876473096601,
-      "ic_lo": 9.917503709715724,
-      "ic_hi": 9.952641588766527,
-      "top2_prob": 0.592
+      "projected_pct": 9.934748840921923,
+      "ic_lo": 9.917357827437321,
+      "ic_hi": 9.952685671017704,
+      "top2_prob": 0.60525
     },
     {
       "candidate": "JUNTOS POR EL PERÚ",
       "actual_pct": 9.99406613245899,
-      "projected_pct": 9.932507459908301,
-      "ic_lo": 9.924913456521356,
-      "ic_hi": 9.940796646987136,
-      "top2_prob": 0.408
+      "projected_pct": 9.932014791381839,
+      "ic_lo": 9.92471865363779,
+      "ic_hi": 9.94006558639676,
+      "top2_prob": 0.39475
     },
     {
       "candidate": "PARTIDO DEL BUEN GOBIERNO",
       "actual_pct": 9.223381544810117,
-      "projected_pct": 9.153861993111883,
-      "ic_lo": 9.140651019723599,
-      "ic_hi": 9.1676042561979,
+      "projected_pct": 9.153960413545231,
+      "ic_lo": 9.141052272841954,
+      "ic_hi": 9.16770813839883,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO CÍVICO OBRAS",
       "actual_pct": 8.466230899266613,
-      "projected_pct": 8.42195611355887,
-      "ic_lo": 8.409862599221672,
-      "ic_hi": 8.43528628257927,
+      "projected_pct": 8.42232279683782,
+      "ic_lo": 8.410035342494709,
+      "ic_hi": 8.435717901314769,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO PAÍS PARA TODOS",
       "actual_pct": 6.580230315349363,
-      "projected_pct": 6.592106984436924,
-      "ic_lo": 6.579042149860099,
-      "ic_hi": 6.605976141206297,
+      "projected_pct": 6.592399352211536,
+      "ic_lo": 6.579518775495447,
+      "ic_hi": 6.606566744978189,
       "top2_prob": 0.0
     },
     {
       "candidate": "AHORA NACIÓN - AN",
       "actual_pct": 6.127423128911224,
-      "projected_pct": 6.091433181461543,
-      "ic_lo": 6.081202098876154,
-      "ic_hi": 6.102518375248312,
+      "projected_pct": 6.091675934126143,
+      "ic_lo": 6.081345274549232,
+      "ic_hi": 6.1030791059613305,
       "top2_prob": 0.0
     },
     {
       "candidate": "VOTOS NULOS",
       "actual_pct": 5.002595069559355,
-      "projected_pct": 5.006479772550895,
-      "ic_lo": 4.996924256042946,
-      "ic_hi": 5.017118355203579,
+      "projected_pct": 5.006563705489872,
+      "ic_lo": 4.997047673480286,
+      "ic_hi": 5.017068067850915,
       "top2_prob": 0.0
     },
     {
       "candidate": "PRIMERO LA GENTE – COMUNIDAD, ECOLOGÍA, LIBERTAD Y PROGRESO",
       "actual_pct": 2.863365065746018,
-      "projected_pct": 2.8540177321382116,
-      "ic_lo": 2.8462873987470356,
-      "ic_hi": 2.86258740143887,
+      "projected_pct": 2.854121744817275,
+      "ic_lo": 2.846450637517775,
+      "ic_hi": 2.8628553072445904,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO SICREO",
       "actual_pct": 2.8178476095142764,
-      "projected_pct": 2.7973277928554734,
-      "ic_lo": 2.7912587485869107,
-      "ic_hi": 2.8041274070192124,
+      "projected_pct": 2.7974119452288178,
+      "ic_lo": 2.79147190598962,
+      "ic_hi": 2.804131598321885,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO FRENTE DE LA ESPERANZA 2021",
       "actual_pct": 1.544071707762184,
-      "projected_pct": 1.5361088764689248,
-      "ic_lo": 1.531380658899548,
-      "ic_hi": 1.541591999708368,
+      "projected_pct": 1.5361037574035379,
+      "ic_lo": 1.5315345919596197,
+      "ic_hi": 1.5415918465825225,
       "top2_prob": 0.0
     },
     {
       "candidate": "PODEMOS PERÚ",
       "actual_pct": 1.319288038038038,
-      "projected_pct": 1.324099578812301,
-      "ic_lo": 1.3206677379043004,
-      "ic_hi": 1.3281671297582525,
+      "projected_pct": 1.324134212679156,
+      "ic_lo": 1.3206127270726231,
+      "ic_hi": 1.3282265956419697,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO POLÍTICO COOPERACIÓN POPULAR",
       "actual_pct": 1.085838176611986,
-      "projected_pct": 1.073023912729726,
-      "ic_lo": 1.0698849702552267,
-      "ic_hi": 1.0769623350742186,
+      "projected_pct": 1.073073470988382,
+      "ic_lo": 1.0699345288256727,
+      "ic_hi": 1.0770467824930239,
       "top2_prob": 0.0
     },
     {
       "candidate": "ALIANZA PARA EL PROGRESO",
       "actual_pct": 0.9427795142080857,
-      "projected_pct": 0.9580845579774011,
-      "ic_lo": 0.9548215775482313,
-      "ic_hi": 0.961903784689778,
+      "projected_pct": 0.9574686187730719,
+      "ic_lo": 0.954215571636369,
+      "ic_hi": 0.9614172220189274,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO APRISTA PERUANO",
       "actual_pct": 0.7997421315873696,
-      "projected_pct": 0.806209456723195,
-      "ic_lo": 0.8021617717159294,
-      "ic_hi": 0.8111809078793577,
+      "projected_pct": 0.8062292425793773,
+      "ic_lo": 0.8022858541419088,
+      "ic_hi": 0.8112602910518655,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO DEMOCRÁTICO SOMOS PERÚ",
       "actual_pct": 0.7460425987211702,
-      "projected_pct": 0.7626360034578652,
-      "ic_lo": 0.759152014460814,
-      "ic_hi": 0.7668401327322828,
+      "projected_pct": 0.7625341147798199,
+      "ic_lo": 0.7590575758550994,
+      "ic_hi": 0.7668699796294685,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO PATRIÓTICO DEL PERÚ",
       "actual_pct": 0.7178415660558518,
-      "projected_pct": 0.7215110271355809,
-      "ic_lo": 0.7182181236362654,
-      "ic_hi": 0.7255388462041604,
+      "projected_pct": 0.7214712235946935,
+      "ic_lo": 0.7182579083314162,
+      "ic_hi": 0.7254543439055875,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO POLÍTICO PERÚ PRIMERO",
       "actual_pct": 0.7144634004753052,
-      "projected_pct": 0.7208206857662437,
-      "ic_lo": 0.7181139516202808,
-      "ic_hi": 0.7241780294041719,
+      "projected_pct": 0.7207411504205022,
+      "ic_lo": 0.7180344165433985,
+      "ic_hi": 0.7240788761124427,
       "top2_prob": 0.0
     },
     {
       "candidate": "ALIANZA ELECTORAL VENCEREMOS",
       "actual_pct": 0.7020200472581425,
-      "projected_pct": 0.7017642840817313,
-      "ic_lo": 0.6987347284321216,
-      "ic_hi": 0.7056683135198738,
+      "projected_pct": 0.7016748176604999,
+      "ic_lo": 0.6987495584795566,
+      "ic_hi": 0.705608273129612,
       "top2_prob": 0.0
     },
     {
       "candidate": "UN CAMINO DIFERENTE",
       "actual_pct": 0.6273918476299428,
-      "projected_pct": 0.6382330121640136,
-      "ic_lo": 0.6344383695507605,
-      "ic_hi": 0.64311543908244,
+      "projected_pct": 0.6382379152527086,
+      "ic_lo": 0.634438554856407,
+      "ic_hi": 0.6431500164291296,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO DEMÓCRATA UNIDO PERÚ",
       "actual_pct": 0.5912215361620123,
-      "projected_pct": 0.5928467919935897,
-      "ic_lo": 0.5900134124885038,
-      "ic_hi": 0.5966984250184479,
+      "projected_pct": 0.592864115800929,
+      "ic_lo": 0.5900628945623355,
+      "ic_hi": 0.5967082987169386,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO POLÍTICO NACIONAL PERÚ LIBRE",
       "actual_pct": 0.49689889719651625,
-      "projected_pct": 0.5016596501826722,
-      "ic_lo": 0.4991216523534234,
-      "ic_hi": 0.5052603515695036,
+      "projected_pct": 0.5016744998055125,
+      "ic_lo": 0.49912644509790133,
+      "ic_hi": 0.5052901002872218,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO MORADO",
       "actual_pct": 0.40921555058459824,
-      "projected_pct": 0.4139813297921635,
-      "ic_lo": 0.411125601106056,
-      "ic_hi": 0.4178006806666572,
+      "projected_pct": 0.4140210205449545,
+      "ic_lo": 0.41118019159504005,
+      "ic_hi": 0.417910025980672,
       "top2_prob": 0.0
     },
     {
       "candidate": "UNIDAD NACIONAL",
       "actual_pct": 0.3373005233124281,
-      "projected_pct": 0.3434423480029715,
-      "ic_lo": 0.34056675337817804,
-      "ic_hi": 0.347480100040894,
+      "projected_pct": 0.34343486416268454,
+      "ic_lo": 0.34057156187186394,
+      "ic_hi": 0.3474105347473112,
       "top2_prob": 0.0
     },
     {
       "candidate": "PROGRESEMOS",
       "actual_pct": 0.3278363397411016,
-      "projected_pct": 0.33331568575780063,
-      "ic_lo": 0.331085734140301,
-      "ic_hi": 0.3362757106220095,
+      "projected_pct": 0.3333106861654809,
+      "ic_lo": 0.331120466642907,
+      "ic_hi": 0.33635526512880476,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO POLÍTICO INTEGRIDAD DEMOCRÁTICA",
       "actual_pct": 0.31740924598067455,
-      "projected_pct": 0.32284633607029684,
-      "ic_lo": 0.32034310363374835,
-      "ic_hi": 0.32610447417691196,
+      "projected_pct": 0.32282643806535977,
+      "ic_lo": 0.3204127267547681,
+      "ic_hi": 0.32614901598055684,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO DEMÓCRATA VERDE",
       "actual_pct": 0.3157121832717071,
-      "projected_pct": 0.32241425190387707,
-      "ic_lo": 0.3200949035622906,
-      "ic_hi": 0.32565749055647775,
+      "projected_pct": 0.3223993204260369,
+      "ic_lo": 0.3200947476052607,
+      "ic_hi": 0.3257268648254122,
       "top2_prob": 0.0
     },
     {
       "candidate": "LIBERTAD POPULAR",
       "actual_pct": 0.20296657201419105,
-      "projected_pct": 0.2096551839223369,
-      "ic_lo": 0.20754442793695307,
-      "ic_hi": 0.21267977308727515,
+      "projected_pct": 0.20967006254988835,
+      "ic_lo": 0.2075642732583434,
+      "ic_hi": 0.2127445645803857,
       "top2_prob": 0.0
     },
     {
       "candidate": "AVANZA PAÍS - PARTIDO DE INTEGRACIÓN SOCIAL",
       "actual_pct": 0.16268926239164336,
-      "projected_pct": 0.1691684008803392,
-      "ic_lo": 0.1673903993679453,
-      "ic_hi": 0.17180572840301792,
+      "projected_pct": 0.16917831704525182,
+      "ic_lo": 0.1674150909998963,
+      "ic_hi": 0.17183054375850013,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO POLÍTICO PERÚ ACCIÓN",
       "actual_pct": 0.15591697139316188,
-      "projected_pct": 0.1627765351081298,
-      "ic_lo": 0.16087921380150333,
-      "ic_hi": 0.1656472874103686,
+      "projected_pct": 0.16279638487630077,
+      "ic_lo": 0.16094388627784262,
+      "ic_hi": 0.16571667757306593,
       "top2_prob": 0.0
     },
     {
       "candidate": "FUERZA Y LIBERTAD",
       "actual_pct": 0.13506810381810383,
-      "projected_pct": 0.14166897525429145,
-      "ic_lo": 0.13991083968058352,
-      "ic_hi": 0.14430121213018188,
+      "projected_pct": 0.1416639946981788,
+      "ic_lo": 0.139965457109244,
+      "ic_hi": 0.14436079560692622,
       "top2_prob": 0.0
     },
     {
       "candidate": "FE EN EL PERÚ",
       "actual_pct": 0.11546410355934165,
-      "projected_pct": 0.12236424933620449,
-      "ic_lo": 0.1208097396340277,
-      "ic_hi": 0.12482265924859272,
+      "projected_pct": 0.12237913663433685,
+      "ic_lo": 0.1208493353453554,
+      "ic_hi": 0.1248476034329928,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO DEMOCRATICO FEDERAL",
       "actual_pct": 0.1077555021007402,
-      "projected_pct": 0.11410995181218583,
-      "ic_lo": 0.11264980531876735,
-      "ic_hi": 0.11628539626041584,
+      "projected_pct": 0.11411987344603677,
+      "ic_lo": 0.11268455951854504,
+      "ic_hi": 0.11634485835785784,
       "top2_prob": 0.0
     },
     {
       "candidate": "SALVEMOS AL PERÚ",
       "actual_pct": 0.08677895582657487,
-      "projected_pct": 0.09374239817439971,
-      "ic_lo": 0.09239648082842554,
-      "ic_hi": 0.09598228276124231,
+      "projected_pct": 0.09378212073642232,
+      "ic_lo": 0.0923913810044297,
+      "ic_hi": 0.09602212926288237,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO POLÍTICO PRIN",
       "actual_pct": 0.07199482645911218,
-      "projected_pct": 0.07901677112342777,
-      "ic_lo": 0.07758145705336676,
-      "ic_hi": 0.08138578431172916,
+      "projected_pct": 0.07901179679053873,
+      "ic_lo": 0.07758144934722519,
+      "ic_hi": 0.08131624544921055,
       "top2_prob": 0.0
     },
     {
       "candidate": "PARTIDO DE LOS TRABAJADORES Y EMPRENDEDORES PTE - PERÚ",
       "actual_pct": 0.05688618039808516,
-      "projected_pct": 0.06386402639070758,
-      "ic_lo": 0.06248831013670448,
-      "ic_hi": 0.06623316374112576,
+      "projected_pct": 0.06387891949964856,
+      "ic_lo": 0.06250320338229493,
+      "ic_hi": 0.06619330112667673,
       "top2_prob": 0.0
     },
     {
       "candidate": "PERÚ MODERNO",
       "actual_pct": 0.048321067666305756,
-      "projected_pct": 0.0556842261367613,
-      "ic_lo": 0.05434824176013012,
-      "ic_hi": 0.05801847393236224,
+      "projected_pct": 0.05568422060566473,
+      "ic_lo": 0.05431843745666743,
+      "ic_hi": 0.05798382694226283,
       "top2_prob": 0.0
     }
   ],
@@ -777,23 +777,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 59090,
-          "pct": 27.544617247952278
+          "votes": 59093,
+          "pct": 27.545649246569024
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 6070,
-          "pct": 2.829369911620617
+          "pct": 2.829311684405954
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 5986,
-          "pct": 2.790294272911729
+          "pct": 2.790107052131965
         },
         {
           "candidate": "FUERZA POPULAR",
           "votes": 28407,
-          "pct": 13.241726005561413
+          "pct": 13.2419099461494
         }
       ]
     },
@@ -805,23 +805,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 82202,
-          "pct": 32.20120376817378
+          "votes": 82204,
+          "pct": 32.20182160428323
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 6342,
-          "pct": 2.484350472916587
+          "pct": 2.4842951454949525
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 7365,
-          "pct": 2.885163506095571
+          "pct": 2.885088377719995
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 13857,
-          "pct": 5.428189191919695
+          "votes": 13856,
+          "pct": 5.427881238022356
         }
       ]
     },
@@ -833,23 +833,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 88534,
-          "pct": 8.903695929538575
+          "votes": 88533,
+          "pct": 8.903540469245245
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 93635,
-          "pct": 9.41662043590645
+          "pct": 9.416714118555854
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 164381,
-          "pct": 16.531431554835574
+          "votes": 164383,
+          "pct": 16.53164041342043
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 64458,
-          "pct": 6.4823523136786045
+          "votes": 64457,
+          "pct": 6.482261357091127
         }
       ]
     },
@@ -861,23 +861,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 88844,
-          "pct": 24.99400476860907
+          "votes": 88845,
+          "pct": 24.994478859088833
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 7776,
-          "pct": 2.1876351695072858
+          "pct": 2.187534650986098
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 15761,
-          "pct": 4.433997181595071
+          "pct": 4.433983917784757
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 22988,
-          "pct": 6.466977476800847
+          "votes": 22986,
+          "pct": 6.466591604158557
         }
       ]
     },
@@ -889,23 +889,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 268897,
-          "pct": 32.70454262784574
+          "votes": 268907,
+          "pct": 32.70569343773885
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 20879,
-          "pct": 2.539408458691904
+          "votes": 20878,
+          "pct": 2.539339023494124
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 29695,
-          "pct": 3.6115877546305772
+          "votes": 29694,
+          "pct": 3.611525152453118
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 89021,
-          "pct": 10.827112979552565
+          "votes": 89020,
+          "pct": 10.827054606232378
         }
       ]
     },
@@ -917,23 +917,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 17410,
-          "pct": 2.597667362567395
+          "votes": 17404,
+          "pct": 2.596800649644842
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 86734,
-          "pct": 12.941147642608213
+          "votes": 86737,
+          "pct": 12.94168056370403
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 86931,
-          "pct": 12.970649952854064
+          "votes": 86935,
+          "pct": 12.971151898761304
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 119584,
-          "pct": 17.842578067539755
+          "votes": 119586,
+          "pct": 17.842909898508236
         }
       ]
     },
@@ -945,23 +945,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 153640,
-          "pct": 18.145356762698228
+          "votes": 153632,
+          "pct": 18.144436865632873
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 34193,
-          "pct": 4.038254613700292
+          "pct": 4.03834690759336
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 64371,
-          "pct": 7.6023682890667565
+          "votes": 64375,
+          "pct": 7.602919775418818
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 42280,
-          "pct": 4.993360057535713
+          "votes": 42267,
+          "pct": 4.991829007352947
         }
       ]
     },
@@ -973,23 +973,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 75200,
-          "pct": 34.54161343581354
+          "votes": 75203,
+          "pct": 34.54300850547725
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 4070,
-          "pct": 1.8692751528789455
+          "votes": 4069,
+          "pct": 1.8691547321067439
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 5610,
-          "pct": 2.5768570032847156
+          "pct": 2.5766963136749963
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 12121,
-          "pct": 5.5675189497834365
+          "votes": 12120,
+          "pct": 5.566938717731426
         }
       ]
     },
@@ -1001,23 +1001,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 100972,
-          "pct": 22.983159067051368
+          "votes": 100976,
+          "pct": 22.98409463540643
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 20449,
-          "pct": 4.654600112114441
+          "votes": 20450,
+          "pct": 4.654853842919019
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 16101,
-          "pct": 3.6649462410171125
+          "pct": 3.6647933034253337
         },
         {
           "candidate": "FUERZA POPULAR",
           "votes": 52883,
-          "pct": 12.037136231111747
+          "pct": 12.037218062931144
         }
       ]
     },
@@ -1029,23 +1029,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 37133,
-          "pct": 6.393371709902107
+          "votes": 37116,
+          "pct": 6.390477712127811
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 45295,
-          "pct": 7.798737804370492
+          "votes": 45301,
+          "pct": 7.799722828291613
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 47433,
-          "pct": 8.166790304825
+          "votes": 47438,
+          "pct": 8.167676452410438
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 97703,
-          "pct": 16.821989266288124
+          "votes": 97708,
+          "pct": 16.822977686704885
         }
       ]
     },
@@ -1057,23 +1057,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 77934,
-          "pct": 9.927416160613554
+          "votes": 77930,
+          "pct": 9.92690912528538
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 48406,
-          "pct": 6.166055732859563
+          "votes": 48407,
+          "pct": 6.166217115679414
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 51065,
-          "pct": 6.504694860699783
+          "votes": 51066,
+          "pct": 6.504824171593759
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 108149,
-          "pct": 13.776255548775342
+          "votes": 108150,
+          "pct": 13.776386625339997
         }
       ]
     },
@@ -1085,23 +1085,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 87756,
-          "pct": 7.545278850968737
+          "votes": 87740,
+          "pct": 7.543928513880606
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 76660,
-          "pct": 6.591242187683236
+          "votes": 76665,
+          "pct": 6.591707979714176
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 91764,
-          "pct": 7.889909164804668
+          "votes": 91771,
+          "pct": 7.890451822433763
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 188722,
-          "pct": 16.226387739169425
+          "votes": 188731,
+          "pct": 16.227122688890134
         }
       ]
     },
@@ -1113,23 +1113,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 71176,
-          "pct": 8.70782730376751
+          "votes": 71171,
+          "pct": 8.707236586424157
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 57398,
-          "pct": 7.022202797962172
+          "votes": 57400,
+          "pct": 7.022419855999186
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 69209,
-          "pct": 8.467154591852264
+          "votes": 69211,
+          "pct": 8.467415662369403
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 176480,
-          "pct": 21.590992564763884
+          "votes": 176485,
+          "pct": 21.591570650396584
         }
       ]
     },
@@ -1141,23 +1141,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 199085,
-          "pct": 2.884581620154382
+          "votes": 199089,
+          "pct": 2.884626756380646
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 1213919,
-          "pct": 17.588668952337905
+          "votes": 1213853,
+          "pct": 17.58771669798162
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 919936,
-          "pct": 13.329102976440867
+          "pct": 13.329109557091664
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 1088504,
-          "pct": 15.771513852117646
+          "votes": 1088512,
+          "pct": 15.77163477457938
         }
       ]
     },
@@ -1165,27 +1165,27 @@
       "code": 150000,
       "name": "LORETO",
       "pct_actas": 82.98109010011123,
-      "emitidos_proj": 449169,
+      "emitidos_proj": 449171,
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 33366,
-          "pct": 7.428400519561295
+          "votes": 33329,
+          "pct": 7.420076673345243
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 22940,
-          "pct": 5.107240635684645
+          "votes": 22947,
+          "pct": 5.108695733276773
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 12439,
-          "pct": 2.7692514109278843
+          "votes": 12434,
+          "pct": 2.7681426131406086
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 95332,
-          "pct": 21.223997890131965
+          "votes": 95367,
+          "pct": 21.231810872627833
         }
       ]
     },
@@ -1198,22 +1198,22 @@
         {
           "candidate": "JUNTOS POR EL PERÚ",
           "votes": 18746,
-          "pct": 18.075334682027204
+          "pct": 18.075140263474214
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 2738,
-          "pct": 2.6401420772510535
+          "pct": 2.639941523927361
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 4200,
-          "pct": 4.049435856347576
+          "pct": 4.049382289483399
         },
         {
           "candidate": "FUERZA POPULAR",
           "votes": 10940,
-          "pct": 10.548942284424673
+          "pct": 10.548656131482002
         }
       ]
     },
@@ -1225,23 +1225,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 14672,
-          "pct": 11.181103757114863
+          "votes": 14671,
+          "pct": 11.180721971814895
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 6640,
-          "pct": 5.059895370769242
+          "pct": 5.0599977452558695
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 11877,
-          "pct": 9.051492937404907
+          "votes": 11878,
+          "pct": 9.051792049421842
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 7510,
-          "pct": 5.722949255478599
+          "votes": 7509,
+          "pct": 5.722481008186417
         }
       ]
     },
@@ -1254,22 +1254,22 @@
         {
           "candidate": "JUNTOS POR EL PERÚ",
           "votes": 21736,
-          "pct": 14.910565504635883
+          "pct": 14.910122364990144
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 7523,
-          "pct": 5.160673042278915
+          "pct": 5.160877185123412
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 5171,
-          "pct": 3.547338364084138
+          "pct": 3.5472417854382874
         },
         {
           "candidate": "FUERZA POPULAR",
           "votes": 21643,
-          "pct": 14.84639296449991
+          "pct": 14.84677997882981
         }
       ]
     },
@@ -1281,23 +1281,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 99982,
-          "pct": 8.743577871937903
+          "votes": 99964,
+          "pct": 8.742040594453481
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 58713,
-          "pct": 5.134545333949961
+          "votes": 58716,
+          "pct": 5.134829746354123
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 77119,
-          "pct": 6.744199802913994
+          "votes": 77124,
+          "pct": 6.744622823033053
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 245655,
-          "pct": 21.48294729125054
+          "votes": 245674,
+          "pct": 21.484558734944667
         }
       ]
     },
@@ -1309,23 +1309,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 161708,
-          "pct": 21.00536130000304
+          "votes": 161709,
+          "pct": 21.00543133107953
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 12522,
-          "pct": 1.62654151354882
+          "votes": 12521,
+          "pct": 1.6264837134085013
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 27130,
-          "pct": 3.524162457992536
+          "pct": 3.5241331211826177
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 25435,
-          "pct": 3.303934611669544
+          "votes": 25433,
+          "pct": 3.3036672558106672
         }
       ]
     },
@@ -1337,23 +1337,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 92654,
-          "pct": 17.413081169892546
+          "votes": 92653,
+          "pct": 17.41296609205942
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 22916,
-          "pct": 4.306745137759925
+          "pct": 4.306857950775295
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 17455,
-          "pct": 3.2804376634813246
+          "votes": 17454,
+          "pct": 3.280325792194997
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 90482,
-          "pct": 17.004961910536956
+          "votes": 90485,
+          "pct": 17.005562586318476
         }
       ]
     },
@@ -1365,23 +1365,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 26247,
-          "pct": 10.548315389740068
+          "votes": 26246,
+          "pct": 10.547758448505922
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 13727,
-          "pct": 5.5165090220581465
+          "pct": 5.516643223153822
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 25351,
-          "pct": 10.188227375527774
+          "votes": 25352,
+          "pct": 10.188648082734689
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 15163,
-          "pct": 6.093854507700574
+          "votes": 15162,
+          "pct": 6.093450597231013
         }
       ]
     },
@@ -1393,23 +1393,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 7615,
-          "pct": 5.4004449286482314
+          "votes": 7611,
+          "pct": 5.397612535417157
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 6536,
-          "pct": 4.635179058171482
+          "votes": 6537,
+          "pct": 4.635460154593662
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 6137,
-          "pct": 4.351807792404453
+          "pct": 4.351816284409992
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 37550,
-          "pct": 26.628615103068256
+          "votes": 37555,
+          "pct": 26.63206894025012
         }
       ]
     },
@@ -1421,23 +1421,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 29073,
-          "pct": 9.68974849853804
+          "votes": 29063,
+          "pct": 9.686422362431358
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 12767,
-          "pct": 4.255188533901667
+          "votes": 12768,
+          "pct": 4.255561375059622
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 9922,
-          "pct": 3.3069581326839628
+          "votes": 9921,
+          "pct": 3.3066136045878136
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 66364,
-          "pct": 22.11863883838395
+          "votes": 66377,
+          "pct": 22.122705152982668
         }
       ]
     },
@@ -1449,23 +1449,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 81288,
-          "pct": 11.681784709292273
+          "votes": 81276,
+          "pct": 11.680055480688305
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 32625,
-          "pct": 4.688550058030845
+          "votes": 32627,
+          "pct": 4.688792239639964
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 40278,
-          "pct": 5.788315717862946
+          "votes": 40280,
+          "pct": 5.788564290513651
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 96776,
-          "pct": 13.907597848221046
+          "votes": 96778,
+          "pct": 13.907893175216676
         }
       ]
     },
@@ -1544,7 +1544,7 @@
         "name": "LORETO",
         "code": 150000,
         "pct_actas": 82.98109010011123,
-        "remaining_votes": 71834,
+        "remaining_votes": 71837,
         "left_pct": 5.12544092584519,
         "right_pct": 7.400420118108676,
         "gap_pp": 2.274979192263486
@@ -1850,7 +1850,7 @@
       },
       {
         "name": "LORETO",
-        "remaining_votes": 71834,
+        "remaining_votes": 71837,
         "left_pct": 5.12544092584519,
         "right_pct": 7.400420118108676,
         "gap_pp": 2.274979192263486,
@@ -1859,7 +1859,7 @@
             "name": "MAYNAS",
             "code": 150100,
             "pct_actas": 83.02308265078183,
-            "remaining_votes": 39338,
+            "remaining_votes": 39340,
             "left_pct": 6.031494644203459,
             "right_pct": 2.8450446434921974,
             "gap_pp": -3.1864500007112615
@@ -1895,7 +1895,7 @@
             "name": "REQUENA",
             "code": 150400,
             "pct_actas": 83.15217391304348,
-            "remaining_votes": 4324,
+            "remaining_votes": 4325,
             "left_pct": 6.29231381919554,
             "right_pct": 10.314615690959776,
             "gap_pp": 4.0223018717642365
@@ -2274,94 +2274,94 @@
   "projection_shift": {
     "latest": {
       "label": "Contra el snapshot previo",
-      "base_at": "2026-04-16T19:05:31.954023+00:00",
+      "base_at": "2026-04-16T19:10:21.748530+00:00",
       "base_actas_pct": 92.83897117478386,
       "rows": [
         {
           "candidate": "FUERZA POPULAR",
-          "current_pct": 14.25614017549302,
-          "base_pct": 14.259247673898809,
-          "delta_pct": -0.0031074984057894994,
-          "current_votes": 2870469,
-          "base_votes": 2874996,
-          "delta_votes": -4527,
+          "current_pct": 14.256568132833824,
+          "base_pct": 14.257340832568463,
+          "delta_pct": -0.0007726997346395592,
+          "current_votes": 2870555,
+          "base_votes": 2874693,
+          "delta_votes": -4138,
           "direction": "sin cambio"
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "current_pct": 9.95163996488564,
-          "base_pct": 9.946353706199893,
-          "delta_pct": 0.005286258685746503,
-          "current_votes": 2003759,
-          "base_votes": 2005416,
-          "delta_votes": -1657,
+          "current_pct": 9.951476097506012,
+          "base_pct": 9.945679464762224,
+          "delta_pct": 0.005796632743788166,
+          "current_votes": 2003727,
+          "base_votes": 2005337,
+          "delta_votes": -1610,
           "direction": "sube"
         },
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "current_pct": 9.947265501276247,
-          "base_pct": 9.946594976266308,
-          "delta_pct": 0.000670525009939027,
-          "current_votes": 2002879,
-          "base_votes": 2005465,
-          "delta_votes": -2586,
+          "current_pct": 9.946693875283966,
+          "base_pct": 9.95050731272503,
+          "delta_pct": -0.0038134374410638827,
+          "current_votes": 2002764,
+          "base_votes": 2006310,
+          "delta_votes": -3546,
           "direction": "sin cambio"
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "current_pct": 9.166589347828427,
-          "base_pct": 9.162700978901404,
-          "delta_pct": 0.003888368927023933,
-          "current_votes": 1845690,
-          "base_votes": 1847414,
-          "delta_votes": -1724,
+          "current_pct": 9.166707816171407,
+          "base_pct": 9.161829359430651,
+          "delta_pct": 0.004878456740755155,
+          "current_votes": 1845714,
+          "base_votes": 1847290,
+          "delta_votes": -1576,
           "direction": "sin cambio"
         }
       ]
     },
     "trend": {
       "label": "Contra la base de tendencia",
-      "base_at": "2026-04-16T18:45:20.973995+00:00",
-      "base_actas_pct": 92.83142530668565,
+      "base_at": "2026-04-16T18:55:16.063084+00:00",
+      "base_actas_pct": 92.8346592501563,
       "rows": [
         {
           "candidate": "FUERZA POPULAR",
-          "current_pct": 14.25614017549302,
-          "base_pct": 14.259849381258881,
-          "delta_pct": -0.003709205765861867,
-          "current_votes": 2870469,
-          "base_votes": 2875202,
-          "delta_votes": -4733,
+          "current_pct": 14.256568132833824,
+          "base_pct": 14.259747703342635,
+          "delta_pct": -0.003179570508811125,
+          "current_votes": 2870555,
+          "base_votes": 2875101,
+          "delta_votes": -4546,
           "direction": "sin cambio"
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "current_pct": 9.95163996488564,
-          "base_pct": 9.944952113207451,
-          "delta_pct": 0.00668785167818875,
-          "current_votes": 2003759,
-          "base_votes": 2005193,
-          "delta_votes": -1434,
+          "current_pct": 9.951476097506012,
+          "base_pct": 9.945070446953451,
+          "delta_pct": 0.00640565055256026,
+          "current_votes": 2003727,
+          "base_votes": 2005160,
+          "delta_votes": -1433,
           "direction": "sube"
         },
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "current_pct": 9.947265501276247,
-          "base_pct": 9.946734619805431,
-          "delta_pct": 0.0005308814708158138,
-          "current_votes": 2002879,
-          "base_votes": 2005552,
-          "delta_votes": -2673,
+          "current_pct": 9.946693875283966,
+          "base_pct": 9.946803256167112,
+          "delta_pct": -0.00010938088314560446,
+          "current_votes": 2002764,
+          "base_votes": 2005510,
+          "delta_votes": -2746,
           "direction": "sin cambio"
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "current_pct": 9.166589347828427,
-          "base_pct": 9.162218031879698,
-          "delta_pct": 0.004371315948729304,
-          "current_votes": 1845690,
-          "base_votes": 1847371,
-          "delta_votes": -1681,
+          "current_pct": 9.166707816171407,
+          "base_pct": 9.162303190525906,
+          "delta_pct": 0.004404625645500815,
+          "current_votes": 1845714,
+          "base_votes": 1847336,
+          "delta_votes": -1622,
           "direction": "sin cambio"
         }
       ]
@@ -2378,27 +2378,27 @@
     {
       "block": "regiones",
       "label": "Regiones sin Lima",
-      "emitidos_proj": 12823104,
+      "emitidos_proj": 12823106,
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 1795876,
-          "pct": 14.005003586403548
+          "votes": 1795758,
+          "pct": 14.004081087315372
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 707553,
-          "pct": 5.51779525063199
+          "votes": 707586,
+          "pct": 5.518051162479959
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
-          "votes": 892751,
-          "pct": 6.962049194164285
+          "votes": 892774,
+          "pct": 6.962232016301523
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 1729502,
-          "pct": 13.487387638522659
+          "votes": 1729580,
+          "pct": 13.487994657863048
         }
       ]
     },
@@ -2409,23 +2409,23 @@
       "candidates": [
         {
           "candidate": "JUNTOS POR EL PERÚ",
-          "votes": 199085,
-          "pct": 2.884581620154382
+          "votes": 199089,
+          "pct": 2.884626756380646
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
-          "votes": 1213919,
-          "pct": 17.588668952337905
+          "votes": 1213853,
+          "pct": 17.58771669798162
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 919936,
-          "pct": 13.329102976440867
+          "pct": 13.329109557091664
         },
         {
           "candidate": "FUERZA POPULAR",
-          "votes": 1088504,
-          "pct": 15.771513852117646
+          "votes": 1088512,
+          "pct": 15.77163477457938
         }
       ]
     },
@@ -2461,9 +2461,9 @@
     {
       "block": "regiones",
       "label": "Regiones sin Lima",
-      "remaining_votes": 826842,
+      "remaining_votes": 826844,
       "counted_votes": 11996262,
-      "remaining_pct": 6.44806436881429
+      "remaining_pct": 6.448078959964926
     },
     {
       "block": "lima",
@@ -2482,38 +2482,38 @@
   ],
   "delta_info": {
     "latest": {
-      "base_at": "2026-04-16T19:05:31.954023+00:00",
-      "curr_at": "2026-04-16T19:10:21.748530+00:00",
+      "base_at": "2026-04-16T19:10:21.748530+00:00",
+      "curr_at": "2026-04-16T19:15:33.251165+00:00",
       "blocks": [
         {
           "block": "regiones",
           "label": "Regiones sin Lima",
-          "new_validos": 464,
+          "new_validos": 0,
           "curr_validos": 11996262,
           "candidates": [
             {
               "candidate": "JUNTOS POR EL PERÚ",
               "curr_pct": 14.046058680612344,
-              "new_pct": 39.439655172413794,
-              "new_votes": 183
+              "new_pct": 0.0,
+              "new_votes": 0
             },
             {
               "candidate": "RENOVACIÓN POPULAR",
               "curr_pct": 5.535691034423889,
-              "new_pct": 1.7241379310344827,
-              "new_votes": 8
+              "new_pct": 0.0,
+              "new_votes": 0
             },
             {
               "candidate": "PARTIDO DEL BUEN GOBIERNO",
               "curr_pct": 7.018636305209073,
-              "new_pct": 0.21551724137931033,
-              "new_votes": 1
+              "new_pct": 0.0,
+              "new_votes": 0
             },
             {
               "candidate": "FUERZA POPULAR",
               "curr_pct": 13.409093599322857,
-              "new_pct": 1.9396551724137931,
-              "new_votes": 9
+              "new_pct": 0.0,
+              "new_votes": 0
             }
           ]
         },
@@ -2584,8 +2584,8 @@
       ]
     },
     "trend": {
-      "base_at": "2026-04-16T18:45:20.973995+00:00",
-      "curr_at": "2026-04-16T19:10:21.748530+00:00",
+      "base_at": "2026-04-16T18:55:16.063084+00:00",
+      "curr_at": "2026-04-16T19:15:33.251165+00:00",
       "blocks": [
         {
           "block": "regiones",
@@ -2695,8 +2695,8 @@
   },
   "late_bias": {
     "snapshots_used": 4,
-    "base_at": "2026-04-16T18:55:16.063084+00:00",
-    "curr_at": "2026-04-16T19:10:21.748530+00:00",
+    "base_at": "2026-04-16T19:00:19.914553+00:00",
+    "curr_at": "2026-04-16T19:15:33.251165+00:00",
     "strength": 0.72,
     "recency_decay": 0.82
   }
