@@ -1143,11 +1143,18 @@ def payload_to_jsonable(
     remaining_info: list[dict[str, float]],
     late_bias_model: dict | None,
     changed: bool,
+    regiones: list | None = None,
 ) -> dict:
+    # Use fresh regiones data for current vote counts (avoids stale snapshot)
     current_votes_by_candidate: dict[str, int] = {}
-    for region in current_snapshot.get("regions", {}).values():
-        for candidate, votes in region.get("votos_por_candidato", {}).items():
-            current_votes_by_candidate[candidate] = current_votes_by_candidate.get(candidate, 0) + int(votes)
+    if regiones:
+        for region in regiones:
+            for cand, votes in zip(region.candidatos, region.votos):
+                current_votes_by_candidate[cand] = current_votes_by_candidate.get(cand, 0) + int(votes)
+    else:
+        for region in current_snapshot.get("regions", {}).values():
+            for candidate, votes in region.get("votos_por_candidato", {}).items():
+                current_votes_by_candidate[candidate] = current_votes_by_candidate.get(candidate, 0) + int(votes)
 
     def current_comparison_row(left: str, right: str) -> dict | None:
         if left not in current_votes_by_candidate or right not in current_votes_by_candidate:
@@ -1455,12 +1462,14 @@ def render_battle_gauge(payload: dict) -> str:
           <div class="battle-gauge__cand" style="text-align:left;">
             <div class="battle-gauge__cand-name" style="color:{left_color};">{escape(left_short)}</div>
             <div class="battle-gauge__cand-pct" style="color:{left_color};">{fmt_pct(left_pct)}</div>
+            <div class="battle-gauge__cand-votes" style="color:{left_color};">{fmt_int(left_votes)} votos</div>
             <div class="battle-gauge__cand-full">{escape(left_cand)}</div>
           </div>
           <div class="battle-gauge__vs">vs</div>
           <div class="battle-gauge__cand" style="text-align:right;">
             <div class="battle-gauge__cand-name" style="color:{right_color};">{escape(right_short)}</div>
             <div class="battle-gauge__cand-pct" style="color:{right_color};">{fmt_pct(right_pct)}</div>
+            <div class="battle-gauge__cand-votes" style="color:{right_color};">{fmt_int(right_votes)} votos</div>
             <div class="battle-gauge__cand-full">{escape(right_cand)}</div>
           </div>
         </div>
@@ -2382,6 +2391,13 @@ def render_html(payload: dict) -> str:
       font-size: 2.4rem;
       line-height: 1;
     }}
+    .battle-gauge__cand-votes {{
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      opacity: 0.75;
+      margin-top: 2px;
+    }}
     .battle-gauge__cand-full {{
       font-size: 0.72rem;
       color: var(--ink-3);
@@ -3279,6 +3295,7 @@ def main() -> None:
         remaining_info=remaining_info,
         late_bias_model=late_bias_model,
         changed=changed,
+        regiones=regiones,
     )
 
     json_out.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
