@@ -2,7 +2,8 @@
   "continents": {
     "920000": "AMERICA",
     "930000": "ASIA",
-    "940000": "EUROPA"
+    "940000": "EUROPA",
+    "950000": "OCEANIA"
   },
   "countries": {
     "920200": "ARGENTINA",
@@ -16,6 +17,7 @@
     "940900": "ESPAÑA",
     "941100": "FRANCIA",
     "941700": "ITALIA",
-    "942800": "SUIZA"
+    "942800": "SUIZA",
+    "950100": "AUSTRALIA"
   }
 }
