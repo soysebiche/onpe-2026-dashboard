@@ -215,24 +215,25 @@ def fetch(path: str, **params) -> dict:
 
 def fetch_totales(**params) -> dict | None:
     params.setdefault("idEleccion", ID_ELECCION)
-    url = f"{API}/resumen-general/totales"
-    for attempt in range(1, FETCH_RETRIES + 1):
-        try:
-            r = _session.get(url, params=params, timeout=FETCH_TIMEOUT)
-        except requests.exceptions.RequestException:
-            if attempt == FETCH_RETRIES:
-                raise
-            time.sleep(0.5 * attempt)
-            continue
-        if r.status_code == 204:
-            return None
-        r.raise_for_status()
-        if "application/json" not in r.headers.get("content-type", ""):
-            return None
-        j = r.json()
-        if not j.get("success", False):
-            return None
-        return j.get("data")
+    for base_url in (API, PROXY_API):
+        url = f"{base_url}/resumen-general/totales"
+        for attempt in range(1, FETCH_RETRIES + 1):
+            try:
+                r = _session.get(url, params=params, timeout=FETCH_TIMEOUT)
+            except requests.exceptions.RequestException:
+                if attempt == FETCH_RETRIES:
+                    break
+                time.sleep(0.5 * attempt)
+                continue
+            if r.status_code == 204:
+                return None
+            r.raise_for_status()
+            if "application/json" not in r.headers.get("content-type", ""):
+                break
+            j = r.json()
+            if not j.get("success", False):
+                break
+            return j.get("data")
     return None
 
 

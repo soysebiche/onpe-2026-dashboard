@@ -8,9 +8,10 @@ import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import numpy as np
 
@@ -112,6 +113,8 @@ FOREIGN_CONTINENT_NAMES = {
     950000: "Oceanía",
 }
 
+DASHBOARD_TZ = ZoneInfo("America/Chicago")
+
 
 @dataclass
 class DepartmentProjection:
@@ -159,13 +162,15 @@ def iso_to_local_label(value: str | None) -> str:
     if not value:
         return "sin dato"
     dt = datetime.fromisoformat(value)
-    return dt.astimezone().strftime("%Y-%m-%d %H:%M:%S %Z")
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(DASHBOARD_TZ).strftime("%Y-%m-%d %H:%M:%S %Z")
 
 
 def epoch_millis_to_local_label(value: int | float | None) -> str:
     if not value:
         return "sin dato"
-    dt = datetime.fromtimestamp(float(value) / 1000.0).astimezone()
+    dt = datetime.fromtimestamp(float(value) / 1000.0, tz=timezone.utc).astimezone(DASHBOARD_TZ)
     return dt.strftime("%Y-%m-%d %H:%M:%S %Z")
 
 
@@ -175,7 +180,10 @@ def fetch_onpe_updated_at_millis() -> int | None:
         {"tipoFiltro": "ambito_geografico", "idAmbitoGeografico": 1},
         {"tipoFiltro": "ambito_geografico", "idAmbitoGeografico": 2},
     ):
-        totals = op.fetch_totales(**params) or {}
+        try:
+            totals = op.fetch("resumen-general/totales", **params) or {}
+        except Exception:
+            totals = op.fetch_totales(**params) or {}
         value = totals.get("fechaActualizacion")
         if value:
             candidates.append(int(value))
@@ -1223,7 +1231,7 @@ def payload_to_jsonable(
     ]
 
     return {
-        "generated_at": datetime.now().astimezone().isoformat(),
+        "generated_at": datetime.now(DASHBOARD_TZ).isoformat(),
         "snapshot_at": current_snapshot.get("captured_at"),
         "onpe_updated_at": onpe_updated_at_millis,
         "actas_contadas": int(current_snapshot.get("actas_contadas", 0)),
