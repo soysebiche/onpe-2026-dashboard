@@ -2954,7 +2954,7 @@ def render_html(payload: dict) -> str:
     <section class="hero">
       <div class="hero__eyebrow">Elecciones Generales 2026 · Primera Vuelta</div>
       <h1 class="hero__title">Estimación de resultados</h1>
-      <p class="hero__sub">Conteo en vivo con proyecciones bayesianas al cierre. Actualización automática cada 15 minutos.</p>
+      <p class="hero__sub">Conteo en vivo con proyecciones bayesianas al cierre. Actualización automática cada 5 minutos.</p>
       <div class="hero__metrics">
         <div class="hero__metric">
           <div class="hero__metric-label">Último corte</div>
