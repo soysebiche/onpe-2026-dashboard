@@ -55,13 +55,17 @@ jobs:
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Trigger Vercel production deploy
+      - name: Deploy to Vercel production
         if: steps.commit_changes.outputs.changed == 'true'
         env:
-          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         run: |
-          if [ -n "${VERCEL_DEPLOY_HOOK_URL}" ]; then
-            curl --fail --silent --show-error -X POST "${VERCEL_DEPLOY_HOOK_URL}?buildCache=false"
-          else
-            echo "VERCEL_DEPLOY_HOOK_URL is not configured. GitHub data update succeeded, but Vercel still needs a manual deploy trigger."
+          if [ -z "${VERCEL_TOKEN}" ] || [ -z "${VERCEL_ORG_ID}" ] || [ -z "${VERCEL_PROJECT_ID}" ]; then
+            echo "Vercel secrets are missing. GitHub data update succeeded, but the production deploy was skipped."
+            exit 0
           fi
+          npm install --global vercel@latest
+          vercel pull --yes --environment=production --token "${VERCEL_TOKEN}"
+          vercel deploy --prod --yes --token "${VERCEL_TOKEN}"
