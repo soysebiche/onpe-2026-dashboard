@@ -56,13 +56,12 @@ jobs:
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Trigger Vercel production deploy
-        if: steps.commit_changes.outputs.changed == 'true' && secrets.VERCEL_DEPLOY_HOOK_URL != ''
+        if: steps.commit_changes.outputs.changed == 'true'
         env:
           VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
         run: |
-          curl --fail --silent --show-error -X POST "${VERCEL_DEPLOY_HOOK_URL}?buildCache=false"
-
-      - name: Note missing Vercel deploy hook
-        if: steps.commit_changes.outputs.changed == 'true' && secrets.VERCEL_DEPLOY_HOOK_URL == ''
-        run: |
-          echo "VERCEL_DEPLOY_HOOK_URL is not configured. GitHub data update succeeded, but Vercel still needs a manual deploy trigger."
+          if [ -n "${VERCEL_DEPLOY_HOOK_URL}" ]; then
+            curl --fail --silent --show-error -X POST "${VERCEL_DEPLOY_HOOK_URL}?buildCache=false"
+          else
+            echo "VERCEL_DEPLOY_HOOK_URL is not configured. GitHub data update succeeded, but Vercel still needs a manual deploy trigger."
+          fi
