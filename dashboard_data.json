@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-17T08:51:50.740635-05:00",
+  "generated_at": "2026-04-17T09:01:50.309050-05:00",
   "snapshot_at": "2026-04-17T13:15:59.138527+00:00",
-  "onpe_updated_at": 1776433320452,
+  "onpe_updated_at": 1776434238169,
   "actas_contadas": 86175,
   "actas_totales": 92766,
   "actas_pct": 92.89502619494212,
@@ -1508,10 +1508,10 @@
         "name": "LIMA",
         "code": 140000,
         "pct_actas": 94.58405990357986,
-        "remaining_votes": 367839,
-        "left_pct": 17.597507349463527,
-        "right_pct": 2.8839011649809523,
-        "gap_pp": -14.713606184482575
+        "remaining_votes": 367852,
+        "left_pct": 17.597283423244846,
+        "right_pct": 2.88384277268434,
+        "gap_pp": -14.713440650560507
       },
       {
         "name": "PIURA",
@@ -1598,19 +1598,19 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 367839,
-        "left_pct": 17.597507349463527,
-        "right_pct": 2.8839011649809523,
-        "gap_pp": -14.713606184482575,
+        "remaining_votes": 367852,
+        "left_pct": 17.597283423244846,
+        "right_pct": 2.88384277268434,
+        "gap_pp": -14.713440650560507,
         "provinces": [
           {
             "name": "LIMA",
             "code": 140100,
             "pct_actas": 94.5866029796429,
-            "remaining_votes": 333264,
-            "left_pct": 18.67297631447965,
-            "right_pct": 2.4792954189304544,
-            "gap_pp": -16.193680895549196
+            "remaining_votes": 333277,
+            "left_pct": 18.672686668282623,
+            "right_pct": 2.4792471428101415,
+            "gap_pp": -16.19343952547248
           },
           {
             "name": "CAÑETE",
