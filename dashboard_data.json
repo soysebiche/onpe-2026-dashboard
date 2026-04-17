@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T21:11:40.496877-05:00",
+  "generated_at": "2026-04-16T21:18:22.897023-05:00",
   "snapshot_at": "2026-04-17T02:05:38.899597+00:00",
   "onpe_updated_at": 1776391574176,
   "actas_contadas": 86135,
@@ -1507,8 +1507,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 94.4678086641365,
-        "remaining_votes": 375761,
+        "pct_actas": 94.47122781823776,
+        "remaining_votes": 375549,
         "left_pct": 17.59098255858971,
         "right_pct": 2.8854507775685185,
         "gap_pp": -14.705531781021193
@@ -1580,7 +1580,7 @@
         "name": "HUÁNUCO",
         "code": 90000,
         "pct_actas": 90.90132422041863,
-        "remaining_votes": 38239,
+        "remaining_votes": 38240,
         "left_pct": 4.662943757479058,
         "right_pct": 22.96120861587555,
         "gap_pp": 18.29826485839649
@@ -1598,7 +1598,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 375761,
+        "remaining_votes": 375549,
         "left_pct": 17.59098255858971,
         "right_pct": 2.8854507775685185,
         "gap_pp": -14.705531781021193,
@@ -1606,8 +1606,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 94.46845617227783,
-            "remaining_votes": 340503,
+            "pct_actas": 94.4722474977252,
+            "remaining_votes": 340287,
             "left_pct": 18.66694607934659,
             "right_pct": 2.4805661703058375,
             "gap_pp": -16.186379909040753
@@ -1616,7 +1616,7 @@
             "name": "CAÑETE",
             "code": 140400,
             "pct_actas": 94.29012345679013,
-            "remaining_votes": 8769,
+            "remaining_votes": 8770,
             "left_pct": 7.283207412495118,
             "right_pct": 5.428736886051742,
             "gap_pp": -1.854470526443376
@@ -1625,7 +1625,7 @@
             "name": "HUAURA",
             "code": 140500,
             "pct_actas": 94.5619335347432,
-            "remaining_votes": 8123,
+            "remaining_votes": 8124,
             "left_pct": 7.319327555892225,
             "right_pct": 6.0336500038222844,
             "gap_pp": -1.2856775520699406
@@ -1634,7 +1634,7 @@
             "name": "HUARAL",
             "code": 140800,
             "pct_actas": 94.54225352112677,
-            "remaining_votes": 7066,
+            "remaining_votes": 7067,
             "left_pct": 7.0293041173125745,
             "right_pct": 7.84059329024611,
             "gap_pp": 0.8112891729335354
@@ -1652,7 +1652,7 @@
             "name": "HUAROCHIRÍ",
             "code": 140600,
             "pct_actas": 94.29429429429429,
-            "remaining_votes": 3957,
+            "remaining_votes": 3958,
             "left_pct": 8.538306298651047,
             "right_pct": 7.526212767248835,
             "gap_pp": -1.0120935314022121
