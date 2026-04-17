@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-17T01:12:05.252774-05:00",
+  "generated_at": "2026-04-17T01:17:49.420989-05:00",
   "snapshot_at": "2026-04-17T05:30:48.961549+00:00",
-  "onpe_updated_at": 1776403440411,
+  "onpe_updated_at": 1776405972786,
   "actas_contadas": 86166,
   "actas_totales": 92766,
   "actas_pct": 92.8853243645301,
@@ -1553,7 +1553,7 @@
         "name": "ÁNCASH",
         "code": 20000,
         "pct_actas": 90.95622119815668,
-        "remaining_votes": 60452,
+        "remaining_votes": 60498,
         "left_pct": 4.6972961920191265,
         "right_pct": 11.68158296239206,
         "gap_pp": 6.984286770372933
@@ -1913,7 +1913,7 @@
       },
       {
         "name": "ÁNCASH",
-        "remaining_votes": 60452,
+        "remaining_votes": 60498,
         "left_pct": 4.6972961920191265,
         "right_pct": 11.68158296239206,
         "gap_pp": 6.984286770372933,
@@ -1922,7 +1922,7 @@
             "name": "SANTA",
             "code": 21300,
             "pct_actas": 91.03448275862068,
-            "remaining_votes": 24949,
+            "remaining_votes": 24967,
             "left_pct": 6.444229901852977,
             "right_pct": 5.46536897391071,
             "gap_pp": -0.9788609279422671
@@ -1931,7 +1931,7 @@
             "name": "HUARAZ",
             "code": 20100,
             "pct_actas": 91.16379310344827,
-            "remaining_votes": 8644,
+            "remaining_votes": 8650,
             "left_pct": 4.9126602819052465,
             "right_pct": 10.013045276655319,
             "gap_pp": 5.100384994750073
@@ -1940,7 +1940,7 @@
             "name": "HUARI",
             "code": 20800,
             "pct_actas": 90.76923076923077,
-            "remaining_votes": 4205,
+            "remaining_votes": 4210,
             "left_pct": 2.8826288797608344,
             "right_pct": 22.516588484067764,
             "gap_pp": 19.63395960430693
@@ -1949,7 +1949,7 @@
             "name": "HUAYLAS",
             "code": 20700,
             "pct_actas": 91.57303370786516,
-            "remaining_votes": 2929,
+            "remaining_votes": 2931,
             "left_pct": 3.065145601921345,
             "right_pct": 10.672470729510657,
             "gap_pp": 7.607325127589312
@@ -1958,7 +1958,7 @@
             "name": "CARHUAZ",
             "code": 20400,
             "pct_actas": 91.02564102564102,
-            "remaining_votes": 2920,
+            "remaining_votes": 2922,
             "left_pct": 2.4868147674604444,
             "right_pct": 19.859357519578072,
             "gap_pp": 17.372542752117628
@@ -1967,7 +1967,7 @@
             "name": "YUNGAY",
             "code": 21500,
             "pct_actas": 91.57303370786516,
-            "remaining_votes": 2902,
+            "remaining_votes": 2904,
             "left_pct": 1.8174646519813096,
             "right_pct": 21.254323684689606,
             "gap_pp": 19.436859032708295
