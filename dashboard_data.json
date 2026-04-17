@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-17T01:57:51.531717-05:00",
+  "generated_at": "2026-04-17T02:01:44.364276-05:00",
   "snapshot_at": "2026-04-17T06:55:49.289827+00:00",
   "onpe_updated_at": 1776408480439,
   "actas_contadas": 86168,
   "actas_totales": 92766,
   "actas_pct": 92.88748032684389,
   "votos_validos": 18807666,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1544,7 +1544,7 @@
         "name": "LORETO",
         "code": 150000,
         "pct_actas": 83.09232480533926,
-        "remaining_votes": 71389,
+        "remaining_votes": 71407,
         "left_pct": 5.127345490639156,
         "right_pct": 7.4071043155971825,
         "gap_pp": 2.2797588249580265
@@ -1850,7 +1850,7 @@
       },
       {
         "name": "LORETO",
-        "remaining_votes": 71389,
+        "remaining_votes": 71407,
         "left_pct": 5.127345490639156,
         "right_pct": 7.4071043155971825,
         "gap_pp": 2.2797588249580265,
@@ -1859,7 +1859,7 @@
             "name": "MAYNAS",
             "code": 150100,
             "pct_actas": 83.0849478390462,
-            "remaining_votes": 39195,
+            "remaining_votes": 39204,
             "left_pct": 6.031494644203459,
             "right_pct": 2.8450446434921974,
             "gap_pp": -3.1864500007112615
@@ -1868,7 +1868,7 @@
             "name": "ALTO AMAZONAS",
             "code": 150200,
             "pct_actas": 83.33333333333333,
-            "remaining_votes": 10309,
+            "remaining_votes": 10311,
             "left_pct": 3.764090892926994,
             "right_pct": 15.008356744070268,
             "gap_pp": 11.244265851143274
@@ -1877,7 +1877,7 @@
             "name": "LORETO",
             "code": 150300,
             "pct_actas": 82.74111675126903,
-            "remaining_votes": 4775,
+            "remaining_votes": 4776,
             "left_pct": 3.8360115368768026,
             "right_pct": 7.981046559538525,
             "gap_pp": 4.145035022661722
@@ -1886,7 +1886,7 @@
             "name": "MARISCAL RAMÓN CASTILLA",
             "code": 150600,
             "pct_actas": 82.90155440414507,
-            "remaining_votes": 4494,
+            "remaining_votes": 4496,
             "left_pct": 3.736608309380716,
             "right_pct": 3.3969166448915598,
             "gap_pp": -0.33969166448915633
@@ -1895,7 +1895,7 @@
             "name": "REQUENA",
             "code": 150400,
             "pct_actas": 83.15217391304348,
-            "remaining_votes": 4327,
+            "remaining_votes": 4329,
             "left_pct": 6.29231381919554,
             "right_pct": 10.314615690959776,
             "gap_pp": 4.0223018717642365
@@ -1904,7 +1904,7 @@
             "name": "UCAYALI",
             "code": 150500,
             "pct_actas": 83.5978835978836,
-            "remaining_votes": 4005,
+            "remaining_votes": 4006,
             "left_pct": 4.439428141459744,
             "right_pct": 12.951467268623025,
             "gap_pp": 8.51203912716328
