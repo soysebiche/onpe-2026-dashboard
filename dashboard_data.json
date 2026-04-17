@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-16T20:58:14.886872-05:00",
+  "generated_at": "2026-04-16T21:01:33.978718-05:00",
   "snapshot_at": "2026-04-17T00:22:00.370656+00:00",
-  "onpe_updated_at": 1776384420379,
+  "onpe_updated_at": 1776390721015,
   "actas_contadas": 86135,
   "actas_totales": 92766,
   "actas_pct": 92.85190694866654,
@@ -1562,7 +1562,7 @@
         "name": "ICA",
         "code": 100000,
         "pct_actas": 90.50347932869423,
-        "remaining_votes": 53204,
+        "remaining_votes": 53209,
         "left_pct": 7.80768436625668,
         "right_pct": 6.3888631055326455,
         "gap_pp": -1.4188212607240347
