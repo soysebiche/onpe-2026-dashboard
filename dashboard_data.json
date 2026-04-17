@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-17T12:18:32.758421-05:00",
+  "generated_at": "2026-04-17T12:22:07.533434-05:00",
   "snapshot_at": "2026-04-17T17:00:42.248720+00:00",
-  "onpe_updated_at": 1776445500346,
+  "onpe_updated_at": 1776446149097,
   "actas_contadas": 86193,
   "actas_totales": 92766,
   "actas_pct": 92.91442985576612,
@@ -1508,7 +1508,7 @@
         "name": "LIMA",
         "code": 140000,
         "pct_actas": 94.64560467740282,
-        "remaining_votes": 363720,
+        "remaining_votes": 363723,
         "left_pct": 17.596522503973663,
         "right_pct": 2.883695166703569,
         "gap_pp": -14.712827337270094
@@ -1598,7 +1598,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 363720,
+        "remaining_votes": 363723,
         "left_pct": 17.596522503973663,
         "right_pct": 2.883695166703569,
         "gap_pp": -14.712827337270094,
@@ -1607,7 +1607,7 @@
             "name": "LIMA",
             "code": 140100,
             "pct_actas": 94.64766309086085,
-            "remaining_votes": 329572,
+            "remaining_votes": 329574,
             "left_pct": 18.67112411059131,
             "right_pct": 2.4793567270297037,
             "gap_pp": -16.191767383561608
@@ -1634,7 +1634,7 @@
             "name": "HUARAL",
             "code": 140800,
             "pct_actas": 94.70899470899471,
-            "remaining_votes": 6840,
+            "remaining_votes": 6841,
             "left_pct": 7.0293041173125745,
             "right_pct": 7.84059329024611,
             "gap_pp": 0.8112891729335354
