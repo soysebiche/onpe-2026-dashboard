@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T01:46:42.234616-05:00",
+  "generated_at": "2026-04-17T01:51:42.898603-05:00",
   "snapshot_at": "2026-04-17T06:40:49.201693+00:00",
   "onpe_updated_at": 1776407770314,
   "actas_contadas": 86168,
@@ -1544,7 +1544,7 @@
         "name": "LORETO",
         "code": 150000,
         "pct_actas": 83.09232480533926,
-        "remaining_votes": 71382,
+        "remaining_votes": 71389,
         "left_pct": 5.127345490639156,
         "right_pct": 7.4071043155971825,
         "gap_pp": 2.2797588249580265
@@ -1850,7 +1850,7 @@
       },
       {
         "name": "LORETO",
-        "remaining_votes": 71382,
+        "remaining_votes": 71389,
         "left_pct": 5.127345490639156,
         "right_pct": 7.4071043155971825,
         "gap_pp": 2.2797588249580265,
@@ -1859,7 +1859,7 @@
             "name": "MAYNAS",
             "code": 150100,
             "pct_actas": 83.0849478390462,
-            "remaining_votes": 39192,
+            "remaining_votes": 39195,
             "left_pct": 6.031494644203459,
             "right_pct": 2.8450446434921974,
             "gap_pp": -3.1864500007112615
@@ -1868,7 +1868,7 @@
             "name": "ALTO AMAZONAS",
             "code": 150200,
             "pct_actas": 83.33333333333333,
-            "remaining_votes": 10308,
+            "remaining_votes": 10309,
             "left_pct": 3.764090892926994,
             "right_pct": 15.008356744070268,
             "gap_pp": 11.244265851143274
@@ -1904,7 +1904,7 @@
             "name": "UCAYALI",
             "code": 150500,
             "pct_actas": 83.5978835978836,
-            "remaining_votes": 4004,
+            "remaining_votes": 4005,
             "left_pct": 4.439428141459744,
             "right_pct": 12.951467268623025,
             "gap_pp": 8.51203912716328
