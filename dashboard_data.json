@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-17T10:57:08.283012-05:00",
+  "generated_at": "2026-04-17T11:01:59.278949-05:00",
   "snapshot_at": "2026-04-17T15:30:41.422370+00:00",
-  "onpe_updated_at": 1776440763000,
+  "onpe_updated_at": 1776441346338,
   "actas_contadas": 86184,
   "actas_totales": 92766,
   "actas_pct": 92.90472802535412,
@@ -1535,7 +1535,7 @@
         "name": "CUSCO",
         "code": 70000,
         "pct_actas": 91.16244037157921,
-        "remaining_votes": 72319,
+        "remaining_votes": 72601,
         "left_pct": 4.046701238204429,
         "right_pct": 18.209252808561292,
         "gap_pp": 14.162551570356863
@@ -1787,7 +1787,7 @@
       },
       {
         "name": "CUSCO",
-        "remaining_votes": 72319,
+        "remaining_votes": 72601,
         "left_pct": 4.046701238204429,
         "right_pct": 18.209252808561292,
         "gap_pp": 14.162551570356863,
@@ -1796,7 +1796,7 @@
             "name": "CUSCO",
             "code": 70100,
             "pct_actas": 91.18086696562033,
-            "remaining_votes": 26472,
+            "remaining_votes": 26566,
             "left_pct": 7.775606974997914,
             "right_pct": 6.202895124732319,
             "gap_pp": -1.5727118502655948
@@ -1805,7 +1805,7 @@
             "name": "LA CONVENCIÓN",
             "code": 70900,
             "pct_actas": 90.99526066350711,
-            "remaining_votes": 6563,
+            "remaining_votes": 6594,
             "left_pct": 2.7119199380472985,
             "right_pct": 23.15333293620063,
             "gap_pp": 20.441412998153332
@@ -1814,7 +1814,7 @@
             "name": "CANCHIS",
             "code": 70600,
             "pct_actas": 91.31832797427653,
-            "remaining_votes": 5679,
+            "remaining_votes": 5701,
             "left_pct": 1.6673091750192752,
             "right_pct": 22.54401182215369,
             "gap_pp": 20.87670264713441
@@ -1823,7 +1823,7 @@
             "name": "QUISPICANCHI",
             "code": 71200,
             "pct_actas": 91.03448275862068,
-            "remaining_votes": 5338,
+            "remaining_votes": 5359,
             "left_pct": 1.6669329498854981,
             "right_pct": 31.453373808382597,
             "gap_pp": 29.786440858497098
@@ -1832,7 +1832,7 @@
             "name": "URUBAMBA",
             "code": 71300,
             "pct_actas": 90.94827586206897,
-            "remaining_votes": 4478,
+            "remaining_votes": 4494,
             "left_pct": 3.263760345524563,
             "right_pct": 14.28480245101168,
             "gap_pp": 11.021042105487117
@@ -1841,7 +1841,7 @@
             "name": "ESPINAR",
             "code": 70800,
             "pct_actas": 91.34199134199135,
-            "remaining_votes": 4113,
+            "remaining_votes": 4129,
             "left_pct": 1.5127988997826183,
             "right_pct": 25.5689632225722,
             "gap_pp": 24.056164322789584
