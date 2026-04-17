@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-17T09:42:10.706682-05:00",
+  "generated_at": "2026-04-17T09:48:34.949722-05:00",
   "snapshot_at": "2026-04-17T14:40:46.044626+00:00",
   "onpe_updated_at": 1776436560363,
   "actas_contadas": 86175,
   "actas_totales": 92766,
   "actas_pct": 92.89502619494212,
   "votos_validos": 18809244,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1508,10 +1508,10 @@
         "name": "LIMA",
         "code": 140000,
         "pct_actas": 94.58405990357986,
-        "remaining_votes": 367853,
-        "left_pct": 17.597283423244846,
-        "right_pct": 2.88384277268434,
-        "gap_pp": -14.713440650560507
+        "remaining_votes": 367864,
+        "left_pct": 17.59729764503194,
+        "right_pct": 2.8838366497376136,
+        "gap_pp": -14.713460995294326
       },
       {
         "name": "PIURA",
@@ -1598,19 +1598,19 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 367853,
-        "left_pct": 17.597283423244846,
-        "right_pct": 2.88384277268434,
-        "gap_pp": -14.713440650560507,
+        "remaining_votes": 367864,
+        "left_pct": 17.59729764503194,
+        "right_pct": 2.8838366497376136,
+        "gap_pp": -14.713460995294326,
         "provinces": [
           {
             "name": "LIMA",
             "code": 140100,
             "pct_actas": 94.5866029796429,
-            "remaining_votes": 333278,
-            "left_pct": 18.672686668282623,
-            "right_pct": 2.4792471428101415,
-            "gap_pp": -16.19343952547248
+            "remaining_votes": 333289,
+            "left_pct": 18.67266227263434,
+            "right_pct": 2.4792554696839635,
+            "gap_pp": -16.193406802950378
           },
           {
             "name": "CAÑETE",
