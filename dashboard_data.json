@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-17T11:18:36.402215-05:00",
+  "generated_at": "2026-04-17T11:22:06.298315-05:00",
   "snapshot_at": "2026-04-17T16:05:49.008030+00:00",
-  "onpe_updated_at": 1776441900361,
+  "onpe_updated_at": 1776442517297,
   "actas_contadas": 86184,
   "actas_totales": 92766,
   "actas_pct": 92.90472802535412,
@@ -1544,10 +1544,10 @@
         "name": "LORETO",
         "code": 150000,
         "pct_actas": 83.12940304041527,
-        "remaining_votes": 71222,
-        "left_pct": 5.127345490639156,
-        "right_pct": 7.4071043155971825,
-        "gap_pp": 2.2797588249580265
+        "remaining_votes": 71567,
+        "left_pct": 5.1126666631657995,
+        "right_pct": 7.520650741221138,
+        "gap_pp": 2.407984078055338
       },
       {
         "name": "ÁNCASH",
@@ -1850,10 +1850,10 @@
       },
       {
         "name": "LORETO",
-        "remaining_votes": 71222,
-        "left_pct": 5.127345490639156,
-        "right_pct": 7.4071043155971825,
-        "gap_pp": 2.2797588249580265,
+        "remaining_votes": 71567,
+        "left_pct": 5.1126666631657995,
+        "right_pct": 7.520650741221138,
+        "gap_pp": 2.407984078055338,
         "provinces": [
           {
             "name": "MAYNAS",
@@ -1901,13 +1901,13 @@
             "gap_pp": 4.0223018717642365
           },
           {
-            "name": "UCAYALI",
-            "code": 150500,
-            "pct_actas": 83.5978835978836,
-            "remaining_votes": 4007,
-            "left_pct": 4.439428141459744,
-            "right_pct": 12.951467268623025,
-            "gap_pp": 8.51203912716328
+            "name": "DATEM DEL MARAÑÓN",
+            "code": 150700,
+            "pct_actas": 82.47422680412372,
+            "remaining_votes": 4174,
+            "left_pct": 1.9736517491488628,
+            "right_pct": 31.104751566586074,
+            "gap_pp": 29.13109981743721
           }
         ]
       },
