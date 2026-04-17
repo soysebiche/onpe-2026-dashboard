@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T22:36:33.721514-05:00",
+  "generated_at": "2026-04-16T22:43:33.728367-05:00",
   "snapshot_at": "2026-04-17T03:30:42.986036+00:00",
   "onpe_updated_at": 1776396240438,
   "actas_contadas": 86152,
@@ -1507,8 +1507,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 94.51909597565562,
-        "remaining_votes": 372398,
+        "pct_actas": 94.55328751666838,
+        "remaining_votes": 369935,
         "left_pct": 17.59742423743952,
         "right_pct": 2.8841771974523844,
         "gap_pp": -14.713247039987134
@@ -1598,7 +1598,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 372398,
+        "remaining_votes": 369935,
         "left_pct": 17.59742423743952,
         "right_pct": 2.8841771974523844,
         "gap_pp": -14.713247039987134,
@@ -1606,8 +1606,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 94.52174242711453,
-            "remaining_votes": 337345,
+            "pct_actas": 94.5560694518159,
+            "remaining_votes": 335136,
             "left_pct": 18.673179768011483,
             "right_pct": 2.479488717850294,
             "gap_pp": -16.19369105016119
@@ -1615,8 +1615,8 @@
           {
             "name": "CAÑETE",
             "code": 140400,
-            "pct_actas": 94.29012345679013,
-            "remaining_votes": 8770,
+            "pct_actas": 94.43585780525503,
+            "remaining_votes": 8534,
             "left_pct": 7.283207412495118,
             "right_pct": 5.428736886051742,
             "gap_pp": -1.854470526443376
@@ -1633,8 +1633,8 @@
           {
             "name": "HUARAL",
             "code": 140800,
-            "pct_actas": 94.54225352112677,
-            "remaining_votes": 7067,
+            "pct_actas": 94.70899470899471,
+            "remaining_votes": 6840,
             "left_pct": 7.0293041173125745,
             "right_pct": 7.84059329024611,
             "gap_pp": 0.8112891729335354
