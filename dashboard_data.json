@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-18T09:28:56.298871-05:00",
+  "generated_at": "2026-04-18T09:32:07.213236-05:00",
   "snapshot_at": "2026-04-18T14:25:51.650987+00:00",
   "onpe_updated_at": 1776521435860,
   "actas_contadas": 86664,
   "actas_totales": 92766,
   "actas_pct": 93.42215898066102,
   "votos_validos": 18898830,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1580,7 +1580,7 @@
         "name": "HUÁNUCO",
         "code": 90000,
         "pct_actas": 91.28577530969672,
-        "remaining_votes": 36543,
+        "remaining_votes": 36560,
         "left_pct": 4.6631169005907696,
         "right_pct": 22.955541546963804,
         "gap_pp": 18.292424646373036
