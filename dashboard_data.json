@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T22:37:17.045814-05:00",
+  "generated_at": "2026-04-17T22:42:01.305168-05:00",
   "snapshot_at": "2026-04-18T03:21:06.101792+00:00",
   "onpe_updated_at": 1776482944163,
   "actas_contadas": 86655,
@@ -1507,8 +1507,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 95.18925017950559,
-        "remaining_votes": 325531,
+        "pct_actas": 95.19266933360687,
+        "remaining_votes": 325290,
         "left_pct": 17.59723076726566,
         "right_pct": 2.8830968109238957,
         "gap_pp": -14.714133956341765
@@ -1598,7 +1598,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 325531,
+        "remaining_votes": 325290,
         "left_pct": 17.59723076726566,
         "right_pct": 2.8830968109238957,
         "gap_pp": -14.714133956341765,
@@ -1606,8 +1606,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 95.1926355267644,
-            "remaining_votes": 294931,
+            "pct_actas": 95.19642383604197,
+            "remaining_votes": 294690,
             "left_pct": 18.67102817554626,
             "right_pct": 2.4790270277337187,
             "gap_pp": -16.192001147812544
@@ -2291,8 +2291,8 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "current_pct": 9.94904344496675,
-          "base_pct": 9.944179277243919,
-          "delta_pct": 0.0048641677228307145,
+          "base_pct": 9.944179277243917,
+          "delta_pct": 0.004864167722832491,
           "current_votes": 2002361,
           "base_votes": 2003756,
           "delta_votes": -1395,
