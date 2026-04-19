@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-19T06:43:05.099721-05:00",
+  "generated_at": "2026-04-19T06:47:15.371548-05:00",
   "snapshot_at": "2026-04-19T09:37:45.637189+00:00",
   "onpe_updated_at": 1776592800395,
   "actas_contadas": 86721,
@@ -1553,7 +1553,7 @@
         "name": "ÁNCASH",
         "code": 20000,
         "pct_actas": 92.59792626728111,
-        "remaining_votes": 49603,
+        "remaining_votes": 49601,
         "left_pct": 4.69278601960499,
         "right_pct": 11.638722178029658,
         "gap_pp": 6.945936158424668
@@ -1904,7 +1904,7 @@
       },
       {
         "name": "ÁNCASH",
-        "remaining_votes": 49603,
+        "remaining_votes": 49601,
         "left_pct": 4.69278601960499,
         "right_pct": 11.638722178029658,
         "gap_pp": 6.945936158424668,
@@ -1937,13 +1937,13 @@
             "gap_pp": 19.63395960430693
           },
           {
-            "name": "HUAYLAS",
-            "code": 20700,
+            "name": "YUNGAY",
+            "code": 21500,
             "pct_actas": 92.61363636363636,
-            "remaining_votes": 2545,
-            "left_pct": 3.065145601921345,
-            "right_pct": 10.672470729510657,
-            "gap_pp": 7.607325127589312
+            "remaining_votes": 2521,
+            "left_pct": 1.8174646519813096,
+            "right_pct": 21.254323684689606,
+            "gap_pp": 19.436859032708295
           },
           {
             "name": "CASMA",
@@ -1955,13 +1955,13 @@
             "gap_pp": 2.2776000843555577
           },
           {
-            "name": "YUNGAY",
-            "code": 21500,
+            "name": "HUAYLAS",
+            "code": 20700,
             "pct_actas": 93.14285714285714,
-            "remaining_votes": 2330,
-            "left_pct": 1.8174646519813096,
-            "right_pct": 21.254323684689606,
-            "gap_pp": 19.436859032708295
+            "remaining_votes": 2352,
+            "left_pct": 3.065145601921345,
+            "right_pct": 10.672470729510657,
+            "gap_pp": 7.607325127589312
           }
         ]
       }
