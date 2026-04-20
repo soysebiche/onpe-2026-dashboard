@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-20T14:57:51.519589-05:00",
+  "generated_at": "2026-04-20T15:03:18.025324-05:00",
   "snapshot_at": "2026-04-20T19:56:22.068382+00:00",
   "onpe_updated_at": 1776714006661,
   "actas_contadas": 86826,
   "actas_totales": 92766,
   "actas_pct": 93.5967919280771,
   "votos_validos": 18923228,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1526,7 +1526,7 @@
         "name": "LA LIBERTAD",
         "code": 120000,
         "pct_actas": 92.83289324783101,
-        "remaining_votes": 80400,
+        "remaining_votes": 80415,
         "left_pct": 6.593670971580536,
         "right_pct": 7.531764046181051,
         "gap_pp": 0.9380930746005145
@@ -1724,7 +1724,7 @@
       },
       {
         "name": "LA LIBERTAD",
-        "remaining_votes": 80400,
+        "remaining_votes": 80415,
         "left_pct": 6.593670971580536,
         "right_pct": 7.531764046181051,
         "gap_pp": 0.9380930746005145,
@@ -1733,7 +1733,7 @@
             "name": "TRUJILLO",
             "code": 120100,
             "pct_actas": 92.88950853956082,
-            "remaining_votes": 45485,
+            "remaining_votes": 45493,
             "left_pct": 9.329780052106914,
             "right_pct": 2.573282397240299,
             "gap_pp": -6.756497654866615
@@ -1742,7 +1742,7 @@
             "name": "SÁNCHEZ CARRIÓN",
             "code": 120300,
             "pct_actas": 92.98642533936652,
-            "remaining_votes": 5821,
+            "remaining_votes": 5822,
             "left_pct": 1.3825118591613608,
             "right_pct": 24.051901270896224,
             "gap_pp": 22.669389411734862
@@ -1751,7 +1751,7 @@
             "name": "ASCOPE",
             "code": 120800,
             "pct_actas": 92.77456647398844,
-            "remaining_votes": 5469,
+            "remaining_votes": 5470,
             "left_pct": 4.580913996857709,
             "right_pct": 3.4332946239497235,
             "gap_pp": -1.1476193729079855
@@ -1769,7 +1769,7 @@
             "name": "VIRÚ",
             "code": 121200,
             "pct_actas": 92.24806201550388,
-            "remaining_votes": 4517,
+            "remaining_votes": 4518,
             "left_pct": 2.4986680873734683,
             "right_pct": 13.001243118451429,
             "gap_pp": 10.50257503107796
@@ -1778,7 +1778,7 @@
             "name": "CHEPÉN",
             "code": 120900,
             "pct_actas": 92.91666666666667,
-            "remaining_votes": 3707,
+            "remaining_votes": 3708,
             "left_pct": 4.327483071091544,
             "right_pct": 9.803960278759401,
             "gap_pp": 5.476477207667857
