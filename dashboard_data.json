@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-19T20:08:09.880103-05:00",
+  "generated_at": "2026-04-19T20:18:58.411849-05:00",
   "snapshot_at": "2026-04-20T00:36:04.817791+00:00",
-  "onpe_updated_at": 1776646210007,
+  "onpe_updated_at": 1776646807306,
   "actas_contadas": 86793,
   "actas_totales": 92766,
   "actas_pct": 93.56121854989975,
@@ -984,7 +984,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 5621,
-          "pct": 2.5822547251840087
+          "pct": 2.582254725184009
         },
         {
           "candidate": "FUERZA POPULAR",
@@ -1203,7 +1203,7 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 2743,
-          "pct": 2.644883609594202
+          "pct": 2.6448836095942023
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
@@ -1213,7 +1213,7 @@
         {
           "candidate": "FUERZA POPULAR",
           "votes": 10923,
-          "pct": 10.532049053832981
+          "pct": 10.532049053832983
         }
       ]
     },
@@ -1432,7 +1432,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 9997,
-          "pct": 3.3309668537764354
+          "pct": 3.330966853776436
         },
         {
           "candidate": "FUERZA POPULAR",
@@ -1516,8 +1516,8 @@
       {
         "name": "PIURA",
         "code": 190000,
-        "pct_actas": 91.89547434198069,
-        "remaining_votes": 88871,
+        "pct_actas": 91.8576027267563,
+        "remaining_votes": 89310,
         "left_pct": 5.139333505279767,
         "right_pct": 8.723278765626896,
         "gap_pp": 3.5839452603471287
@@ -1661,7 +1661,7 @@
       },
       {
         "name": "PIURA",
-        "remaining_votes": 88871,
+        "remaining_votes": 89310,
         "left_pct": 5.139333505279767,
         "right_pct": 8.723278765626896,
         "gap_pp": 3.5839452603471287,
@@ -1669,8 +1669,8 @@
           {
             "name": "PIURA",
             "code": 190100,
-            "pct_actas": 91.7941585535466,
-            "remaining_votes": 39062,
+            "pct_actas": 91.7516218721038,
+            "remaining_votes": 39278,
             "left_pct": 7.230624845211664,
             "right_pct": 6.2247722167427755,
             "gap_pp": -1.0058526284688885
@@ -1679,7 +1679,7 @@
             "name": "SULLANA",
             "code": 190600,
             "pct_actas": 92.0479302832244,
-            "remaining_votes": 15983,
+            "remaining_votes": 15982,
             "left_pct": 4.347624994218584,
             "right_pct": 3.97555874175827,
             "gap_pp": -0.3720662524603138
@@ -1696,8 +1696,8 @@
           {
             "name": "TALARA",
             "code": 190700,
-            "pct_actas": 92.07161125319693,
-            "remaining_votes": 6385,
+            "pct_actas": 91.83673469387755,
+            "remaining_votes": 6588,
             "left_pct": 5.097968303992354,
             "right_pct": 2.938403316843832,
             "gap_pp": -2.1595649871485216
