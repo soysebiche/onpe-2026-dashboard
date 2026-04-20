@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T14:47:22.773356-05:00",
+  "generated_at": "2026-04-20T14:52:14.423975-05:00",
   "snapshot_at": "2026-04-20T19:31:26.511610+00:00",
   "onpe_updated_at": 1776713412795,
   "actas_contadas": 86817,
@@ -1525,8 +1525,8 @@
       {
         "name": "LA LIBERTAD",
         "code": 120000,
-        "pct_actas": 92.66314598264806,
-        "remaining_votes": 82415,
+        "pct_actas": 92.83289324783101,
+        "remaining_votes": 80400,
         "left_pct": 6.593670971580536,
         "right_pct": 7.531764046181051,
         "gap_pp": 0.9380930746005145
@@ -1724,7 +1724,7 @@
       },
       {
         "name": "LA LIBERTAD",
-        "remaining_votes": 82415,
+        "remaining_votes": 80400,
         "left_pct": 6.593670971580536,
         "right_pct": 7.531764046181051,
         "gap_pp": 0.9380930746005145,
@@ -1732,8 +1732,8 @@
           {
             "name": "TRUJILLO",
             "code": 120100,
-            "pct_actas": 92.71269177126918,
-            "remaining_votes": 46678,
+            "pct_actas": 92.88950853956082,
+            "remaining_votes": 45485,
             "left_pct": 9.329780052106914,
             "right_pct": 2.573282397240299,
             "gap_pp": -6.756497654866615
@@ -1759,8 +1759,8 @@
           {
             "name": "PACASMAYO",
             "code": 120500,
-            "pct_actas": 92.33449477351917,
-            "remaining_votes": 4786,
+            "pct_actas": 92.65734265734265,
+            "remaining_votes": 4571,
             "left_pct": 5.602422669262384,
             "right_pct": 7.263016023561124,
             "gap_pp": 1.66059335429874
@@ -1768,8 +1768,8 @@
           {
             "name": "VIRÚ",
             "code": 121200,
-            "pct_actas": 91.89189189189189,
-            "remaining_votes": 4740,
+            "pct_actas": 92.24806201550388,
+            "remaining_votes": 4517,
             "left_pct": 2.4986680873734683,
             "right_pct": 13.001243118451429,
             "gap_pp": 10.50257503107796
@@ -1777,8 +1777,8 @@
           {
             "name": "CHEPÉN",
             "code": 120900,
-            "pct_actas": 92.5311203319502,
-            "remaining_votes": 3922,
+            "pct_actas": 92.91666666666667,
+            "remaining_votes": 3707,
             "left_pct": 4.327483071091544,
             "right_pct": 9.803960278759401,
             "gap_pp": 5.476477207667857
