@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-21T14:40:16.830949-05:00",
+  "generated_at": "2026-04-21T14:54:23.757654-05:00",
   "snapshot_at": "2026-04-21T19:38:39.997068+00:00",
   "onpe_updated_at": 1776799205450,
   "actas_contadas": 87112,
   "actas_totales": 92766,
   "actas_pct": 93.90509453894747,
   "votos_validos": 18982662,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1508,10 +1508,10 @@
         "name": "LIMA",
         "code": 140000,
         "pct_actas": 95.38414196327828,
-        "remaining_votes": 312368,
-        "left_pct": 17.591673413544896,
-        "right_pct": 2.885654874292489,
-        "gap_pp": -14.706018539252408
+        "remaining_votes": 312453,
+        "left_pct": 17.589152538668735,
+        "right_pct": 2.887383966475258,
+        "gap_pp": -14.701768572193476
       },
       {
         "name": "PIURA",
@@ -1598,19 +1598,19 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 312368,
-        "left_pct": 17.591673413544896,
-        "right_pct": 2.885654874292489,
-        "gap_pp": -14.706018539252408,
+        "remaining_votes": 312453,
+        "left_pct": 17.589152538668735,
+        "right_pct": 2.887383966475258,
+        "gap_pp": -14.701768572193476,
         "provinces": [
           {
             "name": "LIMA",
             "code": 140100,
             "pct_actas": 95.38718113937004,
-            "remaining_votes": 282932,
-            "left_pct": 18.667436605573688,
-            "right_pct": 2.479772365888359,
-            "gap_pp": -16.18766423968533
+            "remaining_votes": 282951,
+            "left_pct": 18.667946007274033,
+            "right_pct": 2.4797182505033932,
+            "gap_pp": -16.18822775677064
           },
           {
             "name": "CAÑETE",
@@ -1652,10 +1652,10 @@
             "name": "HUAROCHIRÍ",
             "code": 140600,
             "pct_actas": 95.41547277936962,
-            "remaining_votes": 3268,
-            "left_pct": 8.498732953463504,
-            "right_pct": 7.596420044236769,
-            "gap_pp": -0.902312909226735
+            "remaining_votes": 3334,
+            "left_pct": 8.41790361135365,
+            "right_pct": 7.659276011622747,
+            "gap_pp": -0.758627599730902
           }
         ]
       },
