@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-20T19:07:31.115094-05:00",
+  "generated_at": "2026-04-20T19:17:44.654954-05:00",
   "snapshot_at": "2026-04-21T00:06:03.801902+00:00",
-  "onpe_updated_at": 1776728412280,
+  "onpe_updated_at": 1776729609267,
   "actas_contadas": 86901,
   "actas_totales": 92766,
   "actas_pct": 93.6776405148438,
   "votos_validos": 18942054,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1409,7 +1409,7 @@
         {
           "candidate": "FUERZA POPULAR",
           "votes": 37459,
-          "pct": 26.56390380553849
+          "pct": 26.563903805538484
         }
       ]
     },
@@ -2107,26 +2107,26 @@
       {
         "name": "CHILE",
         "code": 921000,
-        "pct_actas": 58.719,
-        "remaining_votes": 26559,
+        "pct_actas": 59.431,
+        "remaining_votes": 25789,
         "left_pct": 7.8934829795118855,
         "right_pct": 3.1023346921488697,
         "gap_pp": -4.791148287363016,
         "continent_code": 920000,
-        "counted_actas": 165,
+        "counted_actas": 167,
         "total_actas": 281,
         "continent": "AMERICA"
       },
       {
         "name": "ESPAÑA",
         "code": 940900,
-        "pct_actas": 69.507,
-        "remaining_votes": 26520,
+        "pct_actas": 70.179,
+        "remaining_votes": 25686,
         "left_pct": 16.66197951992589,
         "right_pct": 1.6658670945755927,
         "gap_pp": -14.996112425350297,
         "continent_code": 940000,
-        "counted_actas": 310,
+        "counted_actas": 313,
         "total_actas": 446,
         "continent": "EUROPA"
       },
@@ -2146,13 +2146,13 @@
       {
         "name": "ESTADOS UNIDOS DE AMERICA",
         "code": 921300,
-        "pct_actas": 74.366,
-        "remaining_votes": 18141,
+        "pct_actas": 74.766,
+        "remaining_votes": 17762,
         "left_pct": 37.97906097398773,
         "right_pct": 1.1419559558418362,
         "gap_pp": -36.83710501814589,
         "continent_code": 920000,
-        "counted_actas": 557,
+        "counted_actas": 560,
         "total_actas": 749,
         "continent": "AMERICA"
       },
@@ -2198,13 +2198,13 @@
       {
         "name": "CANADA",
         "code": 920600,
-        "pct_actas": 80.769,
-        "remaining_votes": 1658,
+        "pct_actas": 82.692,
+        "remaining_votes": 1457,
         "left_pct": 39.69553353439609,
         "right_pct": 0.674996409593566,
         "gap_pp": -39.02053712480252,
         "continent_code": 920000,
-        "counted_actas": 42,
+        "counted_actas": 43,
         "total_actas": 52,
         "continent": "AMERICA"
       },
