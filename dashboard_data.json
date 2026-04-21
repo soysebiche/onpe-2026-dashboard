@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T22:18:34.194995-05:00",
+  "generated_at": "2026-04-20T22:22:20.196259-05:00",
   "snapshot_at": "2026-04-21T03:06:00.691733+00:00",
   "onpe_updated_at": 1776740404831,
   "actas_contadas": 87052,
@@ -2338,8 +2338,8 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "current_pct": 9.932885570250118,
-          "base_pct": 9.937446370905024,
-          "delta_pct": -0.004560800654905606,
+          "base_pct": 9.937446370905022,
+          "delta_pct": -0.004560800654903829,
           "current_votes": 1998620,
           "base_votes": 2001734,
           "delta_votes": -3114,
