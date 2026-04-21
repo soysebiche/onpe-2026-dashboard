@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-20T19:38:54.682383-05:00",
+  "generated_at": "2026-04-20T19:48:19.543737-05:00",
   "snapshot_at": "2026-04-21T00:36:06.395020+00:00",
   "onpe_updated_at": 1776730805911,
   "actas_contadas": 86952,
   "actas_totales": 92766,
   "actas_pct": 93.73261755384516,
   "votos_validos": 18951825,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1175,7 +1175,7 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 23140,
-          "pct": 5.148369779988796
+          "pct": 5.148369779988795
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
@@ -1432,7 +1432,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 10031,
-          "pct": 3.3422393542859496
+          "pct": 3.34223935428595
         },
         {
           "candidate": "FUERZA POPULAR",
@@ -1483,17 +1483,17 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 78293,
-          "pct": 19.689967613775185
+          "pct": 19.68996761377519
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 31793,
-          "pct": 7.99559565712312
+          "pct": 7.995595657123119
         },
         {
           "candidate": "FUERZA POPULAR",
           "votes": 50677,
-          "pct": 12.74487125664498
+          "pct": 12.744871256644979
         }
       ]
     }
@@ -2433,17 +2433,17 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 78293,
-          "pct": 19.689967613775185
+          "pct": 19.68996761377519
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 31793,
-          "pct": 7.99559565712312
+          "pct": 7.995595657123119
         },
         {
           "candidate": "FUERZA POPULAR",
           "votes": 50677,
-          "pct": 12.74487125664498
+          "pct": 12.744871256644979
         }
       ]
     }
