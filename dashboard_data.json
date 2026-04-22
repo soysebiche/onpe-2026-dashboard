@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T11:22:08.639636-05:00",
+  "generated_at": "2026-04-22T11:28:49.235250-05:00",
   "snapshot_at": "2026-04-22T16:16:03.069734+00:00",
   "onpe_updated_at": 1776873608260,
   "actas_contadas": 87480,
@@ -1543,8 +1543,8 @@
       {
         "name": "LA LIBERTAD",
         "code": 120000,
-        "pct_actas": 95.41682384006036,
-        "remaining_votes": 51871,
+        "pct_actas": 95.473406261788,
+        "remaining_votes": 51207,
         "left_pct": 6.632135424242261,
         "right_pct": 7.463902012436994,
         "gap_pp": 0.8317665881947329
@@ -1588,8 +1588,8 @@
       {
         "name": "CAJAMARCA",
         "code": 60000,
-        "pct_actas": 95.91981132075472,
-        "remaining_votes": 32599,
+        "pct_actas": 95.94339622641509,
+        "remaining_votes": 32377,
         "left_pct": 2.5331703601353386,
         "right_pct": 32.70839185437687,
         "gap_pp": 30.175221494241534
@@ -1841,7 +1841,7 @@
       },
       {
         "name": "LA LIBERTAD",
-        "remaining_votes": 51871,
+        "remaining_votes": 51207,
         "left_pct": 6.632135424242261,
         "right_pct": 7.463902012436994,
         "gap_pp": 0.8317665881947329,
@@ -1849,8 +1849,8 @@
           {
             "name": "TRUJILLO",
             "code": 120100,
-            "pct_actas": 95.47026279391424,
-            "remaining_votes": 29480,
+            "pct_actas": 95.5363321799308,
+            "remaining_votes": 29033,
             "left_pct": 9.360008942238727,
             "right_pct": 2.561578801926307,
             "gap_pp": -6.798430140312419
@@ -1858,8 +1858,8 @@
           {
             "name": "SÁNCHEZ CARRIÓN",
             "code": 120300,
-            "pct_actas": 95.35962877030163,
-            "remaining_votes": 3777,
+            "pct_actas": 95.5813953488372,
+            "remaining_votes": 3588,
             "left_pct": 1.3825118591613608,
             "right_pct": 24.051901270896224,
             "gap_pp": 22.669389411734862
@@ -1885,8 +1885,8 @@
           {
             "name": "PACASMAYO",
             "code": 120500,
-            "pct_actas": 95.37366548042705,
-            "remaining_votes": 2852,
+            "pct_actas": 95.4225352112676,
+            "remaining_votes": 2824,
             "left_pct": 5.569990790685436,
             "right_pct": 7.281936587291146,
             "gap_pp": 1.7119457966057103
