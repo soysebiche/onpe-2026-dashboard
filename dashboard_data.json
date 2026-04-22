@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-22T11:32:22.937609-05:00",
+  "generated_at": "2026-04-22T11:37:24.396165-05:00",
   "snapshot_at": "2026-04-22T16:30:59.809880+00:00",
   "onpe_updated_at": 1776874816632,
   "actas_contadas": 87485,
   "actas_totales": 92766,
   "actas_pct": 94.3071815104672,
   "votos_validos": 19060760,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1544,7 +1544,7 @@
         "name": "LA LIBERTAD",
         "code": 120000,
         "pct_actas": 95.473406261788,
-        "remaining_votes": 51236,
+        "remaining_votes": 51240,
         "left_pct": 6.630482182626064,
         "right_pct": 7.462174981201894,
         "gap_pp": 0.8316927985758298
@@ -1589,7 +1589,7 @@
         "name": "CAJAMARCA",
         "code": 60000,
         "pct_actas": 95.94339622641509,
-        "remaining_votes": 32386,
+        "remaining_votes": 32388,
         "left_pct": 2.5330722466358524,
         "right_pct": 32.709710553013,
         "gap_pp": 30.176638306377143
@@ -1841,7 +1841,7 @@
       },
       {
         "name": "LA LIBERTAD",
-        "remaining_votes": 51236,
+        "remaining_votes": 51240,
         "left_pct": 6.630482182626064,
         "right_pct": 7.462174981201894,
         "gap_pp": 0.8316927985758298,
@@ -1850,7 +1850,7 @@
             "name": "TRUJILLO",
             "code": 120100,
             "pct_actas": 95.5363321799308,
-            "remaining_votes": 29033,
+            "remaining_votes": 29035,
             "left_pct": 9.360008942238727,
             "right_pct": 2.561578801926307,
             "gap_pp": -6.798430140312419
@@ -1859,7 +1859,7 @@
             "name": "SÁNCHEZ CARRIÓN",
             "code": 120300,
             "pct_actas": 95.5813953488372,
-            "remaining_votes": 3588,
+            "remaining_votes": 3589,
             "left_pct": 1.3825118591613608,
             "right_pct": 24.051901270896224,
             "gap_pp": 22.669389411734862
@@ -1886,7 +1886,7 @@
             "name": "PACASMAYO",
             "code": 120500,
             "pct_actas": 95.4225352112676,
-            "remaining_votes": 2853,
+            "remaining_votes": 2854,
             "left_pct": 5.552123301034012,
             "right_pct": 7.252715093971516,
             "gap_pp": 1.7005917929375043
