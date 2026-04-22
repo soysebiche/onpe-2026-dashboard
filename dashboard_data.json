@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T23:07:15.967010-05:00",
+  "generated_at": "2026-04-21T23:16:24.297996-05:00",
   "snapshot_at": "2026-04-22T03:46:01.571102+00:00",
   "onpe_updated_at": 1776829209912,
   "actas_contadas": 87422,
@@ -1114,7 +1114,7 @@
         {
           "candidate": "JUNTOS POR EL PERÚ",
           "votes": 70968,
-          "pct": 8.672710177246012
+          "pct": 8.672710177246014
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
@@ -1437,7 +1437,7 @@
         {
           "candidate": "FUERZA POPULAR",
           "votes": 66236,
-          "pct": 22.069445372750835
+          "pct": 22.06944537275084
         }
       ]
     },
@@ -2389,7 +2389,7 @@
         {
           "candidate": "FUERZA POPULAR",
           "votes": 1729965,
-          "pct": 13.488941492401212
+          "pct": 13.488941492401214
         }
       ]
     },
