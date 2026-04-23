@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T07:25:59.359360-05:00",
+  "generated_at": "2026-04-23T07:33:47.167289-05:00",
   "snapshot_at": "2026-04-23T11:56:03.678727+00:00",
   "onpe_updated_at": 1776929400457,
   "actas_contadas": 87786,
@@ -1179,7 +1179,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 12610,
-          "pct": 2.7999157704452844
+          "pct": 2.7999157704452853
         },
         {
           "candidate": "FUERZA POPULAR",
@@ -1286,7 +1286,7 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 58757,
-          "pct": 5.137219595484004
+          "pct": 5.137219595484005
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
@@ -1408,7 +1408,7 @@
         {
           "candidate": "FUERZA POPULAR",
           "votes": 37502,
-          "pct": 26.594685743209553
+          "pct": 26.594685743209542
         }
       ]
     },
@@ -1431,7 +1431,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 9975,
-          "pct": 3.3235089804443394
+          "pct": 3.32350898044434
         },
         {
           "candidate": "FUERZA POPULAR",
