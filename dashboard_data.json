@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T01:52:07.442345-05:00",
+  "generated_at": "2026-04-23T01:57:03.057908-05:00",
   "snapshot_at": "2026-04-23T06:41:00.367845+00:00",
   "onpe_updated_at": 1776923400455,
   "actas_contadas": 87786,
@@ -2327,8 +2327,8 @@
         {
           "candidate": "JUNTOS POR EL PERÚ",
           "current_pct": 9.990285637413148,
-          "base_pct": 9.976738563585332,
-          "delta_pct": 0.013547073827815836,
+          "base_pct": 9.976738563585329,
+          "delta_pct": 0.01354707382781939,
           "current_votes": 2011194,
           "base_votes": 2010357,
           "delta_votes": 837,
