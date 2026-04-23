@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T04:17:58.278750-05:00",
+  "generated_at": "2026-04-23T04:22:01.117345-05:00",
   "snapshot_at": "2026-04-23T08:35:56.202659+00:00",
   "onpe_updated_at": 1776929400457,
   "actas_contadas": 87786,
@@ -1353,7 +1353,7 @@
         {
           "candidate": "FUERZA POPULAR",
           "votes": 90463,
-          "pct": 17.00132464361706
+          "pct": 17.001324643617064
         }
       ]
     },
@@ -1514,13 +1514,13 @@
         "gap_pp": -14.69550237459333
       },
       {
-        "name": "PIURA",
-        "code": 190000,
-        "pct_actas": 91.89547434198069,
-        "remaining_votes": 88886,
-        "left_pct": 5.139043993151607,
-        "right_pct": 8.721178257300117,
-        "gap_pp": 3.58213426414851
+        "name": "MOQUEGUA",
+        "code": 170000,
+        "pct_actas": 53.11418685121107,
+        "remaining_votes": 60708,
+        "left_pct": 3.5122950274626628,
+        "right_pct": 12.64080433019031,
+        "gap_pp": 9.128509302727647
       },
       {
         "name": "LORETO",
@@ -1568,24 +1568,6 @@
         "gap_pp": 3.7424572516446286
       },
       {
-        "name": "UCAYALI",
-        "code": 250000,
-        "pct_actas": 87.97953964194373,
-        "remaining_votes": 34209,
-        "left_pct": 4.261111528916297,
-        "right_pct": 9.675114687523502,
-        "gap_pp": 5.414003158607205
-      },
-      {
-        "name": "SAN MARTÍN",
-        "code": 210000,
-        "pct_actas": 93.6069455406472,
-        "remaining_votes": 32624,
-        "left_pct": 4.308035446140047,
-        "right_pct": 17.401924470730506,
-        "gap_pp": 13.09388902459046
-      },
-      {
         "name": "CUSCO",
         "code": 70000,
         "pct_actas": 96.2088877730354,
@@ -1593,6 +1575,24 @@
         "left_pct": 3.927409314085392,
         "right_pct": 18.76020320653696,
         "gap_pp": 14.83279389245157
+      },
+      {
+        "name": "HUÁNUCO",
+        "code": 90000,
+        "pct_actas": 92.82357966680905,
+        "remaining_votes": 30377,
+        "left_pct": 4.6461026181389675,
+        "right_pct": 22.983099080509792,
+        "gap_pp": 18.336996462370823
+      },
+      {
+        "name": "CAJAMARCA",
+        "code": 60000,
+        "pct_actas": 97.14622641509433,
+        "remaining_votes": 22814,
+        "left_pct": 2.5453224441287428,
+        "right_pct": 32.623545949131,
+        "gap_pp": 30.078223505002256
       }
     ],
     "region_details": [
@@ -1660,65 +1660,29 @@
         ]
       },
       {
-        "name": "PIURA",
-        "remaining_votes": 88886,
-        "left_pct": 5.139043993151607,
-        "right_pct": 8.721178257300117,
-        "gap_pp": 3.58213426414851,
+        "name": "MOQUEGUA",
+        "remaining_votes": 60708,
+        "left_pct": 3.5122950274626628,
+        "right_pct": 12.64080433019031,
+        "gap_pp": 9.128509302727647,
         "provinces": [
           {
-            "name": "PIURA",
-            "code": 190100,
-            "pct_actas": 91.7941585535466,
-            "remaining_votes": 39063,
-            "left_pct": 7.230624845211664,
-            "right_pct": 6.2247722167427755,
-            "gap_pp": -1.0058526284688885
+            "name": "MARISCAL NIETO",
+            "code": 170100,
+            "pct_actas": 53.13092979127135,
+            "remaining_votes": 53332,
+            "left_pct": 3.833181895184267,
+            "right_pct": 11.399442502271572,
+            "gap_pp": 7.5662606070873055
           },
           {
-            "name": "SULLANA",
-            "code": 190600,
-            "pct_actas": 92.05658324265507,
-            "remaining_votes": 15984,
-            "left_pct": 4.3469780572308485,
-            "right_pct": 3.974849223662261,
-            "gap_pp": -0.3721288335685875
-          },
-          {
-            "name": "MORROPÓN",
-            "code": 190400,
-            "pct_actas": 91.89723320158103,
-            "remaining_votes": 8196,
-            "left_pct": 4.240932963897275,
-            "right_pct": 10.320086017947975,
-            "gap_pp": 6.079153054050701
-          },
-          {
-            "name": "TALARA",
-            "code": 190700,
-            "pct_actas": 92.07161125319693,
-            "remaining_votes": 6385,
-            "left_pct": 5.097968303992354,
-            "right_pct": 2.938403316843832,
-            "gap_pp": -2.1595649871485216
-          },
-          {
-            "name": "PAITA",
-            "code": 190500,
-            "pct_actas": 92.24376731301939,
-            "remaining_votes": 6208,
-            "left_pct": 2.830528536874067,
-            "right_pct": 5.402449693788276,
-            "gap_pp": 2.5719211569142093
-          },
-          {
-            "name": "HUANCABAMBA",
-            "code": 190300,
-            "pct_actas": 91.78470254957507,
-            "remaining_votes": 4813,
-            "left_pct": 1.4701293934110307,
-            "right_pct": 36.05579517298339,
-            "gap_pp": 34.58566577957236
+            "name": "GENERAL SÁNCHEZ CERRO",
+            "code": 170200,
+            "pct_actas": 52.94117647058823,
+            "remaining_votes": 7376,
+            "left_pct": 1.4814814814814814,
+            "right_pct": 20.497076023391813,
+            "gap_pp": 19.015594541910332
           }
         ]
       },
@@ -2271,8 +2235,8 @@
         {
           "candidate": "FUERZA POPULAR",
           "current_pct": 14.260332811878888,
-          "base_pct": 13.015265112183231,
-          "delta_pct": 1.2450676996956567,
+          "base_pct": 13.015265112183233,
+          "delta_pct": 1.245067699695655,
           "current_votes": 2870817,
           "base_votes": 81528,
           "delta_votes": 2789289,
