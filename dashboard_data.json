@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-24T04:47:33.601832-05:00",
+  "generated_at": "2026-04-24T04:52:00.350405-05:00",
   "snapshot_at": "2026-04-24T09:41:29.504472+00:00",
-  "onpe_updated_at": 1777023000460,
+  "onpe_updated_at": 1777023900523,
   "actas_contadas": 88237,
   "actas_totales": 92766,
   "actas_pct": 95.11782334044801,
@@ -1215,7 +1215,7 @@
         {
           "candidate": "FUERZA POPULAR",
           "votes": 10977,
-          "pct": 10.584772522160748
+          "pct": 10.584772522160746
         }
       ]
     },
