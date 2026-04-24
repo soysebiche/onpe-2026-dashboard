@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-24T02:36:58.296555-05:00",
+  "generated_at": "2026-04-24T02:43:00.449793-05:00",
   "snapshot_at": "2026-04-24T07:11:38.363547+00:00",
-  "onpe_updated_at": 1777014903475,
+  "onpe_updated_at": 1777015800445,
   "actas_contadas": 88202,
   "actas_totales": 92766,
   "actas_pct": 95.08009399995689,
@@ -792,7 +792,7 @@
         {
           "candidate": "FUERZA POPULAR",
           "votes": 28477,
-          "pct": 13.248871268378243
+          "pct": 13.248871268378245
         }
       ]
     },
@@ -815,7 +815,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 7389,
-          "pct": 2.894199482827532
+          "pct": 2.8941994828275317
         },
         {
           "candidate": "FUERZA POPULAR",
@@ -1179,7 +1179,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 12610,
-          "pct": 2.799975080720773
+          "pct": 2.7999750807207726
         },
         {
           "candidate": "FUERZA POPULAR",
@@ -1380,7 +1380,7 @@
         {
           "candidate": "FUERZA POPULAR",
           "votes": 15158,
-          "pct": 6.088075235502579
+          "pct": 6.088075235502577
         }
       ]
     },
@@ -1459,7 +1459,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 40596,
-          "pct": 5.814711476980792
+          "pct": 5.814711476980791
         },
         {
           "candidate": "FUERZA POPULAR",
