@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T08:32:15.009392-05:00",
+  "generated_at": "2026-04-24T08:37:03.790690-05:00",
   "snapshot_at": "2026-04-24T12:58:51.613284+00:00",
   "onpe_updated_at": 1777036502338,
   "actas_contadas": 88237,
@@ -1506,8 +1506,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 95.56877628474716,
-        "remaining_votes": 300097,
+        "pct_actas": 95.59271036345608,
+        "remaining_votes": 298419,
         "left_pct": 17.585346324811802,
         "right_pct": 2.886093113674225,
         "gap_pp": -14.699253211137577
@@ -1597,7 +1597,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 300097,
+        "remaining_votes": 298419,
         "left_pct": 17.585346324811802,
         "right_pct": 2.886093113674225,
         "gap_pp": -14.699253211137577,
@@ -1605,8 +1605,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 95.57307459066101,
-            "remaining_votes": 271670,
+            "pct_actas": 95.59598256585181,
+            "remaining_votes": 270214,
             "left_pct": 18.663233200594693,
             "right_pct": 2.478222227567178,
             "gap_pp": -16.185010973027516
@@ -1641,8 +1641,8 @@
           {
             "name": "BARRANCA",
             "code": 140900,
-            "pct_actas": 95.45454545454545,
-            "remaining_votes": 4241,
+            "pct_actas": 95.68345323741008,
+            "remaining_votes": 4019,
             "left_pct": 6.566655980189482,
             "right_pct": 6.041544601302276,
             "gap_pp": -0.5251113788872059
