@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T04:32:19.014742-05:00",
+  "generated_at": "2026-04-24T04:36:59.564934-05:00",
   "snapshot_at": "2026-04-24T08:41:34.640611+00:00",
   "onpe_updated_at": 1777022102297,
   "actas_contadas": 88203,
@@ -1536,7 +1536,7 @@
         "name": "ICA",
         "code": 100000,
         "pct_actas": 90.62627916496112,
-        "remaining_votes": 52548,
+        "remaining_votes": 52644,
         "left_pct": 7.8074220922445985,
         "right_pct": 6.386790204260761,
         "gap_pp": -1.4206318879838378
@@ -1788,7 +1788,7 @@
       },
       {
         "name": "ICA",
-        "remaining_votes": 52548,
+        "remaining_votes": 52644,
         "left_pct": 7.8074220922445985,
         "right_pct": 6.386790204260761,
         "gap_pp": -1.4206318879838378,
@@ -1797,7 +1797,7 @@
             "name": "ICA",
             "code": 100100,
             "pct_actas": 90.7488986784141,
-            "remaining_votes": 24083,
+            "remaining_votes": 24127,
             "left_pct": 9.592124112782445,
             "right_pct": 6.075405352607931,
             "gap_pp": -3.5167187601745136
@@ -1806,7 +1806,7 @@
             "name": "CHINCHA",
             "code": 100200,
             "pct_actas": 90.65420560747664,
-            "remaining_votes": 14040,
+            "remaining_votes": 14065,
             "left_pct": 6.585764162630927,
             "right_pct": 5.64463903592747,
             "gap_pp": -0.941125126703457
@@ -1815,7 +1815,7 @@
             "name": "PISCO",
             "code": 100400,
             "pct_actas": 90.38461538461539,
-            "remaining_votes": 9206,
+            "remaining_votes": 9223,
             "left_pct": 5.5609193106280035,
             "right_pct": 6.899268679739433,
             "gap_pp": 1.3383493691114294
@@ -1824,7 +1824,7 @@
             "name": "NASCA",
             "code": 100300,
             "pct_actas": 90.38461538461539,
-            "remaining_votes": 4367,
+            "remaining_votes": 4375,
             "left_pct": 6.683798566578649,
             "right_pct": 8.378913617502828,
             "gap_pp": 1.695115050924179
@@ -1833,7 +1833,7 @@
             "name": "PALPA",
             "code": 100500,
             "pct_actas": 90.47619047619048,
-            "remaining_votes": 852,
+            "remaining_votes": 854,
             "left_pct": 6.022795440911818,
             "right_pct": 12.5374925014997,
             "gap_pp": 6.514697060587883
