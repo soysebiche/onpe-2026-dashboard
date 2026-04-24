@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T09:32:50.909040-05:00",
+  "generated_at": "2026-04-24T09:37:00.556456-05:00",
   "snapshot_at": "2026-04-24T13:51:02.201160+00:00",
   "onpe_updated_at": 1777040102408,
   "actas_contadas": 88244,
@@ -1529,8 +1529,8 @@
       {
         "name": "LORETO",
         "code": 150000,
-        "pct_actas": 86.91138301816834,
-        "remaining_votes": 55850,
+        "pct_actas": 86.98553948832036,
+        "remaining_votes": 55520,
         "left_pct": 5.069674447127751,
         "right_pct": 7.785951583924829,
         "gap_pp": 2.7162771367970784
@@ -1547,8 +1547,8 @@
       {
         "name": "LA LIBERTAD",
         "code": 120000,
-        "pct_actas": 96.77480196152395,
-        "remaining_votes": 36570,
+        "pct_actas": 96.85024519049415,
+        "remaining_votes": 35776,
         "left_pct": 6.616712614829818,
         "right_pct": 7.52339548217232,
         "gap_pp": 0.9066828673425018
@@ -1728,7 +1728,7 @@
       },
       {
         "name": "LORETO",
-        "remaining_votes": 55850,
+        "remaining_votes": 55520,
         "left_pct": 5.069674447127751,
         "right_pct": 7.785951583924829,
         "gap_pp": 2.7162771367970784,
@@ -1736,8 +1736,8 @@
           {
             "name": "MAYNAS",
             "code": 150100,
-            "pct_actas": 86.52809853733642,
-            "remaining_votes": 30632,
+            "pct_actas": 86.59476117103236,
+            "remaining_votes": 30466,
             "left_pct": 6.047232992597815,
             "right_pct": 2.851838796851134,
             "gap_pp": -3.195394195746681
@@ -1745,8 +1745,8 @@
           {
             "name": "ALTO AMAZONAS",
             "code": 150200,
-            "pct_actas": 88.30845771144278,
-            "remaining_votes": 7978,
+            "pct_actas": 88.33746898263027,
+            "remaining_votes": 7960,
             "left_pct": 3.7752795069528324,
             "right_pct": 15.079438818173372,
             "gap_pp": 11.30415931122054
@@ -1761,15 +1761,6 @@
             "gap_pp": 4.1648382335341285
           },
           {
-            "name": "MARISCAL RAMÓN CASTILLA",
-            "code": 150600,
-            "pct_actas": 86.02150537634408,
-            "remaining_votes": 3573,
-            "left_pct": 3.736608309380716,
-            "right_pct": 3.3969166448915598,
-            "gap_pp": -0.33969166448915633
-          },
-          {
             "name": "REQUENA",
             "code": 150400,
             "pct_actas": 86.26373626373626,
@@ -1779,10 +1770,19 @@
             "gap_pp": 4.005404463040446
           },
           {
+            "name": "MARISCAL RAMÓN CASTILLA",
+            "code": 150600,
+            "pct_actas": 86.48648648648648,
+            "remaining_votes": 3439,
+            "left_pct": 3.736608309380716,
+            "right_pct": 3.3969166448915598,
+            "gap_pp": -0.33969166448915633
+          },
+          {
             "name": "UCAYALI",
             "code": 150500,
             "pct_actas": 86.81318681318682,
-            "remaining_votes": 3126,
+            "remaining_votes": 3127,
             "left_pct": 4.439428141459744,
             "right_pct": 12.951467268623025,
             "gap_pp": 8.51203912716328
@@ -1845,7 +1845,7 @@
       },
       {
         "name": "LA LIBERTAD",
-        "remaining_votes": 36570,
+        "remaining_votes": 35776,
         "left_pct": 6.616712614829818,
         "right_pct": 7.52339548217232,
         "gap_pp": 0.9066828673425018,
@@ -1853,8 +1853,8 @@
           {
             "name": "TRUJILLO",
             "code": 120100,
-            "pct_actas": 96.7966573816156,
-            "remaining_votes": 20777,
+            "pct_actas": 96.86411149825784,
+            "remaining_votes": 20330,
             "left_pct": 9.382804743433995,
             "right_pct": 2.5587225041779464,
             "gap_pp": -6.8240822392560485
@@ -1862,8 +1862,8 @@
           {
             "name": "SÁNCHEZ CARRIÓN",
             "code": 120300,
-            "pct_actas": 96.83257918552036,
-            "remaining_votes": 2647,
+            "pct_actas": 97.05215419501134,
+            "remaining_votes": 2459,
             "left_pct": 1.3766781694692045,
             "right_pct": 24.181492275238085,
             "gap_pp": 22.80481410576888
@@ -1871,8 +1871,8 @@
           {
             "name": "ASCOPE",
             "code": 120800,
-            "pct_actas": 96.76470588235294,
-            "remaining_votes": 2431,
+            "pct_actas": 96.7741935483871,
+            "remaining_votes": 2425,
             "left_pct": 4.541756145709674,
             "right_pct": 3.4066505715543345,
             "gap_pp": -1.1351055741553395
@@ -1889,8 +1889,8 @@
           {
             "name": "PACASMAYO",
             "code": 120500,
-            "pct_actas": 96.89655172413794,
-            "remaining_votes": 1983,
+            "pct_actas": 96.90721649484536,
+            "remaining_votes": 1977,
             "left_pct": 5.495642360022572,
             "right_pct": 7.299830710389366,
             "gap_pp": 1.8041883503667941
@@ -1898,8 +1898,8 @@
           {
             "name": "CHEPÉN",
             "code": 120900,
-            "pct_actas": 96.61016949152543,
-            "remaining_votes": 1764,
+            "pct_actas": 96.63865546218487,
+            "remaining_votes": 1750,
             "left_pct": 4.312507235750395,
             "right_pct": 9.910083741751244,
             "gap_pp": 5.597576506000848
