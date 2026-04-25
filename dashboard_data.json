@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T13:46:57.275522-05:00",
+  "generated_at": "2026-04-25T13:57:43.630353-05:00",
   "snapshot_at": "2026-04-25T17:52:07.639613+00:00",
   "onpe_updated_at": 1777141802894,
   "actas_contadas": 88640,
@@ -1509,8 +1509,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 95.70212329469689,
-        "remaining_votes": 291128,
+        "pct_actas": 95.73973398981092,
+        "remaining_votes": 288487,
         "left_pct": 17.577233831857153,
         "right_pct": 2.8869730835858927,
         "gap_pp": -14.69026074827126
@@ -1543,15 +1543,6 @@
         "gap_pp": 13.09388902459046
       },
       {
-        "name": "ÁNCASH",
-        "code": 20000,
-        "pct_actas": 95.24769585253456,
-        "remaining_votes": 32084,
-        "left_pct": 4.708284529900779,
-        "right_pct": 11.613137006960034,
-        "gap_pp": 6.904852477059255
-      },
-      {
         "name": "LA LIBERTAD",
         "code": 120000,
         "pct_actas": 97.22746133534515,
@@ -1568,6 +1559,15 @@
         "left_pct": 3.927409314085392,
         "right_pct": 18.76020320653696,
         "gap_pp": 14.83279389245157
+      },
+      {
+        "name": "ÁNCASH",
+        "code": 20000,
+        "pct_actas": 95.39170506912443,
+        "remaining_votes": 31063,
+        "left_pct": 4.708284529900779,
+        "right_pct": 11.613137006960034,
+        "gap_pp": 6.904852477059255
       },
       {
         "name": "UCAYALI",
@@ -1600,7 +1600,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 291128,
+        "remaining_votes": 288487,
         "left_pct": 17.577233831857153,
         "right_pct": 2.8869730835858927,
         "gap_pp": -14.69026074827126,
@@ -1608,8 +1608,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 95.70638168864636,
-            "remaining_votes": 263609,
+            "pct_actas": 95.74443897078328,
+            "remaining_votes": 261203,
             "left_pct": 18.652589567817788,
             "right_pct": 2.479835421417429,
             "gap_pp": -16.172754146400358
@@ -1617,8 +1617,8 @@
           {
             "name": "CAÑETE",
             "code": 140400,
-            "pct_actas": 95.46875,
-            "remaining_votes": 6888,
+            "pct_actas": 95.61815336463224,
+            "remaining_votes": 6652,
             "left_pct": 7.283207412495118,
             "right_pct": 5.428736886051742,
             "gap_pp": -1.854470526443376
@@ -1627,7 +1627,7 @@
             "name": "HUAURA",
             "code": 140500,
             "pct_actas": 95.71865443425077,
-            "remaining_votes": 6329,
+            "remaining_votes": 6330,
             "left_pct": 7.319327555892225,
             "right_pct": 6.0336500038222844,
             "gap_pp": -1.2856775520699406
@@ -1851,69 +1851,6 @@
         ]
       },
       {
-        "name": "ÁNCASH",
-        "remaining_votes": 32084,
-        "left_pct": 4.708284529900779,
-        "right_pct": 11.613137006960034,
-        "gap_pp": 6.904852477059255,
-        "provinces": [
-          {
-            "name": "SANTA",
-            "code": 21300,
-            "pct_actas": 95.27131782945736,
-            "remaining_votes": 13182,
-            "left_pct": 6.43588247581592,
-            "right_pct": 5.461676426734663,
-            "gap_pp": -0.974206049081257
-          },
-          {
-            "name": "HUARAZ",
-            "code": 20100,
-            "pct_actas": 95.31914893617021,
-            "remaining_votes": 4689,
-            "left_pct": 4.944167427487885,
-            "right_pct": 10.09099756202783,
-            "gap_pp": 5.146830134539945
-          },
-          {
-            "name": "HUARI",
-            "code": 20800,
-            "pct_actas": 95.06172839506173,
-            "remaining_votes": 2240,
-            "left_pct": 2.9157591512681797,
-            "right_pct": 22.457200402819737,
-            "gap_pp": 19.541441251551557
-          },
-          {
-            "name": "HUAYLAS",
-            "code": 20700,
-            "pct_actas": 95.3757225433526,
-            "remaining_votes": 1580,
-            "left_pct": 3.055176909855983,
-            "right_pct": 10.662004385704972,
-            "gap_pp": 7.606827475848989
-          },
-          {
-            "name": "YUNGAY",
-            "code": 21500,
-            "pct_actas": 95.40229885057471,
-            "remaining_votes": 1565,
-            "left_pct": 1.8010240533460349,
-            "right_pct": 21.508097165991902,
-            "gap_pp": 19.70707311264587
-          },
-          {
-            "name": "CASMA",
-            "code": 20500,
-            "pct_actas": 94.65648854961832,
-            "remaining_votes": 1532,
-            "left_pct": 5.7537520649537806,
-            "right_pct": 8.031352149309338,
-            "gap_pp": 2.2776000843555577
-          }
-        ]
-      },
-      {
         "name": "LA LIBERTAD",
         "remaining_votes": 31548,
         "left_pct": 6.609487146946431,
@@ -1973,6 +1910,69 @@
             "left_pct": 4.342132340560867,
             "right_pct": 9.896544627990945,
             "gap_pp": 5.554412287430078
+          }
+        ]
+      },
+      {
+        "name": "CUSCO",
+        "remaining_votes": 31087,
+        "left_pct": 3.927409314085392,
+        "right_pct": 18.76020320653696,
+        "gap_pp": 14.83279389245157,
+        "provinces": [
+          {
+            "name": "CUSCO",
+            "code": 70100,
+            "pct_actas": 96.21451104100946,
+            "remaining_votes": 10917,
+            "left_pct": 7.775606974997914,
+            "right_pct": 6.202895124732319,
+            "gap_pp": -1.5727118502655948
+          },
+          {
+            "name": "LA CONVENCIÓN",
+            "code": 70900,
+            "pct_actas": 96.05911330049261,
+            "remaining_votes": 4171,
+            "left_pct": 2.223027075706259,
+            "right_pct": 25.82959729047162,
+            "gap_pp": 23.606570214765362
+          },
+          {
+            "name": "CANCHIS",
+            "code": 70600,
+            "pct_actas": 96.27118644067797,
+            "remaining_votes": 2342,
+            "left_pct": 1.6673091750192752,
+            "right_pct": 22.54401182215369,
+            "gap_pp": 20.87670264713441
+          },
+          {
+            "name": "QUISPICANCHI",
+            "code": 71200,
+            "pct_actas": 96.0,
+            "remaining_votes": 2285,
+            "left_pct": 1.6669329498854981,
+            "right_pct": 31.453373808382597,
+            "gap_pp": 29.786440858497098
+          },
+          {
+            "name": "URUBAMBA",
+            "code": 71300,
+            "pct_actas": 96.34703196347031,
+            "remaining_votes": 1728,
+            "left_pct": 3.263760345524563,
+            "right_pct": 14.28480245101168,
+            "gap_pp": 11.021042105487117
+          },
+          {
+            "name": "ESPINAR",
+            "code": 70800,
+            "pct_actas": 96.34703196347031,
+            "remaining_votes": 1665,
+            "left_pct": 1.5127988997826183,
+            "right_pct": 25.5689632225722,
+            "gap_pp": 24.056164322789584
           }
         ]
       }
