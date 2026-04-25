@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T04:41:56.099374-05:00",
+  "generated_at": "2026-04-25T04:46:55.926015-05:00",
   "snapshot_at": "2026-04-25T08:36:36.602287+00:00",
   "onpe_updated_at": 1777108502164,
   "actas_contadas": 88550,
@@ -1549,15 +1549,6 @@
         "gap_pp": 13.09388902459046
       },
       {
-        "name": "ICA",
-        "code": 100000,
-        "pct_actas": 94.26934097421203,
-        "remaining_votes": 32423,
-        "left_pct": 7.777466571607327,
-        "right_pct": 6.386678112587117,
-        "gap_pp": -1.39078845902021
-      },
-      {
         "name": "LA LIBERTAD",
         "code": 120000,
         "pct_actas": 97.22746133534515,
@@ -1592,6 +1583,15 @@
         "left_pct": 6.152252814695674,
         "right_pct": 9.949843392872259,
         "gap_pp": 3.7975905781765844
+      },
+      {
+        "name": "ICA",
+        "code": 100000,
+        "pct_actas": 95.25173966434711,
+        "remaining_votes": 26661,
+        "left_pct": 7.777466571607327,
+        "right_pct": 6.386678112587117,
+        "gap_pp": -1.39078845902021
       }
     ],
     "region_details": [
@@ -1911,56 +1911,65 @@
         ]
       },
       {
-        "name": "ICA",
-        "remaining_votes": 32423,
-        "left_pct": 7.777466571607327,
-        "right_pct": 6.386678112587117,
-        "gap_pp": -1.39078845902021,
+        "name": "LA LIBERTAD",
+        "remaining_votes": 31548,
+        "left_pct": 6.609487146946431,
+        "right_pct": 7.520499316101922,
+        "gap_pp": 0.9110121691554909,
         "provinces": [
           {
-            "name": "ICA",
-            "code": 100100,
-            "pct_actas": 94.32120674356699,
-            "remaining_votes": 14827,
-            "left_pct": 9.570111581013492,
-            "right_pct": 6.052806867494097,
-            "gap_pp": -3.517304713519395
+            "name": "TRUJILLO",
+            "code": 120100,
+            "pct_actas": 97.24065665385959,
+            "remaining_votes": 17862,
+            "left_pct": 9.37822805232312,
+            "right_pct": 2.559657870713185,
+            "gap_pp": -6.818570181609935
           },
           {
-            "name": "CHINCHA",
-            "code": 100200,
-            "pct_actas": 94.31279620853081,
-            "remaining_votes": 8505,
-            "left_pct": 6.565008135886468,
-            "right_pct": 5.62577668536433,
-            "gap_pp": -0.9392314505221382
+            "name": "SÁNCHEZ CARRIÓN",
+            "code": 120300,
+            "pct_actas": 97.27272727272727,
+            "remaining_votes": 2271,
+            "left_pct": 1.3766781694692045,
+            "right_pct": 24.181492275238085,
+            "gap_pp": 22.80481410576888
           },
           {
-            "name": "PISCO",
-            "code": 100400,
-            "pct_actas": 94.32624113475177,
-            "remaining_votes": 5580,
-            "left_pct": 5.575947712418301,
-            "right_pct": 6.88,
-            "gap_pp": 1.3040522875816993
+            "name": "ASCOPE",
+            "code": 120800,
+            "pct_actas": 97.10144927536231,
+            "remaining_votes": 2211,
+            "left_pct": 4.533833304925857,
+            "right_pct": 3.412830564696936,
+            "gap_pp": -1.1210027402289207
           },
           {
-            "name": "NASCA",
-            "code": 100300,
-            "pct_actas": 93.92523364485982,
-            "remaining_votes": 2867,
-            "left_pct": 6.676061299982385,
-            "right_pct": 8.373700898361811,
-            "gap_pp": 1.6976395983794257
+            "name": "VIRÚ",
+            "code": 121200,
+            "pct_actas": 97.0909090909091,
+            "remaining_votes": 1833,
+            "left_pct": 2.5070386890639336,
+            "right_pct": 12.886337034576572,
+            "gap_pp": 10.379298345512638
           },
           {
-            "name": "PALPA",
-            "code": 100500,
-            "pct_actas": 93.47826086956522,
-            "remaining_votes": 644,
-            "left_pct": 5.900456330255757,
-            "right_pct": 12.55438819908734,
-            "gap_pp": 6.653931868831583
+            "name": "PACASMAYO",
+            "code": 120500,
+            "pct_actas": 97.27891156462584,
+            "remaining_votes": 1765,
+            "left_pct": 5.509459521866966,
+            "right_pct": 7.2982250888994935,
+            "gap_pp": 1.7887655670325273
+          },
+          {
+            "name": "CHEPÉN",
+            "code": 120900,
+            "pct_actas": 97.10743801652893,
+            "remaining_votes": 1546,
+            "left_pct": 4.342132340560867,
+            "right_pct": 9.896544627990945,
+            "gap_pp": 5.554412287430078
           }
         ]
       }
