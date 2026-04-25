@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T22:09:04.157346-05:00",
+  "generated_at": "2026-04-24T22:12:00.083999-05:00",
   "snapshot_at": "2026-04-25T02:46:53.116325+00:00",
   "onpe_updated_at": 1777085103004,
   "actas_contadas": 88524,
@@ -2352,8 +2352,8 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "current_pct": 9.149754917256827,
-          "base_pct": 9.15149807122716,
-          "delta_pct": -0.0017431539703327559,
+          "base_pct": 9.151498071227161,
+          "delta_pct": -0.0017431539703345322,
           "current_votes": 1842752,
           "base_votes": 1844270,
           "delta_votes": -1518,
