@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-24T23:23:42.109734-05:00",
+  "generated_at": "2026-04-24T23:26:58.708268-05:00",
   "snapshot_at": "2026-04-25T03:36:32.356406+00:00",
-  "onpe_updated_at": 1777088700471,
+  "onpe_updated_at": 1777090500473,
   "actas_contadas": 88540,
   "actas_totales": 92766,
   "actas_pct": 95.44445163098548,
@@ -1533,8 +1533,8 @@
       {
         "name": "ICA",
         "code": 100000,
-        "pct_actas": 93.86000818665575,
-        "remaining_votes": 34714,
+        "pct_actas": 94.02374130167827,
+        "remaining_votes": 33739,
         "left_pct": 7.783166643832488,
         "right_pct": 6.384436224140293,
         "gap_pp": -1.3987304196921952
@@ -1786,7 +1786,7 @@
       },
       {
         "name": "ICA",
-        "remaining_votes": 34714,
+        "remaining_votes": 33739,
         "left_pct": 7.783166643832488,
         "right_pct": 6.384436224140293,
         "gap_pp": -1.3987304196921952,
@@ -1794,8 +1794,8 @@
           {
             "name": "ICA",
             "code": 100100,
-            "pct_actas": 93.86666666666666,
-            "remaining_votes": 15962,
+            "pct_actas": 94.04444444444445,
+            "remaining_votes": 15477,
             "left_pct": 9.589051969804013,
             "right_pct": 6.052295260245918,
             "gap_pp": -3.5367567095580945
@@ -1803,8 +1803,8 @@
           {
             "name": "CHINCHA",
             "code": 100200,
-            "pct_actas": 93.86792452830188,
-            "remaining_votes": 9203,
+            "pct_actas": 94.01574803149606,
+            "remaining_votes": 8969,
             "left_pct": 6.565008135886468,
             "right_pct": 5.62577668536433,
             "gap_pp": -0.9392314505221382
@@ -1812,8 +1812,8 @@
           {
             "name": "PISCO",
             "code": 100400,
-            "pct_actas": 93.88235294117646,
-            "remaining_votes": 6039,
+            "pct_actas": 94.10377358490567,
+            "remaining_votes": 5808,
             "left_pct": 5.575947712418301,
             "right_pct": 6.88,
             "gap_pp": 1.3040522875816993
@@ -1821,8 +1821,8 @@
           {
             "name": "NASCA",
             "code": 100300,
-            "pct_actas": 93.8388625592417,
-            "remaining_votes": 2867,
+            "pct_actas": 93.89671361502347,
+            "remaining_votes": 2842,
             "left_pct": 6.693915840257303,
             "right_pct": 8.364602876798,
             "gap_pp": 1.6706870365406958
