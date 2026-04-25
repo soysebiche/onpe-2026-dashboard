@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-25T09:19:42.183937-05:00",
+  "generated_at": "2026-04-25T09:28:06.687962-05:00",
   "snapshot_at": "2026-04-25T13:20:56.825206+00:00",
-  "onpe_updated_at": 1777124700491,
+  "onpe_updated_at": 1777126500720,
   "actas_contadas": 88576,
   "actas_totales": 92766,
   "actas_pct": 95.4832589526335,
@@ -950,7 +950,7 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 33048,
-          "pct": 3.927419690764961
+          "pct": 3.927419690764962
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
@@ -1179,7 +1179,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 12434,
-          "pct": 2.760353296557612
+          "pct": 2.7603532965576125
         },
         {
           "candidate": "FUERZA POPULAR",
@@ -1449,7 +1449,7 @@
         {
           "candidate": "JUNTOS POR EL PERÚ",
           "votes": 81068,
-          "pct": 11.624232047948443
+          "pct": 11.624232047948441
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
@@ -1506,8 +1506,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 95.64399767497521,
-        "remaining_votes": 295040,
+        "pct_actas": 95.65767429138032,
+        "remaining_votes": 294075,
         "left_pct": 17.578665602778056,
         "right_pct": 2.8872861275140727,
         "gap_pp": -14.691379475263982
@@ -1597,7 +1597,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 295040,
+        "remaining_votes": 294075,
         "left_pct": 17.578665602778056,
         "right_pct": 2.8872861275140727,
         "gap_pp": -14.691379475263982,
@@ -1605,8 +1605,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 95.64558305226058,
-            "remaining_votes": 267296,
+            "pct_actas": 95.66074203206124,
+            "remaining_votes": 266331,
             "left_pct": 18.654906008465872,
             "right_pct": 2.479901273218358,
             "gap_pp": -16.175004735247512
