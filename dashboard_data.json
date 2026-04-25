@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-24T19:47:44.186695-05:00",
+  "generated_at": "2026-04-24T19:52:43.846043-05:00",
   "snapshot_at": "2026-04-25T00:46:28.178841+00:00",
   "onpe_updated_at": 1777077004565,
   "actas_contadas": 88414,
   "actas_totales": 92766,
   "actas_pct": 95.30862600521743,
   "votos_validos": 19247871,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1289,7 +1289,7 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 59674,
-          "pct": 5.206699428381603
+          "pct": 5.206699428381602
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
