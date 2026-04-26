@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T11:56:56.051034-05:00",
+  "generated_at": "2026-04-26T12:02:07.286750-05:00",
   "snapshot_at": "2026-04-26T16:01:02.350946+00:00",
   "onpe_updated_at": 1777221900679,
   "actas_contadas": 88945,
@@ -1509,8 +1509,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 95.94146408178617,
-        "remaining_votes": 275020,
+        "pct_actas": 95.94488323588745,
+        "remaining_votes": 274780,
         "left_pct": 17.58164527616835,
         "right_pct": 2.8853069659601314,
         "gap_pp": -14.696338310208217
@@ -1600,7 +1600,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 275020,
+        "remaining_votes": 274780,
         "left_pct": 17.58164527616835,
         "right_pct": 2.8853069659601314,
         "gap_pp": -14.696338310208217,
@@ -1608,8 +1608,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 95.94543387646836,
-            "remaining_votes": 249078,
+            "pct_actas": 95.9492231906025,
+            "remaining_votes": 248838,
             "left_pct": 18.656455368624545,
             "right_pct": 2.4785829046143957,
             "gap_pp": -16.17787246401015
