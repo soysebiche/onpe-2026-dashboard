@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T11:52:10.337733-05:00",
+  "generated_at": "2026-04-27T11:58:38.939527-05:00",
   "snapshot_at": "2026-04-27T16:25:57.026544+00:00",
   "onpe_updated_at": 1777307407913,
   "actas_contadas": 89149,
@@ -1507,20 +1507,20 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 96.3654391903443,
-        "remaining_votes": 246500,
+        "pct_actas": 96.38937326905324,
+        "remaining_votes": 244844,
         "left_pct": 17.542653635787456,
         "right_pct": 2.896059174056338,
         "gap_pp": -14.646594461731118
       },
       {
-        "name": "PIURA",
-        "code": 190000,
-        "pct_actas": 94.0162847945465,
-        "remaining_votes": 66090,
-        "left_pct": 5.193708278074549,
-        "right_pct": 8.72400367486349,
-        "gap_pp": 3.53029539678894
+        "name": "MOQUEGUA",
+        "code": 170000,
+        "pct_actas": 54.67128027681661,
+        "remaining_votes": 57671,
+        "left_pct": 3.516284760549519,
+        "right_pct": 12.64080433019031,
+        "gap_pp": 9.12451956964079
       },
       {
         "name": "LORETO",
@@ -1532,19 +1532,10 @@
         "gap_pp": 2.789584273999279
       },
       {
-        "name": "SAN MARTÍN",
-        "code": 210000,
-        "pct_actas": 93.6069455406472,
-        "remaining_votes": 32624,
-        "left_pct": 4.308035446140047,
-        "right_pct": 17.401924470730506,
-        "gap_pp": 13.09388902459046
-      },
-      {
         "name": "ÁNCASH",
         "code": 20000,
-        "pct_actas": 95.50691244239631,
-        "remaining_votes": 30318,
+        "pct_actas": 95.56451612903226,
+        "remaining_votes": 29891,
         "left_pct": 4.707725756269445,
         "right_pct": 11.6188476965176,
         "gap_pp": 6.9111219402481545
@@ -1559,15 +1550,6 @@
         "gap_pp": 14.853590969925996
       },
       {
-        "name": "UCAYALI",
-        "code": 250000,
-        "pct_actas": 90.02557544757033,
-        "remaining_votes": 28574,
-        "left_pct": 4.2629856310451615,
-        "right_pct": 9.580526323514302,
-        "gap_pp": 5.317540692469141
-      },
-      {
         "name": "ICA",
         "code": 100000,
         "pct_actas": 95.374539500614,
@@ -1577,28 +1559,46 @@
         "gap_pp": -1.3910686132279153
       },
       {
-        "name": "CALLAO",
-        "code": 240000,
-        "pct_actas": 96.20427881297447,
-        "remaining_votes": 24936,
-        "left_pct": 12.9373305445813,
-        "right_pct": 2.5984971725152994,
-        "gap_pp": -10.338833372066
+        "name": "CAJAMARCA",
+        "code": 60000,
+        "pct_actas": 97.14622641509433,
+        "remaining_votes": 22814,
+        "left_pct": 2.5453224441287428,
+        "right_pct": 32.623545949131,
+        "gap_pp": 30.078223505002256
       },
       {
         "name": "LA LIBERTAD",
         "code": 120000,
-        "pct_actas": 97.90645039607695,
-        "remaining_votes": 23824,
+        "pct_actas": 98.05733685401735,
+        "remaining_votes": 22082,
         "left_pct": 6.5945361482198175,
         "right_pct": 7.525327767246107,
         "gap_pp": 0.9307916190262899
+      },
+      {
+        "name": "JUNÍN",
+        "code": 110000,
+        "pct_actas": 97.31780005418585,
+        "remaining_votes": 20490,
+        "left_pct": 6.165068887841165,
+        "right_pct": 9.930588296924931,
+        "gap_pp": 3.7655194090837663
+      },
+      {
+        "name": "HUÁNUCO",
+        "code": 90000,
+        "pct_actas": 95.30115335326784,
+        "remaining_votes": 19973,
+        "left_pct": 4.613646902160343,
+        "right_pct": 22.994756678992236,
+        "gap_pp": 18.38110977683189
       }
     ],
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 246500,
+        "remaining_votes": 244844,
         "left_pct": 17.542653635787456,
         "right_pct": 2.896059174056338,
         "gap_pp": -14.646594461731118,
@@ -1606,8 +1606,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 96.36239368165249,
-            "remaining_votes": 223186,
+            "pct_actas": 96.38531343736948,
+            "remaining_votes": 221738,
             "left_pct": 18.639241456922363,
             "right_pct": 2.4827604977536493,
             "gap_pp": -16.156480959168714
@@ -1651,8 +1651,8 @@
           {
             "name": "HUAROCHIRÍ",
             "code": 140600,
-            "pct_actas": 96.33802816901408,
-            "remaining_votes": 2710,
+            "pct_actas": 96.61016949152543,
+            "remaining_votes": 2502,
             "left_pct": 8.360779278776375,
             "right_pct": 7.653232108965056,
             "gap_pp": -0.7075471698113196
@@ -1660,65 +1660,29 @@
         ]
       },
       {
-        "name": "PIURA",
-        "remaining_votes": 66090,
-        "left_pct": 5.193708278074549,
-        "right_pct": 8.72400367486349,
-        "gap_pp": 3.53029539678894,
+        "name": "MOQUEGUA",
+        "remaining_votes": 57671,
+        "left_pct": 3.516284760549519,
+        "right_pct": 12.64080433019031,
+        "gap_pp": 9.12451956964079,
         "provinces": [
           {
-            "name": "PIURA",
-            "code": 190100,
-            "pct_actas": 93.98806792106471,
-            "remaining_votes": 29134,
-            "left_pct": 7.325334682065154,
-            "right_pct": 6.135190777696397,
-            "gap_pp": -1.1901439043687576
+            "name": "MARISCAL NIETO",
+            "code": 170100,
+            "pct_actas": 54.6875,
+            "remaining_votes": 50184,
+            "left_pct": 3.833181895184267,
+            "right_pct": 11.399442502271572,
+            "gap_pp": 7.5662606070873055
           },
           {
-            "name": "SULLANA",
-            "code": 190600,
-            "pct_actas": 94.0,
-            "remaining_votes": 11899,
-            "left_pct": 4.3469780572308485,
-            "right_pct": 3.974849223662261,
-            "gap_pp": -0.3721288335685875
-          },
-          {
-            "name": "MORROPÓN",
-            "code": 190400,
-            "pct_actas": 94.24184261036469,
-            "remaining_votes": 6039,
-            "left_pct": 4.224759556586144,
-            "right_pct": 10.243916757169274,
-            "gap_pp": 6.0191572005831295
-          },
-          {
-            "name": "TALARA",
-            "code": 190700,
-            "pct_actas": 93.99477806788512,
-            "remaining_votes": 4765,
-            "left_pct": 5.097968303992354,
-            "right_pct": 2.938403316843832,
-            "gap_pp": -2.1595649871485216
-          },
-          {
-            "name": "PAITA",
-            "code": 190500,
-            "pct_actas": 94.08450704225352,
-            "remaining_votes": 4686,
-            "left_pct": 2.825300741272732,
-            "right_pct": 5.405648036524996,
-            "gap_pp": 2.5803472952522637
-          },
-          {
-            "name": "HUANCABAMBA",
-            "code": 190300,
-            "pct_actas": 94.1988950276243,
-            "remaining_votes": 3508,
-            "left_pct": 1.4456447993319763,
-            "right_pct": 36.12198389088948,
-            "gap_pp": 34.67633909155751
+            "name": "GENERAL SÁNCHEZ CERRO",
+            "code": 170200,
+            "pct_actas": 54.54545454545455,
+            "remaining_votes": 7487,
+            "left_pct": 1.510721247563353,
+            "right_pct": 20.497076023391813,
+            "gap_pp": 18.98635477582846
           }
         ]
       },
@@ -1786,71 +1750,8 @@
         ]
       },
       {
-        "name": "SAN MARTÍN",
-        "remaining_votes": 32624,
-        "left_pct": 4.308035446140047,
-        "right_pct": 17.401924470730506,
-        "gap_pp": 13.09388902459046,
-        "provinces": [
-          {
-            "name": "SAN MARTÍN",
-            "code": 210600,
-            "pct_actas": 93.50877192982456,
-            "remaining_votes": 7850,
-            "left_pct": 6.949151117128178,
-            "right_pct": 7.102193893425047,
-            "gap_pp": 0.1530427762968687
-          },
-          {
-            "name": "RIOJA",
-            "code": 210500,
-            "pct_actas": 93.62244897959184,
-            "remaining_votes": 5161,
-            "left_pct": 2.526975813051635,
-            "right_pct": 24.21464814978029,
-            "gap_pp": 21.687672336728657
-          },
-          {
-            "name": "MOYOBAMBA",
-            "code": 210100,
-            "pct_actas": 93.73368146214099,
-            "remaining_votes": 4913,
-            "left_pct": 4.358787752768103,
-            "right_pct": 19.57165878255445,
-            "gap_pp": 15.212871029786347
-          },
-          {
-            "name": "LAMAS",
-            "code": 210300,
-            "pct_actas": 93.58490566037736,
-            "remaining_votes": 3397,
-            "left_pct": 3.1233098972417523,
-            "right_pct": 16.530170748667235,
-            "gap_pp": 13.406860851425483
-          },
-          {
-            "name": "TOCACHE",
-            "code": 210800,
-            "pct_actas": 93.61702127659575,
-            "remaining_votes": 2860,
-            "left_pct": 3.2532635877669946,
-            "right_pct": 19.742124945511275,
-            "gap_pp": 16.48886135774428
-          },
-          {
-            "name": "MARISCAL CÁCERES",
-            "code": 210400,
-            "pct_actas": 93.51351351351352,
-            "remaining_votes": 2315,
-            "left_pct": 3.1584705746861683,
-            "right_pct": 15.881607739260625,
-            "gap_pp": 12.723137164574457
-          }
-        ]
-      },
-      {
         "name": "ÁNCASH",
-        "remaining_votes": 30318,
+        "remaining_votes": 29891,
         "left_pct": 4.707725756269445,
         "right_pct": 11.6188476965176,
         "gap_pp": 6.9111219402481545,
@@ -1858,8 +1759,8 @@
           {
             "name": "SANTA",
             "code": 21300,
-            "pct_actas": 95.4933954933955,
-            "remaining_votes": 12542,
+            "pct_actas": 95.56765163297045,
+            "remaining_votes": 12328,
             "left_pct": 6.43588247581592,
             "right_pct": 5.461676426734663,
             "gap_pp": -0.974206049081257
@@ -1867,8 +1768,8 @@
           {
             "name": "HUARAZ",
             "code": 20100,
-            "pct_actas": 95.74468085106383,
-            "remaining_votes": 4268,
+            "pct_actas": 95.76271186440678,
+            "remaining_votes": 4250,
             "left_pct": 4.96849127642788,
             "right_pct": 10.079795467937002,
             "gap_pp": 5.111304191509122
@@ -1892,15 +1793,6 @@
             "gap_pp": 7.571098028878541
           },
           {
-            "name": "YUNGAY",
-            "code": 21500,
-            "pct_actas": 95.48022598870057,
-            "remaining_votes": 1564,
-            "left_pct": 1.8035426731078905,
-            "right_pct": 21.405357927097057,
-            "gap_pp": 19.601815253989166
-          },
-          {
             "name": "CARHUAZ",
             "code": 20400,
             "pct_actas": 95.48387096774194,
@@ -1908,6 +1800,15 @@
             "left_pct": 2.497238925021475,
             "right_pct": 19.96870781691005,
             "gap_pp": 17.471468891888577
+          },
+          {
+            "name": "YUNGAY",
+            "code": 21500,
+            "pct_actas": 96.02272727272727,
+            "remaining_votes": 1369,
+            "left_pct": 1.8035426731078905,
+            "right_pct": 21.405357927097057,
+            "gap_pp": 19.601815253989166
           }
         ]
       },
@@ -1971,6 +1872,60 @@
             "left_pct": 2.1659662298261755,
             "right_pct": 18.155820257130777,
             "gap_pp": 15.989854027304602
+          }
+        ]
+      },
+      {
+        "name": "ICA",
+        "remaining_votes": 26257,
+        "left_pct": 7.787143851020111,
+        "right_pct": 6.3960752377921954,
+        "gap_pp": -1.3910686132279153,
+        "provinces": [
+          {
+            "name": "ICA",
+            "code": 100100,
+            "pct_actas": 95.41850220264317,
+            "remaining_votes": 12081,
+            "left_pct": 9.566761171342263,
+            "right_pct": 6.068283173655242,
+            "gap_pp": -3.4984779976870204
+          },
+          {
+            "name": "CHINCHA",
+            "code": 100200,
+            "pct_actas": 95.36741214057508,
+            "remaining_votes": 6870,
+            "left_pct": 6.565008135886468,
+            "right_pct": 5.62577668536433,
+            "gap_pp": -0.9392314505221382
+          },
+          {
+            "name": "PISCO",
+            "code": 100400,
+            "pct_actas": 95.22673031026252,
+            "remaining_votes": 4662,
+            "left_pct": 5.575947712418301,
+            "right_pct": 6.88,
+            "gap_pp": 1.3040522875816993
+          },
+          {
+            "name": "NASCA",
+            "code": 100300,
+            "pct_actas": 95.39170506912443,
+            "remaining_votes": 2213,
+            "left_pct": 6.671082715442638,
+            "right_pct": 8.37624735571273,
+            "gap_pp": 1.705164640270092
+          },
+          {
+            "name": "PALPA",
+            "code": 100500,
+            "pct_actas": 95.65217391304348,
+            "remaining_votes": 431,
+            "left_pct": 5.877474862651601,
+            "right_pct": 12.408002487820047,
+            "gap_pp": 6.530527625168446
           }
         ]
       }
