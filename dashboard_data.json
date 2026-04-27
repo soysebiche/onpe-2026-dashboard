@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-27T03:02:10.988395-05:00",
+  "generated_at": "2026-04-27T03:07:25.145493-05:00",
   "snapshot_at": "2026-04-27T08:00:59.734544+00:00",
   "onpe_updated_at": 1777266000470,
   "actas_contadas": 89105,
   "actas_totales": 92766,
   "actas_pct": 96.05351098462799,
   "votos_validos": 19392980,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
