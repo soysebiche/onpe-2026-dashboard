@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T08:56:51.207137-05:00",
+  "generated_at": "2026-04-28T09:06:09.373368-05:00",
   "snapshot_at": "2026-04-28T13:21:26.175981+00:00",
   "onpe_updated_at": 1777383902331,
   "actas_contadas": 89355,
@@ -1506,11 +1506,11 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 96.51246281669916,
-        "remaining_votes": 236592,
-        "left_pct": 17.53842360187407,
-        "right_pct": 2.897676854763375,
-        "gap_pp": -14.640746747110693
+        "pct_actas": 96.54323520361062,
+        "remaining_votes": 234499,
+        "left_pct": 17.534962654720655,
+        "right_pct": 2.8986150488310596,
+        "gap_pp": -14.636347605889595
       },
       {
         "name": "PIURA",
@@ -1597,16 +1597,16 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 236592,
-        "left_pct": 17.53842360187407,
-        "right_pct": 2.897676854763375,
-        "gap_pp": -14.640746747110693,
+        "remaining_votes": 234499,
+        "left_pct": 17.534962654720655,
+        "right_pct": 2.8986150488310596,
+        "gap_pp": -14.636347605889595,
         "provinces": [
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 96.5049576416062,
-            "remaining_votes": 214394,
+            "pct_actas": 96.53796458159155,
+            "remaining_votes": 212303,
             "left_pct": 18.640555688654523,
             "right_pct": 2.4835051691678682,
             "gap_pp": -16.157050519486653
@@ -1614,11 +1614,11 @@
           {
             "name": "CAÑETE",
             "code": 140400,
-            "pct_actas": 96.47239263803681,
-            "remaining_votes": 5475,
-            "left_pct": 7.300692532550338,
-            "right_pct": 5.412740244707914,
-            "gap_pp": -1.887952287842424
+            "pct_actas": 96.52042360060514,
+            "remaining_votes": 5473,
+            "left_pct": 7.291807762018099,
+            "right_pct": 5.418706502318801,
+            "gap_pp": -1.8731012596992977
           },
           {
             "name": "HUAURA",
