@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-29T19:03:35.447943-05:00",
+  "generated_at": "2026-04-29T19:13:12.596034-05:00",
   "snapshot_at": "2026-04-30T00:01:23.084823+00:00",
   "onpe_updated_at": 1777506306461,
   "actas_contadas": 89850,
   "actas_totales": 92766,
   "actas_pct": 96.85660694651058,
   "votos_validos": 19555135,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1506,8 +1506,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 96.91934215475091,
-        "remaining_votes": 209190,
+        "pct_actas": 96.93301877115601,
+        "remaining_votes": 208172,
         "left_pct": 17.520761163503366,
         "right_pct": 2.9001555388343756,
         "gap_pp": -14.62060562466899
@@ -1524,8 +1524,8 @@
       {
         "name": "PIURA",
         "code": 190000,
-        "pct_actas": 96.4590039765196,
-        "remaining_votes": 39349,
+        "pct_actas": 96.51581139935618,
+        "remaining_votes": 38747,
         "left_pct": 5.171220359632696,
         "right_pct": 8.699050154547301,
         "gap_pp": 3.527829794914605
@@ -1560,8 +1560,8 @@
       {
         "name": "CALLAO",
         "code": 240000,
-        "pct_actas": 96.75638371290545,
-        "remaining_votes": 21343,
+        "pct_actas": 96.79089026915113,
+        "remaining_votes": 21111,
         "left_pct": 12.94567448420709,
         "right_pct": 2.5996363003647773,
         "gap_pp": -10.346038183842314
@@ -1597,7 +1597,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 209190,
+        "remaining_votes": 208172,
         "left_pct": 17.520761163503366,
         "right_pct": 2.9001555388343756,
         "gap_pp": -14.62060562466899,
@@ -1605,8 +1605,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 96.91360370975711,
-            "remaining_votes": 189381,
+            "pct_actas": 96.92512352717598,
+            "remaining_votes": 188660,
             "left_pct": 18.628717715596615,
             "right_pct": 2.4831793046807222,
             "gap_pp": -16.145538410915893
@@ -1614,8 +1614,8 @@
           {
             "name": "CAÑETE",
             "code": 140400,
-            "pct_actas": 96.87964338781575,
-            "remaining_votes": 5004,
+            "pct_actas": 97.02380952380952,
+            "remaining_votes": 4766,
             "left_pct": 7.255617995244492,
             "right_pct": 5.435406457146821,
             "gap_pp": -1.820211538097671
@@ -1650,8 +1650,8 @@
           {
             "name": "HUAROCHIRÍ",
             "code": 140600,
-            "pct_actas": 96.88385269121812,
-            "remaining_votes": 2295,
+            "pct_actas": 97.1590909090909,
+            "remaining_votes": 2086,
             "left_pct": 8.360779278776375,
             "right_pct": 7.653232108965056,
             "gap_pp": -0.7075471698113196
@@ -1723,7 +1723,7 @@
       },
       {
         "name": "PIURA",
-        "remaining_votes": 39349,
+        "remaining_votes": 38747,
         "left_pct": 5.171220359632696,
         "right_pct": 8.699050154547301,
         "gap_pp": 3.527829794914605,
@@ -1731,8 +1731,8 @@
           {
             "name": "PIURA",
             "code": 190100,
-            "pct_actas": 96.48241206030151,
-            "remaining_votes": 17233,
+            "pct_actas": 96.53126426289366,
+            "remaining_votes": 16990,
             "left_pct": 7.258752854468453,
             "right_pct": 6.165040731558759,
             "gap_pp": -1.093712122909694
@@ -1740,8 +1740,8 @@
           {
             "name": "SULLANA",
             "code": 190600,
-            "pct_actas": 96.45232815964523,
-            "remaining_votes": 7107,
+            "pct_actas": 96.55937846836848,
+            "remaining_votes": 6886,
             "left_pct": 4.331823894352571,
             "right_pct": 3.9533004847493465,
             "gap_pp": -0.37852340960322417
@@ -1750,7 +1750,7 @@
             "name": "MORROPÓN",
             "code": 190400,
             "pct_actas": 96.46365422396856,
-            "remaining_votes": 3644,
+            "remaining_votes": 3645,
             "left_pct": 4.224759556586144,
             "right_pct": 10.243916757169274,
             "gap_pp": 6.0191572005831295
