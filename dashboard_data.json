@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-30T17:57:01.815486-05:00",
+  "generated_at": "2026-04-30T18:01:46.987687-05:00",
   "snapshot_at": "2026-04-30T22:56:01.277983+00:00",
   "onpe_updated_at": 1777589105903,
   "actas_contadas": 90189,
   "actas_totales": 92766,
   "actas_pct": 97.22204255869607,
   "votos_validos": 19624582,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1579,7 +1579,7 @@
         "name": "ÁNCASH",
         "code": 20000,
         "pct_actas": 97.6094470046083,
-        "remaining_votes": 16141,
+        "remaining_votes": 16143,
         "left_pct": 4.701907965277676,
         "right_pct": 11.63520996430827,
         "gap_pp": 6.933301999030594
@@ -1588,7 +1588,7 @@
         "name": "LA LIBERTAD",
         "code": 120000,
         "pct_actas": 98.62316107129385,
-        "remaining_votes": 15676,
+        "remaining_votes": 15677,
         "left_pct": 6.572805006263907,
         "right_pct": 7.524328529123478,
         "gap_pp": 0.9515235228595706
