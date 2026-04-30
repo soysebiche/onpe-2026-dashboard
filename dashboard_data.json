@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-30T15:34:39.709965-05:00",
+  "generated_at": "2026-04-30T15:42:19.868060-05:00",
   "snapshot_at": "2026-04-30T20:32:06.215363+00:00",
   "onpe_updated_at": 1777580102312,
   "actas_contadas": 90097,
   "actas_totales": 92766,
   "actas_pct": 97.12286829226225,
   "votos_validos": 19606777,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -2280,8 +2280,8 @@
         {
           "candidate": "JUNTOS POR EL PERÚ",
           "current_pct": 9.988993601524918,
-          "base_pct": 9.993924936037157,
-          "delta_pct": -0.0049313345122392604,
+          "base_pct": 9.993924936037155,
+          "delta_pct": -0.004931334512237484,
           "current_votes": 2013367,
           "base_votes": 2015094,
           "delta_votes": -1727,
