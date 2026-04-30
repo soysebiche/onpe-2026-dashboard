@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-29T20:32:12.046570-05:00",
+  "generated_at": "2026-04-29T20:40:25.850274-05:00",
   "snapshot_at": "2026-04-30T01:31:07.823672+00:00",
   "onpe_updated_at": 1777511704415,
   "actas_contadas": 89892,
   "actas_totales": 92766,
   "actas_pct": 96.90188215509993,
   "votos_validos": 19565431,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1506,8 +1506,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 96.95353369576367,
-        "remaining_votes": 206830,
+        "pct_actas": 96.9637911580675,
+        "remaining_votes": 206197,
         "left_pct": 17.519494319574576,
         "right_pct": 2.899777237633195,
         "gap_pp": -14.619717081941381
@@ -1533,8 +1533,8 @@
       {
         "name": "SAN MARTÍN",
         "code": 210000,
-        "pct_actas": 93.6069455406472,
-        "remaining_votes": 32646,
+        "pct_actas": 93.68587213891081,
+        "remaining_votes": 32210,
         "left_pct": 4.306266042216412,
         "right_pct": 17.412319221851224,
         "gap_pp": 13.106053179634813
@@ -1597,7 +1597,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 206830,
+        "remaining_votes": 206197,
         "left_pct": 17.519494319574576,
         "right_pct": 2.899777237633195,
         "gap_pp": -14.619717081941381,
@@ -1605,8 +1605,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 96.94792854427975,
-            "remaining_votes": 187317,
+            "pct_actas": 96.95564592755882,
+            "remaining_votes": 186834,
             "left_pct": 18.626734264085602,
             "right_pct": 2.4829801242720038,
             "gap_pp": -16.1437541398136
@@ -1786,7 +1786,7 @@
       },
       {
         "name": "SAN MARTÍN",
-        "remaining_votes": 32646,
+        "remaining_votes": 32210,
         "left_pct": 4.306266042216412,
         "right_pct": 17.412319221851224,
         "gap_pp": 13.106053179634813,
@@ -1794,8 +1794,8 @@
           {
             "name": "SAN MARTÍN",
             "code": 210600,
-            "pct_actas": 93.50877192982456,
-            "remaining_votes": 7850,
+            "pct_actas": 93.67311072056239,
+            "remaining_votes": 7641,
             "left_pct": 6.949151117128178,
             "right_pct": 7.102193893425047,
             "gap_pp": 0.1530427762968687
@@ -1803,8 +1803,8 @@
           {
             "name": "RIOJA",
             "code": 210500,
-            "pct_actas": 93.62244897959184,
-            "remaining_votes": 5171,
+            "pct_actas": 93.87755102040816,
+            "remaining_votes": 4955,
             "left_pct": 2.525284251523337,
             "right_pct": 24.215088887492932,
             "gap_pp": 21.689804635969594
@@ -1812,8 +1812,8 @@
           {
             "name": "MOYOBAMBA",
             "code": 210100,
-            "pct_actas": 93.73368146214099,
-            "remaining_votes": 4925,
+            "pct_actas": 93.75,
+            "remaining_votes": 4914,
             "left_pct": 4.352896963728019,
             "right_pct": 19.617193878212188,
             "gap_pp": 15.26429691448417
