@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T00:31:44.306793-05:00",
+  "generated_at": "2026-05-01T00:37:11.876364-05:00",
   "snapshot_at": "2026-05-01T04:41:06.367566+00:00",
   "onpe_updated_at": 1777612502276,
   "actas_contadas": 90342,
@@ -1347,7 +1347,7 @@
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
           "votes": 17351,
-          "pct": 3.2571167261982015
+          "pct": 3.2571167261982006
         },
         {
           "candidate": "FUERZA POPULAR",
