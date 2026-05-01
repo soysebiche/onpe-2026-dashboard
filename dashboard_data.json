@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T23:33:04.309024-05:00",
+  "generated_at": "2026-04-30T23:36:48.512949-05:00",
   "snapshot_at": "2026-05-01T03:46:03.694162+00:00",
   "onpe_updated_at": 1777608903890,
   "actas_contadas": 90311,
@@ -1506,8 +1506,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 97.08688070571341,
-        "remaining_votes": 197863,
+        "pct_actas": 97.13816801723253,
+        "remaining_votes": 194333,
         "left_pct": 17.536494168298553,
         "right_pct": 2.898301794463723,
         "gap_pp": -14.63819237383483
@@ -1549,15 +1549,6 @@
         "gap_pp": -1.3956278087121552
       },
       {
-        "name": "SAN MARTÍN",
-        "code": 210000,
-        "pct_actas": 95.58011049723757,
-        "remaining_votes": 22685,
-        "left_pct": 4.280485198771123,
-        "right_pct": 17.485232100600125,
-        "gap_pp": 13.204746901829003
-      },
-      {
         "name": "UCAYALI",
         "code": 250000,
         "pct_actas": 93.09462915601023,
@@ -1565,6 +1556,15 @@
         "left_pct": 4.2611883673599635,
         "right_pct": 9.578632363473908,
         "gap_pp": 5.317443996113944
+      },
+      {
+        "name": "SAN MARTÍN",
+        "code": 210000,
+        "pct_actas": 96.2115232833465,
+        "remaining_votes": 19378,
+        "left_pct": 4.280485198771123,
+        "right_pct": 17.485232100600125,
+        "gap_pp": 13.204746901829003
       },
       {
         "name": "HUÁNUCO",
@@ -1597,7 +1597,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 197863,
+        "remaining_votes": 194333,
         "left_pct": 17.536494168298553,
         "right_pct": 2.898301794463723,
         "gap_pp": -14.63819237383483,
@@ -1605,8 +1605,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 97.08106875451332,
-            "remaining_votes": 179174,
+            "pct_actas": 97.1306958537605,
+            "remaining_votes": 176065,
             "left_pct": 18.645513805735796,
             "right_pct": 2.4813108560688995,
             "gap_pp": -16.164202949666898
@@ -1614,8 +1614,8 @@
           {
             "name": "CAÑETE",
             "code": 140400,
-            "pct_actas": 97.0326409495549,
-            "remaining_votes": 4768,
+            "pct_actas": 97.17682020802377,
+            "remaining_votes": 4530,
             "left_pct": 7.257410492565932,
             "right_pct": 5.439914500361487,
             "gap_pp": -1.817495992204445
@@ -1633,7 +1633,7 @@
             "name": "HUARAL",
             "code": 140800,
             "pct_actas": 97.21254355400697,
-            "remaining_votes": 3665,
+            "remaining_votes": 3666,
             "left_pct": 7.01112412177986,
             "right_pct": 7.820011093307038,
             "gap_pp": 0.808886971527178
@@ -1902,65 +1902,47 @@
         ]
       },
       {
-        "name": "SAN MARTÍN",
-        "remaining_votes": 22685,
-        "left_pct": 4.280485198771123,
-        "right_pct": 17.485232100600125,
-        "gap_pp": 13.204746901829003,
+        "name": "UCAYALI",
+        "remaining_votes": 19937,
+        "left_pct": 4.2611883673599635,
+        "right_pct": 9.578632363473908,
+        "gap_pp": 5.317443996113944,
         "provinces": [
           {
-            "name": "SAN MARTÍN",
-            "code": 210600,
-            "pct_actas": 95.51971326164875,
-            "remaining_votes": 5337,
-            "left_pct": 6.949151117128178,
-            "right_pct": 7.102193893425047,
-            "gap_pp": 0.1530427762968687
+            "name": "CORONEL PORTILLO",
+            "code": 250100,
+            "pct_actas": 93.20305862361937,
+            "remaining_votes": 15349,
+            "left_pct": 4.593758072044555,
+            "right_pct": 6.622588582900181,
+            "gap_pp": 2.0288305108556255
           },
           {
-            "name": "RIOJA",
-            "code": 210500,
-            "pct_actas": 95.68527918781726,
-            "remaining_votes": 3533,
-            "left_pct": 2.511331618277594,
-            "right_pct": 24.26558863163053,
-            "gap_pp": 21.754257013352934
+            "name": "PADRE ABAD",
+            "code": 250200,
+            "pct_actas": 93.18181818181819,
+            "remaining_votes": 2864,
+            "left_pct": 3.2523893114881997,
+            "right_pct": 24.729373902867174,
+            "gap_pp": 21.476984591378972
           },
           {
-            "name": "MOYOBAMBA",
-            "code": 210100,
-            "pct_actas": 95.62982005141389,
-            "remaining_votes": 3503,
-            "left_pct": 4.340691002931376,
-            "right_pct": 19.715380953574023,
-            "gap_pp": 15.374689950642647
+            "name": "ATALAYA",
+            "code": 250300,
+            "pct_actas": 92.20779220779221,
+            "remaining_votes": 1610,
+            "left_pct": 2.7861010355884983,
+            "right_pct": 10.92361877726962,
+            "gap_pp": 8.137517741681123
           },
           {
-            "name": "LAMAS",
-            "code": 210300,
-            "pct_actas": 95.6043956043956,
-            "remaining_votes": 2415,
-            "left_pct": 3.1322165609765036,
-            "right_pct": 16.496829295113816,
-            "gap_pp": 13.364612734137312
-          },
-          {
-            "name": "TOCACHE",
-            "code": 210800,
-            "pct_actas": 95.70815450643777,
-            "remaining_votes": 1918,
-            "left_pct": 3.232592860697643,
-            "right_pct": 19.820838800162875,
-            "gap_pp": 16.58824593946523
-          },
-          {
-            "name": "MARISCAL CÁCERES",
-            "code": 210400,
-            "pct_actas": 95.72192513368984,
-            "remaining_votes": 1548,
-            "left_pct": 3.1306677083623984,
-            "right_pct": 15.990959569184408,
-            "gap_pp": 12.86029186082201
+            "name": "PURÚS",
+            "code": 250400,
+            "pct_actas": 92.3076923076923,
+            "remaining_votes": 114,
+            "left_pct": 1.2820512820512822,
+            "right_pct": 13.574660633484163,
+            "gap_pp": 12.29260935143288
           }
         ]
       }
