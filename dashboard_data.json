@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T20:01:53.010072-05:00",
+  "generated_at": "2026-04-30T20:14:31.489961-05:00",
   "snapshot_at": "2026-05-01T00:39:28.768734+00:00",
   "onpe_updated_at": 1777596312551,
   "actas_contadas": 90229,
@@ -2158,13 +2158,13 @@
       {
         "name": "ITALIA",
         "code": 941700,
-        "pct_actas": 94.422,
-        "remaining_votes": 3406,
-        "left_pct": 12.886553237247862,
-        "right_pct": 2.32235461435732,
-        "gap_pp": -10.564198622890542,
+        "pct_actas": 94.821,
+        "remaining_votes": 3164,
+        "left_pct": 12.901778007940617,
+        "right_pct": 2.3217676506128084,
+        "gap_pp": -10.580010357327808,
         "continent_code": 940000,
-        "counted_actas": 237,
+        "counted_actas": 238,
         "total_actas": 251,
         "continent": "EUROPA"
       },
