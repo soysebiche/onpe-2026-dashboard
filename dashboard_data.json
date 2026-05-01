@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-30T19:46:56.537594-05:00",
+  "generated_at": "2026-04-30T19:57:24.713691-05:00",
   "snapshot_at": "2026-05-01T00:39:28.768734+00:00",
-  "onpe_updated_at": 1777595409062,
+  "onpe_updated_at": 1777596312551,
   "actas_contadas": 90229,
   "actas_totales": 92766,
   "actas_pct": 97.26516180497165,
@@ -978,7 +978,7 @@
         {
           "candidate": "RENOVACIÓN POPULAR",
           "votes": 4047,
-          "pct": 1.8584924260781341
+          "pct": 1.858492426078134
         },
         {
           "candidate": "PARTIDO DEL BUEN GOBIERNO",
