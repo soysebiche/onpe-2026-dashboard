@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-02T14:04:31.054799-05:00",
+  "generated_at": "2026-05-02T14:06:45.137500-05:00",
   "snapshot_at": "2026-05-02T19:02:19.598148+00:00",
   "onpe_updated_at": 1777747504263,
   "actas_contadas": 90441,
   "actas_totales": 92766,
   "actas_pct": 97.4936938102322,
   "votos_validos": 19678251,
-  "onpe_changed": true,
+  "onpe_changed": false,
   "tracked": [
     "JUNTOS POR EL PERÚ",
     "RENOVACIÓN POPULAR",
@@ -1169,7 +1169,7 @@
         {
           "candidate": "JUNTOS POR EL PERÚ",
           "votes": 34771,
-          "pct": 7.675317253115061
+          "pct": 7.675317253115059
         },
         {
           "candidate": "RENOVACIÓN POPULAR",
