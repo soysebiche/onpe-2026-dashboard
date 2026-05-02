@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T15:02:56.888390-05:00",
+  "generated_at": "2026-05-02T15:06:42.998204-05:00",
   "snapshot_at": "2026-05-02T19:02:19.598148+00:00",
   "onpe_updated_at": 1777751105198,
   "actas_contadas": 90441,
@@ -1506,8 +1506,8 @@
       {
         "name": "LIMA",
         "code": 140000,
-        "pct_actas": 97.27835333538482,
-        "remaining_votes": 184895,
+        "pct_actas": 97.2817724894861,
+        "remaining_votes": 184656,
         "left_pct": 17.549316511535473,
         "right_pct": 2.8965131158267448,
         "gap_pp": -14.652803395708728
@@ -1542,8 +1542,8 @@
       {
         "name": "ICA",
         "code": 100000,
-        "pct_actas": 95.98853868194843,
-        "remaining_votes": 22792,
+        "pct_actas": 96.02947196070406,
+        "remaining_votes": 22552,
         "left_pct": 7.803189883278216,
         "right_pct": 6.397097052565003,
         "gap_pp": -1.406092830713213
@@ -1597,7 +1597,7 @@
     "region_details": [
       {
         "name": "LIMA",
-        "remaining_votes": 184895,
+        "remaining_votes": 184656,
         "left_pct": 17.549316511535473,
         "right_pct": 2.8965131158267448,
         "gap_pp": -14.652803395708728,
@@ -1605,8 +1605,8 @@
           {
             "name": "LIMA",
             "code": 140100,
-            "pct_actas": 97.27172550062697,
-            "remaining_votes": 167565,
+            "pct_actas": 97.275525325835,
+            "remaining_votes": 167326,
             "left_pct": 18.657310224023497,
             "right_pct": 2.4802284297952535,
             "gap_pp": -16.177081794228243
@@ -1849,7 +1849,7 @@
       },
       {
         "name": "ICA",
-        "remaining_votes": 22792,
+        "remaining_votes": 22552,
         "left_pct": 7.803189883278216,
         "right_pct": 6.397097052565003,
         "gap_pp": -1.406092830713213,
@@ -1857,8 +1857,8 @@
           {
             "name": "ICA",
             "code": 100100,
-            "pct_actas": 96.04569420035149,
-            "remaining_votes": 10466,
+            "pct_actas": 96.1301671064204,
+            "remaining_votes": 10235,
             "left_pct": 9.592166154813528,
             "right_pct": 6.049835708561942,
             "gap_pp": -3.5423304462515857
@@ -1866,8 +1866,8 @@
           {
             "name": "CHINCHA",
             "code": 100200,
-            "pct_actas": 95.9807073954984,
-            "remaining_votes": 5931,
+            "pct_actas": 95.98715890850723,
+            "remaining_votes": 5922,
             "left_pct": 6.565008135886468,
             "right_pct": 5.62577668536433,
             "gap_pp": -0.9392314505221382
